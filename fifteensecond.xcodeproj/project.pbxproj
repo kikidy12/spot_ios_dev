@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,63 @@
 		99114CA822F2726100D0494A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99114CA622F2726100D0494A /* LaunchScreen.storyboard */; };
 		99114CB322F2726100D0494A /* fifteensecondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CB222F2726100D0494A /* fifteensecondTests.swift */; };
 		99114CBE22F2726100D0494A /* fifteensecondUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CBD22F2726100D0494A /* fifteensecondUITests.swift */; };
+		99114CD022F2CF4D00D0494A /* Extenstions+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CCF22F2CF4D00D0494A /* Extenstions+Views.swift */; };
+		99114CD222F2D1D100D0494A /* Extensions+Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CD122F2D1D100D0494A /* Extensions+Objects.swift */; };
+		99114CD422F2D2EA00D0494A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CD322F2D2EA00D0494A /* UserData.swift */; };
+		99114CDF22F2D5E400D0494A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CDD22F2D5E400D0494A /* SplashViewController.swift */; };
+		99114CE022F2D5E400D0494A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CDE22F2D5E400D0494A /* SplashViewController.xib */; };
+		99114CE522F2D87F00D0494A /* QRCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CE322F2D87F00D0494A /* QRCheckViewController.swift */; };
+		99114CE622F2D87F00D0494A /* QRCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CE422F2D87F00D0494A /* QRCheckViewController.xib */; };
+		99114CEB22F2D94000D0494A /* PlaceImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CE922F2D94000D0494A /* PlaceImageCollectionViewCell.swift */; };
+		99114CEC22F2D94000D0494A /* PlaceImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CEA22F2D94000D0494A /* PlaceImageCollectionViewCell.xib */; };
+		99114CF022F2D99100D0494A /* ServerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CEF22F2D99100D0494A /* ServerUtil.swift */; };
+		99114CF222F2D9C400D0494A /* EnumObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CF122F2D9C400D0494A /* EnumObjects.swift */; };
+		99114CF522F8544100D0494A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CF322F8544100D0494A /* LoginViewController.swift */; };
+		99114CF622F8544100D0494A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CF422F8544100D0494A /* LoginViewController.xib */; };
+		99114CF822F8568900D0494A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CF722F8568900D0494A /* CustomView.swift */; };
+		99114CFB22FB9B8000D0494A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CF922FB9B7F00D0494A /* SignUpViewController.swift */; };
+		99114CFC22FB9B8000D0494A /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CFA22FB9B8000D0494A /* SignUpViewController.xib */; };
+		99114CFF22FB9F5900D0494A /* AuthCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CFD22FB9F5900D0494A /* AuthCheckViewController.swift */; };
+		99114D0022FB9F5900D0494A /* AuthCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CFE22FB9F5900D0494A /* AuthCheckViewController.xib */; };
+		99114D0322FBA34300D0494A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D0122FBA34300D0494A /* HomeViewController.swift */; };
+		99114D0422FBA34300D0494A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D0222FBA34300D0494A /* HomeViewController.xib */; };
+		99114D0722FBA60500D0494A /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D0522FBA60500D0494A /* EventCollectionViewCell.swift */; };
+		99114D0822FBA60500D0494A /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D0622FBA60500D0494A /* EventCollectionViewCell.xib */; };
+		99114D0A22FBAD3400D0494A /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D0922FBAD3400D0494A /* CustomPageControl.swift */; };
+		99114D0C22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D0B22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift */; };
+		99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D0D22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib */; };
+		99114D1122FC71CC00D0494A /* AllienceCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D0F22FC71CC00D0494A /* AllienceCollectionReusableView.swift */; };
+		99114D1222FC71CC00D0494A /* AllienceCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D1022FC71CC00D0494A /* AllienceCollectionReusableView.xib */; };
+		99114D1422FD885900D0494A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99114D1322FD885800D0494A /* GoogleService-Info.plist */; };
+		99114D182300E24500D0494A /* AllienceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D162300E24500D0494A /* AllienceCollectionViewCell.swift */; };
+		99114D192300E24500D0494A /* AllienceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D172300E24500D0494A /* AllienceCollectionViewCell.xib */; };
+		99114D1C2300F13800D0494A /* AlienceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D1A2300F13800D0494A /* AlienceListViewController.swift */; };
+		99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D1B2300F13800D0494A /* AlienceListViewController.xib */; };
+		99114D202300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D1E2300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift */; };
+		99114D212300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D1F2300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib */; };
+		99114D2423013E5100D0494A /* RecommandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D2223013E5100D0494A /* RecommandCollectionViewCell.swift */; };
+		99114D2523013E5100D0494A /* RecommandCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D2323013E5100D0494A /* RecommandCollectionViewCell.xib */; };
+		99114D2A2301574A00D0494A /* AlienceListTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D292301574A00D0494A /* AlienceListTileView.swift */; };
+		99114D2C2301575B00D0494A /* AlienceListTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D2B2301575B00D0494A /* AlienceListTileView.xib */; };
+		99114D2F230171E800D0494A /* AlienceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D2D230171E800D0494A /* AlienceMainViewController.swift */; };
+		99114D30230171E800D0494A /* AlienceMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D2E230171E800D0494A /* AlienceMainViewController.xib */; };
+		99114D3323018AB800D0494A /* AlienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D3123018AB800D0494A /* AlienceTableViewCell.swift */; };
+		99114D3423018AB800D0494A /* AlienceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D3223018AB800D0494A /* AlienceTableViewCell.xib */; };
+		99114D362301A60D00D0494A /* UserDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D352301A60D00D0494A /* UserDefs.swift */; };
+		99114D382301A65800D0494A /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D372301A65800D0494A /* AlertHandler.swift */; };
+		99114D3B2301ADC700D0494A /* AlienceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D392301ADC700D0494A /* AlienceMapViewController.swift */; };
+		99114D3C2301ADC700D0494A /* AlienceMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */; };
+		998869902303B45000612092 /* GlobalDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988698F2303B45000612092 /* GlobalDatas.swift */; };
+		998869922303B4CC00612092 /* NationCodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869912303B4CC00612092 /* NationCodeData.swift */; };
+		9988699423080D1E00612092 /* EventDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699323080D1E00612092 /* EventDatas.swift */; };
+		998869962308132800612092 /* CategoryDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869952308132800612092 /* CategoryDatas.swift */; };
+		9988699823081A5E00612092 /* HotelDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699723081A5E00612092 /* HotelDatas.swift */; };
+		9988699A23081A9300612092 /* RestaurantDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699923081A9300612092 /* RestaurantDatas.swift */; };
+		9988699C23081AA100612092 /* TicketDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699B23081AA100612092 /* TicketDatas.swift */; };
+		9988699E23081AB700612092 /* ShoppingDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699D23081AB700612092 /* ShoppingDatas.swift */; };
+		998869A023081CC500612092 /* AlienceDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699F23081CC500612092 /* AlienceDatas.swift */; };
+		998869A32309570900612092 /* AlienceInfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869A12309570900612092 /* AlienceInfoListViewController.swift */; };
+		998869A42309570900612092 /* AlienceInfoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998869A22309570900612092 /* AlienceInfoListViewController.xib */; };
 		B6A76C01E062B97ADE416204 /* Pods_fifteensecondTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F6946F7A07612CD612CE9 /* Pods_fifteensecondTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +112,64 @@
 		99114CB922F2726100D0494A /* fifteensecondUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fifteensecondUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99114CBD22F2726100D0494A /* fifteensecondUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifteensecondUITests.swift; sourceTree = "<group>"; };
 		99114CBF22F2726100D0494A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99114CCF22F2CF4D00D0494A /* Extenstions+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extenstions+Views.swift"; sourceTree = "<group>"; };
+		99114CD122F2D1D100D0494A /* Extensions+Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Objects.swift"; sourceTree = "<group>"; };
+		99114CD322F2D2EA00D0494A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		99114CDD22F2D5E400D0494A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		99114CDE22F2D5E400D0494A /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		99114CE322F2D87F00D0494A /* QRCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCheckViewController.swift; sourceTree = "<group>"; };
+		99114CE422F2D87F00D0494A /* QRCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCheckViewController.xib; sourceTree = "<group>"; };
+		99114CE922F2D94000D0494A /* PlaceImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		99114CEA22F2D94000D0494A /* PlaceImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		99114CEF22F2D99100D0494A /* ServerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerUtil.swift; sourceTree = "<group>"; };
+		99114CF122F2D9C400D0494A /* EnumObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumObjects.swift; sourceTree = "<group>"; };
+		99114CF322F8544100D0494A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		99114CF422F8544100D0494A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		99114CF722F8568900D0494A /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		99114CF922FB9B7F00D0494A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		99114CFA22FB9B8000D0494A /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		99114CFD22FB9F5900D0494A /* AuthCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCheckViewController.swift; sourceTree = "<group>"; };
+		99114CFE22FB9F5900D0494A /* AuthCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthCheckViewController.xib; sourceTree = "<group>"; };
+		99114D0122FBA34300D0494A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		99114D0222FBA34300D0494A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		99114D0522FBA60500D0494A /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		99114D0622FBA60500D0494A /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
+		99114D0922FBAD3400D0494A /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
+		99114D0B22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllianceCollectionViewHeaderView.swift; sourceTree = "<group>"; };
+		99114D0D22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllianceCollectionViewHeaderView.xib; sourceTree = "<group>"; };
+		99114D0F22FC71CC00D0494A /* AllienceCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllienceCollectionReusableView.swift; sourceTree = "<group>"; };
+		99114D1022FC71CC00D0494A /* AllienceCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllienceCollectionReusableView.xib; sourceTree = "<group>"; };
+		99114D1322FD885800D0494A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99114D1522FE6C5D00D0494A /* fifteensecond.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fifteensecond.entitlements; sourceTree = "<group>"; };
+		99114D162300E24500D0494A /* AllienceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllienceCollectionViewCell.swift; sourceTree = "<group>"; };
+		99114D172300E24500D0494A /* AllienceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllienceCollectionViewCell.xib; sourceTree = "<group>"; };
+		99114D1A2300F13800D0494A /* AlienceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceListViewController.swift; sourceTree = "<group>"; };
+		99114D1B2300F13800D0494A /* AlienceListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceListViewController.xib; sourceTree = "<group>"; };
+		99114D1E2300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		99114D1F2300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		99114D2223013E5100D0494A /* RecommandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandCollectionViewCell.swift; sourceTree = "<group>"; };
+		99114D2323013E5100D0494A /* RecommandCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommandCollectionViewCell.xib; sourceTree = "<group>"; };
+		99114D292301574A00D0494A /* AlienceListTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceListTileView.swift; sourceTree = "<group>"; };
+		99114D2B2301575B00D0494A /* AlienceListTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceListTileView.xib; sourceTree = "<group>"; };
+		99114D2D230171E800D0494A /* AlienceMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceMainViewController.swift; sourceTree = "<group>"; };
+		99114D2E230171E800D0494A /* AlienceMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceMainViewController.xib; sourceTree = "<group>"; };
+		99114D3123018AB800D0494A /* AlienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceTableViewCell.swift; sourceTree = "<group>"; };
+		99114D3223018AB800D0494A /* AlienceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceTableViewCell.xib; sourceTree = "<group>"; };
+		99114D352301A60D00D0494A /* UserDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefs.swift; sourceTree = "<group>"; };
+		99114D372301A65800D0494A /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		99114D392301ADC700D0494A /* AlienceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceMapViewController.swift; sourceTree = "<group>"; };
+		99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceMapViewController.xib; sourceTree = "<group>"; };
+		9988698F2303B45000612092 /* GlobalDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDatas.swift; sourceTree = "<group>"; };
+		998869912303B4CC00612092 /* NationCodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationCodeData.swift; sourceTree = "<group>"; };
+		9988699323080D1E00612092 /* EventDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDatas.swift; sourceTree = "<group>"; };
+		998869952308132800612092 /* CategoryDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDatas.swift; sourceTree = "<group>"; };
+		9988699723081A5E00612092 /* HotelDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDatas.swift; sourceTree = "<group>"; };
+		9988699923081A9300612092 /* RestaurantDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDatas.swift; sourceTree = "<group>"; };
+		9988699B23081AA100612092 /* TicketDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDatas.swift; sourceTree = "<group>"; };
+		9988699D23081AB700612092 /* ShoppingDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingDatas.swift; sourceTree = "<group>"; };
+		9988699F23081CC500612092 /* AlienceDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceDatas.swift; sourceTree = "<group>"; };
+		998869A12309570900612092 /* AlienceInfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceInfoListViewController.swift; sourceTree = "<group>"; };
+		998869A22309570900612092 /* AlienceInfoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceInfoListViewController.xib; sourceTree = "<group>"; };
 		A17AFEFEE0B1E79551D57DA0 /* Pods-fifteensecondUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecondUITests.release.xcconfig"; path = "Target Support Files/Pods-fifteensecondUITests/Pods-fifteensecondUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A79F79EFDB6D76BA02B3F653 /* Pods-fifteensecond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecond.debug.xcconfig"; path = "Target Support Files/Pods-fifteensecond/Pods-fifteensecond.debug.xcconfig"; sourceTree = "<group>"; };
 		BACE95EFD44112A2905110D8 /* Pods-fifteensecondUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecondUITests.debug.xcconfig"; path = "Target Support Files/Pods-fifteensecondUITests/Pods-fifteensecondUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,11 +239,14 @@
 		99114C9C22F2726100D0494A /* fifteensecond */ = {
 			isa = PBXGroup;
 			children = (
+				99114D1522FE6C5D00D0494A /* fifteensecond.entitlements */,
+				99114D1322FD885800D0494A /* GoogleService-Info.plist */,
+				99114CCE22F2CF2A00D0494A /* Utils */,
+				99114CCD22F2CF1F00D0494A /* Datas */,
+				99114CCC22F2CEEF00D0494A /* View+Controllers */,
+				99114CCB22F2CED800D0494A /* StoryBoards */,
 				99114C9D22F2726100D0494A /* AppDelegate.swift */,
-				99114C9F22F2726100D0494A /* ViewController.swift */,
-				99114CA122F2726100D0494A /* Main.storyboard */,
 				99114CA422F2726100D0494A /* Assets.xcassets */,
-				99114CA622F2726100D0494A /* LaunchScreen.storyboard */,
 				99114CA922F2726100D0494A /* Info.plist */,
 			);
 			path = fifteensecond;
@@ -152,6 +270,197 @@
 			path = fifteensecondUITests;
 			sourceTree = "<group>";
 		};
+		99114CCB22F2CED800D0494A /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				99114CDA22F2D50500D0494A /* Controllers */,
+				99114CA122F2726100D0494A /* Main.storyboard */,
+				99114CA622F2726100D0494A /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		99114CCC22F2CEEF00D0494A /* View+Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99114D26230156F400D0494A /* CustomView */,
+				99114CD922F2D3B100D0494A /* Cells */,
+				99114CD622F2D31C00D0494A /* Modals */,
+				99114CD522F2D2EF00D0494A /* Popups */,
+			);
+			path = "View+Controllers";
+			sourceTree = "<group>";
+		};
+		99114CCD22F2CF1F00D0494A /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				99114CD322F2D2EA00D0494A /* UserData.swift */,
+				9988698F2303B45000612092 /* GlobalDatas.swift */,
+				998869912303B4CC00612092 /* NationCodeData.swift */,
+				9988699323080D1E00612092 /* EventDatas.swift */,
+				998869952308132800612092 /* CategoryDatas.swift */,
+				9988699723081A5E00612092 /* HotelDatas.swift */,
+				9988699923081A9300612092 /* RestaurantDatas.swift */,
+				9988699B23081AA100612092 /* TicketDatas.swift */,
+				9988699D23081AB700612092 /* ShoppingDatas.swift */,
+				9988699F23081CC500612092 /* AlienceDatas.swift */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
+		99114CCE22F2CF2A00D0494A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				99114CCF22F2CF4D00D0494A /* Extenstions+Views.swift */,
+				99114CD122F2D1D100D0494A /* Extensions+Objects.swift */,
+				99114CEF22F2D99100D0494A /* ServerUtil.swift */,
+				99114CF122F2D9C400D0494A /* EnumObjects.swift */,
+				99114CF722F8568900D0494A /* CustomView.swift */,
+				99114D0922FBAD3400D0494A /* CustomPageControl.swift */,
+				99114D352301A60D00D0494A /* UserDefs.swift */,
+				99114D372301A65800D0494A /* AlertHandler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		99114CD522F2D2EF00D0494A /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				99114CE122F2D85900D0494A /* Controllers */,
+				99114CE222F2D86100D0494A /* Views */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
+		99114CD622F2D31C00D0494A /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				99114CDC22F2D5D300D0494A /* Controllers */,
+				99114CDB22F2D5CE00D0494A /* VIews */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		99114CD922F2D3B100D0494A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				99114CE722F2D8FA00D0494A /* Objects */,
+				99114CE822F2D90800D0494A /* Views */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		99114CDA22F2D50500D0494A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99114C9F22F2726100D0494A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		99114CDB22F2D5CE00D0494A /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				998869A22309570900612092 /* AlienceInfoListViewController.xib */,
+				99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */,
+				99114D2E230171E800D0494A /* AlienceMainViewController.xib */,
+				99114D1B2300F13800D0494A /* AlienceListViewController.xib */,
+				99114D0222FBA34300D0494A /* HomeViewController.xib */,
+				99114CFE22FB9F5900D0494A /* AuthCheckViewController.xib */,
+				99114CFA22FB9B8000D0494A /* SignUpViewController.xib */,
+				99114CF422F8544100D0494A /* LoginViewController.xib */,
+				99114CDE22F2D5E400D0494A /* SplashViewController.xib */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		99114CDC22F2D5D300D0494A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99114CDD22F2D5E400D0494A /* SplashViewController.swift */,
+				99114CF322F8544100D0494A /* LoginViewController.swift */,
+				99114CF922FB9B7F00D0494A /* SignUpViewController.swift */,
+				99114CFD22FB9F5900D0494A /* AuthCheckViewController.swift */,
+				99114D0122FBA34300D0494A /* HomeViewController.swift */,
+				99114D1A2300F13800D0494A /* AlienceListViewController.swift */,
+				99114D2D230171E800D0494A /* AlienceMainViewController.swift */,
+				99114D392301ADC700D0494A /* AlienceMapViewController.swift */,
+				998869A12309570900612092 /* AlienceInfoListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		99114CE122F2D85900D0494A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99114CE322F2D87F00D0494A /* QRCheckViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		99114CE222F2D86100D0494A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99114CE422F2D87F00D0494A /* QRCheckViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99114CE722F2D8FA00D0494A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				99114CE922F2D94000D0494A /* PlaceImageCollectionViewCell.swift */,
+				99114D0522FBA60500D0494A /* EventCollectionViewCell.swift */,
+				99114D0B22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift */,
+				99114D0F22FC71CC00D0494A /* AllienceCollectionReusableView.swift */,
+				99114D162300E24500D0494A /* AllienceCollectionViewCell.swift */,
+				99114D1E2300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift */,
+				99114D2223013E5100D0494A /* RecommandCollectionViewCell.swift */,
+				99114D3123018AB800D0494A /* AlienceTableViewCell.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		99114CE822F2D90800D0494A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99114D3223018AB800D0494A /* AlienceTableViewCell.xib */,
+				99114D2323013E5100D0494A /* RecommandCollectionViewCell.xib */,
+				99114D1F2300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib */,
+				99114D0622FBA60500D0494A /* EventCollectionViewCell.xib */,
+				99114CEA22F2D94000D0494A /* PlaceImageCollectionViewCell.xib */,
+				99114D0D22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib */,
+				99114D1022FC71CC00D0494A /* AllienceCollectionReusableView.xib */,
+				99114D172300E24500D0494A /* AllienceCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99114D26230156F400D0494A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				99114D272301570000D0494A /* Objects */,
+				99114D282301570900D0494A /* Views */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		99114D272301570000D0494A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				99114D292301574A00D0494A /* AlienceListTileView.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		99114D282301570900D0494A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99114D2B2301575B00D0494A /* AlienceListTileView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A5A827D6FABF114A680FC1CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +471,6 @@
 				BACE95EFD44112A2905110D8 /* Pods-fifteensecondUITests.debug.xcconfig */,
 				A17AFEFEE0B1E79551D57DA0 /* Pods-fifteensecondUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -177,6 +485,8 @@
 				99114C9622F2726100D0494A /* Sources */,
 				99114C9722F2726100D0494A /* Frameworks */,
 				99114C9822F2726100D0494A /* Resources */,
+				378FF31916AF558EFCB6118A /* [CP] Embed Pods Frameworks */,
+				E347637679E2A5D948E94D03 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +547,14 @@
 				TargetAttributes = {
 					99114C9922F2726100D0494A = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					99114CAD22F2726100D0494A = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -273,9 +591,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99114CEC22F2D94000D0494A /* PlaceImageCollectionViewCell.xib in Resources */,
+				99114D2523013E5100D0494A /* RecommandCollectionViewCell.xib in Resources */,
 				99114CA822F2726100D0494A /* LaunchScreen.storyboard in Resources */,
+				99114CE622F2D87F00D0494A /* QRCheckViewController.xib in Resources */,
+				99114D192300E24500D0494A /* AllienceCollectionViewCell.xib in Resources */,
 				99114CA522F2726100D0494A /* Assets.xcassets in Resources */,
+				99114D1222FC71CC00D0494A /* AllienceCollectionReusableView.xib in Resources */,
+				99114D30230171E800D0494A /* AlienceMainViewController.xib in Resources */,
+				998869A42309570900612092 /* AlienceInfoListViewController.xib in Resources */,
 				99114CA322F2726100D0494A /* Main.storyboard in Resources */,
+				99114D0822FBA60500D0494A /* EventCollectionViewCell.xib in Resources */,
+				99114CF622F8544100D0494A /* LoginViewController.xib in Resources */,
+				99114CFC22FB9B8000D0494A /* SignUpViewController.xib in Resources */,
+				99114D3423018AB800D0494A /* AlienceTableViewCell.xib in Resources */,
+				99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */,
+				99114D0422FBA34300D0494A /* HomeViewController.xib in Resources */,
+				99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */,
+				99114D212300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib in Resources */,
+				99114D3C2301ADC700D0494A /* AlienceMapViewController.xib in Resources */,
+				99114D2C2301575B00D0494A /* AlienceListTileView.xib in Resources */,
+				99114CE022F2D5E400D0494A /* SplashViewController.xib in Resources */,
+				99114D0022FB9F5900D0494A /* AuthCheckViewController.xib in Resources */,
+				99114D1422FD885900D0494A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +634,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		378FF31916AF558EFCB6118A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fifteensecond/Pods-fifteensecond-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fifteensecond/Pods-fifteensecond-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fifteensecond/Pods-fifteensecond-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4B75B51752F325C3278B6ADF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +695,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E347637679E2A5D948E94D03 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fifteensecond/Pods-fifteensecond-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fifteensecond/Pods-fifteensecond-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fifteensecond/Pods-fifteensecond-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FCF982CD6D86D58A2F32A97E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,8 +741,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99114D2F230171E800D0494A /* AlienceMainViewController.swift in Sources */,
+				99114CD222F2D1D100D0494A /* Extensions+Objects.swift in Sources */,
+				99114D1122FC71CC00D0494A /* AllienceCollectionReusableView.swift in Sources */,
+				99114D2A2301574A00D0494A /* AlienceListTileView.swift in Sources */,
+				99114D2423013E5100D0494A /* RecommandCollectionViewCell.swift in Sources */,
+				9988699C23081AA100612092 /* TicketDatas.swift in Sources */,
+				9988699E23081AB700612092 /* ShoppingDatas.swift in Sources */,
+				99114D0722FBA60500D0494A /* EventCollectionViewCell.swift in Sources */,
+				99114D362301A60D00D0494A /* UserDefs.swift in Sources */,
+				998869962308132800612092 /* CategoryDatas.swift in Sources */,
+				99114CF222F2D9C400D0494A /* EnumObjects.swift in Sources */,
 				99114CA022F2726100D0494A /* ViewController.swift in Sources */,
+				99114CD022F2CF4D00D0494A /* Extenstions+Views.swift in Sources */,
+				99114CF022F2D99100D0494A /* ServerUtil.swift in Sources */,
+				99114D0322FBA34300D0494A /* HomeViewController.swift in Sources */,
+				99114D3323018AB800D0494A /* AlienceTableViewCell.swift in Sources */,
+				998869922303B4CC00612092 /* NationCodeData.swift in Sources */,
+				99114D0C22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift in Sources */,
+				99114CE522F2D87F00D0494A /* QRCheckViewController.swift in Sources */,
+				99114CEB22F2D94000D0494A /* PlaceImageCollectionViewCell.swift in Sources */,
+				99114CDF22F2D5E400D0494A /* SplashViewController.swift in Sources */,
+				99114D1C2300F13800D0494A /* AlienceListViewController.swift in Sources */,
+				99114CD422F2D2EA00D0494A /* UserData.swift in Sources */,
+				99114D202300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift in Sources */,
+				99114CFF22FB9F5900D0494A /* AuthCheckViewController.swift in Sources */,
+				99114CF822F8568900D0494A /* CustomView.swift in Sources */,
+				99114D3B2301ADC700D0494A /* AlienceMapViewController.swift in Sources */,
 				99114C9E22F2726100D0494A /* AppDelegate.swift in Sources */,
+				998869A32309570900612092 /* AlienceInfoListViewController.swift in Sources */,
+				9988699A23081A9300612092 /* RestaurantDatas.swift in Sources */,
+				99114CFB22FB9B8000D0494A /* SignUpViewController.swift in Sources */,
+				9988699423080D1E00612092 /* EventDatas.swift in Sources */,
+				9988699823081A5E00612092 /* HotelDatas.swift in Sources */,
+				998869902303B45000612092 /* GlobalDatas.swift in Sources */,
+				99114CF522F8544100D0494A /* LoginViewController.swift in Sources */,
+				99114D182300E24500D0494A /* AllienceCollectionViewCell.swift in Sources */,
+				99114D0A22FBAD3400D0494A /* CustomPageControl.swift in Sources */,
+				99114D382301A65800D0494A /* AlertHandler.swift in Sources */,
+				998869A023081CC500612092 /* AlienceDatas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +955,7 @@
 			baseConfigurationReference = A79F79EFDB6D76BA02B3F653 /* Pods-fifteensecond.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GH3H7Z7YJZ;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
@@ -565,6 +975,7 @@
 			baseConfigurationReference = F4C024334D94E24ABB856CDE /* Pods-fifteensecond.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GH3H7Z7YJZ;
 				INFOPLIST_FILE = fifteensecond/Info.plist;

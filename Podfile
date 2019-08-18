@@ -7,6 +7,18 @@ target 'fifteensecond' do
 
   # Pods for fifteensecond
 
+  pod 'Alamofire'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'Kingfisher'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
+  pod 'KakaoOpenSDK', '~> 1.14'
+  pod 'Firebase/Analytics'
+
   target 'fifteensecondTests' do
     inherit! :search_paths
     # Pods for testing
