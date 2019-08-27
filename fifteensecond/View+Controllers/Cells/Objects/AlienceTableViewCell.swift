@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AlienceTableViewCell: UITableViewCell {
     
@@ -46,6 +47,7 @@ class AlienceTableViewCell: UITableViewCell {
             drawRestaurantViews()
             break
         case .shopping:
+            shopping = ShoppingDatas(data)
             drawShoppingViews()
             break
         case .tickets:
@@ -58,7 +60,7 @@ class AlienceTableViewCell: UITableViewCell {
     }
     
     func drawHotelViews() {
-        nameLabel.text = hotel.name
+//        nameLabel.text = hotel.name
     }
     
     func drawTicketViews() {
@@ -69,9 +71,25 @@ class AlienceTableViewCell: UITableViewCell {
         openTimeLabel.text = restaurant.openTime
         nameLabel.text = restaurant.name
         distanceLabel.text = "\(restaurant.distance ?? 0)m"
+        categoryLabel.text = restaurant.category.name
+        setImageView(urlStr: restaurant.imageList.first?.imageURL)
     }
     
     func drawShoppingViews() {
-        
+        openTimeLabel.text = shopping.openTime
+        nameLabel.text = shopping.name
+        distanceLabel.text = "\(shopping.distance ?? 0)m"
+        categoryLabel.text = shopping.category.name
+        setImageView(urlStr: shopping.imageList.first?.imageURL)
+        commentLabel.text = shopping.comment
+    }
+    
+    func setImageView(urlStr: String?) {
+        if let urlStr = urlStr, let url = URL(string: urlStr) {
+            titleImageView.kf.setImage(with: url)
+        }
+        else {
+            titleImageView.image = UIImage()
+        }
     }
 }

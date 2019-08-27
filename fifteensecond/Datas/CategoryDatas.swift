@@ -26,6 +26,6 @@ class CategoryDatas: NSObject {
     init(name: String) {
         self.name = name
         id = 0
-        isSelect = false
+        isSelect = true
     }
 }

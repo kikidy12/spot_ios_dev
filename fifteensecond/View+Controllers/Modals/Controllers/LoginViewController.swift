@@ -43,10 +43,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginEvent(sender: UIButton) {
-        navigationController?.isNavigationBarHidden = false
-        let vc = HomeViewController()
-        self.show(vc, sender: nil)
-    }
+        authCheckByPhoneNumber()    }
     
     @IBAction func showNationCodeList(_ sender: UITapGestureRecognizer) {
         textField.becomeFirstResponder()
@@ -265,6 +262,25 @@ extension LoginViewController {
             }
             
             self.pickerView.reloadAllComponents()
+        }
+    }
+    
+    func authCheckByPhoneNumber() {
+        guard let phoneCode = codeLabel.text, let phoneNum = phoneNumTextField.text, !phoneCode.isEmpty, !phoneNum.isEmpty else {
+            AlertHandler.shared.showAlert(vc: self, message: "enter your phone number.", okTitle: "OK")
+            return
+        }
+        let parameters = [
+            "national_code": phoneCode,
+            "phone_num": phoneNum
+        ] as [String:Any]
+        ServerUtil.shared.postSendSms(self, parameters: parameters) { (success, dict, message) in
+            guard success else { return }
+            self.navigationController?.isNavigationBarHidden = false
+            let vc = AuthCheckViewController()
+            vc.phoneNum = phoneNum
+            vc.nationalCode = phoneCode
+            self.show(vc, sender: nil)
         }
     }
 }

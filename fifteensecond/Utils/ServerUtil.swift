@@ -25,9 +25,7 @@ class ServerUtil: NSObject {
     
     fileprivate var serverAddress: String!
     
-//    fileprivate var headers:HTTPHeaders = ["X-Http-Token": UserDefs.userToken]
-    
-    fileprivate var headers:HTTPHeaders = ["X-Http-Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpZCI6MiwiZW1haWwiOiJ6aW80MjcyQGdtYWlsLmNvbSJ9.X6AfGGJr-e0TRr2LOLSszeqs6gLedmn9lGz2EI-2_JEw_Y6tKo_VHNB9QFdvdx7Qq1syUyyP3wiTLlmPKSsy9g"]
+    fileprivate var headers:HTTPHeaders = ["X-Http-Token": UserDefs.userToken]
     
     fileprivate var progressLabel = UILabel()
     
@@ -60,6 +58,26 @@ class ServerUtil: NSObject {
 //        lottie.play()
         progressLabel.numberOfLines = 1
         progressLabel.font = .systemFont(ofSize: 20, weight: .medium)
+    }
+    
+    func getInfo(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("info", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    func postAuth(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("auth", method: .post, parameters: parameters, completion: completion)
+    }
+    
+    func putSendSms(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("send_sms", method: .put, parameters: parameters, completion: completion)
+    }
+    
+    func postSendSms(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("send_sms", method: .post, parameters: parameters, completion: completion)
     }
     
     func getNationCode(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
@@ -119,6 +137,29 @@ class ServerUtil: NSObject {
         }
     }
     
+    func getDetails(_ vc: UIViewController, type: AlienceTitles, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        
+        switch type {
+        case .restaurant:
+            apiRequest("restaurant", method: .post, parameters: parameters, completion: completion)
+            
+        case .hotel:
+            apiRequest("hotel", method: .post, parameters: parameters, completion: completion)
+            
+        case .shopping:
+            apiRequest("shopping", method: .post, parameters: parameters, completion: completion)
+            
+        case .tickets:
+            apiRequest("ticket", method: .post, parameters: parameters, completion: completion)
+        }
+    }
+    
+    func getSpotTicket(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("spot_ticket", method: .get, parameters: parameters, completion: completion)
+    }
+    
     //upload
     
     func putAuth(vc: UIViewController, multipartFormData: @escaping (MultipartFormData) -> Void, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
@@ -130,8 +171,7 @@ class ServerUtil: NSObject {
 extension ServerUtil {
     
     func setToken(token: String) {
-//        headers = ["X-Http-Token": token]
-        headers = ["X-Http-Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpZCI6MiwiZW1haWwiOiJ6aW80MjcyQGdtYWlsLmNvbSJ9.X6AfGGJr-e0TRr2LOLSszeqs6gLedmn9lGz2EI-2_JEw_Y6tKo_VHNB9QFdvdx7Qq1syUyyP3wiTLlmPKSsy9g"]
+        headers = ["X-Http-Token": token]
     }
     
     var headerCheck: Bool {

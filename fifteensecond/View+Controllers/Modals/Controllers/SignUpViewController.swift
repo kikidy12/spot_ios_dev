@@ -10,6 +10,9 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    var provider: String = ""
+    var snsUID: String = ""
+    var signUpParameters = [String:Any]()
     let pickerView = UIPickerView()
     let textField = UITextField(frame: .zero)
     
@@ -63,9 +66,14 @@ class SignUpViewController: UIViewController {
 
     @IBAction func nextEvent(sender: UIButton) {
         if isNext {
-            let vc = AuthCheckViewController()
-            vc.phoneNum = "\(phoneCodeLabel.text ?? "")\(phoneTextField.text ?? "")"
-            self.show(AuthCheckViewController(), sender: nil)
+            signUpParameters["name"] = nameTextField.text!
+            signUpParameters["email"] = emailTextField.text!
+            signUpParameters["national_code"] = phoneCodeLabel.text!
+            signUpParameters["phone_num"] = phoneTextField.text!
+            signUpParameters["provieder"] = provider
+            signUpParameters["uid"] = snsUID
+            
+            smsAuth()
         }
     }
     
@@ -101,4 +109,17 @@ extension SignUpViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         return GlobalDatas.nationCodeList[row].name
     }
     
+}
+
+extension SignUpViewController {
+    func smsAuth() {
+        print(signUpParameters)
+        ServerUtil.shared.putSendSms(self, parameters: signUpParameters) { (success, dict, message) in
+            guard success else { return }
+            print(message)
+            let vc = AuthCheckViewController()
+            vc.phoneNum = "\(self.phoneCodeLabel.text ?? "")\(self.phoneTextField.text ?? "")"
+            self.show(AuthCheckViewController(), sender: nil)
+        }
+    }
 }

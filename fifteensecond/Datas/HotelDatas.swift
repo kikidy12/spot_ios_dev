@@ -18,6 +18,8 @@ class HotelDatas: NSObject {
     var name: String!
     var phoneNum: String!
     
+    
+    
     override init() {
         
     }
@@ -36,4 +38,8 @@ class HotelDatas: NSObject {
         name = data["name"] as? String
         phoneNum = data["phone_num"] as? String
     }
+}
+
+class HotelMenuDatas: NSObject {
+    
 }

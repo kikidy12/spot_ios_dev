@@ -16,6 +16,8 @@
                 <outlet property="alienceTableView" destination="ziG-vp-E36" id="qYE-Oj-Slt"/>
                 <outlet property="categoryColletionView" destination="0yt-eG-Vtw" id="pXE-mr-Qyj"/>
                 <outlet property="recommandColletionView" destination="jad-gv-aga" id="tAW-Qx-be1"/>
+                <outlet property="sortTypeBtn" destination="Uea-1N-uYo" id="EcM-qS-ReN"/>
+                <outlet property="sortTypeView" destination="MRO-xU-6aC" id="79A-IS-IlM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -59,19 +61,23 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qye-CO-FHQ" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
                     <rect key="frame" x="248" y="372.5" width="150" height="25"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by Discount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fco-Vp-Bqi">
-                            <rect key="frame" x="16" y="0.0" width="108" height="25"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uea-1N-uYo">
+                            <rect key="frame" x="15" y="0.0" width="108" height="25"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" name="lightGreyBlue"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <state key="normal" title="Sort by Discount">
+                                <color key="titleColor" name="lightGreyBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="showSortTypeView:" destination="-1" eventType="touchUpInside" id="ncr-UX-x9L"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="Fco-Vp-Bqi" firstAttribute="leading" secondItem="qye-CO-FHQ" secondAttribute="leading" constant="16" id="7A1-K8-5Fg"/>
+                        <constraint firstAttribute="bottom" secondItem="Uea-1N-uYo" secondAttribute="bottom" id="1bs-2G-vZA"/>
+                        <constraint firstItem="Uea-1N-uYo" firstAttribute="top" secondItem="qye-CO-FHQ" secondAttribute="top" id="Afl-9J-g4o"/>
                         <constraint firstAttribute="width" constant="150" id="KIl-wh-KKF"/>
-                        <constraint firstAttribute="bottom" secondItem="Fco-Vp-Bqi" secondAttribute="bottom" id="KZU-yj-ovD"/>
-                        <constraint firstItem="Fco-Vp-Bqi" firstAttribute="top" secondItem="qye-CO-FHQ" secondAttribute="top" id="cwn-Nh-L7X"/>
+                        <constraint firstItem="Uea-1N-uYo" firstAttribute="leading" secondItem="qye-CO-FHQ" secondAttribute="leading" constant="15" id="jYJ-0F-Ooq"/>
                         <constraint firstAttribute="height" constant="25" id="pId-Yd-7Rt"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -92,11 +98,63 @@
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRO-xU-6aC" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
+                    <rect key="frame" x="248" y="372.5" width="150" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ays-bZ-0DV">
+                            <rect key="frame" x="15" y="0.0" width="108" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="Sort by Distance">
+                                <color key="titleColor" name="greyishBrown"/>
+                            </state>
+                            <connections>
+                                <action selector="selectSortType:" destination="-1" eventType="touchUpInside" id="cIf-iH-nxp"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbz-cI-QTS">
+                            <rect key="frame" x="15" y="29" width="120" height="1"/>
+                            <color key="backgroundColor" red="0.74509803921568629" green="0.75294117647058822" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="RH1-GL-bW0"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNy-7c-Ei6">
+                            <rect key="frame" x="15" y="30" width="89" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Cwi-jB-avH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="Sort by Name">
+                                <color key="titleColor" name="greyishBrown"/>
+                            </state>
+                            <connections>
+                                <action selector="selectSortType:" destination="-1" eventType="touchUpInside" id="ygq-TR-xbv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="jbz-cI-QTS" firstAttribute="leading" secondItem="MRO-xU-6aC" secondAttribute="leading" constant="15" id="Gt8-xJ-xLy"/>
+                        <constraint firstItem="fNy-7c-Ei6" firstAttribute="leading" secondItem="MRO-xU-6aC" secondAttribute="leading" constant="15" id="PU9-h7-nwR"/>
+                        <constraint firstAttribute="bottom" secondItem="fNy-7c-Ei6" secondAttribute="bottom" id="ZqZ-f6-weE"/>
+                        <constraint firstItem="fNy-7c-Ei6" firstAttribute="top" secondItem="jbz-cI-QTS" secondAttribute="bottom" id="aVf-sf-G0h"/>
+                        <constraint firstItem="Ays-bZ-0DV" firstAttribute="top" secondItem="MRO-xU-6aC" secondAttribute="top" id="azT-PA-LjR"/>
+                        <constraint firstAttribute="trailing" secondItem="jbz-cI-QTS" secondAttribute="trailing" constant="15" id="e2W-ft-nw8"/>
+                        <constraint firstItem="Ays-bZ-0DV" firstAttribute="leading" secondItem="MRO-xU-6aC" secondAttribute="leading" constant="15" id="vi3-HZ-QAE"/>
+                        <constraint firstItem="jbz-cI-QTS" firstAttribute="top" secondItem="Ays-bZ-0DV" secondAttribute="bottom" id="wGe-Qs-BoI"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" name="darkblue"/>
             <constraints>
                 <constraint firstItem="ziG-vp-E36" firstAttribute="top" secondItem="9yQ-zX-Nuc" secondAttribute="bottom" constant="10" id="4aE-Ky-YBn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ziG-vp-E36" secondAttribute="trailing" constant="16" id="5L1-5t-WiT"/>
+                <constraint firstItem="MRO-xU-6aC" firstAttribute="trailing" secondItem="qye-CO-FHQ" secondAttribute="trailing" id="8aL-LD-br4"/>
                 <constraint firstItem="jad-gv-aga" firstAttribute="top" secondItem="0yt-eG-Vtw" secondAttribute="bottom" constant="34" id="B8N-yp-7ed"/>
                 <constraint firstItem="9yQ-zX-Nuc" firstAttribute="top" secondItem="jad-gv-aga" secondAttribute="bottom" constant="30" id="BjD-VR-p53"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0yt-eG-Vtw" secondAttribute="trailing" id="Bo9-Fk-1KD"/>
@@ -105,8 +163,10 @@
                 <constraint firstItem="0yt-eG-Vtw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QYm-YE-KUG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ziG-vp-E36" secondAttribute="bottom" id="Ufy-M7-mhK"/>
                 <constraint firstItem="0yt-eG-Vtw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="ZfS-pN-Xds"/>
+                <constraint firstItem="MRO-xU-6aC" firstAttribute="leading" secondItem="qye-CO-FHQ" secondAttribute="leading" id="c2r-Td-zU7"/>
                 <constraint firstItem="ziG-vp-E36" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="drU-XD-AqG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jad-gv-aga" secondAttribute="trailing" id="jrz-ar-q7s"/>
+                <constraint firstItem="MRO-xU-6aC" firstAttribute="top" secondItem="qye-CO-FHQ" secondAttribute="top" id="luc-sN-YFN"/>
                 <constraint firstItem="qye-CO-FHQ" firstAttribute="centerY" secondItem="9yQ-zX-Nuc" secondAttribute="centerY" id="ra1-Kq-Vgi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qye-CO-FHQ" secondAttribute="trailing" constant="16" id="srA-Np-uBq"/>
             </constraints>
@@ -117,6 +177,9 @@
     <resources>
         <namedColor name="darkblue">
             <color red="0.11764705882352941" green="0.13725490196078433" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyishBrown">
+            <color red="0.29019607843137257" green="0.29019607843137257" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightGreyBlue">
             <color red="0.6470588235294118" green="0.66666666666666663" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

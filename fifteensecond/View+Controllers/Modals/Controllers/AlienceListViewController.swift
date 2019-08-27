@@ -10,9 +10,18 @@ import UIKit
 import CoreLocation
 import Alamofire
 
+enum SortType: String {
+    case name = "Sort by Name"
+    case distance = "Sort by Discount"
+}
+
 class AlienceListViewController: UIViewController {
     
     var categoryType: AlienceTitles!
+    
+    var sortType: SortType = .distance
+    
+    var selectedCategory: CategoryDatas!
     
     var alienceArray = NSArray() {
         didSet {
@@ -24,6 +33,8 @@ class AlienceListViewController: UIViewController {
         didSet {
             if !categoryList.isEmpty {
                 categoryList.insert(CategoryDatas(name: "전체"), at: 0)
+                selectedCategory = categoryList[0]
+                getAliences()
             }
             categoryColletionView.reloadData()
         }
@@ -32,6 +43,8 @@ class AlienceListViewController: UIViewController {
     @IBOutlet weak var categoryColletionView: UICollectionView!
     @IBOutlet weak var recommandColletionView: UICollectionView!
     @IBOutlet weak var alienceTableView: UITableView!
+    @IBOutlet weak var sortTypeView: UIView!
+    @IBOutlet weak var sortTypeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +66,38 @@ class AlienceListViewController: UIViewController {
         
         getCategorys()
     }
-
+    
+    @IBAction func showSortTypeView(_ sender: UIButton) {
+        sortTypeView.isHidden = false
+    }
+    
+    @IBAction func selectSortType(_ sender: UIButton) {
+        sortTypeView.isHidden = true
+        if sender.title(for: .normal) == SortType.name.rawValue {
+            sortType = .name
+        }
+        else {
+            sortType = .distance
+        }
+        sortTypeBtn.setTitle(sortType.rawValue, for: .normal)
+        getAliences()
+        sortTypeView.subviews.forEach {
+            if let btn = $0 as? UIButton {
+                if btn.tag == 0 {
+                    btn.setTitle(sortType.rawValue, for: .normal)
+                }
+                else {
+                    if sortType == .distance  {
+                        btn.setTitle(SortType.name.rawValue, for: .normal)
+                    }
+                    else {
+                        btn.setTitle(SortType.distance.rawValue, for: .normal)
+                    }
+                }
+            }
+        }
+    }
+    
     
 }
 
@@ -70,6 +114,11 @@ extension AlienceListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AlienceInfoListViewController()
+        vc.type = categoryType
+        if let dict = alienceArray[indexPath.item] as? NSDictionary {
+            vc.alienceId = (dict["id"] as! Int)
+        }
+        parent?.title = categoryType.rawValue
         self.show(vc, sender: nil)
     }
     
@@ -135,7 +184,8 @@ extension AlienceListViewController: UICollectionViewDelegate, UICollectionViewD
                 }
             }
             categoryColletionView.reloadData()
-            getAliences(categoryId: categoryList[indexPath.item].id)
+            selectedCategory = categoryList[indexPath.item]
+            getAliences()
         }
     }
 }
@@ -150,14 +200,20 @@ extension AlienceListViewController {
         }
     }
     
-    func getAliences(categoryId: Int) {
+    func getAliences() {
         guard let type = categoryType else { return }
-        let parameters = [
+        var parameters = [
             "latitude": 37.562899,
             "longitude": 127.064770,
-            "sort_type": "name",
-            "category_id": categoryId
+            "category_id": selectedCategory.id!
         ] as Parameters
+        
+        if sortType == .distance {
+            parameters["sort_type"] = "distance"
+        }
+        else {
+            parameters["sort_type"] = "name"
+        }
         ServerUtil.shared.getAliences(self, type: type, parameters: parameters) { (success, dict, message) in
             guard success, let data = dict else { return }
             

@@ -17,6 +17,13 @@ extension UIImage {
     }
 }
 
+extension DateFormatter {
+    func showDateStr(_ date: Date) -> String {
+        self.dateFormat = "yyyy-MM-dd"
+        return self.string(from: date)
+    }
+}
+
 
 extension UIColor {
     

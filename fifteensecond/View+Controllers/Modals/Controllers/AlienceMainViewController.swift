@@ -10,6 +10,12 @@ import UIKit
 
 class AlienceMainViewController: UIViewController {
     
+    enum ChildViewType {
+        case List, Map
+    }
+    
+    var childViewType: ChildViewType = .List
+    
     var customTitleView: AlienceListTileView!
     
     var titleString: AlienceTitles = .restaurant
@@ -36,6 +42,7 @@ class AlienceMainViewController: UIViewController {
         self.addChild(vc)
         vc.view.frame = containerView.bounds
         containerView.addSubview(vc.view)
+        childViewType = .List
     }
     
     func showMapViewController() {
@@ -48,6 +55,7 @@ class AlienceMainViewController: UIViewController {
         self.addChild(vc)
         vc.view.frame = containerView.bounds
         containerView.addSubview(vc.view)
+        childViewType = .Map
     }
     
     func setNaviBarBtns() {
@@ -100,7 +108,13 @@ class AlienceMainViewController: UIViewController {
             }
         }
         
-        showListViewController()
+        if childViewType == .List {
+            showListViewController()
+        }
+        else {
+            showMapViewController()
+        }
+        
     }
 
     @objc func selectTitleEvent(sender: UIButton) {

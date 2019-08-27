@@ -78,4 +78,18 @@ extension UIViewController {
         
         button.bringSubviewToFront(button.titleLabel!)
     }
+    
+    func phoneCall(_ phoneNum: String) {
+        guard let url = URL(string: "tel://\(phoneNum)") else { return }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+        
+    }
+    
+    
+    @IBAction func closeView() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

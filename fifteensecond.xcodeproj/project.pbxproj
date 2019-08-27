@@ -21,8 +21,6 @@
 		99114CD422F2D2EA00D0494A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CD322F2D2EA00D0494A /* UserData.swift */; };
 		99114CDF22F2D5E400D0494A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CDD22F2D5E400D0494A /* SplashViewController.swift */; };
 		99114CE022F2D5E400D0494A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CDE22F2D5E400D0494A /* SplashViewController.xib */; };
-		99114CE522F2D87F00D0494A /* QRCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CE322F2D87F00D0494A /* QRCheckViewController.swift */; };
-		99114CE622F2D87F00D0494A /* QRCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CE422F2D87F00D0494A /* QRCheckViewController.xib */; };
 		99114CEB22F2D94000D0494A /* PlaceImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CE922F2D94000D0494A /* PlaceImageCollectionViewCell.swift */; };
 		99114CEC22F2D94000D0494A /* PlaceImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114CEA22F2D94000D0494A /* PlaceImageCollectionViewCell.xib */; };
 		99114CF022F2D99100D0494A /* ServerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114CEF22F2D99100D0494A /* ServerUtil.swift */; };
@@ -62,6 +60,20 @@
 		99114D382301A65800D0494A /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D372301A65800D0494A /* AlertHandler.swift */; };
 		99114D3B2301ADC700D0494A /* AlienceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D392301ADC700D0494A /* AlienceMapViewController.swift */; };
 		99114D3C2301ADC700D0494A /* AlienceMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */; };
+		99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */; };
+		99694BF1230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */; };
+		99694BF4230BF4F000F4FF49 /* BuyTicketPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */; };
+		99694BF5230BF4F000F4FF49 /* BuyTicketPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694BF3230BF4F000F4FF49 /* BuyTicketPopupViewController.xib */; };
+		99694BF7230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BF6230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift */; };
+		99694BF9230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694BF8230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib */; };
+		99694BFC2314F53E00F4FF49 /* MyPageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BFA2314F53E00F4FF49 /* MyPageMainViewController.swift */; };
+		99694BFD2314F53E00F4FF49 /* MyPageMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694BFB2314F53E00F4FF49 /* MyPageMainViewController.xib */; };
+		99694C002314FA9800F4FF49 /* UseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BFE2314FA9800F4FF49 /* UseListViewController.swift */; };
+		99694C012314FA9800F4FF49 /* UseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694BFF2314FA9800F4FF49 /* UseListViewController.xib */; };
+		99694C042314FB9F00F4FF49 /* UseListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C022314FB9F00F4FF49 /* UseListTableViewCell.swift */; };
+		99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C032314FB9F00F4FF49 /* UseListTableViewCell.xib */; };
+		99694C07231504AC00F4FF49 /* SpotTicketDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C06231504AC00F4FF49 /* SpotTicketDatas.swift */; };
+		99694C09231504BA00F4FF49 /* SpotDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C08231504BA00F4FF49 /* SpotDatas.swift */; };
 		998869902303B45000612092 /* GlobalDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988698F2303B45000612092 /* GlobalDatas.swift */; };
 		998869922303B4CC00612092 /* NationCodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869912303B4CC00612092 /* NationCodeData.swift */; };
 		9988699423080D1E00612092 /* EventDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699323080D1E00612092 /* EventDatas.swift */; };
@@ -73,6 +85,10 @@
 		998869A023081CC500612092 /* AlienceDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699F23081CC500612092 /* AlienceDatas.swift */; };
 		998869A32309570900612092 /* AlienceInfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869A12309570900612092 /* AlienceInfoListViewController.swift */; };
 		998869A42309570900612092 /* AlienceInfoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998869A22309570900612092 /* AlienceInfoListViewController.xib */; };
+		998869A7230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869A5230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift */; };
+		998869A8230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998869A6230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib */; };
+		998869AB230A27A500612092 /* RestaurantMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */; };
+		998869AC230A27A500612092 /* RestaurantMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */; };
 		B6A76C01E062B97ADE416204 /* Pods_fifteensecondTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F6946F7A07612CD612CE9 /* Pods_fifteensecondTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,8 +133,6 @@
 		99114CD322F2D2EA00D0494A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		99114CDD22F2D5E400D0494A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		99114CDE22F2D5E400D0494A /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
-		99114CE322F2D87F00D0494A /* QRCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCheckViewController.swift; sourceTree = "<group>"; };
-		99114CE422F2D87F00D0494A /* QRCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCheckViewController.xib; sourceTree = "<group>"; };
 		99114CE922F2D94000D0494A /* PlaceImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		99114CEA22F2D94000D0494A /* PlaceImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		99114CEF22F2D99100D0494A /* ServerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerUtil.swift; sourceTree = "<group>"; };
@@ -159,6 +173,20 @@
 		99114D372301A65800D0494A /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		99114D392301ADC700D0494A /* AlienceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceMapViewController.swift; sourceTree = "<group>"; };
 		99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceMapViewController.xib; sourceTree = "<group>"; };
+		99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCallPopupViewController.swift; sourceTree = "<group>"; };
+		99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCallPopupViewController.xib; sourceTree = "<group>"; };
+		99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketPopupViewController.swift; sourceTree = "<group>"; };
+		99694BF3230BF4F000F4FF49 /* BuyTicketPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyTicketPopupViewController.xib; sourceTree = "<group>"; };
+		99694BF6230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerInfoWindowView.swift; sourceTree = "<group>"; };
+		99694BF8230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMarkerInfoWindowView.xib; sourceTree = "<group>"; };
+		99694BFA2314F53E00F4FF49 /* MyPageMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainViewController.swift; sourceTree = "<group>"; };
+		99694BFB2314F53E00F4FF49 /* MyPageMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageMainViewController.xib; sourceTree = "<group>"; };
+		99694BFE2314FA9800F4FF49 /* UseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseListViewController.swift; sourceTree = "<group>"; };
+		99694BFF2314FA9800F4FF49 /* UseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UseListViewController.xib; sourceTree = "<group>"; };
+		99694C022314FB9F00F4FF49 /* UseListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseListTableViewCell.swift; sourceTree = "<group>"; };
+		99694C032314FB9F00F4FF49 /* UseListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UseListTableViewCell.xib; sourceTree = "<group>"; };
+		99694C06231504AC00F4FF49 /* SpotTicketDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTicketDatas.swift; sourceTree = "<group>"; };
+		99694C08231504BA00F4FF49 /* SpotDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDatas.swift; sourceTree = "<group>"; };
 		9988698F2303B45000612092 /* GlobalDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDatas.swift; sourceTree = "<group>"; };
 		998869912303B4CC00612092 /* NationCodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationCodeData.swift; sourceTree = "<group>"; };
 		9988699323080D1E00612092 /* EventDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDatas.swift; sourceTree = "<group>"; };
@@ -170,6 +198,10 @@
 		9988699F23081CC500612092 /* AlienceDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceDatas.swift; sourceTree = "<group>"; };
 		998869A12309570900612092 /* AlienceInfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceInfoListViewController.swift; sourceTree = "<group>"; };
 		998869A22309570900612092 /* AlienceInfoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceInfoListViewController.xib; sourceTree = "<group>"; };
+		998869A5230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceInfoImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		998869A6230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceInfoImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuTableViewCell.swift; sourceTree = "<group>"; };
+		998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantMenuTableViewCell.xib; sourceTree = "<group>"; };
 		A17AFEFEE0B1E79551D57DA0 /* Pods-fifteensecondUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecondUITests.release.xcconfig"; path = "Target Support Files/Pods-fifteensecondUITests/Pods-fifteensecondUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A79F79EFDB6D76BA02B3F653 /* Pods-fifteensecond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecond.debug.xcconfig"; path = "Target Support Files/Pods-fifteensecond/Pods-fifteensecond.debug.xcconfig"; sourceTree = "<group>"; };
 		BACE95EFD44112A2905110D8 /* Pods-fifteensecondUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecondUITests.debug.xcconfig"; path = "Target Support Files/Pods-fifteensecondUITests/Pods-fifteensecondUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -304,6 +336,8 @@
 				9988699B23081AA100612092 /* TicketDatas.swift */,
 				9988699D23081AB700612092 /* ShoppingDatas.swift */,
 				9988699F23081CC500612092 /* AlienceDatas.swift */,
+				99694C06231504AC00F4FF49 /* SpotTicketDatas.swift */,
+				99694C08231504BA00F4FF49 /* SpotDatas.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -361,6 +395,8 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				99694BFF2314FA9800F4FF49 /* UseListViewController.xib */,
+				99694BFB2314F53E00F4FF49 /* MyPageMainViewController.xib */,
 				998869A22309570900612092 /* AlienceInfoListViewController.xib */,
 				99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */,
 				99114D2E230171E800D0494A /* AlienceMainViewController.xib */,
@@ -386,6 +422,8 @@
 				99114D2D230171E800D0494A /* AlienceMainViewController.swift */,
 				99114D392301ADC700D0494A /* AlienceMapViewController.swift */,
 				998869A12309570900612092 /* AlienceInfoListViewController.swift */,
+				99694BFA2314F53E00F4FF49 /* MyPageMainViewController.swift */,
+				99694BFE2314FA9800F4FF49 /* UseListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -393,7 +431,8 @@
 		99114CE122F2D85900D0494A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				99114CE322F2D87F00D0494A /* QRCheckViewController.swift */,
+				99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */,
+				99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -401,7 +440,8 @@
 		99114CE222F2D86100D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				99114CE422F2D87F00D0494A /* QRCheckViewController.xib */,
+				99694BF3230BF4F000F4FF49 /* BuyTicketPopupViewController.xib */,
+				99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -417,6 +457,9 @@
 				99114D1E2300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift */,
 				99114D2223013E5100D0494A /* RecommandCollectionViewCell.swift */,
 				99114D3123018AB800D0494A /* AlienceTableViewCell.swift */,
+				998869A5230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift */,
+				998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */,
+				99694C022314FB9F00F4FF49 /* UseListTableViewCell.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -424,6 +467,9 @@
 		99114CE822F2D90800D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				99694C032314FB9F00F4FF49 /* UseListTableViewCell.xib */,
+				998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */,
+				998869A6230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib */,
 				99114D3223018AB800D0494A /* AlienceTableViewCell.xib */,
 				99114D2323013E5100D0494A /* RecommandCollectionViewCell.xib */,
 				99114D1F2300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib */,
@@ -449,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				99114D292301574A00D0494A /* AlienceListTileView.swift */,
+				99694BF6230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -457,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				99114D2B2301575B00D0494A /* AlienceListTileView.xib */,
+				99694BF8230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -591,10 +639,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99694BF1230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib in Resources */,
 				99114CEC22F2D94000D0494A /* PlaceImageCollectionViewCell.xib in Resources */,
 				99114D2523013E5100D0494A /* RecommandCollectionViewCell.xib in Resources */,
 				99114CA822F2726100D0494A /* LaunchScreen.storyboard in Resources */,
-				99114CE622F2D87F00D0494A /* QRCheckViewController.xib in Resources */,
 				99114D192300E24500D0494A /* AllienceCollectionViewCell.xib in Resources */,
 				99114CA522F2726100D0494A /* Assets.xcassets in Resources */,
 				99114D1222FC71CC00D0494A /* AllienceCollectionReusableView.xib in Resources */,
@@ -602,10 +650,17 @@
 				998869A42309570900612092 /* AlienceInfoListViewController.xib in Resources */,
 				99114CA322F2726100D0494A /* Main.storyboard in Resources */,
 				99114D0822FBA60500D0494A /* EventCollectionViewCell.xib in Resources */,
+				99694C012314FA9800F4FF49 /* UseListViewController.xib in Resources */,
+				998869AC230A27A500612092 /* RestaurantMenuTableViewCell.xib in Resources */,
+				99694BFD2314F53E00F4FF49 /* MyPageMainViewController.xib in Resources */,
 				99114CF622F8544100D0494A /* LoginViewController.xib in Resources */,
+				99694BF9230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib in Resources */,
 				99114CFC22FB9B8000D0494A /* SignUpViewController.xib in Resources */,
 				99114D3423018AB800D0494A /* AlienceTableViewCell.xib in Resources */,
+				998869A8230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib in Resources */,
+				99694BF5230BF4F000F4FF49 /* BuyTicketPopupViewController.xib in Resources */,
 				99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */,
+				99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */,
 				99114D0422FBA34300D0494A /* HomeViewController.xib in Resources */,
 				99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */,
 				99114D212300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib in Resources */,
@@ -741,11 +796,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99694BFC2314F53E00F4FF49 /* MyPageMainViewController.swift in Sources */,
 				99114D2F230171E800D0494A /* AlienceMainViewController.swift in Sources */,
 				99114CD222F2D1D100D0494A /* Extensions+Objects.swift in Sources */,
 				99114D1122FC71CC00D0494A /* AllienceCollectionReusableView.swift in Sources */,
 				99114D2A2301574A00D0494A /* AlienceListTileView.swift in Sources */,
 				99114D2423013E5100D0494A /* RecommandCollectionViewCell.swift in Sources */,
+				998869AB230A27A500612092 /* RestaurantMenuTableViewCell.swift in Sources */,
 				9988699C23081AA100612092 /* TicketDatas.swift in Sources */,
 				9988699E23081AB700612092 /* ShoppingDatas.swift in Sources */,
 				99114D0722FBA60500D0494A /* EventCollectionViewCell.swift in Sources */,
@@ -754,15 +811,21 @@
 				99114CF222F2D9C400D0494A /* EnumObjects.swift in Sources */,
 				99114CA022F2726100D0494A /* ViewController.swift in Sources */,
 				99114CD022F2CF4D00D0494A /* Extenstions+Views.swift in Sources */,
+				99694C042314FB9F00F4FF49 /* UseListTableViewCell.swift in Sources */,
+				99694BF4230BF4F000F4FF49 /* BuyTicketPopupViewController.swift in Sources */,
+				99694C002314FA9800F4FF49 /* UseListViewController.swift in Sources */,
 				99114CF022F2D99100D0494A /* ServerUtil.swift in Sources */,
 				99114D0322FBA34300D0494A /* HomeViewController.swift in Sources */,
 				99114D3323018AB800D0494A /* AlienceTableViewCell.swift in Sources */,
+				99694BF7230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift in Sources */,
 				998869922303B4CC00612092 /* NationCodeData.swift in Sources */,
 				99114D0C22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift in Sources */,
-				99114CE522F2D87F00D0494A /* QRCheckViewController.swift in Sources */,
+				99694C07231504AC00F4FF49 /* SpotTicketDatas.swift in Sources */,
 				99114CEB22F2D94000D0494A /* PlaceImageCollectionViewCell.swift in Sources */,
 				99114CDF22F2D5E400D0494A /* SplashViewController.swift in Sources */,
+				99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */,
 				99114D1C2300F13800D0494A /* AlienceListViewController.swift in Sources */,
+				99694C09231504BA00F4FF49 /* SpotDatas.swift in Sources */,
 				99114CD422F2D2EA00D0494A /* UserData.swift in Sources */,
 				99114D202300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift in Sources */,
 				99114CFF22FB9F5900D0494A /* AuthCheckViewController.swift in Sources */,
@@ -775,6 +838,7 @@
 				9988699423080D1E00612092 /* EventDatas.swift in Sources */,
 				9988699823081A5E00612092 /* HotelDatas.swift in Sources */,
 				998869902303B45000612092 /* GlobalDatas.swift in Sources */,
+				998869A7230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift in Sources */,
 				99114CF522F8544100D0494A /* LoginViewController.swift in Sources */,
 				99114D182300E24500D0494A /* AllienceCollectionViewCell.swift in Sources */,
 				99114D0A22FBAD3400D0494A /* CustomPageControl.swift in Sources */,

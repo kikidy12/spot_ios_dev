@@ -42,7 +42,7 @@
                                 <color key="textColor" name="brownGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="vI3-l3-Xb8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stroke1" translatesAutoresizingMaskIntoConstraints="NO" id="vI3-l3-Xb8">
                                 <rect key="frame" x="117" y="84" width="12" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="CEk-9e-01c"/>
@@ -116,7 +116,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="star" width="12" height="11"/>
+        <image name="stroke1" width="16" height="16"/>
         <namedColor name="brownGrey">
             <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

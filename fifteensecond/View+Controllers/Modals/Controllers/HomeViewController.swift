@@ -40,8 +40,10 @@ class HomeViewController: UIViewController {
         
         allianceCollectionView.register(UINib(nibName: "AllienceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "allienceColletionCell")
         
-        getMainEvents()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getUserInfo()
     }
     
     @IBAction func showAttandView(sender: UITapGestureRecognizer) {
@@ -75,7 +77,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func showMyPageView(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            
+            self.show(MyPageMainViewController(), sender: nil)
         }
     }
     
@@ -86,11 +88,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func hideAttandAlertView(sender: UIButton) {
-        print("hideAttandPopup")
         attandAlertview.isHidden = true
     }
     
     func setNaviBarBtns() {
+        title = " "
         let titleImageView = UIImageView(image: UIImage(named: "login_logo"))
         titleImageView.translatesAutoresizingMaskIntoConstraints = false
         titleImageView.widthAnchor.constraint(equalToConstant: 73).isActive = true
@@ -188,6 +190,24 @@ extension HomeViewController {
             guard success, let array = dict?["main_event"] as? NSArray else { return }
             
             self.subEventList = array.compactMap{ EventDatas($0 as! NSDictionary)}
+        }
+    }
+    
+    func getUserInfo() {
+        ServerUtil.shared.getInfo(self) { (success, dict, message) in
+            guard success, let isAttend = dict?["today_attendance"] as? Bool,
+            let user = dict?["user"] as? NSDictionary else { return }
+            
+            GlobalDatas.currentUser = UserData(user, isAttend: isAttend)
+            
+            if isAttend {
+                self.attandAlertview.isHidden = false
+            }
+            else {
+                self.attandAlertview.isHidden = true
+            }
+            
+            self.getMainEvents()
         }
     }
 }
