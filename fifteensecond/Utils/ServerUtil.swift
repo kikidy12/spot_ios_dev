@@ -155,9 +155,30 @@ class ServerUtil: NSObject {
         }
     }
     
-    func getSpotTicket(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+    func getNotice(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
-        apiRequest("spot_ticket", method: .get, parameters: parameters, completion: completion)
+        apiRequest("notice", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    func postNotice(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("notice", method: .post, parameters: parameters, completion: completion)
+    }
+    
+    func getAttendance(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("attendance", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    func postAttendance(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("attendance", method: .post, parameters: parameters, completion: completion)
+    }
+    
+    
+    func getSpotHistory(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("spot_history", method: .get, parameters: parameters, completion: completion)
     }
     
     //upload

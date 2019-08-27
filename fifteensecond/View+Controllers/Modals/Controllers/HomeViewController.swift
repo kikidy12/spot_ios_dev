@@ -48,7 +48,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func showAttandView(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            print("showAttandView")
+            self.attandAlertview.isHidden = true
+            self.showPopupView(vc: AttendanceCheckViewController())
         }
     }
     
@@ -201,10 +202,10 @@ extension HomeViewController {
             GlobalDatas.currentUser = UserData(user, isAttend: isAttend)
             
             if isAttend {
-                self.attandAlertview.isHidden = false
+                self.attandAlertview.isHidden = true
             }
             else {
-                self.attandAlertview.isHidden = true
+                self.attandAlertview.isHidden = false
             }
             
             self.getMainEvents()

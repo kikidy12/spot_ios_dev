@@ -52,6 +52,34 @@ class GradientButton: UIButton {
     }
 }
 
+class GradientDarkBlueView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.darkblue.cgColor, UIColor.slate.cgColor]
+        gradient.startPoint = CGPoint(x: 1, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        gradient.locations = [0.0, 1.0]
+        gradient.frame = self.bounds
+        self.layer.addSublayer(gradient)
+    }
+}
+
+class GradientHorizentalView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.peachyPink.cgColor, UIColor.darkishPink.cgColor]
+        gradient.startPoint = CGPoint(x: 0, y: 1)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        gradient.locations = [0.0, 1.0]
+        gradient.frame = self.bounds
+        self.layer.addSublayer(gradient)
+    }
+}
+
 @IBDesignable
 class CustomView: UIView {
     

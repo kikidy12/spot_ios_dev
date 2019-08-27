@@ -22,3 +22,9 @@ enum AlienceTitles: String {
 enum TestEnum: CaseIterable {
     case test1, test2, test3
 }
+
+
+enum DateFormatterStyle: String {
+    case dot = "."
+    case hypoon = "-"
+}

@@ -74,6 +74,23 @@
 		99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C032314FB9F00F4FF49 /* UseListTableViewCell.xib */; };
 		99694C07231504AC00F4FF49 /* SpotTicketDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C06231504AC00F4FF49 /* SpotTicketDatas.swift */; };
 		99694C09231504BA00F4FF49 /* SpotDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C08231504BA00F4FF49 /* SpotDatas.swift */; };
+		99694C0C231522A500F4FF49 /* NoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C0A231522A500F4FF49 /* NoticeListViewController.swift */; };
+		99694C0D231522A500F4FF49 /* NoticeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C0B231522A500F4FF49 /* NoticeListViewController.xib */; };
+		99694C0F2315230100F4FF49 /* NoticeDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C0E2315230100F4FF49 /* NoticeDatas.swift */; };
+		99694C122315245800F4FF49 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C102315245800F4FF49 /* NoticeTableViewCell.swift */; };
+		99694C132315245800F4FF49 /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C112315245800F4FF49 /* NoticeTableViewCell.xib */; };
+		99694C16231526E200F4FF49 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C14231526E200F4FF49 /* NoticeDetailViewController.swift */; };
+		99694C17231526E200F4FF49 /* NoticeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C15231526E200F4FF49 /* NoticeDetailViewController.xib */; };
+		99694C1A231529AF00F4FF49 /* AdContectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C18231529AF00F4FF49 /* AdContectViewController.swift */; };
+		99694C1B231529AF00F4FF49 /* AdContectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C19231529AF00F4FF49 /* AdContectViewController.xib */; };
+		99694C1E23152B3B00F4FF49 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C1C23152B3B00F4FF49 /* ContactViewController.swift */; };
+		99694C1F23152B3B00F4FF49 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C1D23152B3B00F4FF49 /* ContactViewController.xib */; };
+		99694C22231530F800F4FF49 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C20231530F800F4FF49 /* SettingViewController.swift */; };
+		99694C23231530F800F4FF49 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C21231530F800F4FF49 /* SettingViewController.xib */; };
+		99694C262315666600F4FF49 /* AttendanceCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C242315666600F4FF49 /* AttendanceCheckViewController.swift */; };
+		99694C272315666600F4FF49 /* AttendanceCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */; };
+		99694C2A23156B5500F4FF49 /* AttendanceCheckPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */; };
+		99694C2B23156B5500F4FF49 /* AttendanceCheckPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */; };
 		998869902303B45000612092 /* GlobalDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988698F2303B45000612092 /* GlobalDatas.swift */; };
 		998869922303B4CC00612092 /* NationCodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869912303B4CC00612092 /* NationCodeData.swift */; };
 		9988699423080D1E00612092 /* EventDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699323080D1E00612092 /* EventDatas.swift */; };
@@ -187,6 +204,23 @@
 		99694C032314FB9F00F4FF49 /* UseListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UseListTableViewCell.xib; sourceTree = "<group>"; };
 		99694C06231504AC00F4FF49 /* SpotTicketDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTicketDatas.swift; sourceTree = "<group>"; };
 		99694C08231504BA00F4FF49 /* SpotDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDatas.swift; sourceTree = "<group>"; };
+		99694C0A231522A500F4FF49 /* NoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListViewController.swift; sourceTree = "<group>"; };
+		99694C0B231522A500F4FF49 /* NoticeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeListViewController.xib; sourceTree = "<group>"; };
+		99694C0E2315230100F4FF49 /* NoticeDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDatas.swift; sourceTree = "<group>"; };
+		99694C102315245800F4FF49 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
+		99694C112315245800F4FF49 /* NoticeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeTableViewCell.xib; sourceTree = "<group>"; };
+		99694C14231526E200F4FF49 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
+		99694C15231526E200F4FF49 /* NoticeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeDetailViewController.xib; sourceTree = "<group>"; };
+		99694C18231529AF00F4FF49 /* AdContectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdContectViewController.swift; sourceTree = "<group>"; };
+		99694C19231529AF00F4FF49 /* AdContectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdContectViewController.xib; sourceTree = "<group>"; };
+		99694C1C23152B3B00F4FF49 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		99694C1D23152B3B00F4FF49 /* ContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
+		99694C20231530F800F4FF49 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		99694C21231530F800F4FF49 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		99694C242315666600F4FF49 /* AttendanceCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckViewController.swift; sourceTree = "<group>"; };
+		99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceCheckViewController.xib; sourceTree = "<group>"; };
+		99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckPopupViewController.swift; sourceTree = "<group>"; };
+		99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceCheckPopupViewController.xib; sourceTree = "<group>"; };
 		9988698F2303B45000612092 /* GlobalDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDatas.swift; sourceTree = "<group>"; };
 		998869912303B4CC00612092 /* NationCodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationCodeData.swift; sourceTree = "<group>"; };
 		9988699323080D1E00612092 /* EventDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDatas.swift; sourceTree = "<group>"; };
@@ -338,6 +372,7 @@
 				9988699F23081CC500612092 /* AlienceDatas.swift */,
 				99694C06231504AC00F4FF49 /* SpotTicketDatas.swift */,
 				99694C08231504BA00F4FF49 /* SpotDatas.swift */,
+				99694C0E2315230100F4FF49 /* NoticeDatas.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -395,6 +430,12 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */,
+				99694C21231530F800F4FF49 /* SettingViewController.xib */,
+				99694C1D23152B3B00F4FF49 /* ContactViewController.xib */,
+				99694C19231529AF00F4FF49 /* AdContectViewController.xib */,
+				99694C15231526E200F4FF49 /* NoticeDetailViewController.xib */,
+				99694C0B231522A500F4FF49 /* NoticeListViewController.xib */,
 				99694BFF2314FA9800F4FF49 /* UseListViewController.xib */,
 				99694BFB2314F53E00F4FF49 /* MyPageMainViewController.xib */,
 				998869A22309570900612092 /* AlienceInfoListViewController.xib */,
@@ -424,6 +465,12 @@
 				998869A12309570900612092 /* AlienceInfoListViewController.swift */,
 				99694BFA2314F53E00F4FF49 /* MyPageMainViewController.swift */,
 				99694BFE2314FA9800F4FF49 /* UseListViewController.swift */,
+				99694C0A231522A500F4FF49 /* NoticeListViewController.swift */,
+				99694C14231526E200F4FF49 /* NoticeDetailViewController.swift */,
+				99694C18231529AF00F4FF49 /* AdContectViewController.swift */,
+				99694C1C23152B3B00F4FF49 /* ContactViewController.swift */,
+				99694C20231530F800F4FF49 /* SettingViewController.swift */,
+				99694C242315666600F4FF49 /* AttendanceCheckViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -433,6 +480,7 @@
 			children = (
 				99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */,
 				99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */,
+				99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -440,6 +488,7 @@
 		99114CE222F2D86100D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */,
 				99694BF3230BF4F000F4FF49 /* BuyTicketPopupViewController.xib */,
 				99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */,
 			);
@@ -460,6 +509,7 @@
 				998869A5230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift */,
 				998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */,
 				99694C022314FB9F00F4FF49 /* UseListTableViewCell.swift */,
+				99694C102315245800F4FF49 /* NoticeTableViewCell.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -467,6 +517,7 @@
 		99114CE822F2D90800D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				99694C112315245800F4FF49 /* NoticeTableViewCell.xib */,
 				99694C032314FB9F00F4FF49 /* UseListTableViewCell.xib */,
 				998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */,
 				998869A6230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib */,
@@ -641,19 +692,26 @@
 			files = (
 				99694BF1230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib in Resources */,
 				99114CEC22F2D94000D0494A /* PlaceImageCollectionViewCell.xib in Resources */,
+				99694C1B231529AF00F4FF49 /* AdContectViewController.xib in Resources */,
 				99114D2523013E5100D0494A /* RecommandCollectionViewCell.xib in Resources */,
 				99114CA822F2726100D0494A /* LaunchScreen.storyboard in Resources */,
+				99694C272315666600F4FF49 /* AttendanceCheckViewController.xib in Resources */,
 				99114D192300E24500D0494A /* AllienceCollectionViewCell.xib in Resources */,
+				99694C1F23152B3B00F4FF49 /* ContactViewController.xib in Resources */,
 				99114CA522F2726100D0494A /* Assets.xcassets in Resources */,
 				99114D1222FC71CC00D0494A /* AllienceCollectionReusableView.xib in Resources */,
 				99114D30230171E800D0494A /* AlienceMainViewController.xib in Resources */,
 				998869A42309570900612092 /* AlienceInfoListViewController.xib in Resources */,
+				99694C0D231522A500F4FF49 /* NoticeListViewController.xib in Resources */,
 				99114CA322F2726100D0494A /* Main.storyboard in Resources */,
 				99114D0822FBA60500D0494A /* EventCollectionViewCell.xib in Resources */,
 				99694C012314FA9800F4FF49 /* UseListViewController.xib in Resources */,
+				99694C132315245800F4FF49 /* NoticeTableViewCell.xib in Resources */,
+				99694C2B23156B5500F4FF49 /* AttendanceCheckPopupViewController.xib in Resources */,
 				998869AC230A27A500612092 /* RestaurantMenuTableViewCell.xib in Resources */,
 				99694BFD2314F53E00F4FF49 /* MyPageMainViewController.xib in Resources */,
 				99114CF622F8544100D0494A /* LoginViewController.xib in Resources */,
+				99694C23231530F800F4FF49 /* SettingViewController.xib in Resources */,
 				99694BF9230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib in Resources */,
 				99114CFC22FB9B8000D0494A /* SignUpViewController.xib in Resources */,
 				99114D3423018AB800D0494A /* AlienceTableViewCell.xib in Resources */,
@@ -661,6 +719,7 @@
 				99694BF5230BF4F000F4FF49 /* BuyTicketPopupViewController.xib in Resources */,
 				99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */,
 				99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */,
+				99694C17231526E200F4FF49 /* NoticeDetailViewController.xib in Resources */,
 				99114D0422FBA34300D0494A /* HomeViewController.xib in Resources */,
 				99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */,
 				99114D212300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib in Resources */,
@@ -801,11 +860,14 @@
 				99114CD222F2D1D100D0494A /* Extensions+Objects.swift in Sources */,
 				99114D1122FC71CC00D0494A /* AllienceCollectionReusableView.swift in Sources */,
 				99114D2A2301574A00D0494A /* AlienceListTileView.swift in Sources */,
+				99694C1E23152B3B00F4FF49 /* ContactViewController.swift in Sources */,
+				99694C2A23156B5500F4FF49 /* AttendanceCheckPopupViewController.swift in Sources */,
 				99114D2423013E5100D0494A /* RecommandCollectionViewCell.swift in Sources */,
 				998869AB230A27A500612092 /* RestaurantMenuTableViewCell.swift in Sources */,
 				9988699C23081AA100612092 /* TicketDatas.swift in Sources */,
 				9988699E23081AB700612092 /* ShoppingDatas.swift in Sources */,
 				99114D0722FBA60500D0494A /* EventCollectionViewCell.swift in Sources */,
+				99694C16231526E200F4FF49 /* NoticeDetailViewController.swift in Sources */,
 				99114D362301A60D00D0494A /* UserDefs.swift in Sources */,
 				998869962308132800612092 /* CategoryDatas.swift in Sources */,
 				99114CF222F2D9C400D0494A /* EnumObjects.swift in Sources */,
@@ -823,21 +885,27 @@
 				99694C07231504AC00F4FF49 /* SpotTicketDatas.swift in Sources */,
 				99114CEB22F2D94000D0494A /* PlaceImageCollectionViewCell.swift in Sources */,
 				99114CDF22F2D5E400D0494A /* SplashViewController.swift in Sources */,
+				99694C1A231529AF00F4FF49 /* AdContectViewController.swift in Sources */,
 				99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */,
 				99114D1C2300F13800D0494A /* AlienceListViewController.swift in Sources */,
 				99694C09231504BA00F4FF49 /* SpotDatas.swift in Sources */,
 				99114CD422F2D2EA00D0494A /* UserData.swift in Sources */,
+				99694C262315666600F4FF49 /* AttendanceCheckViewController.swift in Sources */,
 				99114D202300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift in Sources */,
+				99694C0C231522A500F4FF49 /* NoticeListViewController.swift in Sources */,
 				99114CFF22FB9F5900D0494A /* AuthCheckViewController.swift in Sources */,
 				99114CF822F8568900D0494A /* CustomView.swift in Sources */,
 				99114D3B2301ADC700D0494A /* AlienceMapViewController.swift in Sources */,
 				99114C9E22F2726100D0494A /* AppDelegate.swift in Sources */,
 				998869A32309570900612092 /* AlienceInfoListViewController.swift in Sources */,
 				9988699A23081A9300612092 /* RestaurantDatas.swift in Sources */,
+				99694C0F2315230100F4FF49 /* NoticeDatas.swift in Sources */,
 				99114CFB22FB9B8000D0494A /* SignUpViewController.swift in Sources */,
 				9988699423080D1E00612092 /* EventDatas.swift in Sources */,
+				99694C22231530F800F4FF49 /* SettingViewController.swift in Sources */,
 				9988699823081A5E00612092 /* HotelDatas.swift in Sources */,
 				998869902303B45000612092 /* GlobalDatas.swift in Sources */,
+				99694C122315245800F4FF49 /* NoticeTableViewCell.swift in Sources */,
 				998869A7230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift in Sources */,
 				99114CF522F8544100D0494A /* LoginViewController.swift in Sources */,
 				99114D182300E24500D0494A /* AllienceCollectionViewCell.swift in Sources */,

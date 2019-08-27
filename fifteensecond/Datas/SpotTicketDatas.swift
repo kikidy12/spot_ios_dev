@@ -23,11 +23,8 @@ class SpotTicketDatas: NSObject {
         id = data["id"] as? Int
         price = data["price"] as? Int
         
-        let dateFormmatter = DateFormatter()
-        dateFormmatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
         if let dateStr = data["used_time"] as? String {
-            usedTime = dateFormmatter.date(from: dateStr)
+            usedTime = DateFormatter().stringToDate(dateStr)
         }
         
         if let spotDict = data["spot"] as? NSDictionary {

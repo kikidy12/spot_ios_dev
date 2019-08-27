@@ -34,37 +34,37 @@ class MyPageMainViewController: UIViewController {
     
     @IBAction func showCouponListVCEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            self.show(UseListViewController(), sender: nil)
+//            self.show(UseListViewController(), sender: nil)
         }
     }
     
     @IBAction func showAttandVCEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            self.show(UseListViewController(), sender: nil)
+            self.showPopupView(vc: AttendanceCheckViewController())
         }
     }
     
     @IBAction func showNoticeListVCEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            self.show(UseListViewController(), sender: nil)
+            self.show(NoticeListViewController(), sender: nil)
         }
     }
     
     @IBAction func showAdVCEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            self.show(UseListViewController(), sender: nil)
+            self.show(AdContectViewController(), sender: nil)
         }
     }
     
     @IBAction func showContractVCEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            self.show(UseListViewController(), sender: nil)
+            self.show(ContactViewController(), sender: nil)
         }
     }
     
     @IBAction func showSettingVCEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            self.show(UseListViewController(), sender: nil)
+            self.show(SettingViewController(), sender: nil)
         }
     }
 

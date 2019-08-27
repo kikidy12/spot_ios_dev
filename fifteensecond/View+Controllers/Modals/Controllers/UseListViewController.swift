@@ -57,8 +57,8 @@ extension UseListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension UseListViewController {
     func getUseList() {
-        ServerUtil.shared.getSpotTicket(self) { (success, dict, message) in
-            guard success, let array = dict?["spot_ticket"] as? NSArray else {
+        ServerUtil.shared.getSpotHistory(self) { (success, dict, message) in
+            guard success, let array = dict?["history"] as? NSArray else {
                 AlertHandler.shared.showAlert(vc: self, message: message ?? "", okTitle: "확인")
                 return }
             
