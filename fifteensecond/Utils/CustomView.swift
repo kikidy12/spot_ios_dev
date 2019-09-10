@@ -52,6 +52,7 @@ class GradientButton: UIButton {
     }
 }
 
+@IBDesignable
 class GradientDarkBlueView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -66,6 +67,7 @@ class GradientDarkBlueView: UIView {
     }
 }
 
+@IBDesignable
 class GradientHorizentalView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()

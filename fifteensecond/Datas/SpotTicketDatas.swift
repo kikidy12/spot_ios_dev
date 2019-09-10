@@ -10,10 +10,8 @@ import UIKit
 
 class SpotTicketDatas: NSObject {
     var id: Int!
-    var usedTime: Date!
+    var name: String!
     var price: Int!
-    
-    var spot: SpotDatas!
     
     override init() {
         
@@ -21,14 +19,7 @@ class SpotTicketDatas: NSObject {
     
     init(_ data: NSDictionary) {
         id = data["id"] as? Int
+        name = data["name"] as? String
         price = data["price"] as? Int
-        
-        if let dateStr = data["used_time"] as? String {
-            usedTime = DateFormatter().stringToDate(dateStr)
-        }
-        
-        if let spotDict = data["spot"] as? NSDictionary {
-            self.spot = SpotDatas(spotDict)
-        }
     }
 }

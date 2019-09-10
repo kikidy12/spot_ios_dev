@@ -13,3 +13,22 @@ class GlobalDatas: NSObject {
     static var currentUser: UserData!
 }
 
+
+class ImageDatas: NSObject {
+    var id: Int!
+    var imageURL: String!
+    var displayOrder: Int!
+    var isRepresent: Bool!
+    
+    override init() {
+        
+    }
+    
+    init(_ data: NSDictionary) {
+        id = data["id"] as? Int
+        imageURL = data["img_url"] as? String
+        displayOrder = data["display_order"] as? Int
+        isRepresent = data["is_represent"] as? Bool
+    }
+}
+

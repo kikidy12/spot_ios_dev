@@ -26,13 +26,11 @@ class AttendanceCheckViewController: UIViewController {
     func setAttdent(_ count: Int = 0) {
         attdentBtn.setTitle("춣석하기 (\(count)/10)", for: .normal)
         attdentView.subviews.enumerated().forEach {
-            if let imageView = $0.element as? UIImageView {
-                if $0.offset < count {
-                    imageView.image = #imageLiteral(resourceName: "attendLogo")
-                }
-                else {
-                    imageView.image = #imageLiteral(resourceName: "radioBackground")
-                }
+            if $0.offset < count {
+                $0.element.tintColor = .darkishPink
+            }
+            else {
+                $0.element.tintColor = .lightBlueGreyTwo
             }
         }
     }

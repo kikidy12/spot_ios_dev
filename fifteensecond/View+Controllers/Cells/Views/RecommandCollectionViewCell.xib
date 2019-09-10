@@ -23,7 +23,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff7-Pl-SKB" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="354" height="438"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="61B-RG-Ao6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="61B-RG-Ao6">
                                 <rect key="frame" x="0.0" y="0.0" width="354" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="beC-IO-im6"/>
@@ -93,6 +93,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="354" height="438"/>
+            <connections>
+                <outlet property="commentLabel" destination="5mR-Gf-c2C" id="aUl-ix-xao"/>
+                <outlet property="distanceLabel" destination="xDZ-0Y-c2T" id="kTd-QJ-QsG"/>
+                <outlet property="nameLabel" destination="d0h-OV-Kto" id="RrX-3J-GIE"/>
+                <outlet property="openTimeLabel" destination="ccy-B7-z1E" id="Vjy-Nj-ge9"/>
+                <outlet property="titleImageView" destination="61B-RG-Ao6" id="PzC-AA-Jrf"/>
+            </connections>
             <point key="canvasLocation" x="356.52173913043481" y="223.66071428571428"/>
         </collectionViewCell>
     </objects>

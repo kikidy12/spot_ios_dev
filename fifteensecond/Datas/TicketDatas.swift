@@ -21,9 +21,11 @@ class TicketDatas: NSObject {
     
     var category = CategoryDatas()
     
-    var imageList = [TicketImageDatas]()
+    var imageList = [ImageDatas]()
     
     var facilityList = [FacilityDatas]()
+    
+    var kindList = [TicketKindDatas]()
     
     override init() {
         
@@ -55,11 +57,15 @@ class TicketDatas: NSObject {
         }
         
         if let array = data["ticket_cover_images"] as? NSArray {
-            imageList = array.compactMap { TicketImageDatas($0 as! NSDictionary) }
+            imageList = array.compactMap { ImageDatas($0 as! NSDictionary) }
         }
         
         if let category = data["ticket_category"] as? NSDictionary {
             self.category = CategoryDatas(category)
+        }
+        
+        if let array = data["ticket_kinds"] as? NSArray {
+            self.kindList = array.compactMap { TicketKindDatas($0 as! NSDictionary) }
         }
         
         linkUrl = data["link_url"] as? String
@@ -69,25 +75,35 @@ class TicketDatas: NSObject {
     }
 }
 
-class TicketImageDatas: NSObject {
+class TicketKindDatas: NSObject {
     var id: Int!
-    var imageURL: String!
+    var name: String!
+    var price: Int!
     
     override init() {
         
     }
     
     init(_ data: NSDictionary) {
+        id = data["id"] as? Int
+        name = data["name"] as? String
+        price = data["price"] as? Int
     }
 }
 
+
 class FacilityDatas: NSObject {
     var id: Int!
+    var name: String!
+    var imgUrl: String!
     
     override init() {
         
     }
     
     init(_ data: NSDictionary) {
+        id = (data["facilities"] as! NSDictionary)["id"] as? Int
+        name = (data["facilities"] as! NSDictionary)["name"] as? String
+        imgUrl = (data["facilities"] as! NSDictionary)["img_url"] as? String
     }
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CardCollectionViewCell" customModule="fifteensecond" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="384" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-1u-A3x" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="214"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카카오뱅크 ******1234 / 개인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFU-xg-IFS">
+                                <rect key="frame" x="25" y="174" width="339" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FFU-xg-IFS" secondAttribute="trailing" constant="20" symbolic="YES" id="JCX-kZ-E1X"/>
+                            <constraint firstItem="FFU-xg-IFS" firstAttribute="leading" secondItem="y6a-1u-A3x" secondAttribute="leading" constant="25" id="fei-r1-nk4"/>
+                            <constraint firstAttribute="bottom" secondItem="FFU-xg-IFS" secondAttribute="bottom" constant="22" id="ygb-cH-Kg9"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="y6a-1u-A3x" secondAttribute="trailing" id="05A-dG-9Q6"/>
+                <constraint firstAttribute="bottom" secondItem="y6a-1u-A3x" secondAttribute="bottom" id="KUa-Td-ade"/>
+                <constraint firstItem="y6a-1u-A3x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vS5-mq-DV6"/>
+                <constraint firstItem="y6a-1u-A3x" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zOj-xk-dyD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="384" height="214"/>
+            <point key="canvasLocation" x="37.681159420289859" y="148.66071428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

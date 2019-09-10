@@ -57,6 +57,7 @@ class ServerUtil: NSObject {
 //        loadingView.addSubview(lottie)
 //        lottie.play()
         progressLabel.numberOfLines = 1
+        print("UserToken: ", headers )
         progressLabel.font = .systemFont(ofSize: 20, weight: .medium)
     }
     
@@ -179,6 +180,43 @@ class ServerUtil: NSObject {
     func getSpotHistory(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
         apiRequest("spot_history", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    func getSpotTicket(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("spot_ticket", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    func postSpotTicket(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("spot_ticket", method: .post, parameters: parameters, completion: completion)
+    }
+    
+    func getSpotTicketKind(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("spot_ticket_kind", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    
+    func getSpot(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("spot", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    
+    func putCardRegistration(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("card_registration", method: .put, parameters: parameters, completion: completion)
+    }
+    
+    func getCardRegistration(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("card_registration", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    func postPayment(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("payment", method: .post, parameters: parameters, completion: completion)
     }
     
     //upload

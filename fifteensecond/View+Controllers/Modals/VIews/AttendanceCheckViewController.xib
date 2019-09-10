@@ -57,89 +57,95 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUc-Tt-u2E" customClass="GradientHorizentalView" customModule="fifteensecond" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="364" height="45"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10번 출석체크시 선물을 드립니다 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abw-x9-SpO">
-                                    <rect key="frame" x="75" y="12.5" width="214" height="20"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="abw-x9-SpO" firstAttribute="centerY" secondItem="TUc-Tt-u2E" secondAttribute="centerY" id="PLN-MA-0m0"/>
                                 <constraint firstAttribute="height" constant="45" id="eZT-gD-bh2"/>
-                                <constraint firstItem="abw-x9-SpO" firstAttribute="centerX" secondItem="TUc-Tt-u2E" secondAttribute="centerX" id="ztH-d4-vWe"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10번 출석체크시 선물을 드립니다 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abw-x9-SpO">
+                            <rect key="frame" x="75" y="12.5" width="214" height="20"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ruz-DQ-f4T">
                             <rect key="frame" x="45.5" y="68" width="273" height="110"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O6g-FO-WtX">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="O6g-FO-WtX">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="nQq-CI-jLL"/>
                                         <constraint firstAttribute="width" constant="45" id="suF-Ow-zb4"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-rH-AUo">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-rH-AUo">
                                     <rect key="frame" x="57" y="0.0" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="63R-de-FCj"/>
                                         <constraint firstAttribute="width" constant="45" id="UlX-J1-W9d"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlq-hT-Psz">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="tlq-hT-Psz">
                                     <rect key="frame" x="114" y="0.0" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="0WG-A7-QWp"/>
                                         <constraint firstAttribute="height" constant="45" id="RlH-DQ-IWU"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aGJ-Ud-qcv">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="aGJ-Ud-qcv">
                                     <rect key="frame" x="171" y="0.0" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="7vs-bB-XOA"/>
                                         <constraint firstAttribute="height" constant="45" id="zS0-2H-FYI"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hYi-jb-LhI">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="hYi-jb-LhI">
                                     <rect key="frame" x="228" y="0.0" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="P0u-vE-AfF"/>
                                         <constraint firstAttribute="width" constant="45" id="wqB-28-5iw"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FD6-Zm-ouS">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="FD6-Zm-ouS">
                                     <rect key="frame" x="0.0" y="65" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="Uco-V6-CO6"/>
                                         <constraint firstAttribute="width" constant="45" id="osC-3S-Nuj"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-ij-GkO">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-ij-GkO">
                                     <rect key="frame" x="57" y="65" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="3na-Oc-Xt2"/>
                                         <constraint firstAttribute="height" constant="45" id="6Fj-u5-YG5"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S25-zg-MeW">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="S25-zg-MeW">
                                     <rect key="frame" x="114" y="65" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="hjx-JX-5QI"/>
                                         <constraint firstAttribute="width" constant="45" id="y5S-Vk-yJW"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4UL-wE-Hfu">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendBtn" translatesAutoresizingMaskIntoConstraints="NO" id="4UL-wE-Hfu">
                                     <rect key="frame" x="171" y="65" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="45" id="F21-1K-JQH"/>
                                         <constraint firstAttribute="height" constant="45" id="g3p-Zq-hhq"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZZe-lG-PEu">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rolletBtn" translatesAutoresizingMaskIntoConstraints="NO" id="ZZe-lG-PEu">
                                     <rect key="frame" x="228" y="65" width="45" height="45"/>
+                                    <color key="tintColor" name="lightGreyBlueTwo"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="DNA-c5-QOy"/>
                                         <constraint firstAttribute="width" constant="45" id="yL9-JC-y8k"/>
@@ -191,10 +197,12 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="WWr-BV-6TA" secondAttribute="bottom" constant="21" id="2ai-oB-LI0"/>
                         <constraint firstAttribute="height" constant="285" id="5dT-Se-OpW"/>
+                        <constraint firstItem="abw-x9-SpO" firstAttribute="centerY" secondItem="TUc-Tt-u2E" secondAttribute="centerY" id="Ax9-GD-Kzj"/>
                         <constraint firstItem="WWr-BV-6TA" firstAttribute="leading" secondItem="iW5-cB-X4q" secondAttribute="leading" constant="33" id="Bbc-cB-VWv"/>
                         <constraint firstAttribute="trailing" secondItem="TUc-Tt-u2E" secondAttribute="trailing" id="LaT-y0-W9O"/>
                         <constraint firstAttribute="trailing" secondItem="WWr-BV-6TA" secondAttribute="trailing" constant="33" id="RRV-NR-qYI"/>
                         <constraint firstItem="Ruz-DQ-f4T" firstAttribute="centerX" secondItem="iW5-cB-X4q" secondAttribute="centerX" id="nFi-Zg-Dhl"/>
+                        <constraint firstItem="abw-x9-SpO" firstAttribute="centerX" secondItem="TUc-Tt-u2E" secondAttribute="centerX" id="nza-R5-MDW"/>
                         <constraint firstItem="TUc-Tt-u2E" firstAttribute="top" secondItem="iW5-cB-X4q" secondAttribute="top" id="uB1-Xc-srC"/>
                         <constraint firstItem="TUc-Tt-u2E" firstAttribute="leading" secondItem="iW5-cB-X4q" secondAttribute="leading" id="w1i-F2-dhm"/>
                         <constraint firstItem="Ruz-DQ-f4T" firstAttribute="top" secondItem="TUc-Tt-u2E" secondAttribute="bottom" constant="23" id="xCp-rO-pi3"/>
@@ -229,7 +237,12 @@
         </view>
     </objects>
     <resources>
+        <image name="attendBtn" width="46" height="47"/>
         <image name="attendanceBack" width="375" height="667"/>
+        <image name="rolletBtn" width="46" height="46"/>
+        <namedColor name="lightGreyBlueTwo">
+            <color red="0.70980392156862748" green="0.70980392156862748" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="maize">
             <color red="1" green="0.78823529411764703" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

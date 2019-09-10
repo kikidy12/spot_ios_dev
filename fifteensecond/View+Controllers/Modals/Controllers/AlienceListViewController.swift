@@ -23,9 +23,33 @@ class AlienceListViewController: UIViewController {
     
     var selectedCategory: CategoryDatas!
     
+    var locManager = CLLocationManager()
+    
     var alienceArray = NSArray() {
         didSet {
+            let tempArray = alienceArray.sortedArray { (dict1, dict2) -> ComparisonResult in
+                let id1 = (dict1 as! NSDictionary)["id"] as! Int
+                let id2 = (dict2 as! NSDictionary)["id"] as! Int
+                
+                return "\(id1)".compare("\(id2)")
+                } as NSArray
+            
+            premiumArray = tempArray.filter {
+                if (($0 as! NSDictionary)["is_premium"] as! Bool) {
+                    return true
+                }
+                else {
+                    return false
+                }
+                } as NSArray
+            
             alienceTableView.reloadData()
+        }
+    }
+    
+    var premiumArray = NSArray() {
+        didSet {
+            recommandColletionView.reloadData()
         }
     }
     
@@ -129,8 +153,11 @@ extension AlienceListViewController: UICollectionViewDelegate, UICollectionViewD
         if collectionView == categoryColletionView {
             return categoryList.count
         }
+        else if collectionView == recommandColletionView {
+            return premiumArray.count
+        }
         else {
-            return 10
+            return 0
         }
     }
     
@@ -153,10 +180,13 @@ extension AlienceListViewController: UICollectionViewDelegate, UICollectionViewD
             cell.categoryLabel.text = data.name
             return cell
         }
-        else {
+        else if collectionView == recommandColletionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recommandCell", for: indexPath) as! RecommandCollectionViewCell
-            
+            cell.initView(type: categoryType, data: premiumArray[indexPath.item] as! NSDictionary)
             return cell
+        }
+        else {
+            return UICollectionViewCell()
         }
     }
     
@@ -202,9 +232,10 @@ extension AlienceListViewController {
     
     func getAliences() {
         guard let type = categoryType else { return }
+        //수정 필요
         var parameters = [
-            "latitude": 37.562899,
-            "longitude": 127.064770,
+            "latitude": locManager.location!.coordinate.latitude,
+            "longitude": locManager.location!.coordinate.longitude,
             "category_id": selectedCategory.id!
         ] as Parameters
         

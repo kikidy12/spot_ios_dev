@@ -10,7 +10,7 @@ import UIKit
 
 class UseListViewController: UIViewController {
     
-    var useSpotList = [SpotTicketDatas]() {
+    var useSpotList = [SpotTicketUseInfoDatas]() {
         didSet {
             useListTableView.reloadData()
         }
@@ -62,7 +62,7 @@ extension UseListViewController {
                 AlertHandler.shared.showAlert(vc: self, message: message ?? "", okTitle: "확인")
                 return }
             
-            self.useSpotList = array.compactMap { SpotTicketDatas($0 as! NSDictionary) }
+            self.useSpotList = array.compactMap { SpotTicketUseInfoDatas($0 as! NSDictionary) }
         }
     }
 }

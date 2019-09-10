@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpotMarkerInfoWindowView" customModule="fifteensecond" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLabel" destination="RMt-ce-2Qj" id="QfO-DT-EqT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMt-ce-2Qj">
+                    <rect key="frame" x="0.0" y="71" width="414" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-TR-28b" customClass="CustomButton" customModule="fifteensecond" customModuleProvider="target">
+                    <rect key="frame" x="15" y="796" width="384" height="46"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="uZW-aj-PgW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <state key="normal" title="15Seconds 이용하기">
+                        <color key="titleColor" name="darkishPink"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="darkishPink"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Imc-TR-28b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="G1k-18-G9t"/>
+                <constraint firstItem="RMt-ce-2Qj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Wbv-Oc-5EV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Imc-TR-28b" secondAttribute="bottom" constant="20" id="ZHC-Bs-egb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Imc-TR-28b" secondAttribute="trailing" constant="15" id="gdQ-el-7T5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RMt-ce-2Qj" secondAttribute="trailing" id="mG2-dn-Hd3"/>
+                <constraint firstItem="RMt-ce-2Qj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="27" id="rD2-Sk-w01"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="darkishPink">
+            <color red="0.92941176470588238" green="0.21176470588235294" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -9,6 +9,7 @@
 import UIKit
 
 class AlienceInfoImageCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var coverImageView: UIImageView!
     
     override func awakeFromNib() {

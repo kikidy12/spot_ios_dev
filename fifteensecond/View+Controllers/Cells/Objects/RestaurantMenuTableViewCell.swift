@@ -10,6 +10,8 @@ import UIKit
 
 class RestaurantMenuTableViewCell: UITableViewCell {
     
+    var numberFormatter = NumberFormatter()
+    
     var menu: RestaurantMenuDatas!
 
     @IBOutlet weak var mainBtn: CustomButton!
@@ -32,15 +34,22 @@ class RestaurantMenuTableViewCell: UITableViewCell {
     
     
     func initView(_ data: RestaurantMenuDatas) {
+        numberFormatter.numberStyle = .decimal
         menu = data
         nameLabel.text = menu.name
         menu.isMain ? (mainBtn.isHidden = false) : (mainBtn.isHidden = true)
+        salePriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
         priceLabel.text = "\(menu.price ?? 0)원"
         
-        if let salePrice = menu.salePrice {
+        if let rate = menu.discountRate {
             cancelLineView.isHidden = false
             arrowLabel.isHidden = false
-            salePriceLabel.text = "\(salePrice)원"
+            var discountPrice = 0
+            if let price = menu.price, price > 0 {
+                discountPrice = price - Int(Double(price * rate) / 100)
+            }
+            discountPercentLabel.text = "\(rate)%"
+            salePriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
         }
         else {
             arrowLabel.isHidden = true

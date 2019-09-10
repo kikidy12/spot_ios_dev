@@ -84,7 +84,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func show15SecondView(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            
+            show(SpotMapViewController(), sender: nil)
         }
     }
     

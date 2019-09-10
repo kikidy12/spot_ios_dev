@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 import Foundation
 
 
@@ -86,6 +87,18 @@ extension UIViewController {
         }
         
         
+    }
+    
+    func openNaverNavi(lat: Double, lng: Double) {
+        let urlString = "nmap://navigation?dlat=\(lat)&dlng=\(lng)"
+        if let url = URL(string: urlString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, completionHandler: nil)
+            }
+            else {
+                UIApplication.shared.open(URL(string: "https://itunes.apple.com/kr/app/id311867728?mt=8")!, completionHandler: nil)
+            }
+        }
     }
     
     

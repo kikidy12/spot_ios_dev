@@ -51,20 +51,31 @@ class AlienceTableViewCell: UITableViewCell {
             drawShoppingViews()
             break
         case .tickets:
+            ticket = TicketDatas(data)
             drawTicketViews()
             break
         case .hotel:
+            hotel = HotelDatas(data)
             drawHotelViews()
             break
         }
     }
     
     func drawHotelViews() {
-//        nameLabel.text = hotel.name
+        openTimeLabel.text = "In \(hotel.sleepInTime ?? "00:00")/ Out \(hotel.sleepOutTime ?? "00:00")"
+        nameLabel.text = hotel.name
+        distanceLabel.text = "\(hotel.distance ?? 0)m"
+        categoryLabel.text = hotel.category.name
+        setImageView(urlStr: hotel.imageList.first?.imageURL)
     }
     
     func drawTicketViews() {
-        
+        openTimeLabel.text = ticket.openTime
+        nameLabel.text = ticket.name
+        distanceLabel.text = "\(ticket.distance ?? 0)m"
+        categoryLabel.text = ticket.category.name
+        setImageView(urlStr: ticket.imageList.first?.imageURL)
+//        commentLabel.text = ticket.comment
     }
     
     func drawRestaurantViews() {
@@ -73,6 +84,7 @@ class AlienceTableViewCell: UITableViewCell {
         distanceLabel.text = "\(restaurant.distance ?? 0)m"
         categoryLabel.text = restaurant.category.name
         setImageView(urlStr: restaurant.imageList.first?.imageURL)
+//        commentLabel.text = restaurant.comment
     }
     
     func drawShoppingViews() {

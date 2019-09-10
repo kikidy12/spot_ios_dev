@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpotTicketListViewController" customModule="fifteensecond" customModuleProvider="target">
+            <connections>
+                <outlet property="spotTicketTableView" destination="CXc-JE-qx6" id="l3c-kl-9se"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paycompBack" translatesAutoresizingMaskIntoConstraints="NO" id="xGt-Ac-Q3X">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9As-uv-jjs">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" name="darkblue91"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-QA-UYn">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CXc-JE-qx6">
+                            <rect key="frame" x="10" y="20" width="394" height="722"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2r-yy-3Wa" customClass="GradientButton" customModule="fifteensecond" customModuleProvider="target">
+                            <rect key="frame" x="10" y="752" width="394" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="51" id="prN-6o-rAR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <state key="normal" title="선택한 이용권 구매하기">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="buyTicketEvent" destination="-1" eventType="touchUpInside" id="HTw-Zc-lwc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="CXc-JE-qx6" firstAttribute="top" secondItem="ZHN-QA-UYn" secondAttribute="top" constant="20" id="29e-PZ-3r6"/>
+                        <constraint firstItem="v2r-yy-3Wa" firstAttribute="leading" secondItem="ZHN-QA-UYn" secondAttribute="leading" constant="10" id="Q4y-VO-Ir6"/>
+                        <constraint firstItem="CXc-JE-qx6" firstAttribute="leading" secondItem="ZHN-QA-UYn" secondAttribute="leading" constant="10" id="l9W-vd-7z3"/>
+                        <constraint firstAttribute="bottom" secondItem="v2r-yy-3Wa" secondAttribute="bottom" constant="15" id="nwM-rq-ht3"/>
+                        <constraint firstAttribute="trailing" secondItem="v2r-yy-3Wa" secondAttribute="trailing" constant="10" id="oU6-dO-xVH"/>
+                        <constraint firstAttribute="trailing" secondItem="CXc-JE-qx6" secondAttribute="trailing" constant="10" id="p4g-EN-83H"/>
+                        <constraint firstItem="v2r-yy-3Wa" firstAttribute="top" secondItem="CXc-JE-qx6" secondAttribute="bottom" constant="10" id="ubr-Q4-4XP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9As-uv-jjs" secondAttribute="bottom" id="6AZ-vT-Dt3"/>
+                <constraint firstAttribute="trailing" secondItem="xGt-Ac-Q3X" secondAttribute="trailing" id="8kZ-vH-1Un"/>
+                <constraint firstItem="9As-uv-jjs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HJa-jr-INP"/>
+                <constraint firstItem="9As-uv-jjs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JDQ-UO-fat"/>
+                <constraint firstItem="xGt-Ac-Q3X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Oew-KC-hU3"/>
+                <constraint firstItem="xGt-Ac-Q3X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PfI-3v-huW"/>
+                <constraint firstItem="ZHN-QA-UYn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TrT-O9-2XX"/>
+                <constraint firstItem="ZHN-QA-UYn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ufy-Jq-tUl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZHN-QA-UYn" secondAttribute="trailing" id="XOq-Sk-LyW"/>
+                <constraint firstAttribute="trailing" secondItem="9As-uv-jjs" secondAttribute="trailing" id="ifc-0u-3Fr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZHN-QA-UYn" secondAttribute="bottom" id="rEO-Fv-Aas"/>
+                <constraint firstAttribute="bottom" secondItem="xGt-Ac-Q3X" secondAttribute="bottom" id="zd6-it-C93"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="47.544642857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="paycompBack" width="375" height="667"/>
+        <namedColor name="darkblue91">
+            <color red="0.11800000071525574" green="0.13699999451637268" blue="0.18000000715255737" alpha="0.9100000262260437" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -22,7 +22,7 @@ class RestaurantDatas: NSObject {
     
     var category = CategoryDatas()
     
-    var imageList = [RestaurantImageDatas]()
+    var imageList = [ImageDatas]()
     
     var menuList = [RestaurantMenuDatas]()
     
@@ -57,7 +57,7 @@ class RestaurantDatas: NSObject {
         }
         
         if let array = data["restaurant_cover_images"] as? NSArray {
-            imageList = array.compactMap { RestaurantImageDatas($0 as! NSDictionary) }
+            imageList = array.compactMap { ImageDatas($0 as! NSDictionary) }
         }
         
         if let category = data["restaurant_category"] as? NSDictionary {
@@ -71,31 +71,13 @@ class RestaurantDatas: NSObject {
     }
 }
 
-class RestaurantImageDatas: NSObject {
-    var id: Int!
-    var imageURL: String!
-    var displayOrder: Int!
-    var isRepresent: Bool!
-    
-    override init() {
-        
-    }
-    
-    init(_ data: NSDictionary) {
-        id = data["id"] as? Int
-        imageURL = data["img_url"] as? String
-        displayOrder = data["display_order"] as? Int
-        isRepresent = data["is_represent"] as? Bool
-    }
-}
-
 class RestaurantMenuDatas: NSObject {
     var id: Int!
     var price: Int!
     var name: String!
     var isMain = false
-    var salePrice: Int!
     var imageURL: String!
+    var discountRate: Int!
     
     override init() {
         
@@ -106,7 +88,7 @@ class RestaurantMenuDatas: NSObject {
         price = data["price"] as? Int
         name = data["name"] as? String
         isMain = data["is_main"] as? Bool ?? false
-        salePrice = data["sale_price"] as? Int
+        discountRate = data["discount_rate"] as? Int
         
         if let dict = data["restaurant_menu_images"] as? NSDictionary {
             imageURL = dict["img_url"] as? String

@@ -91,6 +91,46 @@
 		99694C272315666600F4FF49 /* AttendanceCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */; };
 		99694C2A23156B5500F4FF49 /* AttendanceCheckPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */; };
 		99694C2B23156B5500F4FF49 /* AttendanceCheckPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */; };
+		997D18E6231D0552007B98DF /* SpotMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18E4231D0552007B98DF /* SpotMapViewController.swift */; };
+		997D18E7231D0552007B98DF /* SpotMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D18E5231D0552007B98DF /* SpotMapViewController.xib */; };
+		997D18E9231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18E8231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift */; };
+		997D18EB231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D18EA231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib */; };
+		997D18EE231D2EB4007B98DF /* RegistCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18EC231D2EB4007B98DF /* RegistCardViewController.swift */; };
+		997D18EF231D2EB4007B98DF /* RegistCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D18ED231D2EB4007B98DF /* RegistCardViewController.xib */; };
+		997D18F2231D49C2007B98DF /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18F0231D49C2007B98DF /* PayViewController.swift */; };
+		997D18F3231D49C2007B98DF /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D18F1231D49C2007B98DF /* PayViewController.xib */; };
+		997D18F6231D4D63007B98DF /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18F4231D4D63007B98DF /* CardCollectionViewCell.swift */; };
+		997D18F7231D4D63007B98DF /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D18F5231D4D63007B98DF /* CardCollectionViewCell.xib */; };
+		997D18F9231D4E82007B98DF /* CardDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18F8231D4E82007B98DF /* CardDatas.swift */; };
+		997D1900231DEA72007B98DF /* SpotTicketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18FE231DEA72007B98DF /* SpotTicketListViewController.swift */; };
+		997D1901231DEA72007B98DF /* SpotTicketListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D18FF231DEA72007B98DF /* SpotTicketListViewController.xib */; };
+		997D1904231DEC19007B98DF /* SpotTicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D1902231DEC19007B98DF /* SpotTicketTableViewCell.swift */; };
+		997D1905231DEC19007B98DF /* SpotTicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D1903231DEC19007B98DF /* SpotTicketTableViewCell.xib */; };
+		997D1908231DF337007B98DF /* PayCompViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D1906231DF337007B98DF /* PayCompViewController.swift */; };
+		997D1909231DF337007B98DF /* PayCompViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D1907231DF337007B98DF /* PayCompViewController.xib */; };
+		997D190C231DFE07007B98DF /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D190A231DFE07007B98DF /* RecordVideoViewController.swift */; };
+		997D190D231DFE07007B98DF /* RecordVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D190B231DFE07007B98DF /* RecordVideoViewController.xib */; };
+		997D1910231E82B5007B98DF /* ShoppingMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D190E231E82B5007B98DF /* ShoppingMenuTableViewCell.swift */; };
+		997D1911231E82B5007B98DF /* ShoppingMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D190F231E82B5007B98DF /* ShoppingMenuTableViewCell.xib */; };
+		997D19142325F5C7007B98DF /* SpotUsePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D19122325F5C7007B98DF /* SpotUsePopupViewController.swift */; };
+		997D19152325F5C7007B98DF /* SpotUsePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D19132325F5C7007B98DF /* SpotUsePopupViewController.xib */; };
+		997D19182325F928007B98DF /* HasSpotTicketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D19162325F928007B98DF /* HasSpotTicketListViewController.swift */; };
+		997D19192325F928007B98DF /* HasSpotTicketListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D19172325F928007B98DF /* HasSpotTicketListViewController.xib */; };
+		997D191C2325FA33007B98DF /* HasSpotTicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D191A2325FA33007B98DF /* HasSpotTicketTableViewCell.swift */; };
+		997D191D2325FA33007B98DF /* HasSpotTicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D191B2325FA33007B98DF /* HasSpotTicketTableViewCell.xib */; };
+		997D192023260819007B98DF /* PreViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D191E23260819007B98DF /* PreViewViewController.swift */; };
+		997D192123260819007B98DF /* PreViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D191F23260819007B98DF /* PreViewViewController.xib */; };
+		997D19232326680E007B98DF /* SpotTicketUseInfoDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D19222326680E007B98DF /* SpotTicketUseInfoDatas.swift */; };
+		997D192623274D92007B98DF /* AlienceTicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D192423274D92007B98DF /* AlienceTicketTableViewCell.swift */; };
+		997D192723274D92007B98DF /* AlienceTicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D192523274D92007B98DF /* AlienceTicketTableViewCell.xib */; };
+		997D192A232756AF007B98DF /* HotelRoomInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D1928232756AF007B98DF /* HotelRoomInfoTableViewCell.swift */; };
+		997D192B232756AF007B98DF /* HotelRoomInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D1929232756AF007B98DF /* HotelRoomInfoTableViewCell.xib */; };
+		997D192E23276C4C007B98DF /* FacilityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D192C23276C4C007B98DF /* FacilityCollectionViewCell.swift */; };
+		997D192F23276C4C007B98DF /* FacilityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D192D23276C4C007B98DF /* FacilityCollectionViewCell.xib */; };
+		997D19322327C369007B98DF /* DetailImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D19302327C369007B98DF /* DetailImageCollectionViewCell.swift */; };
+		997D19332327C369007B98DF /* DetailImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D19312327C369007B98DF /* DetailImageCollectionViewCell.xib */; };
+		997D19362327C43C007B98DF /* ImageListPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D19342327C43C007B98DF /* ImageListPopupViewController.swift */; };
+		997D19372327C43C007B98DF /* ImageListPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D19352327C43C007B98DF /* ImageListPopupViewController.xib */; };
 		998869902303B45000612092 /* GlobalDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988698F2303B45000612092 /* GlobalDatas.swift */; };
 		998869922303B4CC00612092 /* NationCodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869912303B4CC00612092 /* NationCodeData.swift */; };
 		9988699423080D1E00612092 /* EventDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988699323080D1E00612092 /* EventDatas.swift */; };
@@ -221,6 +261,46 @@
 		99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceCheckViewController.xib; sourceTree = "<group>"; };
 		99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckPopupViewController.swift; sourceTree = "<group>"; };
 		99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceCheckPopupViewController.xib; sourceTree = "<group>"; };
+		997D18E4231D0552007B98DF /* SpotMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMapViewController.swift; sourceTree = "<group>"; };
+		997D18E5231D0552007B98DF /* SpotMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotMapViewController.xib; sourceTree = "<group>"; };
+		997D18E8231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMarkerInfoWindowView.swift; sourceTree = "<group>"; };
+		997D18EA231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotMarkerInfoWindowView.xib; sourceTree = "<group>"; };
+		997D18EC231D2EB4007B98DF /* RegistCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistCardViewController.swift; sourceTree = "<group>"; };
+		997D18ED231D2EB4007B98DF /* RegistCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistCardViewController.xib; sourceTree = "<group>"; };
+		997D18F0231D49C2007B98DF /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		997D18F1231D49C2007B98DF /* PayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
+		997D18F4231D4D63007B98DF /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		997D18F5231D4D63007B98DF /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		997D18F8231D4E82007B98DF /* CardDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDatas.swift; sourceTree = "<group>"; };
+		997D18FE231DEA72007B98DF /* SpotTicketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTicketListViewController.swift; sourceTree = "<group>"; };
+		997D18FF231DEA72007B98DF /* SpotTicketListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotTicketListViewController.xib; sourceTree = "<group>"; };
+		997D1902231DEC19007B98DF /* SpotTicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTicketTableViewCell.swift; sourceTree = "<group>"; };
+		997D1903231DEC19007B98DF /* SpotTicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotTicketTableViewCell.xib; sourceTree = "<group>"; };
+		997D1906231DF337007B98DF /* PayCompViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCompViewController.swift; sourceTree = "<group>"; };
+		997D1907231DF337007B98DF /* PayCompViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayCompViewController.xib; sourceTree = "<group>"; };
+		997D190A231DFE07007B98DF /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
+		997D190B231DFE07007B98DF /* RecordVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordVideoViewController.xib; sourceTree = "<group>"; };
+		997D190E231E82B5007B98DF /* ShoppingMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingMenuTableViewCell.swift; sourceTree = "<group>"; };
+		997D190F231E82B5007B98DF /* ShoppingMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingMenuTableViewCell.xib; sourceTree = "<group>"; };
+		997D19122325F5C7007B98DF /* SpotUsePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotUsePopupViewController.swift; sourceTree = "<group>"; };
+		997D19132325F5C7007B98DF /* SpotUsePopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotUsePopupViewController.xib; sourceTree = "<group>"; };
+		997D19162325F928007B98DF /* HasSpotTicketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSpotTicketListViewController.swift; sourceTree = "<group>"; };
+		997D19172325F928007B98DF /* HasSpotTicketListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HasSpotTicketListViewController.xib; sourceTree = "<group>"; };
+		997D191A2325FA33007B98DF /* HasSpotTicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSpotTicketTableViewCell.swift; sourceTree = "<group>"; };
+		997D191B2325FA33007B98DF /* HasSpotTicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HasSpotTicketTableViewCell.xib; sourceTree = "<group>"; };
+		997D191E23260819007B98DF /* PreViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreViewViewController.swift; sourceTree = "<group>"; };
+		997D191F23260819007B98DF /* PreViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreViewViewController.xib; sourceTree = "<group>"; };
+		997D19222326680E007B98DF /* SpotTicketUseInfoDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTicketUseInfoDatas.swift; sourceTree = "<group>"; };
+		997D192423274D92007B98DF /* AlienceTicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceTicketTableViewCell.swift; sourceTree = "<group>"; };
+		997D192523274D92007B98DF /* AlienceTicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceTicketTableViewCell.xib; sourceTree = "<group>"; };
+		997D1928232756AF007B98DF /* HotelRoomInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelRoomInfoTableViewCell.swift; sourceTree = "<group>"; };
+		997D1929232756AF007B98DF /* HotelRoomInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelRoomInfoTableViewCell.xib; sourceTree = "<group>"; };
+		997D192C23276C4C007B98DF /* FacilityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityCollectionViewCell.swift; sourceTree = "<group>"; };
+		997D192D23276C4C007B98DF /* FacilityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacilityCollectionViewCell.xib; sourceTree = "<group>"; };
+		997D19302327C369007B98DF /* DetailImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		997D19312327C369007B98DF /* DetailImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		997D19342327C43C007B98DF /* ImageListPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListPopupViewController.swift; sourceTree = "<group>"; };
+		997D19352327C43C007B98DF /* ImageListPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageListPopupViewController.xib; sourceTree = "<group>"; };
 		9988698F2303B45000612092 /* GlobalDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDatas.swift; sourceTree = "<group>"; };
 		998869912303B4CC00612092 /* NationCodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationCodeData.swift; sourceTree = "<group>"; };
 		9988699323080D1E00612092 /* EventDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDatas.swift; sourceTree = "<group>"; };
@@ -373,6 +453,8 @@
 				99694C06231504AC00F4FF49 /* SpotTicketDatas.swift */,
 				99694C08231504BA00F4FF49 /* SpotDatas.swift */,
 				99694C0E2315230100F4FF49 /* NoticeDatas.swift */,
+				997D18F8231D4E82007B98DF /* CardDatas.swift */,
+				997D19222326680E007B98DF /* SpotTicketUseInfoDatas.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -430,6 +512,14 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				997D191F23260819007B98DF /* PreViewViewController.xib */,
+				997D19172325F928007B98DF /* HasSpotTicketListViewController.xib */,
+				997D190B231DFE07007B98DF /* RecordVideoViewController.xib */,
+				997D1907231DF337007B98DF /* PayCompViewController.xib */,
+				997D18FF231DEA72007B98DF /* SpotTicketListViewController.xib */,
+				997D18F1231D49C2007B98DF /* PayViewController.xib */,
+				997D18ED231D2EB4007B98DF /* RegistCardViewController.xib */,
+				997D18E5231D0552007B98DF /* SpotMapViewController.xib */,
 				99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */,
 				99694C21231530F800F4FF49 /* SettingViewController.xib */,
 				99694C1D23152B3B00F4FF49 /* ContactViewController.xib */,
@@ -471,6 +561,14 @@
 				99694C1C23152B3B00F4FF49 /* ContactViewController.swift */,
 				99694C20231530F800F4FF49 /* SettingViewController.swift */,
 				99694C242315666600F4FF49 /* AttendanceCheckViewController.swift */,
+				997D18E4231D0552007B98DF /* SpotMapViewController.swift */,
+				997D18EC231D2EB4007B98DF /* RegistCardViewController.swift */,
+				997D18F0231D49C2007B98DF /* PayViewController.swift */,
+				997D18FE231DEA72007B98DF /* SpotTicketListViewController.swift */,
+				997D1906231DF337007B98DF /* PayCompViewController.swift */,
+				997D190A231DFE07007B98DF /* RecordVideoViewController.swift */,
+				997D19162325F928007B98DF /* HasSpotTicketListViewController.swift */,
+				997D191E23260819007B98DF /* PreViewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -481,6 +579,8 @@
 				99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */,
 				99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */,
 				99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */,
+				997D19122325F5C7007B98DF /* SpotUsePopupViewController.swift */,
+				997D19342327C43C007B98DF /* ImageListPopupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -488,6 +588,8 @@
 		99114CE222F2D86100D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				997D19352327C43C007B98DF /* ImageListPopupViewController.xib */,
+				997D19132325F5C7007B98DF /* SpotUsePopupViewController.xib */,
 				99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */,
 				99694BF3230BF4F000F4FF49 /* BuyTicketPopupViewController.xib */,
 				99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */,
@@ -510,6 +612,14 @@
 				998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */,
 				99694C022314FB9F00F4FF49 /* UseListTableViewCell.swift */,
 				99694C102315245800F4FF49 /* NoticeTableViewCell.swift */,
+				997D18F4231D4D63007B98DF /* CardCollectionViewCell.swift */,
+				997D1902231DEC19007B98DF /* SpotTicketTableViewCell.swift */,
+				997D190E231E82B5007B98DF /* ShoppingMenuTableViewCell.swift */,
+				997D191A2325FA33007B98DF /* HasSpotTicketTableViewCell.swift */,
+				997D192423274D92007B98DF /* AlienceTicketTableViewCell.swift */,
+				997D1928232756AF007B98DF /* HotelRoomInfoTableViewCell.swift */,
+				997D192C23276C4C007B98DF /* FacilityCollectionViewCell.swift */,
+				997D19302327C369007B98DF /* DetailImageCollectionViewCell.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -517,6 +627,14 @@
 		99114CE822F2D90800D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				997D19312327C369007B98DF /* DetailImageCollectionViewCell.xib */,
+				997D192D23276C4C007B98DF /* FacilityCollectionViewCell.xib */,
+				997D1929232756AF007B98DF /* HotelRoomInfoTableViewCell.xib */,
+				997D192523274D92007B98DF /* AlienceTicketTableViewCell.xib */,
+				997D191B2325FA33007B98DF /* HasSpotTicketTableViewCell.xib */,
+				997D190F231E82B5007B98DF /* ShoppingMenuTableViewCell.xib */,
+				997D1903231DEC19007B98DF /* SpotTicketTableViewCell.xib */,
+				997D18F5231D4D63007B98DF /* CardCollectionViewCell.xib */,
 				99694C112315245800F4FF49 /* NoticeTableViewCell.xib */,
 				99694C032314FB9F00F4FF49 /* UseListTableViewCell.xib */,
 				998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */,
@@ -547,6 +665,7 @@
 			children = (
 				99114D292301574A00D0494A /* AlienceListTileView.swift */,
 				99694BF6230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift */,
+				997D18E8231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -556,6 +675,7 @@
 			children = (
 				99114D2B2301575B00D0494A /* AlienceListTileView.xib */,
 				99694BF8230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib */,
+				997D18EA231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -690,6 +810,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997D1905231DEC19007B98DF /* SpotTicketTableViewCell.xib in Resources */,
 				99694BF1230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib in Resources */,
 				99114CEC22F2D94000D0494A /* PlaceImageCollectionViewCell.xib in Resources */,
 				99694C1B231529AF00F4FF49 /* AdContectViewController.xib in Resources */,
@@ -698,8 +819,10 @@
 				99694C272315666600F4FF49 /* AttendanceCheckViewController.xib in Resources */,
 				99114D192300E24500D0494A /* AllienceCollectionViewCell.xib in Resources */,
 				99694C1F23152B3B00F4FF49 /* ContactViewController.xib in Resources */,
+				997D192B232756AF007B98DF /* HotelRoomInfoTableViewCell.xib in Resources */,
 				99114CA522F2726100D0494A /* Assets.xcassets in Resources */,
 				99114D1222FC71CC00D0494A /* AllienceCollectionReusableView.xib in Resources */,
+				997D191D2325FA33007B98DF /* HasSpotTicketTableViewCell.xib in Resources */,
 				99114D30230171E800D0494A /* AlienceMainViewController.xib in Resources */,
 				998869A42309570900612092 /* AlienceInfoListViewController.xib in Resources */,
 				99694C0D231522A500F4FF49 /* NoticeListViewController.xib in Resources */,
@@ -707,27 +830,43 @@
 				99114D0822FBA60500D0494A /* EventCollectionViewCell.xib in Resources */,
 				99694C012314FA9800F4FF49 /* UseListViewController.xib in Resources */,
 				99694C132315245800F4FF49 /* NoticeTableViewCell.xib in Resources */,
+				997D192123260819007B98DF /* PreViewViewController.xib in Resources */,
 				99694C2B23156B5500F4FF49 /* AttendanceCheckPopupViewController.xib in Resources */,
+				997D192723274D92007B98DF /* AlienceTicketTableViewCell.xib in Resources */,
 				998869AC230A27A500612092 /* RestaurantMenuTableViewCell.xib in Resources */,
 				99694BFD2314F53E00F4FF49 /* MyPageMainViewController.xib in Resources */,
 				99114CF622F8544100D0494A /* LoginViewController.xib in Resources */,
+				997D192F23276C4C007B98DF /* FacilityCollectionViewCell.xib in Resources */,
+				997D18F3231D49C2007B98DF /* PayViewController.xib in Resources */,
 				99694C23231530F800F4FF49 /* SettingViewController.xib in Resources */,
 				99694BF9230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib in Resources */,
 				99114CFC22FB9B8000D0494A /* SignUpViewController.xib in Resources */,
 				99114D3423018AB800D0494A /* AlienceTableViewCell.xib in Resources */,
+				997D18F7231D4D63007B98DF /* CardCollectionViewCell.xib in Resources */,
+				997D19372327C43C007B98DF /* ImageListPopupViewController.xib in Resources */,
 				998869A8230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib in Resources */,
+				997D1901231DEA72007B98DF /* SpotTicketListViewController.xib in Resources */,
+				997D19152325F5C7007B98DF /* SpotUsePopupViewController.xib in Resources */,
+				997D1911231E82B5007B98DF /* ShoppingMenuTableViewCell.xib in Resources */,
 				99694BF5230BF4F000F4FF49 /* BuyTicketPopupViewController.xib in Resources */,
 				99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */,
 				99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */,
 				99694C17231526E200F4FF49 /* NoticeDetailViewController.xib in Resources */,
+				997D1909231DF337007B98DF /* PayCompViewController.xib in Resources */,
 				99114D0422FBA34300D0494A /* HomeViewController.xib in Resources */,
 				99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */,
+				997D18EF231D2EB4007B98DF /* RegistCardViewController.xib in Resources */,
+				997D19332327C369007B98DF /* DetailImageCollectionViewCell.xib in Resources */,
 				99114D212300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib in Resources */,
 				99114D3C2301ADC700D0494A /* AlienceMapViewController.xib in Resources */,
 				99114D2C2301575B00D0494A /* AlienceListTileView.xib in Resources */,
 				99114CE022F2D5E400D0494A /* SplashViewController.xib in Resources */,
+				997D190D231DFE07007B98DF /* RecordVideoViewController.xib in Resources */,
+				997D18EB231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib in Resources */,
+				997D18E7231D0552007B98DF /* SpotMapViewController.xib in Resources */,
 				99114D0022FB9F5900D0494A /* AuthCheckViewController.xib in Resources */,
 				99114D1422FD885900D0494A /* GoogleService-Info.plist in Resources */,
+				997D19192325F928007B98DF /* HasSpotTicketListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,43 +994,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997D18EE231D2EB4007B98DF /* RegistCardViewController.swift in Sources */,
 				99694BFC2314F53E00F4FF49 /* MyPageMainViewController.swift in Sources */,
+				997D192E23276C4C007B98DF /* FacilityCollectionViewCell.swift in Sources */,
 				99114D2F230171E800D0494A /* AlienceMainViewController.swift in Sources */,
 				99114CD222F2D1D100D0494A /* Extensions+Objects.swift in Sources */,
+				997D18F2231D49C2007B98DF /* PayViewController.swift in Sources */,
 				99114D1122FC71CC00D0494A /* AllienceCollectionReusableView.swift in Sources */,
+				997D18F6231D4D63007B98DF /* CardCollectionViewCell.swift in Sources */,
 				99114D2A2301574A00D0494A /* AlienceListTileView.swift in Sources */,
 				99694C1E23152B3B00F4FF49 /* ContactViewController.swift in Sources */,
 				99694C2A23156B5500F4FF49 /* AttendanceCheckPopupViewController.swift in Sources */,
 				99114D2423013E5100D0494A /* RecommandCollectionViewCell.swift in Sources */,
 				998869AB230A27A500612092 /* RestaurantMenuTableViewCell.swift in Sources */,
+				997D18E6231D0552007B98DF /* SpotMapViewController.swift in Sources */,
 				9988699C23081AA100612092 /* TicketDatas.swift in Sources */,
 				9988699E23081AB700612092 /* ShoppingDatas.swift in Sources */,
+				997D192A232756AF007B98DF /* HotelRoomInfoTableViewCell.swift in Sources */,
 				99114D0722FBA60500D0494A /* EventCollectionViewCell.swift in Sources */,
 				99694C16231526E200F4FF49 /* NoticeDetailViewController.swift in Sources */,
+				997D19322327C369007B98DF /* DetailImageCollectionViewCell.swift in Sources */,
 				99114D362301A60D00D0494A /* UserDefs.swift in Sources */,
 				998869962308132800612092 /* CategoryDatas.swift in Sources */,
 				99114CF222F2D9C400D0494A /* EnumObjects.swift in Sources */,
 				99114CA022F2726100D0494A /* ViewController.swift in Sources */,
 				99114CD022F2CF4D00D0494A /* Extenstions+Views.swift in Sources */,
 				99694C042314FB9F00F4FF49 /* UseListTableViewCell.swift in Sources */,
+				997D192023260819007B98DF /* PreViewViewController.swift in Sources */,
 				99694BF4230BF4F000F4FF49 /* BuyTicketPopupViewController.swift in Sources */,
 				99694C002314FA9800F4FF49 /* UseListViewController.swift in Sources */,
 				99114CF022F2D99100D0494A /* ServerUtil.swift in Sources */,
 				99114D0322FBA34300D0494A /* HomeViewController.swift in Sources */,
+				997D190C231DFE07007B98DF /* RecordVideoViewController.swift in Sources */,
+				997D18F9231D4E82007B98DF /* CardDatas.swift in Sources */,
 				99114D3323018AB800D0494A /* AlienceTableViewCell.swift in Sources */,
 				99694BF7230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift in Sources */,
+				997D1904231DEC19007B98DF /* SpotTicketTableViewCell.swift in Sources */,
+				997D191C2325FA33007B98DF /* HasSpotTicketTableViewCell.swift in Sources */,
 				998869922303B4CC00612092 /* NationCodeData.swift in Sources */,
 				99114D0C22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift in Sources */,
 				99694C07231504AC00F4FF49 /* SpotTicketDatas.swift in Sources */,
 				99114CEB22F2D94000D0494A /* PlaceImageCollectionViewCell.swift in Sources */,
+				997D19142325F5C7007B98DF /* SpotUsePopupViewController.swift in Sources */,
 				99114CDF22F2D5E400D0494A /* SplashViewController.swift in Sources */,
 				99694C1A231529AF00F4FF49 /* AdContectViewController.swift in Sources */,
 				99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */,
+				997D192623274D92007B98DF /* AlienceTicketTableViewCell.swift in Sources */,
 				99114D1C2300F13800D0494A /* AlienceListViewController.swift in Sources */,
 				99694C09231504BA00F4FF49 /* SpotDatas.swift in Sources */,
+				997D1908231DF337007B98DF /* PayCompViewController.swift in Sources */,
 				99114CD422F2D2EA00D0494A /* UserData.swift in Sources */,
 				99694C262315666600F4FF49 /* AttendanceCheckViewController.swift in Sources */,
 				99114D202300F2A100D0494A /* AlienceCategoryCollectionViewCell.swift in Sources */,
+				997D19232326680E007B98DF /* SpotTicketUseInfoDatas.swift in Sources */,
+				997D1900231DEA72007B98DF /* SpotTicketListViewController.swift in Sources */,
 				99694C0C231522A500F4FF49 /* NoticeListViewController.swift in Sources */,
 				99114CFF22FB9F5900D0494A /* AuthCheckViewController.swift in Sources */,
 				99114CF822F8568900D0494A /* CustomView.swift in Sources */,
@@ -908,10 +1064,14 @@
 				99694C122315245800F4FF49 /* NoticeTableViewCell.swift in Sources */,
 				998869A7230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift in Sources */,
 				99114CF522F8544100D0494A /* LoginViewController.swift in Sources */,
+				997D1910231E82B5007B98DF /* ShoppingMenuTableViewCell.swift in Sources */,
 				99114D182300E24500D0494A /* AllienceCollectionViewCell.swift in Sources */,
 				99114D0A22FBAD3400D0494A /* CustomPageControl.swift in Sources */,
+				997D18E9231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift in Sources */,
 				99114D382301A65800D0494A /* AlertHandler.swift in Sources */,
 				998869A023081CC500612092 /* AlienceDatas.swift in Sources */,
+				997D19182325F928007B98DF /* HasSpotTicketListViewController.swift in Sources */,
+				997D19362327C43C007B98DF /* ImageListPopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

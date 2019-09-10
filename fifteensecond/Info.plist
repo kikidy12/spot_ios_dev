@@ -45,6 +45,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kakaobee64818af8f71adab9a82991b9dcb9b</string>
+		<string>nmap</string>
 		<string>kakaokompassauth</string>
 		<string>storykompassauth</string>
 		<string>fbapi</string>
@@ -54,6 +55,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>촬영허가</string>
 	<key>NSCameraUsageDescription</key>
 	<string>촬영 권한.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
