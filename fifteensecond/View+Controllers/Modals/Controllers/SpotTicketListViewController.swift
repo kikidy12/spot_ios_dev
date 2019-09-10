@@ -22,7 +22,7 @@ class SpotTicketListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Sdfsdfsd")
         spotTicketTableView.register(UINib(nibName: "SpotTicketTableViewCell", bundle: nil), forCellReuseIdentifier: "ticketCell")
         spotTicketTableView.delegate = self
         spotTicketTableView.dataSource = self

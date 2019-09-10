@@ -41,7 +41,6 @@
 		99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D0D22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib */; };
 		99114D1122FC71CC00D0494A /* AllienceCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D0F22FC71CC00D0494A /* AllienceCollectionReusableView.swift */; };
 		99114D1222FC71CC00D0494A /* AllienceCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D1022FC71CC00D0494A /* AllienceCollectionReusableView.xib */; };
-		99114D1422FD885900D0494A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99114D1322FD885800D0494A /* GoogleService-Info.plist */; };
 		99114D182300E24500D0494A /* AllienceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D162300E24500D0494A /* AllienceCollectionViewCell.swift */; };
 		99114D192300E24500D0494A /* AllienceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D172300E24500D0494A /* AllienceCollectionViewCell.xib */; };
 		99114D1C2300F13800D0494A /* AlienceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D1A2300F13800D0494A /* AlienceListViewController.swift */; };
@@ -60,6 +59,7 @@
 		99114D382301A65800D0494A /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D372301A65800D0494A /* AlertHandler.swift */; };
 		99114D3B2301ADC700D0494A /* AlienceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D392301ADC700D0494A /* AlienceMapViewController.swift */; };
 		99114D3C2301ADC700D0494A /* AlienceMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */; };
+		9968CF0D2327CBF100B8D095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */; };
 		99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */; };
 		99694BF1230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */; };
 		99694BF4230BF4F000F4FF49 /* BuyTicketPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */; };
@@ -210,7 +210,6 @@
 		99114D0D22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllianceCollectionViewHeaderView.xib; sourceTree = "<group>"; };
 		99114D0F22FC71CC00D0494A /* AllienceCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllienceCollectionReusableView.swift; sourceTree = "<group>"; };
 		99114D1022FC71CC00D0494A /* AllienceCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllienceCollectionReusableView.xib; sourceTree = "<group>"; };
-		99114D1322FD885800D0494A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99114D1522FE6C5D00D0494A /* fifteensecond.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fifteensecond.entitlements; sourceTree = "<group>"; };
 		99114D162300E24500D0494A /* AllienceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllienceCollectionViewCell.swift; sourceTree = "<group>"; };
 		99114D172300E24500D0494A /* AllienceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllienceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -230,6 +229,7 @@
 		99114D372301A65800D0494A /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		99114D392301ADC700D0494A /* AlienceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceMapViewController.swift; sourceTree = "<group>"; };
 		99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceMapViewController.xib; sourceTree = "<group>"; };
+		9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCallPopupViewController.swift; sourceTree = "<group>"; };
 		99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCallPopupViewController.xib; sourceTree = "<group>"; };
 		99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketPopupViewController.swift; sourceTree = "<group>"; };
@@ -385,8 +385,8 @@
 		99114C9C22F2726100D0494A /* fifteensecond */ = {
 			isa = PBXGroup;
 			children = (
+				9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */,
 				99114D1522FE6C5D00D0494A /* fifteensecond.entitlements */,
-				99114D1322FD885800D0494A /* GoogleService-Info.plist */,
 				99114CCE22F2CF2A00D0494A /* Utils */,
 				99114CCD22F2CF1F00D0494A /* Datas */,
 				99114CCC22F2CEEF00D0494A /* View+Controllers */,
@@ -821,6 +821,7 @@
 				99694C1F23152B3B00F4FF49 /* ContactViewController.xib in Resources */,
 				997D192B232756AF007B98DF /* HotelRoomInfoTableViewCell.xib in Resources */,
 				99114CA522F2726100D0494A /* Assets.xcassets in Resources */,
+				9968CF0D2327CBF100B8D095 /* GoogleService-Info.plist in Resources */,
 				99114D1222FC71CC00D0494A /* AllienceCollectionReusableView.xib in Resources */,
 				997D191D2325FA33007B98DF /* HasSpotTicketTableViewCell.xib in Resources */,
 				99114D30230171E800D0494A /* AlienceMainViewController.xib in Resources */,
@@ -865,7 +866,6 @@
 				997D18EB231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib in Resources */,
 				997D18E7231D0552007B98DF /* SpotMapViewController.xib in Resources */,
 				99114D0022FB9F5900D0494A /* AuthCheckViewController.xib in Resources */,
-				99114D1422FD885900D0494A /* GoogleService-Info.plist in Resources */,
 				997D19192325F928007B98DF /* HasSpotTicketListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
