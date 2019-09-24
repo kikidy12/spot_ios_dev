@@ -60,6 +60,10 @@
 		99114D3B2301ADC700D0494A /* AlienceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D392301ADC700D0494A /* AlienceMapViewController.swift */; };
 		99114D3C2301ADC700D0494A /* AlienceMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */; };
 		9968CF0D2327CBF100B8D095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */; };
+		9968CF10232F4DDC00B8D095 /* TutoMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */; };
+		9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */; };
+		9968CF14232F77D600B8D095 /* WinningPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968CF12232F77D600B8D095 /* WinningPopUpViewController.swift */; };
+		9968CF15232F77D600B8D095 /* WinningPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF13232F77D600B8D095 /* WinningPopUpViewController.xib */; };
 		99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */; };
 		99694BF1230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */; };
 		99694BF4230BF4F000F4FF49 /* BuyTicketPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */; };
@@ -230,6 +234,10 @@
 		99114D392301ADC700D0494A /* AlienceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceMapViewController.swift; sourceTree = "<group>"; };
 		99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceMapViewController.xib; sourceTree = "<group>"; };
 		9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutoMainViewController.swift; sourceTree = "<group>"; };
+		9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutoMainViewController.xib; sourceTree = "<group>"; };
+		9968CF12232F77D600B8D095 /* WinningPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningPopUpViewController.swift; sourceTree = "<group>"; };
+		9968CF13232F77D600B8D095 /* WinningPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinningPopUpViewController.xib; sourceTree = "<group>"; };
 		99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCallPopupViewController.swift; sourceTree = "<group>"; };
 		99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCallPopupViewController.xib; sourceTree = "<group>"; };
 		99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketPopupViewController.swift; sourceTree = "<group>"; };
@@ -512,6 +520,7 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */,
 				997D191F23260819007B98DF /* PreViewViewController.xib */,
 				997D19172325F928007B98DF /* HasSpotTicketListViewController.xib */,
 				997D190B231DFE07007B98DF /* RecordVideoViewController.xib */,
@@ -569,6 +578,7 @@
 				997D190A231DFE07007B98DF /* RecordVideoViewController.swift */,
 				997D19162325F928007B98DF /* HasSpotTicketListViewController.swift */,
 				997D191E23260819007B98DF /* PreViewViewController.swift */,
+				9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -581,6 +591,7 @@
 				99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */,
 				997D19122325F5C7007B98DF /* SpotUsePopupViewController.swift */,
 				997D19342327C43C007B98DF /* ImageListPopupViewController.swift */,
+				9968CF12232F77D600B8D095 /* WinningPopUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -588,6 +599,7 @@
 		99114CE222F2D86100D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9968CF13232F77D600B8D095 /* WinningPopUpViewController.xib */,
 				997D19352327C43C007B98DF /* ImageListPopupViewController.xib */,
 				997D19132325F5C7007B98DF /* SpotUsePopupViewController.xib */,
 				99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */,
@@ -841,6 +853,7 @@
 				997D18F3231D49C2007B98DF /* PayViewController.xib in Resources */,
 				99694C23231530F800F4FF49 /* SettingViewController.xib in Resources */,
 				99694BF9230C0D3C00F4FF49 /* CustomMarkerInfoWindowView.xib in Resources */,
+				9968CF15232F77D600B8D095 /* WinningPopUpViewController.xib in Resources */,
 				99114CFC22FB9B8000D0494A /* SignUpViewController.xib in Resources */,
 				99114D3423018AB800D0494A /* AlienceTableViewCell.xib in Resources */,
 				997D18F7231D4D63007B98DF /* CardCollectionViewCell.xib in Resources */,
@@ -853,6 +866,7 @@
 				99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */,
 				99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */,
 				99694C17231526E200F4FF49 /* NoticeDetailViewController.xib in Resources */,
+				9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */,
 				997D1909231DF337007B98DF /* PayCompViewController.xib in Resources */,
 				99114D0422FBA34300D0494A /* HomeViewController.xib in Resources */,
 				99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */,
@@ -1010,6 +1024,7 @@
 				997D18E6231D0552007B98DF /* SpotMapViewController.swift in Sources */,
 				9988699C23081AA100612092 /* TicketDatas.swift in Sources */,
 				9988699E23081AB700612092 /* ShoppingDatas.swift in Sources */,
+				9968CF14232F77D600B8D095 /* WinningPopUpViewController.swift in Sources */,
 				997D192A232756AF007B98DF /* HotelRoomInfoTableViewCell.swift in Sources */,
 				99114D0722FBA60500D0494A /* EventCollectionViewCell.swift in Sources */,
 				99694C16231526E200F4FF49 /* NoticeDetailViewController.swift in Sources */,
@@ -1069,6 +1084,7 @@
 				99114D0A22FBAD3400D0494A /* CustomPageControl.swift in Sources */,
 				997D18E9231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift in Sources */,
 				99114D382301A65800D0494A /* AlertHandler.swift in Sources */,
+				9968CF10232F4DDC00B8D095 /* TutoMainViewController.swift in Sources */,
 				998869A023081CC500612092 /* AlienceDatas.swift in Sources */,
 				997D19182325F928007B98DF /* HasSpotTicketListViewController.swift in Sources */,
 				997D19362327C43C007B98DF /* ImageListPopupViewController.swift in Sources */,
@@ -1249,7 +1265,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GH3H7Z7YJZ;
+				DEVELOPMENT_TEAM = 5GTM2WZXJH;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1269,7 +1285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GH3H7Z7YJZ;
+				DEVELOPMENT_TEAM = 5GTM2WZXJH;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

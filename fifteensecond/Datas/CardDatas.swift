@@ -11,6 +11,8 @@ import UIKit
 class CardDatas: NSObject {
     
     var id: Int!
+    var name: String!
+    var cardNum: String!
     
     override init() {
         
@@ -18,5 +20,9 @@ class CardDatas: NSObject {
     
     init(_ data: NSDictionary) {
         id = data["id"] as? Int
+        name = data["card_name"] as? String
+        if let str = data["card_num"] as? String {
+            cardNum = "******" + String(str.suffix(4))
+        }
     }
 }

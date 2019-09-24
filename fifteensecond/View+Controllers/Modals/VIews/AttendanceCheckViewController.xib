@@ -46,14 +46,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019.07 -  2020.07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZH7-oA-NIf">
-                    <rect key="frame" x="36" y="210.5" width="143" height="19.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iW5-cB-X4q" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
-                    <rect key="frame" x="25" y="270" width="364" height="285"/>
+                    <rect key="frame" x="25" y="265.5" width="364" height="285"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUc-Tt-u2E" customClass="GradientHorizentalView" customModule="fifteensecond" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="364" height="45"/>
@@ -217,16 +211,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ExB-sr-2Z2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="09J-UD-GFt"/>
-                <constraint firstItem="ZH7-oA-NIf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="5Rr-mR-GKt"/>
                 <constraint firstItem="syq-9R-xkZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="68" id="9NU-tK-SKD"/>
                 <constraint firstItem="syq-9R-xkZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="AdU-G1-iGu"/>
-                <constraint firstItem="ZH7-oA-NIf" firstAttribute="top" secondItem="wvd-7r-vqg" secondAttribute="bottom" constant="25" id="AxK-8S-FFE"/>
                 <constraint firstItem="wvd-7r-vqg" firstAttribute="top" secondItem="syq-9R-xkZ" secondAttribute="bottom" constant="5" id="Ay0-v6-5Kw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cCy-x7-bfm" secondAttribute="bottom" id="LE8-Og-NGs"/>
+                <constraint firstItem="iW5-cB-X4q" firstAttribute="top" secondItem="wvd-7r-vqg" secondAttribute="bottom" constant="80" id="Ml7-SJ-1PQ"/>
                 <constraint firstItem="cCy-x7-bfm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RAg-Lw-Ys7"/>
                 <constraint firstItem="iW5-cB-X4q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Rkk-a6-nyW"/>
                 <constraint firstItem="cCy-x7-bfm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y75-Ge-xGu"/>
-                <constraint firstItem="iW5-cB-X4q" firstAttribute="top" secondItem="ZH7-oA-NIf" secondAttribute="bottom" constant="40" id="b9k-RD-Wzm"/>
                 <constraint firstAttribute="trailing" secondItem="cCy-x7-bfm" secondAttribute="trailing" id="gOY-dI-Q59"/>
                 <constraint firstItem="ExB-sr-2Z2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="jcX-Lp-7Ud"/>
                 <constraint firstItem="wvd-7r-vqg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="u0R-dr-Yv8"/>

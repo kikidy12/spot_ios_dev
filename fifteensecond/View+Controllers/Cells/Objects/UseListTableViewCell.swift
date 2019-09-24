@@ -14,7 +14,6 @@ class UseListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var useTimeLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,11 +24,8 @@ class UseListTableViewCell: UITableViewCell {
         spotTicketUseInfo = data
         
         addressLabel.text = spotTicketUseInfo.spot.address
-        useTimeLabel.text = DateFormatter().showDateStr(spotTicketUseInfo.usedTime)
+        useTimeLabel.text = "이용일자 \(DateFormatter().showDateStr(spotTicketUseInfo.usedTime, style: .dot))"
         
-        let foramtter = NumberFormatter()
-        foramtter.numberStyle = .decimal
-        priceLabel.text = "\(foramtter.string(for: spotTicketUseInfo.price) ?? "0")원"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

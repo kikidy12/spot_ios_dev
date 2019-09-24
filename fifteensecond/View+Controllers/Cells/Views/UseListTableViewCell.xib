@@ -39,19 +39,11 @@
                             <constraint firstAttribute="height" constant="1" id="i9t-oO-omy"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnH-KF-cgW">
-                        <rect key="frame" x="294.5" y="44" width="24.5" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" name="brownGrey"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="vnH-KF-cgW" secondAttribute="trailing" constant="24" id="0GE-gb-h4v"/>
                     <constraint firstItem="aw9-sq-Oj1" firstAttribute="top" secondItem="2uB-Mp-dEg" secondAttribute="bottom" constant="22" id="KeG-7C-wPJ"/>
                     <constraint firstItem="ory-s1-A8d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="LiK-lO-ydW"/>
-                    <constraint firstItem="vnH-KF-cgW" firstAttribute="centerY" secondItem="2uB-Mp-dEg" secondAttribute="centerY" id="YvM-rh-HNQ"/>
                     <constraint firstAttribute="trailing" secondItem="aw9-sq-Oj1" secondAttribute="trailing" id="enQ-Es-k1D"/>
                     <constraint firstItem="2uB-Mp-dEg" firstAttribute="top" secondItem="ory-s1-A8d" secondAttribute="bottom" constant="5" id="rCh-lL-bOA"/>
                     <constraint firstItem="ory-s1-A8d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="sOw-sT-jpN"/>
@@ -64,7 +56,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="addressLabel" destination="ory-s1-A8d" id="hLm-ZI-sLA"/>
-                <outlet property="priceLabel" destination="vnH-KF-cgW" id="faY-1i-XEi"/>
                 <outlet property="useTimeLabel" destination="2uB-Mp-dEg" id="wtJ-YE-Rhh"/>
             </connections>
             <point key="canvasLocation" x="154.34782608695653" y="126.22767857142857"/>

@@ -70,6 +70,8 @@ class AlienceListViewController: UIViewController {
     @IBOutlet weak var sortTypeView: UIView!
     @IBOutlet weak var sortTypeBtn: UIButton!
     
+    @IBOutlet weak var alienceTableHeightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryColletionView.delegate = self
@@ -126,6 +128,12 @@ class AlienceListViewController: UIViewController {
 }
 
 extension AlienceListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
+            alienceTableHeightConstraint.constant = tableView.contentSize.height
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return alienceArray.count
     }

@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         locationManager.delegate = self
         navigationController?.isNavigationBarHidden = true
-        phoneNumTextField.attributedPlaceholder = NSAttributedString(string: "Phone Number",
+        phoneNumTextField.attributedPlaceholder = NSAttributedString(string: "ex) 01012345678",
                                                                  attributes: [.foregroundColor: UIColor.steel])
         phoneNumTextField.inputAccessoryView = closeEventInputAccessary
         createPickerViewAndAccessarayView()
@@ -43,7 +43,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginEvent(sender: UIButton) {
-        authCheckByPhoneNumber()    }
+        authCheckByPhoneNumber()
+    }
     
     @IBAction func showNationCodeList(_ sender: UITapGestureRecognizer) {
         textField.becomeFirstResponder()
@@ -135,13 +136,20 @@ class LoginViewController: UIViewController {
                     userDefult.setValue(token, forKey: "access_tocken")
                     userDefult.synchronize()
                 }
-                if let email : NSString = (result! as AnyObject).value(forKey: "email") as? NSString {
-                    print("email: \(email)")
-                }
+                
+                let email = dict["email"] as? String
+                let uid = dict["id"] as! String
+                
+                print(uid)
+                print(email)
+                
+                self.snsCheck(provider: "FACEBOOK", uid: uid, email: email)
             }
         })
     }
     
+    
+    //kakao profile
     func profile(_ error: Error?, user: KOUserMe?) {
         guard let user = user,
             error == nil else {
@@ -151,15 +159,13 @@ class LoginViewController: UIViewController {
         
         guard let token = user.id else { return }
         let name = user.nickname ?? ""
-        let email = user.account?.email ?? ""
+        let email = user.account?.email
         
         print(token)
         print(name)
         print(email)
         
-        let vc = SignUpViewController()
-        vc.email = email
-        self.show(vc, sender: nil)
+        self.snsCheck(provider: "KAKAO", uid: token, email: email)
     }
     
     func createPickerViewAndAccessarayView() {
@@ -197,8 +203,6 @@ extension LoginViewController: CLLocationManagerDelegate {
             
         case .restricted, .denied:
             print("fail")
-            // Disable location features
-            //            disableMyLocationBasedFeatures()
             break
             
         case .authorizedWhenInUse:
@@ -222,10 +226,12 @@ extension LoginViewController: GIDSignInUIDelegate, GIDSignInDelegate {
         }
         
         guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
+//        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+//                                                       accessToken: authentication.accessToken)
 
         print(user.profile.email)
+        print(user.userID)
+        self.snsCheck(provider: "GOOGLE", uid: user.userID, email: user.profile.email)
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
@@ -255,13 +261,42 @@ extension LoginViewController {
             
             GlobalDatas.nationCodeList = array.compactMap { NationCodeData($0 as! NSDictionary) }
             
-            let nation = GlobalDatas.nationCodeList[0]
-            self.codeLabel.text = nation.code
-            if let nationImageURL = URL(string: nation.imgUrl ?? "") {
+            let nation = GlobalDatas.nationCodeList.first(where: { $0.code == "82"})
+            self.codeLabel.text = nation!.code
+            if let nationImageURL = URL(string: nation!.imgUrl ?? "") {
                 self.nationImageView.kf.setImage(with: nationImageURL)
             }
             
             self.pickerView.reloadAllComponents()
+        }
+    }
+    
+    func snsCheck(provider: String, uid: String, email: String?) {
+        let parameters = [
+            "provider": provider,
+            "uid": uid
+        ] as [String:Any]
+        ServerUtil.shared.postSnsAuth(self, parameters: parameters) { (success, dict, message) in
+            guard success, let isSigned = dict?["is_signup"] as? Bool else { return }
+            
+            if isSigned {
+                if let token = dict?["token"] as? String {
+                    UserDefs.setUserToken(token: token)
+                    UserDefs.setAutoLogin(true)
+                    self.navigationController?.isNavigationBarHidden = false
+                    let vc = HomeViewController()
+                    self.show(vc, sender: nil)
+                }
+            }
+            else {
+                self.navigationController?.isNavigationBarHidden = false
+                let vc = SignUpViewController()
+                if let email = email {
+                    vc.email = email
+                }
+                vc.provider = provider
+                self.show(vc, sender: nil)
+            }
         }
     }
     

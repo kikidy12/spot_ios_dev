@@ -77,12 +77,19 @@ extension HasSpotTicketListViewController: UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = SpotUsePopupViewController()
-        vc.useSpotTicket = useableTicketList[indexPath.item]
-        vc.closeHandler = {
-            self.useSpotTicket(self.useableTicketList[indexPath.item].id)
-        }
-        showPopupView(vc: vc)
+        guard spot != nil else { return }
+        
+        let ticket = useableTicketList[indexPath.item]
+        
+        AlertHandler.shared.showAlert(vc: self, message: "\(ticket.ticketKind?.name ?? "")을\n사용하시겠습니까?", okTitle: "확인", cancelTitle: "취소", okHandler: { (_) in
+            let vc = SpotUsePopupViewController()
+            vc.useSpotTicket = ticket
+            vc.closeHandler = {
+                self.useSpotTicket(ticket.id)
+            }
+            self.showPopupView(vc: vc)
+        })
+        
     }
     
     func recordVideo() {

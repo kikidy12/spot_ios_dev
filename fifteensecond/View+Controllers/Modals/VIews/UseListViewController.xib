@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UseListViewController" customModule="fifteensecond" customModuleProvider="target">
             <connections>
+                <outlet property="emptyLabel" destination="1el-Zf-A8t" id="XH9-zU-A9y"/>
                 <outlet property="useListTableView" destination="oUh-sx-RT2" id="S3e-Lk-3yo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,15 +37,23 @@
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용내역이 없습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1el-Zf-A8t">
+                    <rect key="frame" x="142.5" y="438.5" width="129" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" name="darkblue"/>
             <constraints>
                 <constraint firstItem="Cm4-vT-YDp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8oh-qO-JFV"/>
                 <constraint firstItem="Cm4-vT-YDp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lon-bG-5V2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oUh-sx-RT2" secondAttribute="bottom" id="bV1-Sf-gGs"/>
+                <constraint firstItem="1el-Zf-A8t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gAY-BC-fNW"/>
                 <constraint firstItem="oUh-sx-RT2" firstAttribute="top" secondItem="Cm4-vT-YDp" secondAttribute="bottom" id="jVC-79-ZZn"/>
                 <constraint firstItem="oUh-sx-RT2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jnX-EF-BJ1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oUh-sx-RT2" secondAttribute="trailing" id="nGa-fB-ukJ"/>
+                <constraint firstItem="1el-Zf-A8t" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nP9-jE-koF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Cm4-vT-YDp" secondAttribute="trailing" id="zFv-Es-Ba7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -15,13 +15,17 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("splash Opne")
         locManager.delegate = self
         
         NotificationCenter.default.addObserver(self, selector:#selector(locCheck), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
     }
     
     @objc func locCheck() {
+        print("loc Check")
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse, CLLocationManager.authorizationStatus() == .authorizedAlways {
             if UserDefs.isAutoLogin {
                 showHomeVc()
@@ -42,12 +46,18 @@ class SplashViewController: UIViewController {
     }
     
     func showLoginVc() {
-        let navi = UINavigationController(rootViewController: LoginViewController())
-        navi.navigationBar.barStyle = .black
-        navi.navigationBar.tintColor = .white
-        navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navi.navigationBar.shadowImage = UIImage()
-        self.present(navi, animated: true, completion: nil)
+        if UserDefs.isOpenedApp {
+            let navi = UINavigationController(rootViewController: LoginViewController())
+            navi.navigationBar.barStyle = .black
+            navi.navigationBar.tintColor = .white
+            navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navi.navigationBar.shadowImage = UIImage()
+            self.present(navi, animated: true, completion: nil)
+        }
+        else {
+            present(TutoMainViewController(), animated: true, completion: nil)
+        }
+        
     }
 
 

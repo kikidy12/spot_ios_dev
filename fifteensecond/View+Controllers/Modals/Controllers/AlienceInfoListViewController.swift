@@ -33,18 +33,20 @@ class AlienceInfoListViewController: UIViewController {
     }
     
     
-    var facilityList = [String]() {
+    var facilityList = [FacilityDatas]() {
         didSet {
             var str = ""
             facilityList.forEach {
                 if facilityList.last == $0 {
-                    str += "\($0)"
+                    str += "\($0.name!)"
                 }
                 else {
-                    str += "\($0), "
+                    str += "\($0.name!), "
                 }
             }
             facilityLabel.text = str
+            
+            facilityCollectionView.reloadData()
         }
     }
     
@@ -82,6 +84,7 @@ class AlienceInfoListViewController: UIViewController {
             addressLabel.text = hotel.address
             linkURL = hotel.linkURL ?? ""
             imageList = hotel.imageList
+            facilityList = hotel.facilityList
             hotelRoomTableView.reloadData()
         }
     }
@@ -101,7 +104,7 @@ class AlienceInfoListViewController: UIViewController {
             addressLabel.text = ticket.address
             linkURL = ticket.linkUrl ?? ""
             imageList = ticket.imageList
-            facilityList = ticket.facilityList.compactMap { $0.name }
+            facilityList = ticket.facilityList
             print(ticket.kindList.count)
             ticketKindTableView.reloadData()
         }
@@ -142,6 +145,11 @@ class AlienceInfoListViewController: UIViewController {
     @IBOutlet weak var ticketKindTableView: UITableView!
     @IBOutlet weak var hotelRoomTableView: UITableView!
     @IBOutlet weak var imageCollectionView: UICollectionView!
+    @IBOutlet weak var facilityCollectionView: UICollectionView!
+    
+    @IBOutlet weak var hotelTableHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var menuTableHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var ticketKindTableHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var locationView: UIView!
     @IBOutlet weak var callView: UIView!
@@ -151,7 +159,9 @@ class AlienceInfoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        naviBarSetting()
+//        naviBarSetting()
+        facilityCollectionView.delegate = self
+        facilityCollectionView.dataSource = self
         alienceMenuTableView.delegate = self
         alienceMenuTableView.dataSource = self
         ticketKindTableView.delegate = self
@@ -168,6 +178,7 @@ class AlienceInfoListViewController: UIViewController {
         ticketKindTableView.register(UINib(nibName: "AlienceTicketTableViewCell", bundle: nil), forCellReuseIdentifier: "kindCell")
         imageCollectionView.register(UINib(nibName: "AlienceInfoImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imageCell")
         hotelRoomTableView.register(UINib(nibName: "HotelRoomInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "roomCell")
+        facilityCollectionView.register(UINib(nibName: "FacilityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "facilityCell")
         alienceMenuTableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 0.001))
         getAlienceInfo()
     }
@@ -207,7 +218,7 @@ class AlienceInfoListViewController: UIViewController {
                 openNaverNavi(lat: ticket.location.latitude, lng: ticket.location.longitude)
                 break
             case .hotel:
-//                openNaverNavi(lat: hotel.location.latitude, lng: hotel.location.longitude)
+                openNaverNavi(lat: hotel.location.latitude, lng: hotel.location.longitude)
                 break
             }
         }
@@ -243,28 +254,73 @@ class AlienceInfoListViewController: UIViewController {
 
 extension AlienceInfoListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageList.count
+        if collectionView == imageCollectionView {
+            return imageList.count
+        }
+        else if collectionView == facilityCollectionView {
+            return facilityList.count
+        }
+        else {
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! AlienceInfoImageCollectionViewCell
-        cell.initView(imageStr: imageList[indexPath.item].imageURL)
-        return cell
+        switch collectionView {
+        case imageCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! AlienceInfoImageCollectionViewCell
+            cell.initView(imageStr: imageList[indexPath.item].imageURL)
+            return cell
+        case facilityCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "facilityCell", for: indexPath) as! FacilityCollectionViewCell
+            cell.initView(facilityList[indexPath.item])
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 141, height: 141)
+        switch collectionView {
+        case imageCollectionView:
+            return CGSize(width: 141, height: 141)
+        case facilityCollectionView:
+            return CGSize(width: 65, height: 50)
+        default:
+            return .zero
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = ImageListPopupViewController()
-        vc.imageList = self.imageList
-        showPopupView(vc: vc)
+        switch collectionView {
+        case imageCollectionView:
+            let vc = ImageListPopupViewController()
+            vc.imageList = self.imageList
+            showPopupView(vc: vc)
+            break
+        default:
+            print("error")
+        }
+        
     }
     
 }
 
 extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
+            if tableView == hotelRoomTableView {
+                hotelTableHeightConstraint.constant = tableView.contentSize.height
+            }
+            else if tableView == alienceMenuTableView {
+                menuTableHeightConstraint.constant = tableView.contentSize.height
+            }
+            else if tableView == ticketKindTableView {
+                ticketKindTableHeightConstraint.constant = tableView.contentSize.height
+            }
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch type {
         case .restaurant:
@@ -302,7 +358,7 @@ extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if type == .hotel {
             let vc = ImageListPopupViewController()
-            vc.imageList = self.imageList
+            vc.imageList = hotel.roomList[indexPath.item].imageList
             showPopupView(vc: vc)
         }
     }

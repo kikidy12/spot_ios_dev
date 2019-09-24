@@ -45,7 +45,7 @@
                         <constraint firstAttribute="height" constant="61" id="2Z9-Ce-k7i"/>
                         <constraint firstAttribute="width" constant="47" id="MFg-N5-Uxi"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" backgroundImage="triangle"/>
                     <connections>
                         <action selector="playVideo:" destination="-1" eventType="touchUpInside" id="KWe-cO-xg9"/>
                     </connections>
@@ -113,6 +113,7 @@
     <resources>
         <image name="cancel27size" width="27" height="27"/>
         <image name="share25size" width="25" height="25"/>
+        <image name="triangle" width="47" height="61"/>
         <namedColor name="darkblue">
             <color red="0.11764705882352941" green="0.13725490196078433" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

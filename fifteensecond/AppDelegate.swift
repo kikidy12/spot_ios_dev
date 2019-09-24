@@ -47,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("FCM token: \(messaging.fcmToken ?? "")")
+        GlobalDatas.deviceToken = messaging.fcmToken ?? ""
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

@@ -18,9 +18,21 @@ enum AlienceTitles: String {
     static var allCase = [restaurant, shopping, tickets, hotel]
 }
 
+enum CardInfoEnum: String {
+    case wooriCard = "우리은행"
+    case shinhanCard = "신한은행"
+    case kakaoCard = "카카오뱅크"
+    case nonghyeopCard = "농협"
+    case ibkCard = "기업은행"
+    case kbCard = "KB국민은행"
+    case hanaCard = "하나은행(서울은행)"
+    case anotherCard = "기타카드"
+}
 
-enum TestEnum: CaseIterable {
-    case test1, test2, test3
+
+enum LinkType: String {
+    case OUT = "OUT"
+    case IN = "IN"
 }
 
 

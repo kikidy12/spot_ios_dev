@@ -76,12 +76,15 @@ extension PayViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! CardCollectionViewCell
-        
+        cell.initView(cardList[indexPath.item])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        registedCardPay(cardId: cardList[indexPath.item].id)
+        
+        AlertHandler.shared.showAlert(vc: self, message: "\(spotTicket?.name ?? "")을\n구매하시겠습니까?", okTitle: "확인", cancelTitle: "취소", okHandler: { (_) in
+            self.registedCardPay(cardId: self.cardList[indexPath.item].id)
+        })
     }
 }
 

@@ -23,30 +23,13 @@ class AuthCheckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        phoneLabel.text = nationalCode + phoneNum + "로\n발송된 인증번호를 입력해주세요"
+        phoneLabel.text = phoneNum + "로\n발송된 인증번호를 입력해주세요"
+        codeTextField.attributedPlaceholder = NSAttributedString(string: "4자리 숫자입력",
+                                                                 attributes: [.foregroundColor: UIColor.steel])
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
-    }
-
-    func SMSAuth() {
-        print("snsAuth")
-        self.codeTextField.text = ""
-        PhoneAuthProvider.provider().verifyPhoneNumber("+821089049034", uiDelegate: nil) { (verificationID, error) in
-            if let error = error {
-                print("error")
-                print(error)
-                return
-            }
-            guard let vid = verificationID else {
-                print("idFail")
-                return
-            }
-            self.lastTime = 180
-            self.setTimer()
-            self.verifiID = vid
-        }
     }
     
     func setTimer() {
@@ -73,7 +56,10 @@ class AuthCheckViewController: UIViewController {
         ] as [String:Any]
         ServerUtil.shared.postAuth(self, parameters: parameters) { (success, dict, message) in
             
-            guard success, let data = dict?["user"] as? NSDictionary, let token = dict?["token"] as? String else { return }
+            guard success, let data = dict?["user"] as? NSDictionary, let token = dict?["token"] as? String else {
+                AlertHandler.shared.showAlert(vc: self, message: message ?? "", okTitle: "확인")
+                return
+            }
             UserDefs.setUserToken(token: token)
             UserDefs.setAutoLogin(true)
             
@@ -82,19 +68,6 @@ class AuthCheckViewController: UIViewController {
             self.show(vc, sender: nil)
 
         }
-//        guard let code = codeTextField.text, !code.isEmpty else { return }
-//        let credential = PhoneAuthProvider.provider().credential(
-//            withVerificationID: verifiID,
-//            verificationCode: code)
-//        Auth.auth().signIn(with: credential) { (authResult, error) in
-//            if let error = error {
-//                self.codeTextField.text = ""
-//                print(error)
-//                return
-//            }
-//
-//            self.performSegue(withIdentifier: "nextStep", sender: nil)
-//        }
     }
 
 }

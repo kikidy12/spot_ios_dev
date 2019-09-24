@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -20,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.01</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -34,14 +29,14 @@
 			</array>
 		</dict>
 	</array>
-	<key>KAKAO_APP_KEY</key>
-	<string>bee64818af8f71adab9a82991b9dcb9b</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
 	<string>638821019946552</string>
 	<key>FacebookDisplayName</key>
 	<string>Spot</string>
+	<key>KAKAO_APP_KEY</key>
+	<string>bee64818af8f71adab9a82991b9dcb9b</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kakaobee64818af8f71adab9a82991b9dcb9b</string>
@@ -55,14 +50,19 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>촬영허가</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>촬영 권한.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>위치정보 사용을 허용하시겠습니까?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>위치정보 사용을 허용하시겠습니까?</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>촬영허가</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>사진 사용 권한.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

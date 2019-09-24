@@ -20,11 +20,27 @@ class AttendanceCheckViewController: UIViewController {
     }
     
     @IBAction func attendentEvnet() {
-        attendent()
+        if attdentBtn.titleLabel?.text == "룰렛 돌리기" {
+            let vc = WinningPopUpViewController()
+            vc.compClouser = {
+                self.setAttdent(0)
+            }
+            self.showPopupView(vc: vc)
+        }
+        else {
+            attendent()
+        }
+        
     }
     
     func setAttdent(_ count: Int = 0) {
-        attdentBtn.setTitle("춣석하기 (\(count)/10)", for: .normal)
+        if count == 10 {
+            attdentBtn.setTitle("룰렛 돌리기", for: .normal)
+        }
+        else {
+            attdentBtn.setTitle("춣석하기 (\(count)/10)", for: .normal)
+        }
+        
         attdentView.subviews.enumerated().forEach {
             if $0.offset < count {
                 $0.element.tintColor = .darkishPink

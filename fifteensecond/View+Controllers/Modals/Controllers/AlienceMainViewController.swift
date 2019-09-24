@@ -76,7 +76,14 @@ class AlienceMainViewController: UIViewController {
             }
         }
         
-        rightBtn = UIBarButtonItem(title: "MAP", style: .plain, target: self, action: #selector(changeView(sender:)))
+        var rightTitle = "MAP"
+        if childViewType == .List {
+            rightTitle = "MAP"
+        }
+        else {
+            rightTitle = "LIST"
+        }
+        rightBtn = UIBarButtonItem(title: rightTitle, style: .plain, target: self, action: #selector(changeView(sender:)))
         
         navigationItem.rightBarButtonItem = rightBtn
     }

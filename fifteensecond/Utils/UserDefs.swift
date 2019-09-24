@@ -14,12 +14,20 @@ class UserDefs: NSObject {
         return UserDefaults.standard.bool(forKey: "autoLogin")
     }
     
+    static var isOpenedApp: Bool {
+        return UserDefaults.standard.bool(forKey: "startApp")
+    }
+    
     static var userToken: String {
         return UserDefaults.standard.string(forKey: "userToken") ?? ""
     }
     
     static func setAutoLogin(_ auto : Bool) {
         UserDefaults.standard.set(auto, forKey: "autoLogin")
+    }
+    
+    static func setOpenedApp(_ opened : Bool) {
+        UserDefaults.standard.set(opened, forKey: "startApp")
     }
     
     static func setUserToken(token: String) {

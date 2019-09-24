@@ -51,6 +51,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="384" height="214"/>
+            <connections>
+                <outlet property="cardInfoLabel" destination="FFU-xg-IFS" id="frh-Re-4cL"/>
+                <outlet property="customView" destination="y6a-1u-A3x" id="LY3-oh-Xh2"/>
+            </connections>
             <point key="canvasLocation" x="37.681159420289859" y="148.66071428571428"/>
         </collectionViewCell>
     </objects>

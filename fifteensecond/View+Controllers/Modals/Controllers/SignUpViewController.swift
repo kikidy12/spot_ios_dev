@@ -32,10 +32,16 @@ class SignUpViewController: UIViewController {
                                                              attributes: [.foregroundColor: UIColor.steel])
         emailTextField.attributedPlaceholder = NSAttributedString(string: "Email",
                                                                  attributes: [.foregroundColor: UIColor.steel])
-        phoneTextField.attributedPlaceholder = NSAttributedString(string: "Phone Number",
+        phoneTextField.attributedPlaceholder = NSAttributedString(string: "ex) 01012345678",
                                                                  attributes: [.foregroundColor: UIColor.steel])
         if email != nil {
             emailTextField.text = email
+        }
+        
+        let nation = GlobalDatas.nationCodeList.first(where: { $0.code == "82"})
+        self.phoneCodeLabel.text = nation!.code
+        if let nationImageURL = URL(string: nation!.imgUrl ?? "") {
+            self.nationImageView.kf.setImage(with: nationImageURL)
         }
         
         createPickerViewAndAccessarayView()
@@ -91,7 +97,11 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func selectRow() {
-        phoneCodeLabel.text = GlobalDatas.nationCodeList[pickerView.selectedRow(inComponent: 0)].code
+        let nation = GlobalDatas.nationCodeList[pickerView.selectedRow(inComponent: 0)]
+        self.phoneCodeLabel.text = nation.code
+        if let nationImageURL = URL(string: nation.imgUrl ?? "") {
+            self.nationImageView.kf.setImage(with: nationImageURL)
+        }
         textField.resignFirstResponder()
     }
 }
@@ -116,10 +126,10 @@ extension SignUpViewController {
         print(signUpParameters)
         ServerUtil.shared.putSendSms(self, parameters: signUpParameters) { (success, dict, message) in
             guard success else { return }
-            print(message)
             let vc = AuthCheckViewController()
-            vc.phoneNum = "\(self.phoneCodeLabel.text ?? "")\(self.phoneTextField.text ?? "")"
-            self.show(AuthCheckViewController(), sender: nil)
+            vc.phoneNum = self.phoneTextField.text ?? ""
+            vc.nationalCode = self.phoneCodeLabel.text ?? ""
+            self.show(vc, sender: nil)
         }
     }
 }

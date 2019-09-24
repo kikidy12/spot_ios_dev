@@ -12,7 +12,6 @@ class AlienceTicketTableViewCell: UITableViewCell {
     
     var kind: TicketKindDatas!
     
-    @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     

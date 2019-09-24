@@ -22,7 +22,4 @@ class PayCompViewController: UIViewController {
             preVC.show(SpotTicketListViewController(), sender: nil)
         }
     }
-    
-    
-
 }

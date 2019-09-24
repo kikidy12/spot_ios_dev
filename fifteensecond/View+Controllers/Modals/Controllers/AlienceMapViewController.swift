@@ -135,6 +135,13 @@ extension AlienceMapViewController: GMSMapViewDelegate {
                 vc.type = .shopping
                 self.show(vc, sender: nil)
             }
+            
+            else if let hotel = data as? HotelDatas {
+                let vc = AlienceInfoListViewController()
+                vc.alienceId = hotel.id
+                vc.type = .hotel
+                self.show(vc, sender: nil)
+            }
         }
     }
     
@@ -195,7 +202,7 @@ extension AlienceMapViewController {
                 break
             case .hotel:
                 if let array = data["hotel"] as? NSArray {
-                    self.restaurantList = array.compactMap { RestaurantDatas($0 as! NSDictionary) }
+                    self.hotelList = array.compactMap { HotelDatas($0 as! NSDictionary) }
                 }
                 break
             }

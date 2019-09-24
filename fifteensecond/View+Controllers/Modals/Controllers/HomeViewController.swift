@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
     
@@ -56,6 +57,7 @@ class HomeViewController: UIViewController {
     @IBAction func showAlienceListView(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             let vc = AlienceMainViewController()
+            vc.childViewType = .List
             switch sender.view!.tag {
             case 0:
                 vc.titleString = .restaurant
@@ -72,6 +74,7 @@ class HomeViewController: UIViewController {
             default:
                 break
             }
+            title = " "
             self.show(vc, sender: nil)
         }
     }
@@ -92,6 +95,13 @@ class HomeViewController: UIViewController {
         attandAlertview.isHidden = true
     }
     
+    @objc func showMapView() {
+        let vc = AlienceMainViewController()
+        vc.childViewType = .Map
+        vc.titleString = .restaurant
+        show(vc, sender: nil)
+    }
+    
     func setNaviBarBtns() {
         title = " "
         let titleImageView = UIImageView(image: UIImage(named: "login_logo"))
@@ -101,6 +111,18 @@ class HomeViewController: UIViewController {
         titleImageView.contentMode = .scaleToFill
         self.navigationItem.titleView = titleImageView
         self.navigationItem.hidesBackButton = true
+        
+        let rightBtn = UIBarButtonItem(image: UIImage(named: "mainSpotTicket"), style: .plain, target: self, action: #selector(goToSpotTicketList))
+        
+        let leftBtn = UIBarButtonItem(title: "MAP", style: .plain, target: self, action: #selector(showMapView))
+        
+        navigationItem.leftBarButtonItem = leftBtn
+        navigationItem.rightBarButtonItem = rightBtn
+    }
+    
+    @objc func goToSpotTicketList() {
+        let vc = HasSpotTicketListViewController()
+        show(vc, sender: nil)
     }
 }
 
@@ -172,6 +194,33 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             pageControl.currentPage = collectionView.indexPath(for: collectionView.visibleCells.first!)!.row
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == eventCollectionView {
+            showViewByType(mainEventList[indexPath.item])
+        }
+        else if collectionView == allianceCollectionView {
+            showViewByType(subEventList[indexPath.item])
+        }
+    }
+    
+    func showViewByType(_ event: EventDatas) {
+        if event.linkType == .OUT {
+            if let urlStr = event.linkURL, let url = URL(string: urlStr) {
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+        else {
+            if let inType = event.inType, let id = event.inTypeId {
+                let vc = AlienceInfoListViewController()
+                vc.type = inType
+                vc.alienceId = id
+                self.title = inType.rawValue
+                self.show(vc, sender: nil)
+            }
+        }
+        
+    }
 }
 
 extension HomeViewController {
@@ -187,17 +236,22 @@ extension HomeViewController {
     }
     
     func getSubEvents() {
-        ServerUtil.shared.getMainEvent(self) { (success, dict, message) in
-            guard success, let array = dict?["main_event"] as? NSArray else { return }
+        ServerUtil.shared.getSubEvent(self) { (success, dict, message) in
+            guard success, let array = dict?["sub_event"] as? NSArray else { return }
             
             self.subEventList = array.compactMap{ EventDatas($0 as! NSDictionary)}
         }
     }
     
     func getUserInfo() {
-        ServerUtil.shared.getInfo(self) { (success, dict, message) in
+        let parameters = [
+            "os": "iOS",
+            "device_token": GlobalDatas.deviceToken
+        ] as [String:Any]
+        
+        ServerUtil.shared.getInfo(self, parameters: parameters) { (success, dict, message) in
             guard success, let isAttend = dict?["today_attendance"] as? Bool,
-            let user = dict?["user"] as? NSDictionary else { return }
+                let user = dict?["user"] as? NSDictionary else { return }
             
             GlobalDatas.currentUser = UserData(user, isAttend: isAttend)
             

@@ -35,6 +35,14 @@ class RegistCardViewController: UIViewController {
         twoDigitTextFields = [yearTextField, monthTextField, passwordTextField]
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        title = "카드 등록"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        title = " "
+    }
+    
     @IBAction func selectNextTextField(_ sender: UITextField) {
         if let tempText = sender.text, tempText.count > 4 {
             sender.text = String(tempText.dropLast())

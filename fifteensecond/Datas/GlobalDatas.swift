@@ -11,6 +11,8 @@ import Foundation
 class GlobalDatas: NSObject {
     static var nationCodeList = [NationCodeData]()
     static var currentUser: UserData!
+    
+    static var deviceToken = ""
 }
 
 

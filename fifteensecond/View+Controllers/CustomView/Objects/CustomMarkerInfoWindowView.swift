@@ -66,6 +66,13 @@ class CustomMarkerInfoWindowView: UIView {
             openTimeLabel.text = shopping.openTime
             setImageView(urlStr: shopping.imageList.first?.imageURL)
         }
+        else if let hotel = alienceData as? HotelDatas {
+            nameLabel.text = hotel.name
+            distanceLabel.text = "\(hotel.distance ?? 0)m"
+            categoryLabel.text = hotel.category.name
+            openTimeLabel.text = "Check In \(hotel.sleepInTime!)/ Out \(hotel.sleepOutTime!)"
+            setImageView(urlStr: hotel.imageList.first?.imageURL)
+        }
     }
     
     func setImageView(urlStr: String?) {

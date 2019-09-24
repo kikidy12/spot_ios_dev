@@ -11,7 +11,9 @@ import UIKit
 class FacilityCollectionViewCell: UICollectionViewCell {
     
     var facility: FacilityDatas!
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +21,12 @@ class FacilityCollectionViewCell: UICollectionViewCell {
 
     func initView(_ data: FacilityDatas) {
         facility = data
+        
+        if let urlStr = facility.imgUrl as? String {
+            let url = URL(string: urlStr)
+            imageView.kf.setImage(with: url)
+        }
+        
+        nameLabel.text = facility.name
     }
 }

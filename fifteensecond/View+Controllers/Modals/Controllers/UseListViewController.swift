@@ -12,12 +12,18 @@ class UseListViewController: UIViewController {
     
     var useSpotList = [SpotTicketUseInfoDatas]() {
         didSet {
+            if useSpotList.isEmpty {
+                emptyLabel.isHidden = false
+            }
+            else {
+                emptyLabel.isHidden = true
+            }
             useListTableView.reloadData()
         }
     }
     
     @IBOutlet weak var useListTableView: UITableView!
-    
+    @IBOutlet weak var emptyLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

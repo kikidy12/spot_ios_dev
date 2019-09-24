@@ -12,11 +12,18 @@ class NoticeListViewController: UIViewController {
     
     var noticeList = [NoticeDatas]() {
         didSet {
+            if noticeList.isEmpty {
+                emptyLabel.isHidden = false
+            }
+            else {
+                emptyLabel.isHidden = true
+            }
             noticeTableView.reloadData()
         }
     }
     
     @IBOutlet weak var noticeTableView: UITableView!
+    @IBOutlet weak var emptyLabel: UILabel!
     
 
     override func viewDidLoad() {

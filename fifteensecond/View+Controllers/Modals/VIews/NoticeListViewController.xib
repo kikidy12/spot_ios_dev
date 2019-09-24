@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoticeListViewController" customModule="fifteensecond" customModuleProvider="target">
             <connections>
+                <outlet property="emptyLabel" destination="q7W-Rv-8Bu" id="cAX-mj-agT"/>
                 <outlet property="noticeTableView" destination="EVw-xp-Gf1" id="Oac-Ha-2FG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,6 +41,12 @@
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공지사항이 없습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7W-Rv-8Bu">
+                    <rect key="frame" x="142.5" y="438.5" width="129" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" name="darkblue"/>
             <constraints>
@@ -51,7 +58,9 @@
                 <constraint firstItem="na6-G8-NEE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="W5y-iQ-z5S"/>
                 <constraint firstAttribute="bottom" secondItem="na6-G8-NEE" secondAttribute="bottom" id="ajk-mI-4au"/>
                 <constraint firstItem="F9y-xH-jCe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="c74-bQ-TXq"/>
+                <constraint firstItem="q7W-Rv-8Bu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="j3u-JX-656"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EVw-xp-Gf1" secondAttribute="trailing" id="q32-gY-sZc"/>
+                <constraint firstItem="q7W-Rv-8Bu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r36-st-xVK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EVw-xp-Gf1" secondAttribute="bottom" id="wIa-OH-2BK"/>
                 <constraint firstItem="EVw-xp-Gf1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yZg-XP-WLF"/>
             </constraints>
