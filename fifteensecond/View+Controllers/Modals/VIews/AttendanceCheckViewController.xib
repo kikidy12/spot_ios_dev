@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="attdentBtn" destination="WWr-BV-6TA" id="xfD-vt-jJE"/>
                 <outlet property="attdentView" destination="Ruz-DQ-f4T" id="bm7-f5-oC8"/>
+                <outlet property="loadingView" destination="3Jc-zR-okR" id="fYk-gd-NhR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -207,6 +208,14 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Jc-zR-okR">
+                    <rect key="frame" x="157" y="398" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="b0P-Jm-MpW"/>
+                        <constraint firstAttribute="width" constant="100" id="xfK-FZ-3Nw"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -218,9 +227,11 @@
                 <constraint firstItem="iW5-cB-X4q" firstAttribute="top" secondItem="wvd-7r-vqg" secondAttribute="bottom" constant="80" id="Ml7-SJ-1PQ"/>
                 <constraint firstItem="cCy-x7-bfm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RAg-Lw-Ys7"/>
                 <constraint firstItem="iW5-cB-X4q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Rkk-a6-nyW"/>
+                <constraint firstItem="3Jc-zR-okR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UUq-Cm-Wfd"/>
                 <constraint firstItem="cCy-x7-bfm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y75-Ge-xGu"/>
                 <constraint firstAttribute="trailing" secondItem="cCy-x7-bfm" secondAttribute="trailing" id="gOY-dI-Q59"/>
                 <constraint firstItem="ExB-sr-2Z2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="jcX-Lp-7Ud"/>
+                <constraint firstItem="3Jc-zR-okR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oqF-Ur-GR3"/>
                 <constraint firstItem="wvd-7r-vqg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="u0R-dr-Yv8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iW5-cB-X4q" secondAttribute="trailing" constant="25" id="veA-tX-N8O"/>
             </constraints>

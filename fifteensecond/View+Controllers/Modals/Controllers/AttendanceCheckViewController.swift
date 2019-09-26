@@ -8,30 +8,54 @@
 
 import UIKit
 import CoreLocation
+import Lottie
 
 class AttendanceCheckViewController: UIViewController {
+    
     
     @IBOutlet weak var attdentView: UIView!
     @IBOutlet weak var attdentBtn: UIButton!
     
+    @IBOutlet weak var loadingView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         getAttendence()
     }
     
     @IBAction func attendentEvnet() {
+        
         if attdentBtn.titleLabel?.text == "룰렛 돌리기" {
-            let vc = WinningPopUpViewController()
-            vc.compClouser = {
-                self.setAttdent(0)
+            let lottie = AnimationView()
+            
+            let ani = Animation.named("loading")
+            
+            lottie.animation = ani
+            lottie.frame = loadingView.bounds
+            lottie.sizeToFit()
+            lottie.loopMode = .playOnce
+            lottie.contentMode = .scaleToFill
+            loadingView.addSubview(lottie)
+            lottie.play { (_) in
+                self.loadingView.isHidden = true
+                print("endLoading")
+                let vc = WinningPopUpViewController()
+                vc.compClouser = {
+//                    self.setAttdent(0)
+                    self.dismiss(animated: true, completion: nil)
+                }
+                self.showPopupView(vc: vc)
             }
-            self.showPopupView(vc: vc)
+            
         }
         else {
             attendent()
         }
         
     }
+    
     
     func setAttdent(_ count: Int = 0) {
         if count == 10 {
@@ -57,7 +81,7 @@ extension AttendanceCheckViewController {
         ServerUtil.shared.getAttendance(self) { (success, dict, message) in
             guard success, let count = dict?["attendance_count"] as? Int else { return }
             
-            self.setAttdent(count)
+            self.setAttdent(10)
         }
     }
     

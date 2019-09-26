@@ -86,6 +86,21 @@ class ServerUtil: NSObject {
         apiRequest("send_sms", method: .put, parameters: parameters, completion: completion)
     }
     
+    func getSnsAuth(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("sns_auth", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    func postUserDelete(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("user_delete", method: .post, parameters: parameters, completion: completion)
+    }
+    
+    func putSnsAuth(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("sns_auth", method: .put, parameters: parameters, completion: completion)
+    }
+    
     func postSendSms(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
         apiRequest("send_sms", method: .post, parameters: parameters, completion: completion)

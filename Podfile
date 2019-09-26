@@ -18,6 +18,7 @@ target 'fifteensecond' do
   pod 'FBSDKLoginKit'
   pod 'KakaoOpenSDK', '~> 1.14'
   pod 'Firebase/Analytics'
+  pod 'lottie-ios'
 
   target 'fifteensecondTests' do
     inherit! :search_paths

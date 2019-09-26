@@ -64,6 +64,10 @@
 		9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */; };
 		9968CF14232F77D600B8D095 /* WinningPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968CF12232F77D600B8D095 /* WinningPopUpViewController.swift */; };
 		9968CF15232F77D600B8D095 /* WinningPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF13232F77D600B8D095 /* WinningPopUpViewController.xib */; };
+		9968CF18233B361C00B8D095 /* RestaurantPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968CF16233B361C00B8D095 /* RestaurantPopUpViewController.swift */; };
+		9968CF19233B361C00B8D095 /* RestaurantPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF17233B361C00B8D095 /* RestaurantPopUpViewController.xib */; };
+		9968CF1B233CDFD600B8D095 /* ProviderDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968CF1A233CDFD600B8D095 /* ProviderDatas.swift */; };
+		9968CF1E233CF1D400B8D095 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF1D233CF1D400B8D095 /* loading.json */; };
 		99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */; };
 		99694BF1230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */; };
 		99694BF4230BF4F000F4FF49 /* BuyTicketPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */; };
@@ -238,6 +242,10 @@
 		9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutoMainViewController.xib; sourceTree = "<group>"; };
 		9968CF12232F77D600B8D095 /* WinningPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningPopUpViewController.swift; sourceTree = "<group>"; };
 		9968CF13232F77D600B8D095 /* WinningPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinningPopUpViewController.xib; sourceTree = "<group>"; };
+		9968CF16233B361C00B8D095 /* RestaurantPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPopUpViewController.swift; sourceTree = "<group>"; };
+		9968CF17233B361C00B8D095 /* RestaurantPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantPopUpViewController.xib; sourceTree = "<group>"; };
+		9968CF1A233CDFD600B8D095 /* ProviderDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDatas.swift; sourceTree = "<group>"; };
+		9968CF1D233CF1D400B8D095 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		99694BEE230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCallPopupViewController.swift; sourceTree = "<group>"; };
 		99694BEF230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCallPopupViewController.xib; sourceTree = "<group>"; };
 		99694BF2230BF4F000F4FF49 /* BuyTicketPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketPopupViewController.swift; sourceTree = "<group>"; };
@@ -393,6 +401,7 @@
 		99114C9C22F2726100D0494A /* fifteensecond */ = {
 			isa = PBXGroup;
 			children = (
+				9968CF1C233CF17100B8D095 /* json */,
 				9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */,
 				99114D1522FE6C5D00D0494A /* fifteensecond.entitlements */,
 				99114CCE22F2CF2A00D0494A /* Utils */,
@@ -463,6 +472,7 @@
 				99694C0E2315230100F4FF49 /* NoticeDatas.swift */,
 				997D18F8231D4E82007B98DF /* CardDatas.swift */,
 				997D19222326680E007B98DF /* SpotTicketUseInfoDatas.swift */,
+				9968CF1A233CDFD600B8D095 /* ProviderDatas.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -592,6 +602,7 @@
 				997D19122325F5C7007B98DF /* SpotUsePopupViewController.swift */,
 				997D19342327C43C007B98DF /* ImageListPopupViewController.swift */,
 				9968CF12232F77D600B8D095 /* WinningPopUpViewController.swift */,
+				9968CF16233B361C00B8D095 /* RestaurantPopUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -599,6 +610,7 @@
 		99114CE222F2D86100D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9968CF17233B361C00B8D095 /* RestaurantPopUpViewController.xib */,
 				9968CF13232F77D600B8D095 /* WinningPopUpViewController.xib */,
 				997D19352327C43C007B98DF /* ImageListPopupViewController.xib */,
 				997D19132325F5C7007B98DF /* SpotUsePopupViewController.xib */,
@@ -690,6 +702,14 @@
 				997D18EA231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9968CF1C233CF17100B8D095 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				9968CF1D233CF1D400B8D095 /* loading.json */,
+			);
+			path = json;
 			sourceTree = "<group>";
 		};
 		A5A827D6FABF114A680FC1CD /* Pods */ = {
@@ -847,6 +867,7 @@
 				99694C2B23156B5500F4FF49 /* AttendanceCheckPopupViewController.xib in Resources */,
 				997D192723274D92007B98DF /* AlienceTicketTableViewCell.xib in Resources */,
 				998869AC230A27A500612092 /* RestaurantMenuTableViewCell.xib in Resources */,
+				9968CF1E233CF1D400B8D095 /* loading.json in Resources */,
 				99694BFD2314F53E00F4FF49 /* MyPageMainViewController.xib in Resources */,
 				99114CF622F8544100D0494A /* LoginViewController.xib in Resources */,
 				997D192F23276C4C007B98DF /* FacilityCollectionViewCell.xib in Resources */,
@@ -864,6 +885,7 @@
 				997D1911231E82B5007B98DF /* ShoppingMenuTableViewCell.xib in Resources */,
 				99694BF5230BF4F000F4FF49 /* BuyTicketPopupViewController.xib in Resources */,
 				99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */,
+				9968CF19233B361C00B8D095 /* RestaurantPopUpViewController.xib in Resources */,
 				99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */,
 				99694C17231526E200F4FF49 /* NoticeDetailViewController.xib in Resources */,
 				9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */,
@@ -1030,6 +1052,7 @@
 				99694C16231526E200F4FF49 /* NoticeDetailViewController.swift in Sources */,
 				997D19322327C369007B98DF /* DetailImageCollectionViewCell.swift in Sources */,
 				99114D362301A60D00D0494A /* UserDefs.swift in Sources */,
+				9968CF1B233CDFD600B8D095 /* ProviderDatas.swift in Sources */,
 				998869962308132800612092 /* CategoryDatas.swift in Sources */,
 				99114CF222F2D9C400D0494A /* EnumObjects.swift in Sources */,
 				99114CA022F2726100D0494A /* ViewController.swift in Sources */,
@@ -1046,6 +1069,7 @@
 				99694BF7230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift in Sources */,
 				997D1904231DEC19007B98DF /* SpotTicketTableViewCell.swift in Sources */,
 				997D191C2325FA33007B98DF /* HasSpotTicketTableViewCell.swift in Sources */,
+				9968CF18233B361C00B8D095 /* RestaurantPopUpViewController.swift in Sources */,
 				998869922303B4CC00612092 /* NationCodeData.swift in Sources */,
 				99114D0C22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift in Sources */,
 				99694C07231504AC00F4FF49 /* SpotTicketDatas.swift in Sources */,

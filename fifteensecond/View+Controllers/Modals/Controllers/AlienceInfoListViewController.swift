@@ -57,7 +57,7 @@ class AlienceInfoListViewController: UIViewController {
             siteView.isHidden = true
             hotelView.isHidden = true
             ticketView.isHidden = true
-            alienceMenuTableView.isHidden = false
+            menuView.isHidden = false
             nameLabel.text = restaurant.name
             commentLabel.text = ""
             openTimeLabel.text = restaurant.openTime
@@ -76,7 +76,7 @@ class AlienceInfoListViewController: UIViewController {
             siteView.isHidden = false
             hotelView.isHidden = false
             ticketView.isHidden = true
-            alienceMenuTableView.isHidden = true
+            menuView.isHidden = true
             nameLabel.text = hotel.name
             commentLabel.text = hotel.comment ?? ""
             openTimeLabel.isHidden = true
@@ -96,7 +96,7 @@ class AlienceInfoListViewController: UIViewController {
             siteView.isHidden = true
             ticketView.isHidden = false
             hotelView.isHidden = true
-            alienceMenuTableView.isHidden = true
+            menuView.isHidden = true
             nameLabel.text = ticket.name
             commentLabel.text = ""
             openTimeLabel.text = ticket.openTime
@@ -116,7 +116,7 @@ class AlienceInfoListViewController: UIViewController {
             callView.isHidden = true
             siteView.isHidden = true
             ticketView.isHidden = true
-            alienceMenuTableView.isHidden = false
+            menuView.isHidden = false
             nameLabel.text = shopping.name
             commentLabel.text = ""
             openTimeLabel.text = shopping.openTime
@@ -134,6 +134,7 @@ class AlienceInfoListViewController: UIViewController {
     
     @IBOutlet weak var ticketView: UIView!
     @IBOutlet weak var hotelView: UIView!
+    @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var openTimeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -146,6 +147,9 @@ class AlienceInfoListViewController: UIViewController {
     @IBOutlet weak var hotelRoomTableView: UITableView!
     @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var facilityCollectionView: UICollectionView!
+    
+    @IBOutlet weak var useBtn: UIButton!
+    @IBOutlet weak var useView: UIView!
     
     @IBOutlet weak var hotelTableHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuTableHeightConstraint: NSLayoutConstraint!
@@ -180,6 +184,7 @@ class AlienceInfoListViewController: UIViewController {
         hotelRoomTableView.register(UINib(nibName: "HotelRoomInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "roomCell")
         facilityCollectionView.register(UINib(nibName: "FacilityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "facilityCell")
         alienceMenuTableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 0.001))
+        
         getAlienceInfo()
     }
     
@@ -201,8 +206,24 @@ class AlienceInfoListViewController: UIViewController {
         }
     }
     
-    @IBAction func callEventByBtn(sender: UIButton) {
-        phoneCall(hotel.phoneNum)
+    @IBAction func useBtnEvent(_ sender: UIButton) {
+        switch type {
+        case .restaurant:
+            let vc = RestaurantPopUpViewController()
+            vc.restaurant = self.restaurant
+            showPopupView(vc: vc)
+            break
+        case .shopping:
+            break
+        case .tickets:
+            let vc = BuyTicketPopupViewController()
+            vc.ticket = self.ticket
+            showPopupView(vc: vc)
+            break
+        case .hotel:
+            phoneCall(hotel.phoneNum)
+            break
+        }
     }
     
     @IBAction func locationEvent(sender: UITapGestureRecognizer) {
@@ -224,11 +245,6 @@ class AlienceInfoListViewController: UIViewController {
         }
     }
     
-    @IBAction func buyTicketEvent(_ sender: UIButton) {
-        let vc = BuyTicketPopupViewController()
-        vc.ticket = self.ticket
-        showPopupView(vc: vc)
-    }
     
     func naviBarSetting() {
         
@@ -372,15 +388,19 @@ extension AlienceInfoListViewController {
             "latitude": locationManager.location!.coordinate.latitude,
             "longitude": locationManager.location!.coordinate.longitude
         ] as [String:Any]
-        
+        useView.isHidden = false
         switch type {
         case .restaurant:
+            useBtn.setTitle("이용하기", for: .normal)
             parameters["restaurant_id"] = id
         case .shopping:
+            useView.isHidden = true
             parameters["shopping_id"] = id
         case .tickets:
+            useBtn.setTitle("구매하기", for: .normal)
             parameters["ticket_id"] = id
         case .hotel:
+            useBtn.setTitle("전화하기", for: .normal)
             parameters["hotel_id"] = id
         }
         ServerUtil.shared.getDetails(self, type: type, parameters: parameters) { (success, dict, message) in

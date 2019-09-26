@@ -115,6 +115,7 @@ PODS:
   - KakaoOpenSDK/KakaoS2 (1.14.1):
     - KakaoOpenSDK/KakaoCommon
   - Kingfisher (5.6.0)
+  - lottie-ios (3.1.2)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -134,6 +135,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - KakaoOpenSDK (~> 1.14)
   - Kingfisher
+  - lottie-ios
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -157,6 +159,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - KakaoOpenSDK
     - Kingfisher
+    - lottie-ios
     - nanopb
     - Protobuf
 
@@ -181,9 +184,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   KakaoOpenSDK: 8f26484fee731781441561b7bb7e8a5739188b95
   Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
+  lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
 
-PODFILE CHECKSUM: c540217b80b4fbd3fce29906dd2887652e650128
+PODFILE CHECKSUM: deb00b2c0aa8457763140136dbfcbc5af0436f1e
 
 COCOAPODS: 1.7.2
