@@ -57,7 +57,7 @@
                     <color key="textColor" name="brownGrey"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JRt-Sx-l05">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinkStar" translatesAutoresizingMaskIntoConstraints="NO" id="JRt-Sx-l05">
                     <rect key="frame" x="93" y="118.5" width="10" height="10"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="10" id="VmX-oN-0eP"/>
@@ -130,6 +130,7 @@
         </view>
     </objects>
     <resources>
+        <image name="pinkStar" width="10" height="9"/>
         <namedColor name="brownGrey">
             <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

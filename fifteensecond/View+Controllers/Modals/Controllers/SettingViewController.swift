@@ -74,13 +74,12 @@ class SettingViewController: UIViewController {
     
     @IBAction func logoutEvent() {
         logout()
-        
-//        UserDefs.setAutoLogin(false)
-//        self.present(SplashViewController(), animated: true, completion: nil)
     }
     
     @IBAction func deleteUserEvent() {
-        deleteUser()
+        AlertHandler.shared.showAlert(vc: self, message: "탈퇴하시겠습니까?", okTitle: "확인", cancelTitle: "취소") { (_) in
+            self.deleteUser()
+        }
     }
     
     @IBAction func googleSignIn(_ sender: Any) {

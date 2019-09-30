@@ -71,6 +71,7 @@ class ShoppingDatas: NSObject {
             self.category = CategoryDatas(category)
         }
         
+        comment = data["comment"] as? String
         name = data["name"] as? String
         phoneNum = data["phone_num"] as? String
     }

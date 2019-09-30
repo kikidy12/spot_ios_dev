@@ -50,6 +50,7 @@ class CustomMarkerInfoWindowView: UIView {
             distanceLabel.text = "\(restaurant.distance ?? 0)m"
             categoryLabel.text = restaurant.category.name
             openTimeLabel.text = restaurant.openTime
+            commentLabel.text = restaurant.comment ?? "없음"
             setImageView(urlStr: restaurant.imageList.first?.imageURL)
         }
         else if let ticket = alienceData as? TicketDatas {
@@ -57,6 +58,7 @@ class CustomMarkerInfoWindowView: UIView {
             distanceLabel.text = "\(ticket.distance ?? 0)m"
             categoryLabel.text = ticket.category.name
             openTimeLabel.text = ticket.openTime
+            commentLabel.text = ticket.comment ?? "없음"
             setImageView(urlStr: ticket.imageList.first?.imageURL)
         }
         else if let shopping = alienceData as? ShoppingDatas {
@@ -64,12 +66,14 @@ class CustomMarkerInfoWindowView: UIView {
             distanceLabel.text = "\(shopping.distance ?? 0)m"
             categoryLabel.text = shopping.category.name
             openTimeLabel.text = shopping.openTime
+            commentLabel.text = shopping.comment ?? "없음"
             setImageView(urlStr: shopping.imageList.first?.imageURL)
         }
         else if let hotel = alienceData as? HotelDatas {
             nameLabel.text = hotel.name
             distanceLabel.text = "\(hotel.distance ?? 0)m"
             categoryLabel.text = hotel.category.name
+            commentLabel.text = hotel.comment ?? "없음"
             openTimeLabel.text = "Check In \(hotel.sleepInTime!)/ Out \(hotel.sleepOutTime!)"
             setImageView(urlStr: hotel.imageList.first?.imageURL)
         }
