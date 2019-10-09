@@ -225,6 +225,16 @@ extension AlienceListViewController: UICollectionViewDelegate, UICollectionViewD
             selectedCategory = categoryList[indexPath.item]
             getAliences()
         }
+        
+        if collectionView == recommandColletionView {
+            let vc = AlienceInfoListViewController()
+            vc.type = categoryType
+            if let dict = premiumArray[indexPath.item] as? NSDictionary {
+                vc.alienceId = (dict["id"] as! Int)
+            }
+            parent?.title = categoryType.rawValue
+            self.show(vc, sender: nil)
+        }
     }
 }
 
@@ -269,7 +279,12 @@ extension AlienceListViewController {
             case .hotel:
                 self.alienceArray = data["hotel"] as? NSArray ?? NSArray()
                 break
+            case .play:
+                self.alienceArray = data["play"] as? NSArray ?? NSArray()
+            case .beauty:
+                self.alienceArray = data["beauty"] as? NSArray ?? NSArray()
             }
+            
         }
     }
 }

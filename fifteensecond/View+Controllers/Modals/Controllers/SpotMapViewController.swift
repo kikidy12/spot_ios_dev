@@ -40,6 +40,7 @@ class SpotMapViewController: UIViewController {
         let longCenter = 127.064770
         mapView = GMSMapView(frame: mapContainerView.bounds)
         mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
         if let loc = locationManager.location?.coordinate {
             let camera = GMSCameraPosition.camera(withLatitude: loc.latitude, longitude: loc.longitude, zoom: 15.0)
             mapView.camera = camera
@@ -79,7 +80,9 @@ extension SpotMapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         if let spot = markerList.first(where: {$0.keys.first == marker})?.values.first {
 //            selectSpot = spot
-            let vc = HasSpotTicketListViewController()
+//            let vc = HasSpotTicketListViewController()
+//            vc.spot = spot
+            let vc = UseSpotTicketViewController()
             vc.spot = spot
             show(vc, sender: nil)
         }

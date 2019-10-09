@@ -17,6 +17,7 @@ class UserData: NSObject {
     var phoneNum: String!
     var provider: String!
     var uid: String!
+    var ticketCount: Int!
     var isAttend = false
     
     override init() {
@@ -31,6 +32,7 @@ class UserData: NSObject {
         phoneNum = data["phone_num"] as? String
         provider = data["provider"] as? String
         uid = data["uid"] as? String
+        ticketCount = data["ticket"] as? Int
         self.isAttend = isAttend
     }
 }

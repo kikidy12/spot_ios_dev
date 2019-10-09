@@ -16,6 +16,8 @@ class RecommandCollectionViewCell: UICollectionViewCell {
     var restaurant: RestaurantDatas!
     var ticket: TicketDatas!
     var shopping: ShoppingDatas!
+    var play: PlayDatas!
+    var beauty: BeautyDatas!
     
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var openTimeLabel: UILabel!
@@ -47,6 +49,12 @@ class RecommandCollectionViewCell: UICollectionViewCell {
             hotel = HotelDatas(data)
             drawHotelViews()
             break
+        case .play:
+            play = PlayDatas(data)
+            drawPlayViews()
+        case .beauty:
+            beauty = BeautyDatas(data)
+            drawBeautyViews()
         }
     }
     
@@ -63,7 +71,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         nameLabel.text = ticket.name
         distanceLabel.text = "\(ticket.distance ?? 0)m"
         setImageView(urlStr: ticket.imageList.first?.imageURL)
-//        commentLabel.text = ticket.comment
+        commentLabel.text = ticket.comment
     }
     
     func drawRestaurantViews() {
@@ -71,7 +79,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         nameLabel.text = restaurant.name
         distanceLabel.text = "\(restaurant.distance ?? 0)m"
         setImageView(urlStr: restaurant.imageList.first?.imageURL)
-//        commentLabel.text = restaurant.comment
+        commentLabel.text = restaurant.comment
     }
     
     func drawShoppingViews() {
@@ -82,12 +90,25 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         commentLabel.text = shopping.comment
     }
     
+    func drawPlayViews() {
+        openTimeLabel.text = play.openTime
+        nameLabel.text = play.name
+        distanceLabel.text = "\(play.distance ?? 0)m"
+        setImageView(urlStr: play.imageList.first?.imageURL)
+        commentLabel.text = play.comment
+    }
+    
+    func drawBeautyViews() {
+        openTimeLabel.text = beauty.openTime
+        nameLabel.text = beauty.name
+        distanceLabel.text = "\(beauty.distance ?? 0)m"
+        setImageView(urlStr: beauty.imageList.first?.imageURL)
+        commentLabel.text = beauty.comment
+    }
+    
     func setImageView(urlStr: String?) {
-        if let urlStr = urlStr, let url = URL(string: urlStr) {
+        if let urlStr = urlStr, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             titleImageView.kf.setImage(with: url)
-        }
-        else {
-            titleImageView.image = UIImage()
         }
     }
 }

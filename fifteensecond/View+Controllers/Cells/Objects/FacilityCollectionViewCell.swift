@@ -22,8 +22,7 @@ class FacilityCollectionViewCell: UICollectionViewCell {
     func initView(_ data: FacilityDatas) {
         facility = data
         
-        if let urlStr = facility.imgUrl as? String {
-            let url = URL(string: urlStr)
+        if let urlStr = facility.imgUrl, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             imageView.kf.setImage(with: url)
         }
         

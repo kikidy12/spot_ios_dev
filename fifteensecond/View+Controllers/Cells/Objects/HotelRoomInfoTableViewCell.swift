@@ -50,13 +50,8 @@ class HotelRoomInfoTableViewCell: UITableViewCell {
         
         nameLabel.text = room.name
         
-        if let urlStr = room.imageList.first?.imageURL {
-            let url = URL(string: urlStr)
-            
+        if let urlStr = room.imageList.first?.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             titleImageView.kf.setImage(with: url)
-        }
-        else {
-            titleImageView.image = UIImage()
         }
         
         if let sleep = room.sleepRoomInfo {

@@ -20,11 +20,14 @@ class BuyTicketPopupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = ticket.name
+        nameLabel.text = "\(ticket.name ?? "")" + " 구매처"
         
     }
     
     @IBAction func goToSeller() {
+        if let urlStr = ticket.linkUrl, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
         
     }
 }

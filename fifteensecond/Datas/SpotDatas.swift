@@ -16,6 +16,7 @@ class SpotDatas: NSObject {
     var address: String!
     var openTime: String!
     var phoneNum: String!
+    var count: Int!
     var location: CLLocationCoordinate2D!
     var distance: Int!
     var uniqueNumber: Int!
@@ -30,6 +31,7 @@ class SpotDatas: NSObject {
         price = data["price"] as? Int
         address = data["address"] as? String
         phoneNum = data["phone_num"] as? String
+        count = data["count"] as? Int
         
         if let oTime = data["open_time"] as? String, let cTime = data["close_time"] as? String {
             let oIndex = oTime.index(oTime.endIndex, offsetBy: -3)

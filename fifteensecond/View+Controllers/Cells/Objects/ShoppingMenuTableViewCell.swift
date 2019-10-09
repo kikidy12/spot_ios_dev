@@ -38,7 +38,7 @@ class ShoppingMenuTableViewCell: UITableViewCell {
             isFavorBtn.isHidden = false
         }
         
-        if let urlStr = mall.imageURL, let url = URL(string: urlStr) {
+        if let urlStr = mall.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             titleImageView.kf.setImage(with: url)
         }
         

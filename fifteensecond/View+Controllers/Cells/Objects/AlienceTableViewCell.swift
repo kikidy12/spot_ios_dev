@@ -17,6 +17,8 @@ class AlienceTableViewCell: UITableViewCell {
     var restaurant: RestaurantDatas!
     var ticket: TicketDatas!
     var shopping: ShoppingDatas!
+    var play: PlayDatas!
+    var beauty: BeautyDatas!
     
     
     @IBOutlet weak var categoryLabel: UILabel!
@@ -58,6 +60,14 @@ class AlienceTableViewCell: UITableViewCell {
             hotel = HotelDatas(data)
             drawHotelViews()
             break
+        case .play:
+            play = PlayDatas(data)
+            drawPlayViews()
+            break
+        case .beauty:
+            beauty = BeautyDatas(data)
+            drawBeautyViews()
+            break
         }
     }
     
@@ -75,7 +85,7 @@ class AlienceTableViewCell: UITableViewCell {
         distanceLabel.text = "\(ticket.distance ?? 0)m"
         categoryLabel.text = ticket.category.name
         setImageView(urlStr: ticket.imageList.first?.imageURL)
-//        commentLabel.text = ticket.comment
+        commentLabel.text = ticket.comment
     }
     
     func drawRestaurantViews() {
@@ -84,7 +94,25 @@ class AlienceTableViewCell: UITableViewCell {
         distanceLabel.text = "\(restaurant.distance ?? 0)m"
         categoryLabel.text = restaurant.category.name
         setImageView(urlStr: restaurant.imageList.first?.imageURL)
-//        commentLabel.text = restaurant.comment
+        commentLabel.text = restaurant.comment
+    }
+    
+    func drawBeautyViews() {
+        openTimeLabel.text = beauty.openTime
+        nameLabel.text = beauty.name
+        distanceLabel.text = "\(beauty.distance ?? 0)m"
+        categoryLabel.text = beauty.category.name
+        setImageView(urlStr: beauty.imageList.first?.imageURL)
+        commentLabel.text = beauty.comment
+    }
+    
+    func drawPlayViews() {
+        openTimeLabel.text = play.openTime
+        nameLabel.text = play.name
+        distanceLabel.text = "\(play.distance ?? 0)m"
+        categoryLabel.text = play.category.name
+        setImageView(urlStr: play.imageList.first?.imageURL)
+        commentLabel.text = play.comment
     }
     
     func drawShoppingViews() {
@@ -97,11 +125,8 @@ class AlienceTableViewCell: UITableViewCell {
     }
     
     func setImageView(urlStr: String?) {
-        if let urlStr = urlStr, let url = URL(string: urlStr) {
+        if let urlStr = urlStr, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             titleImageView.kf.setImage(with: url)
-        }
-        else {
-            titleImageView.image = UIImage()
         }
     }
 }

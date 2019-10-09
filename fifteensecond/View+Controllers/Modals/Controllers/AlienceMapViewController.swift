@@ -77,6 +77,32 @@ class AlienceMapViewController: UIViewController {
             }
         }
     }
+    
+    var playList = [PlayDatas]() {
+        didSet {
+            markerList = playList.compactMap {
+                let marker = GMSMarker()
+                marker.position = $0.location
+                marker.map = mapView
+                marker.icon = #imageLiteral(resourceName: "playMapIcon")
+                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                return [marker:$0]
+            }
+        }
+    }
+    
+    var beautyList = [BeautyDatas]() {
+            didSet {
+                markerList = beautyList.compactMap {
+                    let marker = GMSMarker()
+                marker.position = $0.location
+                marker.map = mapView
+                marker.icon = #imageLiteral(resourceName: "beautyMapIcon")
+                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                    return [marker:$0]
+                }
+            }
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +142,7 @@ extension AlienceMapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         if let currentDict = markerList.first(where: {$0.keys.first == marker}) {
             guard let data = currentDict.values.first else { return }
+            parent?.title = categoryType.rawValue
             if let resaturant = data as? RestaurantDatas {
                 let vc = AlienceInfoListViewController()
                 vc.alienceId = resaturant.id
@@ -140,6 +167,20 @@ extension AlienceMapViewController: GMSMapViewDelegate {
                 let vc = AlienceInfoListViewController()
                 vc.alienceId = hotel.id
                 vc.type = .hotel
+                self.show(vc, sender: nil)
+            }
+            
+            else if let play = data as? PlayDatas {
+                let vc = AlienceInfoListViewController()
+                vc.alienceId = play.id
+                vc.type = .play
+                self.show(vc, sender: nil)
+            }
+            
+            else if let beauty = data as? BeautyDatas {
+                let vc = AlienceInfoListViewController()
+                vc.alienceId = beauty.id
+                vc.type = .beauty
                 self.show(vc, sender: nil)
             }
         }
@@ -205,7 +246,18 @@ extension AlienceMapViewController {
                     self.hotelList = array.compactMap { HotelDatas($0 as! NSDictionary) }
                 }
                 break
+            case .play:
+                if let array = data["play"] as? NSArray {
+                    self.playList = array.compactMap { PlayDatas($0 as! NSDictionary) }
+                }
+                break
+            case .beauty:
+                if let array = data["beauty"] as? NSArray {
+                    self.beautyList = array.compactMap { BeautyDatas($0 as! NSDictionary) }
+                }
+                break
             }
+            
         }
     }
 }

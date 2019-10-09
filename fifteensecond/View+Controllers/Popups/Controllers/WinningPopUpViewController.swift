@@ -10,6 +10,8 @@ import UIKit
 
 class WinningPopUpViewController: UIViewController {
     
+    var message = ""
+    
     @IBOutlet weak var winningImageView: UIImageView!
     @IBOutlet weak var winningLabel: UILabel!
     
@@ -17,8 +19,8 @@ class WinningPopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        winningLabel.text = message
     }
     
     override func closeView() {

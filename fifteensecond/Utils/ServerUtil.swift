@@ -7,11 +7,8 @@
 //
 
 import UIKit
-
-
-import UIKit
 import Alamofire
-//import Lottie
+import Lottie
 
 class ServerUtil: NSObject {
     
@@ -42,20 +39,20 @@ class ServerUtil: NSObject {
     fileprivate var currentVc: UIViewController!
     
     override init() {
-//        let lottie = AnimationView()
-//        let ani = Animation.named("loading")!
+        let lottie = AnimationView()
+        let ani = Animation.named("loading")!
         
-//        lottie.animation = ani
-//        lottie.frame = .init(x: 0, y: 0, width: 150, height: 150)
-//        lottie.sizeToFit()
-//        lottie.loopMode = .loop
-//        lottie.contentMode = .scaleAspectFill
+        lottie.animation = ani
+        lottie.frame = .init(x: 0, y: 0, width: 50, height: 50)
+        lottie.sizeToFit()
+        lottie.loopMode = .loop
+        lottie.contentMode = .scaleAspectFill
         serverAddress = devServer
         loadingView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.376177226)
         loadingView.frame = UIScreen.main.bounds
-//        lottie.center = loadingView.center
-//        loadingView.addSubview(lottie)
-//        lottie.play()
+        lottie.center = loadingView.center
+        loadingView.addSubview(lottie)
+        lottie.play()
         progressLabel.numberOfLines = 1
         print("UserToken: ", headers )
         progressLabel.font = .systemFont(ofSize: 20, weight: .medium)
@@ -126,6 +123,16 @@ class ServerUtil: NSObject {
         apiRequest("sub_event", method: .get, parameters: parameters, completion: completion)
     }
     
+    func postRoulette(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("roulette", method: .post, parameters: parameters, completion: completion)
+    }
+    
+    func postPromotionLogs(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("promotion_logs", method: .post, parameters: parameters, completion: completion)
+    }
+    
     func getCategorys(_ vc: UIViewController, type: AlienceTitles, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
         
@@ -141,6 +148,11 @@ class ServerUtil: NSObject {
             
         case .tickets:
             apiRequest("ticket_categories", method: .get, parameters: parameters, completion: completion)
+        case .play:
+            apiRequest("play_categories", method: .get, parameters: parameters, completion: completion)
+            
+        case .beauty:
+            apiRequest("beauty_categories", method: .get, parameters: parameters, completion: completion)
         }
     }
     
@@ -160,6 +172,12 @@ class ServerUtil: NSObject {
             
         case .tickets:
             apiRequest("ticket", method: .get, parameters: parameters, completion: completion)
+            
+        case .play:
+            apiRequest("play", method: .get, parameters: parameters, completion: completion)
+        
+        case .beauty:
+            apiRequest("beauty", method: .get, parameters: parameters, completion: completion)
         }
     }
     
@@ -178,6 +196,13 @@ class ServerUtil: NSObject {
             
         case .tickets:
             apiRequest("ticket", method: .post, parameters: parameters, completion: completion)
+            
+        case .play:
+            apiRequest("play", method: .post, parameters: parameters, completion: completion)
+        
+        case .beauty:
+            apiRequest("beauty", method: .post, parameters: parameters, completion: completion)
+            
         }
     }
     

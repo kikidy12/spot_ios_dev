@@ -14,8 +14,10 @@ enum AlienceTitles: String {
     case shopping = "Shopping"
     case tickets = "Tickets"
     case hotel = "Hotel"
+    case play = "Play"
+    case beauty = "Beauty"
     
-    static var allCase = [restaurant, shopping, tickets, hotel]
+    static var allCase = [restaurant, tickets, play, beauty]
 }
 
 enum CardInfoEnum: String {

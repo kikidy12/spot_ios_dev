@@ -15,6 +15,7 @@ class SpotMarkerInfoWindowView: UIView {
     var spot: SpotDatas!
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,5 +37,6 @@ class SpotMarkerInfoWindowView: UIView {
     func initView(_ data: SpotDatas) {
         spot = data
         nameLabel.text = spot.name
+        countLabel.text = "\(spot.count ?? 0) 장"
     }
 }

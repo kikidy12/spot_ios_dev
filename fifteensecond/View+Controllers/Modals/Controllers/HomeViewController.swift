@@ -63,13 +63,13 @@ class HomeViewController: UIViewController {
                 vc.titleString = .restaurant
                 break
             case 1:
-                vc.titleString = .shopping
+                vc.titleString = .beauty
                 break
             case 2:
                 vc.titleString = .tickets
                 break
             case 4:
-                vc.titleString = .hotel
+                vc.titleString = .play
                 break
             default:
                 break
@@ -112,7 +112,7 @@ class HomeViewController: UIViewController {
         self.navigationItem.titleView = titleImageView
         self.navigationItem.hidesBackButton = true
         
-        let rightBtn = UIBarButtonItem(image: UIImage(named: "mainSpotTicket"), style: .plain, target: self, action: #selector(goToSpotTicketList))
+        let rightBtn = UIBarButtonItem(image: UIImage(named: "mainSpotTicket"), style: .plain, target: self, action: #selector(showBuySpotTicketView))
         
         let leftBtn = UIBarButtonItem(title: "MAP", style: .plain, target: self, action: #selector(showMapView))
         
@@ -120,8 +120,8 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightBtn
     }
     
-    @objc func goToSpotTicketList() {
-        let vc = HasSpotTicketListViewController()
+    @objc func showBuySpotTicketView() {
+        let vc = BuySpotTicketViewController()
         show(vc, sender: nil)
     }
 }

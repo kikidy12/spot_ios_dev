@@ -77,14 +77,29 @@ class CustomMarkerInfoWindowView: UIView {
             openTimeLabel.text = "Check In \(hotel.sleepInTime!)/ Out \(hotel.sleepOutTime!)"
             setImageView(urlStr: hotel.imageList.first?.imageURL)
         }
+        
+        else if let play = alienceData as? PlayDatas {
+            nameLabel.text = play.name
+            distanceLabel.text = "\(play.distance ?? 0)m"
+            categoryLabel.text = play.category.name
+            commentLabel.text = play.comment ?? "없음"
+            openTimeLabel.text = play.openTime
+            setImageView(urlStr: play.imageList.first?.imageURL)
+        }
+        
+        else if let beauty = alienceData as? BeautyDatas {
+            nameLabel.text = beauty.name
+            distanceLabel.text = "\(beauty.distance ?? 0)m"
+            categoryLabel.text = beauty.category.name
+            commentLabel.text = beauty.comment ?? "없음"
+            openTimeLabel.text = beauty.openTime
+            setImageView(urlStr: beauty.imageList.first?.imageURL)
+        }
     }
     
     func setImageView(urlStr: String?) {
-        if let urlStr = urlStr, let url = URL(string: urlStr) {
+        if let urlStr = urlStr, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             alienceImageView.kf.setImage(with: url)
-        }
-        else {
-            alienceImageView.image = UIImage()
         }
     }
     

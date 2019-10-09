@@ -19,7 +19,7 @@ class SpotUsePopupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = "\(useSpotTicket.ticketKind.name ?? "")을\n사용하시겠습니까?"
+        titleLabel.text = "15Second를\n이용하시겠습니까?"
     }
     
     @IBAction func recordVideo() {

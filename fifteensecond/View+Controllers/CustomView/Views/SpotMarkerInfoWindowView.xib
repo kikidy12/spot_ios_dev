@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpotMarkerInfoWindowView" customModule="fifteensecond" customModuleProvider="target">
             <connections>
+                <outlet property="countLabel" destination="QrI-fZ-wUl" id="cxg-f7-QZI"/>
                 <outlet property="nameLabel" destination="RMt-ce-2Qj" id="QfO-DT-EqT"/>
             </connections>
         </placeholder>
@@ -22,8 +23,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMt-ce-2Qj">
-                    <rect key="frame" x="0.0" y="71" width="414" height="19.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <rect key="frame" x="0.0" y="59" width="414" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -49,15 +50,42 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGK-8y-5of">
+                    <rect key="frame" x="0.0" y="94.5" width="414" height="1"/>
+                    <color key="backgroundColor" name="veryLightPink"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="CWK-LO-00F"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="필요 이용권 매수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BS-dT-eeT">
+                    <rect key="frame" x="18" y="113.5" width="99" height="664.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="2 장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrI-fZ-wUl">
+                    <rect key="frame" x="372" y="437" width="26" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <color key="textColor" name="darkishPink"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="0BS-dT-eeT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="18" id="0TH-Ii-5Hg"/>
+                <constraint firstItem="QrI-fZ-wUl" firstAttribute="centerY" secondItem="0BS-dT-eeT" secondAttribute="centerY" id="3DS-yK-kNN"/>
                 <constraint firstItem="Imc-TR-28b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="G1k-18-G9t"/>
+                <constraint firstItem="uGK-8y-5of" firstAttribute="top" secondItem="RMt-ce-2Qj" secondAttribute="bottom" constant="15" id="MCo-gV-Bs2"/>
+                <constraint firstItem="Imc-TR-28b" firstAttribute="top" secondItem="0BS-dT-eeT" secondAttribute="bottom" constant="18" id="R4L-ZQ-sbF"/>
                 <constraint firstItem="RMt-ce-2Qj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Wbv-Oc-5EV"/>
+                <constraint firstItem="uGK-8y-5of" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WpO-8f-lx5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Imc-TR-28b" secondAttribute="bottom" constant="20" id="ZHC-Bs-egb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Imc-TR-28b" secondAttribute="trailing" constant="15" id="gdQ-el-7T5"/>
+                <constraint firstItem="0BS-dT-eeT" firstAttribute="top" secondItem="uGK-8y-5of" secondAttribute="bottom" constant="18" id="kiB-jb-nVf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RMt-ce-2Qj" secondAttribute="trailing" id="mG2-dn-Hd3"/>
-                <constraint firstItem="RMt-ce-2Qj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="27" id="rD2-Sk-w01"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uGK-8y-5of" secondAttribute="trailing" id="ngd-oF-M1e"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QrI-fZ-wUl" secondAttribute="trailing" constant="16" id="ogS-1A-Q1m"/>
+                <constraint firstItem="RMt-ce-2Qj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="rD2-Sk-w01"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
@@ -65,6 +93,9 @@
     <resources>
         <namedColor name="darkishPink">
             <color red="0.92941176470588238" green="0.21176470588235294" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="veryLightPink">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -10,7 +10,7 @@ import UIKit
 
 class PayViewController: UIViewController {
     
-    var spotTicket: SpotTicketDatas!
+    var count = 1
     
     var cardList = [CardDatas]() {
         didSet {
@@ -82,7 +82,7 @@ extension PayViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        AlertHandler.shared.showAlert(vc: self, message: "\(spotTicket?.name ?? "")을\n구매하시겠습니까?", okTitle: "확인", cancelTitle: "취소", okHandler: { (_) in
+        AlertHandler.shared.showAlert(vc: self, message: "15Seconds 이용권 \(count)장을\n구매하시겠습니까?", okTitle: "확인", cancelTitle: "취소", okHandler: { (_) in
             self.registedCardPay(cardId: self.cardList[indexPath.item].id)
         })
     }
@@ -134,7 +134,7 @@ extension PayViewController {
     func registedCardPay(cardId: Int) {
         let parameters = [
             "user_card_id": cardId,
-            "spot_ticket_kind_id": spotTicket.id!
+            "count": count
         ] as [String:Any]
         ServerUtil.shared.postPayment(self, parameters: parameters) { (success, dict, message) in
             guard success else {
@@ -142,7 +142,7 @@ extension PayViewController {
                 return
             }
             
-            if let vc = self.navigationController?.viewControllers.last(where: {$0 is HasSpotTicketListViewController}) {
+            if let vc = self.navigationController?.viewControllers.last(where: {$0 is BuySpotTicketViewController}) {
                 self.navigationController?.popToViewController(vc, animated: true)
             }
         }

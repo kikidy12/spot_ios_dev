@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -71,18 +69,18 @@
                                                 <outletCollection property="gestureRecognizers" destination="NvH-eq-Pkb" appends="YES" id="LUg-vj-MbN"/>
                                             </connections>
                                         </view>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-4s-ohG" userLabel="shoppingView" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
+                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-4s-ohG" userLabel="beautyView" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
                                             <rect key="frame" x="126.5" y="0.0" width="121" height="112"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_shopping" translatesAutoresizingMaskIntoConstraints="NO" id="4hE-DT-Rv2">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beautyIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4hE-DT-Rv2">
                                                     <rect key="frame" x="45" y="27" width="31" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="fJ6-9O-OVc"/>
                                                         <constraint firstAttribute="width" constant="31" id="syB-Qv-Fcw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHz-9k-ZrB">
-                                                    <rect key="frame" x="28" y="71" width="65.5" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beauty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHz-9k-ZrB">
+                                                    <rect key="frame" x="36.5" y="71" width="48" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -181,18 +179,18 @@
                                                 <outletCollection property="gestureRecognizers" destination="6Bh-zJ-7H9" appends="YES" id="cQ3-eW-8ab"/>
                                             </connections>
                                         </view>
-                                        <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNQ-qk-30C" userLabel="hotelView" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
+                                        <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNQ-qk-30C" userLabel="playView" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
                                             <rect key="frame" x="126.5" y="0.0" width="121" height="112"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_hotel" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-Yu-f1g">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-Yu-f1g">
                                                     <rect key="frame" x="45" y="27" width="31" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="4kG-OV-Pes"/>
                                                         <constraint firstAttribute="width" constant="31" id="5Jy-7W-52V"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dF-kd-4mm">
-                                                    <rect key="frame" x="42" y="71" width="37" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dF-kd-4mm">
+                                                    <rect key="frame" x="46.5" y="71" width="28.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -413,14 +411,14 @@
     </objects>
     <resources>
         <image name="attend_alert" width="249" height="204"/>
+        <image name="beautyIcon" width="32" height="31"/>
         <image name="cancelBtn" width="38" height="38"/>
         <image name="homeback" width="375" height="402"/>
         <image name="main_15spot" width="29" height="32"/>
-        <image name="main_hotel" width="32" height="31"/>
         <image name="main_mypage" width="30" height="30"/>
         <image name="main_restaurant" width="31" height="31"/>
-        <image name="main_shopping" width="31" height="31"/>
         <image name="main_ticket" width="31" height="20"/>
+        <image name="playIcon" width="28" height="35"/>
         <namedColor name="darkblue31">
             <color red="0.11800000071525574" green="0.13699999451637268" blue="0.18000000715255737" alpha="0.31000000238418579" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

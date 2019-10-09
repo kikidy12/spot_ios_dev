@@ -12,6 +12,7 @@ import Lottie
 
 class AttendanceCheckViewController: UIViewController {
     
+    let lottie = AnimationView()
     
     @IBOutlet weak var attdentView: UIView!
     @IBOutlet weak var attdentBtn: UIButton!
@@ -21,34 +22,25 @@ class AttendanceCheckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let ani = Animation.named("roulette")
+        lottie.animation = ani
+        lottie.frame = self.loadingView.bounds
+        lottie.sizeToFit()
+        lottie.loopMode = .loop
+        lottie.contentMode = .scaleToFill
+        self.loadingView.addSubview(lottie)
+        loadingView.isHidden = true
         getAttendence()
     }
     
     @IBAction func attendentEvnet() {
         
         if attdentBtn.titleLabel?.text == "룰렛 돌리기" {
-            let lottie = AnimationView()
-            
-            let ani = Animation.named("loading")
-            
-            lottie.animation = ani
-            lottie.frame = loadingView.bounds
-            lottie.sizeToFit()
-            lottie.loopMode = .playOnce
-            lottie.contentMode = .scaleToFill
-            loadingView.addSubview(lottie)
-            lottie.play { (_) in
-                self.loadingView.isHidden = true
-                print("endLoading")
-                let vc = WinningPopUpViewController()
-                vc.compClouser = {
-//                    self.setAttdent(0)
-                    self.dismiss(animated: true, completion: nil)
-                }
-                self.showPopupView(vc: vc)
+            loadingView.isHidden = false
+            lottie.play()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.rouletteEvent()
             }
-            
         }
         else {
             attendent()
@@ -81,7 +73,7 @@ extension AttendanceCheckViewController {
         ServerUtil.shared.getAttendance(self) { (success, dict, message) in
             guard success, let count = dict?["attendance_count"] as? Int else { return }
             
-            self.setAttdent(10)
+            self.setAttdent(count)
         }
     }
     
@@ -102,6 +94,24 @@ extension AttendanceCheckViewController {
             self.setAttdent(count)
             let vc = AttendanceCheckPopupViewController()
             vc.count = count
+            self.showPopupView(vc: vc)
+        }
+    }
+    
+    func rouletteEvent() {
+        ServerUtil.shared.postRoulette(self) { (success, dict, message) in
+            self.loadingView.isHidden = true
+            self.lottie.stop()
+            guard success, let roulette = dict?["roulette"] as? NSDictionary, let name = roulette["name"] as? String else {
+                AlertHandler.shared.showAlert(vc: self, message: message ?? "error", okTitle: "확인")
+                return
+            }
+            let vc = WinningPopUpViewController()
+            vc.message = name
+            vc.compClouser = {
+            self.setAttdent(0)
+            self.dismiss(animated: true, completion: nil)
+            }
             self.showPopupView(vc: vc)
         }
     }

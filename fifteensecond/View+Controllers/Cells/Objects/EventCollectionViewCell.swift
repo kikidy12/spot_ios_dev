@@ -24,7 +24,7 @@ class EventCollectionViewCell: UICollectionViewCell {
     func initView(_ data: EventDatas) {
         event = data
         
-        if let urlStr = event.imgaeURL, let url = URL(string: urlStr) {
+        if let urlStr = event.imgaeURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             imageView.kf.setImage(with: url)
         }
     }

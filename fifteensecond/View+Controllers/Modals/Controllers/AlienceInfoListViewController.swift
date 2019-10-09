@@ -35,18 +35,14 @@ class AlienceInfoListViewController: UIViewController {
     
     var facilityList = [FacilityDatas]() {
         didSet {
-            var str = ""
-            facilityList.forEach {
-                if facilityList.last == $0 {
-                    str += "\($0.name!)"
-                }
-                else {
-                    str += "\($0.name!), "
-                }
-            }
-            facilityLabel.text = str
-            
+            print("fcCount:",facilityList.count)
             facilityCollectionView.reloadData()
+        }
+    }
+    
+    var promotionList = [PromotionDatas]() {
+        didSet {
+            promotionTableView.reloadData()
         }
     }
     
@@ -55,8 +51,7 @@ class AlienceInfoListViewController: UIViewController {
             locationView.isHidden = false
             callView.isHidden = false
             siteView.isHidden = true
-            hotelView.isHidden = true
-            ticketView.isHidden = true
+            hasFacilityView.isHidden = true
             menuView.isHidden = false
             nameLabel.text = restaurant.name
             commentLabel.text = ""
@@ -69,13 +64,48 @@ class AlienceInfoListViewController: UIViewController {
         }
     }
     
+    var beauty: BeautyDatas! {
+        didSet {
+            locationView.isHidden = false
+            callView.isHidden = false
+            siteView.isHidden = true
+            hasFacilityView.isHidden = true
+            menuView.isHidden = false
+            nameLabel.text = beauty.name
+            commentLabel.text = ""
+            openTimeLabel.text = beauty.openTime
+            categoryLabel.text = beauty.category.name
+            addressLabel.text = beauty.address
+            linkURL = beauty.linkUrl ?? ""
+            imageList = beauty.imageList
+            alienceMenuTableView.reloadData()
+        }
+    }
+    
+    var play: PlayDatas! {
+        didSet {
+            locationView.isHidden = false
+            callView.isHidden = false
+            siteView.isHidden = true
+            hasFacilityView.isHidden = true
+            menuView.isHidden = false
+            nameLabel.text = play.name
+            commentLabel.text = ""
+            openTimeLabel.text = play.openTime
+            categoryLabel.text = play.category.name
+            addressLabel.text = play.address
+            linkURL = play.linkUrl ?? ""
+            imageList = play.imageList
+            alienceMenuTableView.reloadData()
+        }
+    }
+    
     var hotel: HotelDatas! {
         didSet {
             locationView.isHidden = false
             callView.isHidden = true
             siteView.isHidden = false
-            hotelView.isHidden = false
-            ticketView.isHidden = true
+            hasFacilityView.isHidden = false
             menuView.isHidden = true
             nameLabel.text = hotel.name
             commentLabel.text = hotel.comment ?? ""
@@ -85,7 +115,7 @@ class AlienceInfoListViewController: UIViewController {
             linkURL = hotel.linkURL ?? ""
             imageList = hotel.imageList
             facilityList = hotel.facilityList
-            hotelRoomTableView.reloadData()
+            hasFacilityMenuTableView.reloadData()
         }
     }
     
@@ -94,8 +124,7 @@ class AlienceInfoListViewController: UIViewController {
             locationView.isHidden = false
             callView.isHidden = true
             siteView.isHidden = true
-            ticketView.isHidden = false
-            hotelView.isHidden = true
+            hasFacilityView.isHidden = false
             menuView.isHidden = true
             nameLabel.text = ticket.name
             commentLabel.text = ""
@@ -105,8 +134,7 @@ class AlienceInfoListViewController: UIViewController {
             linkURL = ticket.linkUrl ?? ""
             imageList = ticket.imageList
             facilityList = ticket.facilityList
-            print(ticket.kindList.count)
-            ticketKindTableView.reloadData()
+            hasFacilityMenuTableView.reloadData()
         }
     }
     
@@ -115,7 +143,6 @@ class AlienceInfoListViewController: UIViewController {
             locationView.isHidden = false
             callView.isHidden = true
             siteView.isHidden = true
-            ticketView.isHidden = true
             menuView.isHidden = false
             nameLabel.text = shopping.name
             commentLabel.text = ""
@@ -129,31 +156,28 @@ class AlienceInfoListViewController: UIViewController {
         }
     }
     
-    var hotelMenuList = [String]()
     
-    
-    @IBOutlet weak var ticketView: UIView!
-    @IBOutlet weak var hotelView: UIView!
+    @IBOutlet weak var hasFacilityView: UIView!
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var openTimeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var facilityLabel: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var alienceMenuTableView: UITableView!
-    @IBOutlet weak var ticketKindTableView: UITableView!
-    @IBOutlet weak var hotelRoomTableView: UITableView!
+    @IBOutlet weak var hasFacilityMenuTableView: UITableView!
     @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var facilityCollectionView: UICollectionView!
     
     @IBOutlet weak var useBtn: UIButton!
     @IBOutlet weak var useView: UIView!
     
-    @IBOutlet weak var hotelTableHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var hasFacilityTableHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuTableHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var ticketKindTableHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var promotionTableView: UITableView!
+    @IBOutlet weak var promotionTableViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var locationView: UIView!
     @IBOutlet weak var callView: UIView!
@@ -168,23 +192,23 @@ class AlienceInfoListViewController: UIViewController {
         facilityCollectionView.dataSource = self
         alienceMenuTableView.delegate = self
         alienceMenuTableView.dataSource = self
-        ticketKindTableView.delegate = self
-        ticketKindTableView.dataSource = self
-        ticketKindTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.001))
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
-        hotelRoomTableView.delegate = self
-        hotelRoomTableView.dataSource = self
-        hotelRoomTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.001))
+        hasFacilityMenuTableView.delegate = self
+        hasFacilityMenuTableView.dataSource = self
+        promotionTableView.delegate = self
+        promotionTableView.dataSource = self
+        hasFacilityMenuTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.001))
         
         alienceMenuTableView.register(UINib(nibName: "RestaurantMenuTableViewCell", bundle: nil), forCellReuseIdentifier: "restaurantCell")
         alienceMenuTableView.register(UINib(nibName: "ShoppingMenuTableViewCell", bundle: nil), forCellReuseIdentifier: "shoppingCell")
-        ticketKindTableView.register(UINib(nibName: "AlienceTicketTableViewCell", bundle: nil), forCellReuseIdentifier: "kindCell")
         imageCollectionView.register(UINib(nibName: "AlienceInfoImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imageCell")
-        hotelRoomTableView.register(UINib(nibName: "HotelRoomInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "roomCell")
+        hasFacilityMenuTableView.register(UINib(nibName: "HotelRoomInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "roomCell")
+        hasFacilityMenuTableView.register(UINib(nibName: "AlienceTicketTableViewCell", bundle: nil), forCellReuseIdentifier: "ticketCell")
         facilityCollectionView.register(UINib(nibName: "FacilityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "facilityCell")
         alienceMenuTableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 0.001))
-        
+        promotionTableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: "promotionCell")
+        promotionTableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 0.001))
         getAlienceInfo()
     }
     
@@ -192,15 +216,19 @@ class AlienceInfoListViewController: UIViewController {
         if sender.state == .ended {
             switch type {
             case .restaurant:
-                let vc = RestaurantCallPopupViewController()
-                vc.restaurant = self.restaurant
-                showPopupView(vc: vc)
+                phoneCall(restaurant.phoneNum)
                 break
             case .shopping:
                 break
             case .tickets:
                 break
             case .hotel:
+                break
+            case .play:
+                phoneCall(play.phoneNum)
+                break
+            case .beauty:
+                phoneCall(beauty.phoneNum)
                 break
             }
         }
@@ -209,9 +237,6 @@ class AlienceInfoListViewController: UIViewController {
     @IBAction func useBtnEvent(_ sender: UIButton) {
         switch type {
         case .restaurant:
-            let vc = RestaurantPopUpViewController()
-            vc.restaurant = self.restaurant
-            showPopupView(vc: vc)
             break
         case .shopping:
             break
@@ -222,6 +247,10 @@ class AlienceInfoListViewController: UIViewController {
             break
         case .hotel:
             phoneCall(hotel.phoneNum)
+            break
+        case .play:
+            break
+        case .beauty:
             break
         }
     }
@@ -240,6 +269,12 @@ class AlienceInfoListViewController: UIViewController {
                 break
             case .hotel:
                 openNaverNavi(lat: hotel.location.latitude, lng: hotel.location.longitude)
+                break
+            case .play:
+                openNaverNavi(lat: play.location.latitude, lng: hotel.location.longitude)
+                break
+            case .beauty:
+                openNaverNavi(lat: beauty.location.latitude, lng: hotel.location.longitude)
                 break
             }
         }
@@ -325,49 +360,77 @@ extension AlienceInfoListViewController: UICollectionViewDelegate, UICollectionV
 extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
-            if tableView == hotelRoomTableView {
-                hotelTableHeightConstraint.constant = tableView.contentSize.height
+        if tableView == promotionTableView {
+            if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
+                promotionTableViewHeightConstraint.constant = tableView.contentSize.height
             }
-            else if tableView == alienceMenuTableView {
+        }
+        else if tableView == hasFacilityMenuTableView {
+            if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
+                hasFacilityTableHeightConstraint.constant = tableView.contentSize.height
+            }
+        }
+        else {
+            if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
                 menuTableHeightConstraint.constant = tableView.contentSize.height
-            }
-            else if tableView == ticketKindTableView {
-                ticketKindTableHeightConstraint.constant = tableView.contentSize.height
             }
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch type {
-        case .restaurant:
-            return restaurant?.menuList.count ?? 0
-        case .shopping:
-            return shopping?.menuList.count ?? 0
-        case .tickets:
-            return ticket?.kindList.count ?? 0
-        case .hotel:
-            return hotel?.roomList.count ?? 0
+        if tableView == promotionTableView {
+            return promotionList.count
+        }
+        else {
+            switch type {
+            case .restaurant:
+                return restaurant?.menuList.count ?? 0
+            case .shopping:
+                return shopping?.menuList.count ?? 0
+            case .tickets:
+                return ticket?.kindList.count ?? 0
+            case .hotel:
+                return hotel?.roomList.count ?? 0
+            case .play:
+                return play?.menuList.count ?? 0
+            case .beauty:
+                return beauty?.menuList.count ?? 0
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch type {
-        case .hotel:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! HotelRoomInfoTableViewCell
-            cell.initView(hotel.roomList[indexPath.item])
+        if tableView == promotionTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "promotionCell", for: indexPath) as! PromotionTableViewCell
+            cell.initView(promotionList[indexPath.item])
             return cell
-        case .restaurant:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantMenuTableViewCell
-            cell.initView(restaurant.menuList[indexPath.item])
-            return cell
-        case .shopping:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCell", for: indexPath) as! ShoppingMenuTableViewCell
-            cell.initView(shopping.menuList[indexPath.item])
-            return cell
-        case .tickets:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "kindCell", for: indexPath) as! AlienceTicketTableViewCell
-            cell.initView(ticket.kindList[indexPath.item])
-            return cell
+        }
+        else {
+            switch type {
+            case .hotel:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! HotelRoomInfoTableViewCell
+                cell.initView(hotel.roomList[indexPath.item])
+                return cell
+            case .restaurant:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantMenuTableViewCell
+                cell.initView(restaurant: restaurant.menuList[indexPath.item])
+                return cell
+            case .shopping:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCell", for: indexPath) as! ShoppingMenuTableViewCell
+                cell.initView(shopping.menuList[indexPath.item])
+                return cell
+            case .tickets:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ticketCell", for: indexPath) as! AlienceTicketTableViewCell
+                cell.initView(ticket.kindList[indexPath.item])
+                return cell
+            case .play:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantMenuTableViewCell
+                cell.initView(play: play.menuList[indexPath.item])
+                return cell
+            case .beauty:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantMenuTableViewCell
+                cell.initView(beauty: beauty.menuList[indexPath.item])
+                return cell
+            }
         }
     }
     
@@ -375,6 +438,13 @@ extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSou
         if type == .hotel {
             let vc = ImageListPopupViewController()
             vc.imageList = hotel.roomList[indexPath.item].imageList
+            showPopupView(vc: vc)
+        }
+        
+        if tableView == promotionTableView {
+            let vc = RestaurantPopUpViewController()
+            vc.promotion = promotionList[indexPath.item]
+            vc.type = type
             showPopupView(vc: vc)
         }
     }
@@ -388,23 +458,37 @@ extension AlienceInfoListViewController {
             "latitude": locationManager.location!.coordinate.latitude,
             "longitude": locationManager.location!.coordinate.longitude
         ] as [String:Any]
-        useView.isHidden = false
+        useView.isHidden = true
         switch type {
         case .restaurant:
-            useBtn.setTitle("이용하기", for: .normal)
             parameters["restaurant_id"] = id
+            break
         case .shopping:
-            useView.isHidden = true
             parameters["shopping_id"] = id
+            break
         case .tickets:
+            useView.isHidden = false
             useBtn.setTitle("구매하기", for: .normal)
             parameters["ticket_id"] = id
+            break
         case .hotel:
+            useView.isHidden = false
             useBtn.setTitle("전화하기", for: .normal)
             parameters["hotel_id"] = id
+            break
+        case .play:
+            parameters["play_id"] = id
+            break
+        case .beauty:
+            parameters["beauty_id"] = id
+            break
         }
         ServerUtil.shared.getDetails(self, type: type, parameters: parameters) { (success, dict, message) in
             guard success else { return }
+            
+            if let promotions = dict?["promotion_menu"] as? NSArray {
+                self.promotionList = promotions.compactMap({PromotionDatas($0 as! NSDictionary)})
+            }
             
             if let data = dict?["restaurant"] as? NSDictionary {
                 self.restaurant = RestaurantDatas(data)
@@ -420,6 +504,14 @@ extension AlienceInfoListViewController {
             
             if let data = dict?["hotel"] as? NSDictionary {
                 self.hotel = HotelDatas(data)
+            }
+            
+            if let data = dict?["play"] as? NSDictionary {
+                self.play = PlayDatas(data)
+            }
+            
+            if let data = dict?["beauty"] as? NSDictionary {
+                self.beauty = BeautyDatas(data)
             }
         }
     }

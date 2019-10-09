@@ -32,6 +32,10 @@ class AlienceDatas: NSObject {
         case .hotel:
             array = data["hotel"] as? NSArray
             break
+        case .play:
+            array = data["play"] as? NSArray
+        case .beauty:
+            array = data["beauty"] as? NSArray
         }
     }
 }

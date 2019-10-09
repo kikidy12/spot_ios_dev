@@ -20,8 +20,7 @@ class DetailImageCollectionViewCell: UICollectionViewCell {
     
     func initView(_ data: ImageDatas) {
         image = data
-        if let urlStr = image.imageURL {
-            let url = URL(string: urlStr)
+        if let urlStr = image.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             imaegView.kf.setImage(with: url)
         }
     }

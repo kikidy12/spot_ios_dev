@@ -11,8 +11,6 @@ import UIKit
 class RestaurantMenuTableViewCell: UITableViewCell {
     
     var numberFormatter = NumberFormatter()
-    
-    var menu: RestaurantMenuDatas!
 
     @IBOutlet weak var mainBtn: CustomButton!
     
@@ -33,9 +31,21 @@ class RestaurantMenuTableViewCell: UITableViewCell {
     }
     
     
-    func initView(_ data: RestaurantMenuDatas) {
+    func initView(restaurant: RestaurantMenuDatas? = nil, play: PlayMenuDatas? = nil, beauty: BeautyMenuDatas? = nil) {
         numberFormatter.numberStyle = .decimal
-        menu = data
+        
+        if let menu = restaurant {
+            drawRestaurant(menu)
+        }
+        else if let menu = play {
+            drawPlay(menu)
+        }
+        else if let menu = beauty {
+            drawBeauty(menu)
+        }
+    }
+    
+    func drawRestaurant(_ menu: RestaurantMenuDatas) {
         nameLabel.text = menu.name
         menu.isMain ? (mainBtn.isHidden = false) : (mainBtn.isHidden = true)
         salePriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
@@ -56,7 +66,59 @@ class RestaurantMenuTableViewCell: UITableViewCell {
             salePriceLabel.isHidden = true
         }
         
-        if let urlStr = menu.imageURL, let url = URL(string: urlStr) {
+        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
+            titleImageView.kf.setImage(with: url)
+        }
+    }
+    
+    func drawBeauty(_ menu: BeautyMenuDatas) {
+        nameLabel.text = menu.name
+        menu.isMain ? (mainBtn.isHidden = false) : (mainBtn.isHidden = true)
+        salePriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
+        priceLabel.text = "\(menu.price ?? 0)원"
+        
+        if let rate = menu.discountRate {
+            cancelLineView.isHidden = false
+            arrowLabel.isHidden = false
+            var discountPrice = 0
+            if let price = menu.price, price > 0 {
+                discountPrice = price - Int(Double(price * rate) / 100)
+            }
+            discountPercentLabel.text = "\(rate)%"
+            salePriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
+        }
+        else {
+            arrowLabel.isHidden = true
+            salePriceLabel.isHidden = true
+        }
+        
+        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
+            titleImageView.kf.setImage(with: url)
+        }
+    }
+    
+    func drawPlay(_ menu: PlayMenuDatas) {
+        nameLabel.text = menu.name
+        menu.isMain ? (mainBtn.isHidden = false) : (mainBtn.isHidden = true)
+        salePriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
+        priceLabel.text = "\(menu.price ?? 0)원"
+        
+        if let rate = menu.discountRate {
+            cancelLineView.isHidden = false
+            arrowLabel.isHidden = false
+            var discountPrice = 0
+            if let price = menu.price, price > 0 {
+                discountPrice = price - Int(Double(price * rate) / 100)
+            }
+            discountPercentLabel.text = "\(rate)%"
+            salePriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
+        }
+        else {
+            arrowLabel.isHidden = true
+            salePriceLabel.isHidden = true
+        }
+        
+        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
             titleImageView.kf.setImage(with: url)
         }
     }

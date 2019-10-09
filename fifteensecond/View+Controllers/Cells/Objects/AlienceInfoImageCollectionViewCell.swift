@@ -18,7 +18,8 @@ class AlienceInfoImageCollectionViewCell: UICollectionViewCell {
     }
 
     func initView(imageStr: String) {
-        guard let url = URL(string: imageStr) else { return }
-        coverImageView.kf.setImage(with: url)
+        if let encoded = imageStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
+            coverImageView.kf.setImage(with: url)
+        }
     }
 }

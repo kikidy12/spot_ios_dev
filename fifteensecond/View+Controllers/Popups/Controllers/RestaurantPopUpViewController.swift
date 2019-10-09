@@ -10,7 +10,9 @@ import UIKit
 
 class RestaurantPopUpViewController: UIViewController {
     
-    var restaurant: RestaurantDatas!
+    var type: AlienceTitles = .restaurant
+    
+    var promotion: PromotionDatas!
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -24,8 +26,7 @@ class RestaurantPopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nameLabel.text = restaurant.name
+        nameLabel.text = promotion.title
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -65,15 +66,31 @@ class RestaurantPopUpViewController: UIViewController {
     }
     
     @IBAction func checkCode() {
-        useRestaurant()
+        guard !numberfirstView.text!.isEmpty, !numbersecondView.text!.isEmpty, !numberthirdView.text!.isEmpty, !numberfourthView.text!.isEmpty, !numberfifthView.text!.isEmpty, !numbersixthView.text!.isEmpty else {
+            return
+        }
+        usePromotion()
     }
 
 }
 
 extension RestaurantPopUpViewController {
-    func useRestaurant() {
+    func usePromotion() {
         let code = "\(numberfirstView.text!)\(numbersecondView.text!)\(numberthirdView.text!)\(numberfourthView.text!)\(numberfifthView.text!)\(numbersixthView.text!)"
         
-        print(code)
+        let parameters = [
+            "auth_num": code,
+            "promotion_id": promotion.id!
+        ] as [String: Any]
+        
+        ServerUtil.shared.postPromotionLogs(self, parameters: parameters) { (success, dict, message) in
+            guard success else {
+                AlertHandler.shared.showAlert(vc: self, message: message ?? "error", okTitle: "확인")
+                return
+            }
+            AlertHandler.shared.showAlert(vc: self, message: "인증이 완료되었습니다", okTitle: "확인", okHandler: { (_) in
+                self.dismiss(animated: true, completion: nil)
+            })
+        }
     }
 }

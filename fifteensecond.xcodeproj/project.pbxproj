@@ -154,6 +154,20 @@
 		998869A8230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998869A6230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib */; };
 		998869AB230A27A500612092 /* RestaurantMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */; };
 		998869AC230A27A500612092 /* RestaurantMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */; };
+		99D43F76234C5433009B9AB5 /* PromotionDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D43F75234C5433009B9AB5 /* PromotionDatas.swift */; };
+		99D43F78234C55CD009B9AB5 /* PlayDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D43F77234C55CD009B9AB5 /* PlayDatas.swift */; };
+		99D43F7A234C55DD009B9AB5 /* BeautyDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D43F79234C55DD009B9AB5 /* BeautyDatas.swift */; };
+		99D43F7D234C5D6B009B9AB5 /* PromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D43F7B234C5D6B009B9AB5 /* PromotionTableViewCell.swift */; };
+		99D43F7E234C5D6B009B9AB5 /* PromotionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F7C234C5D6B009B9AB5 /* PromotionTableViewCell.xib */; };
+		99D43F80234DDC03009B9AB5 /* roulette.json in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F7F234DDC03009B9AB5 /* roulette.json */; };
+		99D43F8D234DDCD5009B9AB5 /* img_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F89234DDCD5009B9AB5 /* img_2.png */; };
+		99D43F8E234DDCD5009B9AB5 /* img_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8A234DDCD5009B9AB5 /* img_4.png */; };
+		99D43F8F234DDCD5009B9AB5 /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8B234DDCD5009B9AB5 /* img_1.png */; };
+		99D43F90234DDCD5009B9AB5 /* img_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8C234DDCD5009B9AB5 /* img_3.png */; };
+		99F7DCA72349B648007C4ABE /* UseSpotTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F7DCA52349B648007C4ABE /* UseSpotTicketViewController.swift */; };
+		99F7DCA82349B648007C4ABE /* UseSpotTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F7DCA62349B648007C4ABE /* UseSpotTicketViewController.xib */; };
+		99F7DCAB2349BD3F007C4ABE /* BuySpotTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F7DCA92349BD3F007C4ABE /* BuySpotTicketViewController.swift */; };
+		99F7DCAC2349BD3F007C4ABE /* BuySpotTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F7DCAA2349BD3F007C4ABE /* BuySpotTicketViewController.xib */; };
 		B6A76C01E062B97ADE416204 /* Pods_fifteensecondTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0F6946F7A07612CD612CE9 /* Pods_fifteensecondTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -332,6 +346,20 @@
 		998869A6230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceInfoImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuTableViewCell.swift; sourceTree = "<group>"; };
 		998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantMenuTableViewCell.xib; sourceTree = "<group>"; };
+		99D43F75234C5433009B9AB5 /* PromotionDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionDatas.swift; sourceTree = "<group>"; };
+		99D43F77234C55CD009B9AB5 /* PlayDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayDatas.swift; sourceTree = "<group>"; };
+		99D43F79234C55DD009B9AB5 /* BeautyDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyDatas.swift; sourceTree = "<group>"; };
+		99D43F7B234C5D6B009B9AB5 /* PromotionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionTableViewCell.swift; sourceTree = "<group>"; };
+		99D43F7C234C5D6B009B9AB5 /* PromotionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionTableViewCell.xib; sourceTree = "<group>"; };
+		99D43F7F234DDC03009B9AB5 /* roulette.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roulette.json; sourceTree = "<group>"; };
+		99D43F89234DDCD5009B9AB5 /* img_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_2.png; sourceTree = "<group>"; };
+		99D43F8A234DDCD5009B9AB5 /* img_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_4.png; sourceTree = "<group>"; };
+		99D43F8B234DDCD5009B9AB5 /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
+		99D43F8C234DDCD5009B9AB5 /* img_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_3.png; sourceTree = "<group>"; };
+		99F7DCA52349B648007C4ABE /* UseSpotTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseSpotTicketViewController.swift; sourceTree = "<group>"; };
+		99F7DCA62349B648007C4ABE /* UseSpotTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UseSpotTicketViewController.xib; sourceTree = "<group>"; };
+		99F7DCA92349BD3F007C4ABE /* BuySpotTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySpotTicketViewController.swift; sourceTree = "<group>"; };
+		99F7DCAA2349BD3F007C4ABE /* BuySpotTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuySpotTicketViewController.xib; sourceTree = "<group>"; };
 		A17AFEFEE0B1E79551D57DA0 /* Pods-fifteensecondUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecondUITests.release.xcconfig"; path = "Target Support Files/Pods-fifteensecondUITests/Pods-fifteensecondUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A79F79EFDB6D76BA02B3F653 /* Pods-fifteensecond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecond.debug.xcconfig"; path = "Target Support Files/Pods-fifteensecond/Pods-fifteensecond.debug.xcconfig"; sourceTree = "<group>"; };
 		BACE95EFD44112A2905110D8 /* Pods-fifteensecondUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecondUITests.debug.xcconfig"; path = "Target Support Files/Pods-fifteensecondUITests/Pods-fifteensecondUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -401,6 +429,7 @@
 		99114C9C22F2726100D0494A /* fifteensecond */ = {
 			isa = PBXGroup;
 			children = (
+				99D43F91234DDDB0009B9AB5 /* images */,
 				9968CF1C233CF17100B8D095 /* json */,
 				9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */,
 				99114D1522FE6C5D00D0494A /* fifteensecond.entitlements */,
@@ -473,6 +502,9 @@
 				997D18F8231D4E82007B98DF /* CardDatas.swift */,
 				997D19222326680E007B98DF /* SpotTicketUseInfoDatas.swift */,
 				9968CF1A233CDFD600B8D095 /* ProviderDatas.swift */,
+				99D43F75234C5433009B9AB5 /* PromotionDatas.swift */,
+				99D43F77234C55CD009B9AB5 /* PlayDatas.swift */,
+				99D43F79234C55DD009B9AB5 /* BeautyDatas.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -530,6 +562,8 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				99F7DCAA2349BD3F007C4ABE /* BuySpotTicketViewController.xib */,
+				99F7DCA62349B648007C4ABE /* UseSpotTicketViewController.xib */,
 				9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */,
 				997D191F23260819007B98DF /* PreViewViewController.xib */,
 				997D19172325F928007B98DF /* HasSpotTicketListViewController.xib */,
@@ -589,6 +623,8 @@
 				997D19162325F928007B98DF /* HasSpotTicketListViewController.swift */,
 				997D191E23260819007B98DF /* PreViewViewController.swift */,
 				9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */,
+				99F7DCA52349B648007C4ABE /* UseSpotTicketViewController.swift */,
+				99F7DCA92349BD3F007C4ABE /* BuySpotTicketViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -644,6 +680,7 @@
 				997D1928232756AF007B98DF /* HotelRoomInfoTableViewCell.swift */,
 				997D192C23276C4C007B98DF /* FacilityCollectionViewCell.swift */,
 				997D19302327C369007B98DF /* DetailImageCollectionViewCell.swift */,
+				99D43F7B234C5D6B009B9AB5 /* PromotionTableViewCell.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -651,6 +688,7 @@
 		99114CE822F2D90800D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				99D43F7C234C5D6B009B9AB5 /* PromotionTableViewCell.xib */,
 				997D19312327C369007B98DF /* DetailImageCollectionViewCell.xib */,
 				997D192D23276C4C007B98DF /* FacilityCollectionViewCell.xib */,
 				997D1929232756AF007B98DF /* HotelRoomInfoTableViewCell.xib */,
@@ -707,9 +745,21 @@
 		9968CF1C233CF17100B8D095 /* json */ = {
 			isa = PBXGroup;
 			children = (
+				99D43F7F234DDC03009B9AB5 /* roulette.json */,
 				9968CF1D233CF1D400B8D095 /* loading.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		99D43F91234DDDB0009B9AB5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				99D43F8B234DDCD5009B9AB5 /* img_1.png */,
+				99D43F89234DDCD5009B9AB5 /* img_2.png */,
+				99D43F8C234DDCD5009B9AB5 /* img_3.png */,
+				99D43F8A234DDCD5009B9AB5 /* img_4.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		A5A827D6FABF114A680FC1CD /* Pods */ = {
@@ -862,12 +912,15 @@
 				99114CA322F2726100D0494A /* Main.storyboard in Resources */,
 				99114D0822FBA60500D0494A /* EventCollectionViewCell.xib in Resources */,
 				99694C012314FA9800F4FF49 /* UseListViewController.xib in Resources */,
+				99F7DCAC2349BD3F007C4ABE /* BuySpotTicketViewController.xib in Resources */,
+				99D43F7E234C5D6B009B9AB5 /* PromotionTableViewCell.xib in Resources */,
 				99694C132315245800F4FF49 /* NoticeTableViewCell.xib in Resources */,
 				997D192123260819007B98DF /* PreViewViewController.xib in Resources */,
 				99694C2B23156B5500F4FF49 /* AttendanceCheckPopupViewController.xib in Resources */,
 				997D192723274D92007B98DF /* AlienceTicketTableViewCell.xib in Resources */,
 				998869AC230A27A500612092 /* RestaurantMenuTableViewCell.xib in Resources */,
 				9968CF1E233CF1D400B8D095 /* loading.json in Resources */,
+				99F7DCA82349B648007C4ABE /* UseSpotTicketViewController.xib in Resources */,
 				99694BFD2314F53E00F4FF49 /* MyPageMainViewController.xib in Resources */,
 				99114CF622F8544100D0494A /* LoginViewController.xib in Resources */,
 				997D192F23276C4C007B98DF /* FacilityCollectionViewCell.xib in Resources */,
@@ -883,9 +936,13 @@
 				997D1901231DEA72007B98DF /* SpotTicketListViewController.xib in Resources */,
 				997D19152325F5C7007B98DF /* SpotUsePopupViewController.xib in Resources */,
 				997D1911231E82B5007B98DF /* ShoppingMenuTableViewCell.xib in Resources */,
+				99D43F8D234DDCD5009B9AB5 /* img_2.png in Resources */,
 				99694BF5230BF4F000F4FF49 /* BuyTicketPopupViewController.xib in Resources */,
+				99D43F8E234DDCD5009B9AB5 /* img_4.png in Resources */,
 				99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */,
 				9968CF19233B361C00B8D095 /* RestaurantPopUpViewController.xib in Resources */,
+				99D43F8F234DDCD5009B9AB5 /* img_1.png in Resources */,
+				99D43F90234DDCD5009B9AB5 /* img_3.png in Resources */,
 				99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */,
 				99694C17231526E200F4FF49 /* NoticeDetailViewController.xib in Resources */,
 				9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */,
@@ -900,6 +957,7 @@
 				99114CE022F2D5E400D0494A /* SplashViewController.xib in Resources */,
 				997D190D231DFE07007B98DF /* RecordVideoViewController.xib in Resources */,
 				997D18EB231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib in Resources */,
+				99D43F80234DDC03009B9AB5 /* roulette.json in Resources */,
 				997D18E7231D0552007B98DF /* SpotMapViewController.xib in Resources */,
 				99114D0022FB9F5900D0494A /* AuthCheckViewController.xib in Resources */,
 				997D19192325F928007B98DF /* HasSpotTicketListViewController.xib in Resources */,
@@ -1030,6 +1088,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99D43F76234C5433009B9AB5 /* PromotionDatas.swift in Sources */,
 				997D18EE231D2EB4007B98DF /* RegistCardViewController.swift in Sources */,
 				99694BFC2314F53E00F4FF49 /* MyPageMainViewController.swift in Sources */,
 				997D192E23276C4C007B98DF /* FacilityCollectionViewCell.swift in Sources */,
@@ -1054,6 +1113,7 @@
 				99114D362301A60D00D0494A /* UserDefs.swift in Sources */,
 				9968CF1B233CDFD600B8D095 /* ProviderDatas.swift in Sources */,
 				998869962308132800612092 /* CategoryDatas.swift in Sources */,
+				99F7DCA72349B648007C4ABE /* UseSpotTicketViewController.swift in Sources */,
 				99114CF222F2D9C400D0494A /* EnumObjects.swift in Sources */,
 				99114CA022F2726100D0494A /* ViewController.swift in Sources */,
 				99114CD022F2CF4D00D0494A /* Extenstions+Views.swift in Sources */,
@@ -1064,6 +1124,7 @@
 				99114CF022F2D99100D0494A /* ServerUtil.swift in Sources */,
 				99114D0322FBA34300D0494A /* HomeViewController.swift in Sources */,
 				997D190C231DFE07007B98DF /* RecordVideoViewController.swift in Sources */,
+				99F7DCAB2349BD3F007C4ABE /* BuySpotTicketViewController.swift in Sources */,
 				997D18F9231D4E82007B98DF /* CardDatas.swift in Sources */,
 				99114D3323018AB800D0494A /* AlienceTableViewCell.swift in Sources */,
 				99694BF7230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift in Sources */,
@@ -1076,6 +1137,8 @@
 				99114CEB22F2D94000D0494A /* PlaceImageCollectionViewCell.swift in Sources */,
 				997D19142325F5C7007B98DF /* SpotUsePopupViewController.swift in Sources */,
 				99114CDF22F2D5E400D0494A /* SplashViewController.swift in Sources */,
+				99D43F7D234C5D6B009B9AB5 /* PromotionTableViewCell.swift in Sources */,
+				99D43F7A234C55DD009B9AB5 /* BeautyDatas.swift in Sources */,
 				99694C1A231529AF00F4FF49 /* AdContectViewController.swift in Sources */,
 				99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */,
 				997D192623274D92007B98DF /* AlienceTicketTableViewCell.swift in Sources */,
@@ -1094,6 +1157,7 @@
 				99114C9E22F2726100D0494A /* AppDelegate.swift in Sources */,
 				998869A32309570900612092 /* AlienceInfoListViewController.swift in Sources */,
 				9988699A23081A9300612092 /* RestaurantDatas.swift in Sources */,
+				99D43F78234C55CD009B9AB5 /* PlayDatas.swift in Sources */,
 				99694C0F2315230100F4FF49 /* NoticeDatas.swift in Sources */,
 				99114CFB22FB9B8000D0494A /* SignUpViewController.swift in Sources */,
 				9988699423080D1E00612092 /* EventDatas.swift in Sources */,
