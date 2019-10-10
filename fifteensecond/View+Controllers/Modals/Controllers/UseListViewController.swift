@@ -33,7 +33,8 @@ class UseListViewController: UIViewController {
         useListTableView.delegate = self
         useListTableView.dataSource = self
         
-        getUseList()
+//        getUseList()
+        getTicketUseList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +70,15 @@ extension UseListViewController {
                 return }
             
             self.useSpotList = array.compactMap { SpotTicketUseInfoDatas($0 as! NSDictionary) }
+        }
+    }
+    
+    func getTicketUseList() {
+        let parameters = [
+            "type": "USE"
+        ] as [String:Any]
+        ServerUtil.shared.getSpotTicket(self, parameters: parameters) { (success, dict, messate) in
+            guard success else { return }
         }
     }
 }

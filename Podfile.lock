@@ -138,7 +138,7 @@ DEPENDENCIES:
   - lottie-ios
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -190,4 +190,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: deb00b2c0aa8457763140136dbfcbc5af0436f1e
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.8.3
