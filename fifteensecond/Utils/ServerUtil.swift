@@ -302,6 +302,7 @@ extension ServerUtil {
     
     fileprivate func apiRequest(_ api: String, method: HTTPMethod, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         showLoadding()
+        
         var request: DataRequest!
         switch method {
         case .delete:

@@ -164,6 +164,9 @@
 		99D43F8E234DDCD5009B9AB5 /* img_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8A234DDCD5009B9AB5 /* img_4.png */; };
 		99D43F8F234DDCD5009B9AB5 /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8B234DDCD5009B9AB5 /* img_1.png */; };
 		99D43F90234DDCD5009B9AB5 /* img_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8C234DDCD5009B9AB5 /* img_3.png */; };
+		99DE34C02355F3580043D61A /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DE34BE2355F3580043D61A /* DocumentViewController.swift */; };
+		99DE34C12355F3580043D61A /* DocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DE34BF2355F3580043D61A /* DocumentViewController.xib */; };
+		99DE34C32355F4980043D61A /* spotServiceTerm.docx in Resources */ = {isa = PBXBuildFile; fileRef = 99DE34C22355F4980043D61A /* spotServiceTerm.docx */; };
 		99F7DCA72349B648007C4ABE /* UseSpotTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F7DCA52349B648007C4ABE /* UseSpotTicketViewController.swift */; };
 		99F7DCA82349B648007C4ABE /* UseSpotTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F7DCA62349B648007C4ABE /* UseSpotTicketViewController.xib */; };
 		99F7DCAB2349BD3F007C4ABE /* BuySpotTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F7DCA92349BD3F007C4ABE /* BuySpotTicketViewController.swift */; };
@@ -356,6 +359,9 @@
 		99D43F8A234DDCD5009B9AB5 /* img_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_4.png; sourceTree = "<group>"; };
 		99D43F8B234DDCD5009B9AB5 /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
 		99D43F8C234DDCD5009B9AB5 /* img_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_3.png; sourceTree = "<group>"; };
+		99DE34BE2355F3580043D61A /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
+		99DE34BF2355F3580043D61A /* DocumentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentViewController.xib; sourceTree = "<group>"; };
+		99DE34C22355F4980043D61A /* spotServiceTerm.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = spotServiceTerm.docx; sourceTree = "<group>"; };
 		99F7DCA52349B648007C4ABE /* UseSpotTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseSpotTicketViewController.swift; sourceTree = "<group>"; };
 		99F7DCA62349B648007C4ABE /* UseSpotTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UseSpotTicketViewController.xib; sourceTree = "<group>"; };
 		99F7DCA92349BD3F007C4ABE /* BuySpotTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySpotTicketViewController.swift; sourceTree = "<group>"; };
@@ -429,6 +435,7 @@
 		99114C9C22F2726100D0494A /* fifteensecond */ = {
 			isa = PBXGroup;
 			children = (
+				99DE34BD2355F3380043D61A /* Documents */,
 				99D43F91234DDDB0009B9AB5 /* images */,
 				9968CF1C233CF17100B8D095 /* json */,
 				9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */,
@@ -562,6 +569,7 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				99DE34BF2355F3580043D61A /* DocumentViewController.xib */,
 				99F7DCAA2349BD3F007C4ABE /* BuySpotTicketViewController.xib */,
 				99F7DCA62349B648007C4ABE /* UseSpotTicketViewController.xib */,
 				9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */,
@@ -625,6 +633,7 @@
 				9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */,
 				99F7DCA52349B648007C4ABE /* UseSpotTicketViewController.swift */,
 				99F7DCA92349BD3F007C4ABE /* BuySpotTicketViewController.swift */,
+				99DE34BE2355F3580043D61A /* DocumentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -760,6 +769,14 @@
 				99D43F8A234DDCD5009B9AB5 /* img_4.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		99DE34BD2355F3380043D61A /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				99DE34C22355F4980043D61A /* spotServiceTerm.docx */,
+			);
+			path = Documents;
 			sourceTree = "<group>";
 		};
 		A5A827D6FABF114A680FC1CD /* Pods */ = {
@@ -945,12 +962,14 @@
 				99D43F90234DDCD5009B9AB5 /* img_3.png in Resources */,
 				99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */,
 				99694C17231526E200F4FF49 /* NoticeDetailViewController.xib in Resources */,
+				99DE34C32355F4980043D61A /* spotServiceTerm.docx in Resources */,
 				9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */,
 				997D1909231DF337007B98DF /* PayCompViewController.xib in Resources */,
 				99114D0422FBA34300D0494A /* HomeViewController.xib in Resources */,
 				99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */,
 				997D18EF231D2EB4007B98DF /* RegistCardViewController.xib in Resources */,
 				997D19332327C369007B98DF /* DetailImageCollectionViewCell.xib in Resources */,
+				99DE34C12355F3580043D61A /* DocumentViewController.xib in Resources */,
 				99114D212300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib in Resources */,
 				99114D3C2301ADC700D0494A /* AlienceMapViewController.xib in Resources */,
 				99114D2C2301575B00D0494A /* AlienceListTileView.xib in Resources */,
@@ -1143,6 +1162,7 @@
 				99694BF0230B7E0700F4FF49 /* RestaurantCallPopupViewController.swift in Sources */,
 				997D192623274D92007B98DF /* AlienceTicketTableViewCell.swift in Sources */,
 				99114D1C2300F13800D0494A /* AlienceListViewController.swift in Sources */,
+				99DE34C02355F3580043D61A /* DocumentViewController.swift in Sources */,
 				99694C09231504BA00F4FF49 /* SpotDatas.swift in Sources */,
 				997D1908231DF337007B98DF /* PayCompViewController.swift in Sources */,
 				99114CD422F2D2EA00D0494A /* UserData.swift in Sources */,

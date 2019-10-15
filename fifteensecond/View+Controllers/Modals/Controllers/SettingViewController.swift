@@ -76,6 +76,13 @@ class SettingViewController: UIViewController {
         logout()
     }
     
+    @IBAction func showTermEvent() {
+        let vc = DocumentViewController()
+        vc.fileUrl = Bundle.main.url(forResource: "spotServiceTerm", withExtension: "docx")
+        vc.titleStr = "서비스 이용 약관"
+        self.show(vc, sender: nil)
+    }
+    
     @IBAction func deleteUserEvent() {
         AlertHandler.shared.showAlert(vc: self, message: "탈퇴하시겠습니까?", okTitle: "확인", cancelTitle: "취소") { (_) in
             self.deleteUser()
@@ -95,7 +102,6 @@ class SettingViewController: UIViewController {
         else {
             getFacebookUserInfo()
         }
-        
     }
     
     @IBAction func kakaoSignIn(_ sender: UIButton) {

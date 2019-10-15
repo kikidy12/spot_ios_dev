@@ -333,6 +333,7 @@
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstItem="C5k-Ub-pHz" firstAttribute="leading" secondItem="eGA-2m-YpX" secondAttribute="leading" id="CYd-m5-M6v"/>
                                         <constraint firstAttribute="trailing" secondItem="C5k-Ub-pHz" secondAttribute="trailing" id="GCe-dO-F8P"/>
@@ -343,6 +344,9 @@
                                         <constraint firstItem="qCr-yE-gsc" firstAttribute="centerY" secondItem="eGA-2m-YpX" secondAttribute="centerY" id="wPe-9L-whD"/>
                                         <constraint firstAttribute="trailing" secondItem="HZp-rw-81q" secondAttribute="trailing" constant="30" id="x0N-JE-yIC"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="Deh-mf-801" appends="YES" id="ILM-OH-vJX"/>
+                                    </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhQ-6A-Awa">
                                     <rect key="frame" x="0.0" y="465" width="414" height="55"/>
@@ -483,6 +487,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="47.544642857142854"/>
         </view>
+        <tapGestureRecognizer id="Deh-mf-801" userLabel="termTapGesture">
+            <connections>
+                <action selector="showTermEvent" destination="-1" id="IqH-C2-zGE"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="strokeRightArrow" width="8" height="15"/>
