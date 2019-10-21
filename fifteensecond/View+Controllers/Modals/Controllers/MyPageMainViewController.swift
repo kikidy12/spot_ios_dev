@@ -34,7 +34,8 @@ class MyPageMainViewController: UIViewController {
     
     @IBAction func showCouponListVCEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-//            self.show(UseListViewController(), sender: nil)
+            let vc = CouponsViewController()
+            show(vc, sender: nil)
         }
     }
     

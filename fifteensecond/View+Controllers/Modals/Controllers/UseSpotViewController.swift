@@ -1,60 +1,40 @@
 //
-//  UseSpotTicketViewController.swift
+//  UseSpotViewController.swift
 //  fifteensecond
 //
-//  Created by 권성민 on 06/10/2019.
+//  Created by 권성민 on 2019/10/21.
 //  Copyright © 2019 cfour. All rights reserved.
 //
 
 import UIKit
 import MobileCoreServices
 
-class UseSpotTicketViewController: UIViewController {
-    
-    var spot: SpotDatas!
+class UseSpotViewController: UIViewController {
     
     var controller = UIImagePickerController()
     let videoFileName = "/video.mp4"
-    
     var videoURL: URL!
     
-    @IBOutlet weak var needTicketCountLabel: UILabel!
-    @IBOutlet weak var hasTicketCountLabel: UILabel!
+    var spot: SpotDatas!
+    var code = ""
+    
+    @IBOutlet weak var locationNameLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        needTicketCountLabel.text = "이용권 \(spot.count ?? 0)장 필요"
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        title = "이용권 사용하기"
-        getUserInfo()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        title = " "
-    }
-    
-    @IBAction func showBuyTicketView() {
-        let vc = BuySpotTicketViewController()
-        show(vc, sender: nil)
-    }
-    
-    @IBAction func useSpotEvent() {
-        if let ticketCount = GlobalDatas.currentUser.ticketCount, let needCount = spot.count, ticketCount < needCount {
-            AlertHandler.shared.showAlert(vc: self, message: "티켓 수량이 부족합니다.", okTitle: "확인")
+        
+        guard spot != nil else {
+            self.navigationController?.popViewController(animated: true)
             return
         }
-        let vc = SpotUsePopupViewController()
-//        vc.useSpotTicket = ticket
-        vc.closeHandler = {
-            self.useSpotTicket()
-        }
-        self.showPopupView(vc: vc)
-//        AlertHandler.shared.showAlert(vc: self, message: "Sopt을\n이용하시겠습니까?", okTitle: "확인", cancelTitle: "취소", okHandler: { (_) in
-//
-//        })
+        locationNameLabel.text = "이용지점 : \(spot.name ?? "미확인")"
+        countLabel.text = "\(spot.count ?? 0)장의 이용권이 차감됩니다"
+    }
+
+    @IBAction func useSoptTicketEvent() {
+        useSpotTicket()
     }
     
     func recordVideo() {
@@ -71,7 +51,7 @@ class UseSpotTicketViewController: UIViewController {
     }
 }
 
-extension UseSpotTicketViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+extension UseSpotViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedVideo:URL = (info[UIImagePickerController.InfoKey.mediaURL] as? URL) {
             
@@ -106,28 +86,18 @@ extension UseSpotTicketViewController: UINavigationControllerDelegate, UIImagePi
     }
 }
 
-extension UseSpotTicketViewController {
-    
-    func getUserInfo() {
-        let parameters = [
-            "os": "iOS",
-            "device_token": GlobalDatas.deviceToken
-        ] as [String:Any]
-        
-        ServerUtil.shared.getInfo(self, parameters: parameters) { (success, dict, message) in
-            guard success, let isAttend = dict?["today_attendance"] as? Bool,
-                let user = dict?["user"] as? NSDictionary else { return }
-            
-            GlobalDatas.currentUser = UserData(user, isAttend: isAttend)
-            
-            self.hasTicketCountLabel.text = "보유 이용권 매수 \(GlobalDatas.currentUser.ticketCount ?? 0)장"
-        }
-    }
-    
+extension UseSpotViewController {
     func useSpotTicket() {
+        guard let count = spot.count, GlobalDatas.currentUser.ticketCount! >= count  else {
+            AlertHandler.shared.showAlert(vc: self, message: "잔여 쿠폰수량이 부족합니다", okTitle: "확인")
+            return
+        }
+        
         let parameters = [
-            "spot_id": spot.id!
+            "spot_id": spot.id!,
+            "unique_number": code
             ] as [String:Any]
+        
         ServerUtil.shared.postSpotTicket(self, parameters: parameters) { (success, dict, message) in
             guard success else {
                 if let message = message {

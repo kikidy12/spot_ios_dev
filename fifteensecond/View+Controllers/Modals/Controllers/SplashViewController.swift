@@ -42,6 +42,7 @@ class SplashViewController: UIViewController {
         navi.navigationBar.tintColor = .white
         navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navi.navigationBar.shadowImage = UIImage()
+        navi.modalPresentationStyle = .fullScreen
         self.present(navi, animated: true, completion: nil)
     }
     
@@ -52,10 +53,13 @@ class SplashViewController: UIViewController {
             navi.navigationBar.tintColor = .white
             navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
             navi.navigationBar.shadowImage = UIImage()
+            navi.modalPresentationStyle = .fullScreen
             self.present(navi, animated: true, completion: nil)
         }
         else {
-            present(TutoMainViewController(), animated: true, completion: nil)
+            let vc = TutoMainViewController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
         }
         
     }

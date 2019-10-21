@@ -77,9 +77,7 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func showTermEvent() {
-        let vc = DocumentViewController()
-        vc.fileUrl = Bundle.main.url(forResource: "spotServiceTerm", withExtension: "docx")
-        vc.titleStr = "서비스 이용 약관"
+        let vc = TermListViewController()
         self.show(vc, sender: nil)
     }
     
@@ -228,6 +226,7 @@ extension SettingViewController {
             navi.navigationBar.tintColor = .white
             navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
             navi.navigationBar.shadowImage = UIImage()
+            navi.modalPresentationStyle = .fullScreen
             self.present(navi, animated: true, completion: nil)
         }
     }
@@ -271,6 +270,7 @@ extension SettingViewController {
             navi.navigationBar.tintColor = .white
             navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
             navi.navigationBar.shadowImage = UIImage()
+            navi.modalPresentationStyle = .fullScreen
             self.present(navi, animated: true, completion: nil)
         }
     }

@@ -42,6 +42,12 @@ class AlienceInfoListViewController: UIViewController {
     
     var promotionList = [PromotionDatas]() {
         didSet {
+            if promotionList.isEmpty {
+                promotionView.isHidden = true
+            }
+            else {
+                promotionView.isHidden = false
+            }
             promotionTableView.reloadData()
         }
     }
@@ -159,6 +165,7 @@ class AlienceInfoListViewController: UIViewController {
     
     @IBOutlet weak var hasFacilityView: UIView!
     @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var promotionView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var openTimeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -299,6 +306,7 @@ class AlienceInfoListViewController: UIViewController {
             return
         }
         let activityVC = UIActivityViewController(activityItems: [linkURL], applicationActivities: nil)
+        activityVC.modalPresentationStyle = .fullScreen
         self.present(activityVC, animated: true, completion: nil)
     }
 }

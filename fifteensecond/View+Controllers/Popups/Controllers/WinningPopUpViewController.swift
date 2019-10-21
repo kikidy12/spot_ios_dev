@@ -21,6 +21,13 @@ class WinningPopUpViewController: UIViewController {
         super.viewDidLoad()
         
         winningLabel.text = message
+        
+        if message == "꽝" {
+            winningImageView.image = UIImage(named: "failRulletIcon")
+        }
+        else {
+            winningImageView.image = UIImage(named: "winningGift")
+        }
     }
     
     override func closeView() {

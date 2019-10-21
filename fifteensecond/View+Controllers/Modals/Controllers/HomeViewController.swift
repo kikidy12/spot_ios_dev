@@ -121,7 +121,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func showBuySpotTicketView() {
-        let vc = BuySpotTicketViewController()
+        let vc = CouponsViewController()
         show(vc, sender: nil)
     }
 }

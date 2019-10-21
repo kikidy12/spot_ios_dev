@@ -13,7 +13,6 @@ import GooglePlaces
 
 class SpotMapViewController: UIViewController {
     
-    var mapView: GMSMapView!
     var selectSpot:SpotDatas!
     let locationManager = CLLocationManager()
     
@@ -32,13 +31,13 @@ class SpotMapViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var mapContainerView: UIView!
+    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var countLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let latCenter = 37.562899
         let longCenter = 127.064770
-        mapView = GMSMapView(frame: mapContainerView.bounds)
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
         if let loc = locationManager.location?.coordinate {
@@ -49,8 +48,6 @@ class SpotMapViewController: UIViewController {
             let camera = GMSCameraPosition.camera(withLatitude: latCenter, longitude: longCenter, zoom: 15.0)
             mapView.camera = camera
         }
-        
-        mapContainerView.addSubview(mapView)
         mapView.delegate = self
         locationManager.delegate = self
         
@@ -59,10 +56,16 @@ class SpotMapViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         title = "15Seconds"
+        countLabel.text = "\(GlobalDatas.currentUser.ticketCount ?? 0)"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         title = " "
+    }
+    
+    @IBAction func showCouPonViewEvent() {
+        let vc = CouponsViewController()
+        show(vc, sender: nil)
     }
 }
 
@@ -82,8 +85,7 @@ extension SpotMapViewController: GMSMapViewDelegate {
 //            selectSpot = spot
 //            let vc = HasSpotTicketListViewController()
 //            vc.spot = spot
-            let vc = UseSpotTicketViewController()
-            vc.spot = spot
+            let vc = CouponsViewController()
             show(vc, sender: nil)
         }
     }

@@ -32,7 +32,7 @@ class PreViewViewController: UIViewController {
         let player = AVPlayer(url: videoURL)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
-        
+        playerViewController.modalPresentationStyle = .fullScreen
         present(playerViewController, animated: true) {
             player.play()
         }
@@ -56,6 +56,7 @@ class PreViewViewController: UIViewController {
                     
                     let activityVC = UIActivityViewController(activityItems: [NSURL(fileURLWithPath: filePath)], applicationActivities: nil)
                     activityVC.excludedActivityTypes = [.addToReadingList, .assignToContact]
+                    activityVC.modalPresentationStyle = .fullScreen
                     self.present(activityVC, animated: true, completion: nil)
                 }
             }

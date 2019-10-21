@@ -13,7 +13,6 @@ import GooglePlaces
 
 class AlienceMapViewController: UIViewController {
     
-    var mapView: GMSMapView!
     var categoryType: AlienceTitles!
     
     var place: GMSPlacesClient!
@@ -103,13 +102,15 @@ class AlienceMapViewController: UIViewController {
                 }
             }
         }
+    
+    @IBOutlet weak var mapView: GMSMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let latCenter = 37.562899
         let longCenter = 127.064770
-        mapView = GMSMapView(frame: view.bounds)
         mapView.isMyLocationEnabled = true
+        
         if let loc = locationManager.location?.coordinate {
             let camera = GMSCameraPosition.camera(withLatitude: loc.latitude, longitude: loc.longitude, zoom: 15.0)
             mapView.camera = camera
@@ -118,9 +119,8 @@ class AlienceMapViewController: UIViewController {
             let camera = GMSCameraPosition.camera(withLatitude: latCenter, longitude: longCenter, zoom: 15.0)
             mapView.camera = camera
         }
-        view.addSubview(mapView)
+        mapView.settings.myLocationButton = true
         mapView.delegate = self
-        view.sendSubviewToBack(mapView)
         locationManager.delegate = self
         
         getAliences()

@@ -242,6 +242,11 @@ class ServerUtil: NSObject {
         apiRequest("spot_ticket", method: .post, parameters: parameters, completion: completion)
     }
     
+    func getSpotNumberCheck(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("spot_number_check", method: .get, parameters: parameters, completion: completion)
+    }
+    
     func getSpotTicketKind(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
         apiRequest("spot_ticket_kind", method: .get, parameters: parameters, completion: completion)
