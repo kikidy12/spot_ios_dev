@@ -37,7 +37,7 @@ class CouponsViewController: UIViewController {
     }
     
     @IBAction func showCheckSpotCodeViewEvent() {
-        let vc = UseSpotViewController()
+        let vc = CheckSpotCodeViewController()
         show(vc, sender: nil)
     }
 }

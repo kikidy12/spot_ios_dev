@@ -65,6 +65,8 @@
 		994A6B17235D8B0E0088D46E /* TermListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B15235D8B0E0088D46E /* TermListViewController.xib */; };
 		994A6B1A235D8DD50088D46E /* spotLocationTerm.docx in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B18235D8DD50088D46E /* spotLocationTerm.docx */; };
 		994A6B1B235D8DD50088D46E /* spotPrivacyTerm.docx in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B19235D8DD50088D46E /* spotPrivacyTerm.docx */; };
+		994A6B1E235EC20E0088D46E /* CheckSpotCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A6B1C235EC20E0088D46E /* CheckSpotCodeViewController.swift */; };
+		994A6B1F235EC20E0088D46E /* CheckSpotCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B1D235EC20E0088D46E /* CheckSpotCodeViewController.xib */; };
 		9968CF0D2327CBF100B8D095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */; };
 		9968CF10232F4DDC00B8D095 /* TutoMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */; };
 		9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */; };
@@ -266,6 +268,8 @@
 		994A6B15235D8B0E0088D46E /* TermListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermListViewController.xib; sourceTree = "<group>"; };
 		994A6B18235D8DD50088D46E /* spotLocationTerm.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = spotLocationTerm.docx; sourceTree = "<group>"; };
 		994A6B19235D8DD50088D46E /* spotPrivacyTerm.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = spotPrivacyTerm.docx; sourceTree = "<group>"; };
+		994A6B1C235EC20E0088D46E /* CheckSpotCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSpotCodeViewController.swift; sourceTree = "<group>"; };
+		994A6B1D235EC20E0088D46E /* CheckSpotCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckSpotCodeViewController.xib; sourceTree = "<group>"; };
 		9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutoMainViewController.swift; sourceTree = "<group>"; };
 		9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutoMainViewController.xib; sourceTree = "<group>"; };
@@ -581,6 +585,7 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				994A6B1D235EC20E0088D46E /* CheckSpotCodeViewController.xib */,
 				994A6B15235D8B0E0088D46E /* TermListViewController.xib */,
 				994A6B11235D875E0088D46E /* UseSpotViewController.xib */,
 				99DE34BF2355F3580043D61A /* DocumentViewController.xib */,
@@ -650,6 +655,7 @@
 				99DE34BE2355F3580043D61A /* DocumentViewController.swift */,
 				994A6B10235D875E0088D46E /* UseSpotViewController.swift */,
 				994A6B14235D8B0E0088D46E /* TermListViewController.swift */,
+				994A6B1C235EC20E0088D46E /* CheckSpotCodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -997,6 +1003,7 @@
 				99114CE022F2D5E400D0494A /* SplashViewController.xib in Resources */,
 				997D190D231DFE07007B98DF /* RecordVideoViewController.xib in Resources */,
 				997D18EB231D0C3D007B98DF /* SpotMarkerInfoWindowView.xib in Resources */,
+				994A6B1F235EC20E0088D46E /* CheckSpotCodeViewController.xib in Resources */,
 				99D43F80234DDC03009B9AB5 /* roulette.json in Resources */,
 				994A6B13235D875E0088D46E /* UseSpotViewController.xib in Resources */,
 				997D18E7231D0552007B98DF /* SpotMapViewController.xib in Resources */,
@@ -1195,6 +1202,7 @@
 				997D1900231DEA72007B98DF /* SpotTicketListViewController.swift in Sources */,
 				99694C0C231522A500F4FF49 /* NoticeListViewController.swift in Sources */,
 				99114CFF22FB9F5900D0494A /* AuthCheckViewController.swift in Sources */,
+				994A6B1E235EC20E0088D46E /* CheckSpotCodeViewController.swift in Sources */,
 				99114CF822F8568900D0494A /* CustomView.swift in Sources */,
 				99114D3B2301ADC700D0494A /* AlienceMapViewController.swift in Sources */,
 				99114C9E22F2726100D0494A /* AppDelegate.swift in Sources */,
