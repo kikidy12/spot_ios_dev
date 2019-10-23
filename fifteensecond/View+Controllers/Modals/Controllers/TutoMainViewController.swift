@@ -67,7 +67,6 @@ class TutoMainViewController: UIViewController {
         navi.navigationBar.tintColor = .white
         navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navi.navigationBar.shadowImage = UIImage()
-        navi.modalPresentationStyle = .fullScreen
-        self.present(navi, animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController = navi
     }
 }

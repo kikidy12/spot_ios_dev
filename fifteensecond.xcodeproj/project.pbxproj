@@ -67,6 +67,10 @@
 		994A6B1B235D8DD50088D46E /* spotPrivacyTerm.docx in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B19235D8DD50088D46E /* spotPrivacyTerm.docx */; };
 		994A6B1E235EC20E0088D46E /* CheckSpotCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A6B1C235EC20E0088D46E /* CheckSpotCodeViewController.swift */; };
 		994A6B1F235EC20E0088D46E /* CheckSpotCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B1D235EC20E0088D46E /* CheckSpotCodeViewController.xib */; };
+		994A6B462360963F0088D46E /* logolottie_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B432360963F0088D46E /* logolottie_1.png */; };
+		994A6B472360963F0088D46E /* logolottie_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B442360963F0088D46E /* logolottie_0.png */; };
+		994A6B482360963F0088D46E /* logolottie_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B452360963F0088D46E /* logolottie_2.png */; };
+		994A6B4A2360964D0088D46E /* logolottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B492360964D0088D46E /* logolottie.json */; };
 		9968CF0D2327CBF100B8D095 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */; };
 		9968CF10232F4DDC00B8D095 /* TutoMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */; };
 		9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */; };
@@ -168,10 +172,10 @@
 		99D43F7D234C5D6B009B9AB5 /* PromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D43F7B234C5D6B009B9AB5 /* PromotionTableViewCell.swift */; };
 		99D43F7E234C5D6B009B9AB5 /* PromotionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F7C234C5D6B009B9AB5 /* PromotionTableViewCell.xib */; };
 		99D43F80234DDC03009B9AB5 /* roulette.json in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F7F234DDC03009B9AB5 /* roulette.json */; };
-		99D43F8D234DDCD5009B9AB5 /* img_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F89234DDCD5009B9AB5 /* img_2.png */; };
-		99D43F8E234DDCD5009B9AB5 /* img_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8A234DDCD5009B9AB5 /* img_4.png */; };
-		99D43F8F234DDCD5009B9AB5 /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8B234DDCD5009B9AB5 /* img_1.png */; };
-		99D43F90234DDCD5009B9AB5 /* img_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8C234DDCD5009B9AB5 /* img_3.png */; };
+		99D43F8D234DDCD5009B9AB5 /* winning_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F89234DDCD5009B9AB5 /* winning_2.png */; };
+		99D43F8E234DDCD5009B9AB5 /* winning_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8A234DDCD5009B9AB5 /* winning_4.png */; };
+		99D43F8F234DDCD5009B9AB5 /* winning_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8B234DDCD5009B9AB5 /* winning_1.png */; };
+		99D43F90234DDCD5009B9AB5 /* winning_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D43F8C234DDCD5009B9AB5 /* winning_3.png */; };
 		99DE34C02355F3580043D61A /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DE34BE2355F3580043D61A /* DocumentViewController.swift */; };
 		99DE34C12355F3580043D61A /* DocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DE34BF2355F3580043D61A /* DocumentViewController.xib */; };
 		99DE34C32355F4980043D61A /* spotServiceTerm.docx in Resources */ = {isa = PBXBuildFile; fileRef = 99DE34C22355F4980043D61A /* spotServiceTerm.docx */; };
@@ -270,6 +274,10 @@
 		994A6B19235D8DD50088D46E /* spotPrivacyTerm.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = spotPrivacyTerm.docx; sourceTree = "<group>"; };
 		994A6B1C235EC20E0088D46E /* CheckSpotCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSpotCodeViewController.swift; sourceTree = "<group>"; };
 		994A6B1D235EC20E0088D46E /* CheckSpotCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckSpotCodeViewController.xib; sourceTree = "<group>"; };
+		994A6B432360963F0088D46E /* logolottie_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logolottie_1.png; sourceTree = "<group>"; };
+		994A6B442360963F0088D46E /* logolottie_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logolottie_0.png; sourceTree = "<group>"; };
+		994A6B452360963F0088D46E /* logolottie_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logolottie_2.png; sourceTree = "<group>"; };
+		994A6B492360964D0088D46E /* logolottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logolottie.json; sourceTree = "<group>"; };
 		9968CF0C2327CBF100B8D095 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9968CF0E232F4DDC00B8D095 /* TutoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutoMainViewController.swift; sourceTree = "<group>"; };
 		9968CF0F232F4DDC00B8D095 /* TutoMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutoMainViewController.xib; sourceTree = "<group>"; };
@@ -371,10 +379,10 @@
 		99D43F7B234C5D6B009B9AB5 /* PromotionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionTableViewCell.swift; sourceTree = "<group>"; };
 		99D43F7C234C5D6B009B9AB5 /* PromotionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionTableViewCell.xib; sourceTree = "<group>"; };
 		99D43F7F234DDC03009B9AB5 /* roulette.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roulette.json; sourceTree = "<group>"; };
-		99D43F89234DDCD5009B9AB5 /* img_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_2.png; sourceTree = "<group>"; };
-		99D43F8A234DDCD5009B9AB5 /* img_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_4.png; sourceTree = "<group>"; };
-		99D43F8B234DDCD5009B9AB5 /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
-		99D43F8C234DDCD5009B9AB5 /* img_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_3.png; sourceTree = "<group>"; };
+		99D43F89234DDCD5009B9AB5 /* winning_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winning_2.png; sourceTree = "<group>"; };
+		99D43F8A234DDCD5009B9AB5 /* winning_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winning_4.png; sourceTree = "<group>"; };
+		99D43F8B234DDCD5009B9AB5 /* winning_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winning_1.png; sourceTree = "<group>"; };
+		99D43F8C234DDCD5009B9AB5 /* winning_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winning_3.png; sourceTree = "<group>"; };
 		99DE34BE2355F3580043D61A /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		99DE34BF2355F3580043D61A /* DocumentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentViewController.xib; sourceTree = "<group>"; };
 		99DE34C22355F4980043D61A /* spotServiceTerm.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = spotServiceTerm.docx; sourceTree = "<group>"; };
@@ -776,6 +784,7 @@
 		9968CF1C233CF17100B8D095 /* json */ = {
 			isa = PBXGroup;
 			children = (
+				994A6B492360964D0088D46E /* logolottie.json */,
 				99D43F7F234DDC03009B9AB5 /* roulette.json */,
 				9968CF1D233CF1D400B8D095 /* loading.json */,
 			);
@@ -785,10 +794,13 @@
 		99D43F91234DDDB0009B9AB5 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				99D43F8B234DDCD5009B9AB5 /* img_1.png */,
-				99D43F89234DDCD5009B9AB5 /* img_2.png */,
-				99D43F8C234DDCD5009B9AB5 /* img_3.png */,
-				99D43F8A234DDCD5009B9AB5 /* img_4.png */,
+				994A6B442360963F0088D46E /* logolottie_0.png */,
+				994A6B432360963F0088D46E /* logolottie_1.png */,
+				994A6B452360963F0088D46E /* logolottie_2.png */,
+				99D43F8B234DDCD5009B9AB5 /* winning_1.png */,
+				99D43F89234DDCD5009B9AB5 /* winning_2.png */,
+				99D43F8C234DDCD5009B9AB5 /* winning_3.png */,
+				99D43F8A234DDCD5009B9AB5 /* winning_4.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -945,6 +957,7 @@
 				99694C1F23152B3B00F4FF49 /* ContactViewController.xib in Resources */,
 				997D192B232756AF007B98DF /* HotelRoomInfoTableViewCell.xib in Resources */,
 				99114CA522F2726100D0494A /* Assets.xcassets in Resources */,
+				994A6B482360963F0088D46E /* logolottie_2.png in Resources */,
 				9968CF0D2327CBF100B8D095 /* GoogleService-Info.plist in Resources */,
 				994A6B1B235D8DD50088D46E /* spotPrivacyTerm.docx in Resources */,
 				99114D1222FC71CC00D0494A /* AllienceCollectionReusableView.xib in Resources */,
@@ -967,6 +980,7 @@
 				99F7DCA82349B648007C4ABE /* CouponsViewController.xib in Resources */,
 				99694BFD2314F53E00F4FF49 /* MyPageMainViewController.xib in Resources */,
 				99114CF622F8544100D0494A /* LoginViewController.xib in Resources */,
+				994A6B472360963F0088D46E /* logolottie_0.png in Resources */,
 				997D192F23276C4C007B98DF /* FacilityCollectionViewCell.xib in Resources */,
 				997D18F3231D49C2007B98DF /* PayViewController.xib in Resources */,
 				99694C23231530F800F4FF49 /* SettingViewController.xib in Resources */,
@@ -980,13 +994,15 @@
 				997D1901231DEA72007B98DF /* SpotTicketListViewController.xib in Resources */,
 				997D19152325F5C7007B98DF /* SpotUsePopupViewController.xib in Resources */,
 				997D1911231E82B5007B98DF /* ShoppingMenuTableViewCell.xib in Resources */,
-				99D43F8D234DDCD5009B9AB5 /* img_2.png in Resources */,
+				99D43F8D234DDCD5009B9AB5 /* winning_2.png in Resources */,
 				99694BF5230BF4F000F4FF49 /* BuyTicketPopupViewController.xib in Resources */,
-				99D43F8E234DDCD5009B9AB5 /* img_4.png in Resources */,
+				99D43F8E234DDCD5009B9AB5 /* winning_4.png in Resources */,
 				99114D1D2300F13800D0494A /* AlienceListViewController.xib in Resources */,
 				9968CF19233B361C00B8D095 /* RestaurantPopUpViewController.xib in Resources */,
-				99D43F8F234DDCD5009B9AB5 /* img_1.png in Resources */,
-				99D43F90234DDCD5009B9AB5 /* img_3.png in Resources */,
+				994A6B462360963F0088D46E /* logolottie_1.png in Resources */,
+				99D43F8F234DDCD5009B9AB5 /* winning_1.png in Resources */,
+				99D43F90234DDCD5009B9AB5 /* winning_3.png in Resources */,
+				994A6B4A2360964D0088D46E /* logolottie.json in Resources */,
 				99694C052314FB9F00F4FF49 /* UseListTableViewCell.xib in Resources */,
 				99694C17231526E200F4FF49 /* NoticeDetailViewController.xib in Resources */,
 				99DE34C32355F4980043D61A /* spotServiceTerm.docx in Resources */,

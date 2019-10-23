@@ -25,7 +25,7 @@ class SpotMapViewController: UIViewController {
                 marker.position = $0.location
                 marker.map = mapView
                 marker.icon = #imageLiteral(resourceName: "spotMarker")
-                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
         }
@@ -91,11 +91,11 @@ extension SpotMapViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didCloseInfoWindowOf marker: GMSMarker) {
-        marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+        marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        marker.setIconSize(scaledToSize: CGSize(width: 70, height: 78))
+        marker.setIconSize(scaledToSize: CGSize(width: 50, height: 54))
         return false
     }
 }

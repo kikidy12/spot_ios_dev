@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,28 +25,14 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attendanceBack" translatesAutoresizingMaskIntoConstraints="NO" id="cCy-x7-bfm">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExB-sr-2Z2">
-                    <rect key="frame" x="18" y="58" width="30" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="X"/>
-                    <connections>
-                        <action selector="closeView" destination="-1" eventType="touchUpInside" id="U6Q-xU-WVg"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출석체크하고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syq-9R-xkZ">
-                    <rect key="frame" x="36" y="112" width="140.5" height="32.5"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                    <color key="textColor" name="maize"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 혜택 받아보자!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvd-7r-vqg">
-                    <rect key="frame" x="36" y="149.5" width="256.5" height="36"/>
+                    <rect key="frame" x="36" y="105.5" width="256.5" height="36"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iW5-cB-X4q" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
-                    <rect key="frame" x="25" y="265.5" width="364" height="285"/>
+                    <rect key="frame" x="25" y="221.5" width="364" height="285"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUc-Tt-u2E" customClass="GradientHorizentalView" customModule="fifteensecond" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="364" height="45"/>
@@ -214,11 +200,15 @@
                         <constraint firstAttribute="width" constant="100" id="xfK-FZ-3Nw"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출석체크하고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syq-9R-xkZ">
+                    <rect key="frame" x="36" y="68" width="140.5" height="32.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                    <color key="textColor" name="maize"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ExB-sr-2Z2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="09J-UD-GFt"/>
-                <constraint firstItem="syq-9R-xkZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="68" id="9NU-tK-SKD"/>
                 <constraint firstItem="syq-9R-xkZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="AdU-G1-iGu"/>
                 <constraint firstItem="wvd-7r-vqg" firstAttribute="top" secondItem="syq-9R-xkZ" secondAttribute="bottom" constant="5" id="Ay0-v6-5Kw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cCy-x7-bfm" secondAttribute="bottom" id="LE8-Og-NGs"/>
@@ -227,8 +217,8 @@
                 <constraint firstItem="iW5-cB-X4q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Rkk-a6-nyW"/>
                 <constraint firstItem="3Jc-zR-okR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UUq-Cm-Wfd"/>
                 <constraint firstItem="cCy-x7-bfm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y75-Ge-xGu"/>
+                <constraint firstItem="syq-9R-xkZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="68" id="cXR-ah-ipm"/>
                 <constraint firstAttribute="trailing" secondItem="cCy-x7-bfm" secondAttribute="trailing" id="gOY-dI-Q59"/>
-                <constraint firstItem="ExB-sr-2Z2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="jcX-Lp-7Ud"/>
                 <constraint firstItem="3Jc-zR-okR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oqF-Ur-GR3"/>
                 <constraint firstItem="wvd-7r-vqg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="u0R-dr-Yv8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iW5-cB-X4q" secondAttribute="trailing" constant="25" id="veA-tX-N8O"/>

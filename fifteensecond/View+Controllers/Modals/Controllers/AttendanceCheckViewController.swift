@@ -109,8 +109,8 @@ extension AttendanceCheckViewController {
             let vc = WinningPopUpViewController()
             vc.message = name
             vc.compClouser = {
-            self.setAttdent(0)
-            self.dismiss(animated: true, completion: nil)
+                self.setAttdent(0)
+                self.navigationController?.popViewController(animated: true)
             }
             self.showPopupView(vc: vc)
         }

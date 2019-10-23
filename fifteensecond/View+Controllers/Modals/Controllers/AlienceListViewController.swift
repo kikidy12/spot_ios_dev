@@ -12,14 +12,15 @@ import Alamofire
 
 enum SortType: String {
     case name = "Sort by Name"
-    case distance = "Sort by Discount"
+    case distance = "Sort by Distance"
+    case discount = "Sort by Discount"
 }
 
 class AlienceListViewController: UIViewController {
     
     var categoryType: AlienceTitles!
     
-    var sortType: SortType = .distance
+    var sortType: SortType = .name
     
     var selectedCategory: CategoryDatas!
     
@@ -102,22 +103,49 @@ class AlienceListViewController: UIViewController {
         if sender.title(for: .normal) == SortType.name.rawValue {
             sortType = .name
         }
-        else {
+        else if sender.title(for: .normal) == SortType.distance.rawValue {
             sortType = .distance
+        }
+        else {
+            sortType = .discount
         }
         sortTypeBtn.setTitle(sortType.rawValue, for: .normal)
         getAliences()
         sortTypeView.subviews.forEach {
             if let btn = $0 as? UIButton {
-                if btn.tag == 0 {
-                    btn.setTitle(sortType.rawValue, for: .normal)
-                }
-                else {
-                    if sortType == .distance  {
+                if sortType == .name {
+                    if btn.tag == 0 {
                         btn.setTitle(SortType.name.rawValue, for: .normal)
                     }
-                    else {
+                    if btn.tag == 1 {
                         btn.setTitle(SortType.distance.rawValue, for: .normal)
+                    }
+                    if btn.tag == 2 {
+                        btn.setTitle(SortType.discount.rawValue, for: .normal)
+                    }
+                }
+                
+                if sortType == .discount {
+                    if btn.tag == 0 {
+                        btn.setTitle(SortType.discount.rawValue, for: .normal)
+                    }
+                    if btn.tag == 1 {
+                        btn.setTitle(SortType.name.rawValue, for: .normal)
+                    }
+                    if btn.tag == 2 {
+                        btn.setTitle(SortType.distance.rawValue, for: .normal)
+                    }
+                }
+                
+                if sortType == .distance {
+                    if btn.tag == 0 {
+                        btn.setTitle(SortType.distance.rawValue, for: .normal)
+                    }
+                    if btn.tag == 1 {
+                        btn.setTitle(SortType.discount.rawValue, for: .normal)
+                    }
+                    if btn.tag == 2 {
+                        btn.setTitle(SortType.name.rawValue, for: .normal)
                     }
                 }
             }
@@ -249,6 +277,7 @@ extension AlienceListViewController {
     }
     
     func getAliences() {
+        sortTypeView.isHidden = true
         guard let type = categoryType else { return }
         //수정 필요
         var parameters = [
@@ -259,6 +288,9 @@ extension AlienceListViewController {
         
         if sortType == .distance {
             parameters["sort_type"] = "distance"
+        }
+        else if sortType == .discount {
+            parameters["sort_type"] = "discount"
         }
         else {
             parameters["sort_type"] = "name"

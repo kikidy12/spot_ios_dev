@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -66,10 +66,10 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qye-CO-FHQ" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
                                     <rect key="frame" x="248" y="267.5" width="150" height="25"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uea-1N-uYo">
-                                            <rect key="frame" x="15" y="0.0" width="108" height="25"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uea-1N-uYo">
+                                            <rect key="frame" x="15" y="0.0" width="135" height="25"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <state key="normal" title="Sort by Discount">
+                                            <state key="normal" title="Sort by Name">
                                                 <color key="titleColor" name="lightGreyBlue"/>
                                             </state>
                                             <connections>
@@ -92,6 +92,7 @@
                                         <constraint firstAttribute="trailing" secondItem="OLi-4A-hzr" secondAttribute="trailing" constant="10" id="grA-nk-8R7"/>
                                         <constraint firstItem="OLi-4A-hzr" firstAttribute="centerY" secondItem="qye-CO-FHQ" secondAttribute="centerY" id="h7b-MP-T24"/>
                                         <constraint firstItem="Uea-1N-uYo" firstAttribute="leading" secondItem="qye-CO-FHQ" secondAttribute="leading" constant="15" id="jYJ-0F-Ooq"/>
+                                        <constraint firstAttribute="trailing" secondItem="Uea-1N-uYo" secondAttribute="trailing" id="kNM-kJ-tbf"/>
                                         <constraint firstAttribute="height" constant="25" id="pId-Yd-7Rt"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -116,12 +117,12 @@
                                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </tableView>
                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRO-xU-6aC" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
-                                    <rect key="frame" x="248" y="267.5" width="150" height="70"/>
+                                    <rect key="frame" x="248" y="267.5" width="150" height="110"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ays-bZ-0DV">
-                                            <rect key="frame" x="15" y="0.0" width="108" height="29"/>
+                                            <rect key="frame" x="15" y="0.0" width="89" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <state key="normal" title="Sort by Distance">
+                                            <state key="normal" title="Sort by Name">
                                                 <color key="titleColor" name="greyishBrown"/>
                                             </state>
                                             <connections>
@@ -135,28 +136,44 @@
                                                 <constraint firstAttribute="height" constant="1" id="RH1-GL-bW0"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNy-7c-Ei6">
-                                            <rect key="frame" x="15" y="30" width="89" height="40"/>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNy-7c-Ei6">
+                                            <rect key="frame" x="15" y="30" width="108" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Cwi-jB-avH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <state key="normal" title="Sort by Name">
+                                            <state key="normal" title="Sort by Distance">
                                                 <color key="titleColor" name="greyishBrown"/>
                                             </state>
                                             <connections>
                                                 <action selector="selectSortType:" destination="-1" eventType="touchUpInside" id="ygq-TR-xbv"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIJ-TQ-q0T">
+                                            <rect key="frame" x="15" y="70" width="108" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="zU6-MM-CSh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <state key="normal" title="Sort by Discount">
+                                                <color key="titleColor" name="greyishBrown"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="selectSortType:" destination="-1" eventType="touchUpInside" id="fe7-RK-ROI"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="mIJ-TQ-q0T" firstAttribute="leading" secondItem="fNy-7c-Ei6" secondAttribute="leading" id="8Hg-y8-02u"/>
                                         <constraint firstItem="jbz-cI-QTS" firstAttribute="leading" secondItem="MRO-xU-6aC" secondAttribute="leading" constant="15" id="Gt8-xJ-xLy"/>
                                         <constraint firstItem="fNy-7c-Ei6" firstAttribute="leading" secondItem="MRO-xU-6aC" secondAttribute="leading" constant="15" id="PU9-h7-nwR"/>
-                                        <constraint firstAttribute="bottom" secondItem="fNy-7c-Ei6" secondAttribute="bottom" id="ZqZ-f6-weE"/>
+                                        <constraint firstAttribute="bottom" secondItem="mIJ-TQ-q0T" secondAttribute="bottom" id="PmC-0U-o8n"/>
                                         <constraint firstItem="fNy-7c-Ei6" firstAttribute="top" secondItem="jbz-cI-QTS" secondAttribute="bottom" id="aVf-sf-G0h"/>
                                         <constraint firstItem="Ays-bZ-0DV" firstAttribute="top" secondItem="MRO-xU-6aC" secondAttribute="top" id="azT-PA-LjR"/>
+                                        <constraint firstItem="mIJ-TQ-q0T" firstAttribute="trailing" secondItem="fNy-7c-Ei6" secondAttribute="trailing" id="bS4-O7-tRi"/>
                                         <constraint firstAttribute="trailing" secondItem="jbz-cI-QTS" secondAttribute="trailing" constant="15" id="e2W-ft-nw8"/>
+                                        <constraint firstItem="mIJ-TQ-q0T" firstAttribute="top" secondItem="fNy-7c-Ei6" secondAttribute="bottom" id="ffp-qB-bWc"/>
                                         <constraint firstItem="Ays-bZ-0DV" firstAttribute="leading" secondItem="MRO-xU-6aC" secondAttribute="leading" constant="15" id="vi3-HZ-QAE"/>
                                         <constraint firstItem="jbz-cI-QTS" firstAttribute="top" secondItem="Ays-bZ-0DV" secondAttribute="bottom" id="wGe-Qs-BoI"/>
                                     </constraints>

@@ -71,10 +71,21 @@ class AlienceTableViewCell: UITableViewCell {
         }
     }
     
+    func setDistanceDisplay(_ distance: Int) {
+        
+        if distance >= 1000 {
+            let distance = Double(distance)/100
+            distanceLabel.text = "\(distance.rounded()/10)km"
+        }
+        else {
+            distanceLabel.text = "\(distance)m"
+        }
+    }
+    
     func drawHotelViews() {
         openTimeLabel.text = "In \(hotel.sleepInTime ?? "00:00")/ Out \(hotel.sleepOutTime ?? "00:00")"
         nameLabel.text = hotel.name
-        distanceLabel.text = "\(hotel.distance ?? 0)m"
+        setDistanceDisplay(hotel.distance ?? 0)
         categoryLabel.text = hotel.category.name
         setImageView(urlStr: hotel.imageList.first?.imageURL)
     }
@@ -82,7 +93,7 @@ class AlienceTableViewCell: UITableViewCell {
     func drawTicketViews() {
         openTimeLabel.text = ticket.openTime
         nameLabel.text = ticket.name
-        distanceLabel.text = "\(ticket.distance ?? 0)m"
+        setDistanceDisplay(ticket.distance ?? 0)
         categoryLabel.text = ticket.category.name
         setImageView(urlStr: ticket.imageList.first?.imageURL)
         commentLabel.text = ticket.comment
@@ -91,7 +102,7 @@ class AlienceTableViewCell: UITableViewCell {
     func drawRestaurantViews() {
         openTimeLabel.text = restaurant.openTime
         nameLabel.text = restaurant.name
-        distanceLabel.text = "\(restaurant.distance ?? 0)m"
+        setDistanceDisplay(restaurant.distance ?? 0)
         categoryLabel.text = restaurant.category.name
         setImageView(urlStr: restaurant.imageList.first?.imageURL)
         commentLabel.text = restaurant.comment
@@ -100,7 +111,7 @@ class AlienceTableViewCell: UITableViewCell {
     func drawBeautyViews() {
         openTimeLabel.text = beauty.openTime
         nameLabel.text = beauty.name
-        distanceLabel.text = "\(beauty.distance ?? 0)m"
+        setDistanceDisplay(beauty.distance ?? 0)
         categoryLabel.text = beauty.category.name
         setImageView(urlStr: beauty.imageList.first?.imageURL)
         commentLabel.text = beauty.comment
@@ -109,7 +120,7 @@ class AlienceTableViewCell: UITableViewCell {
     func drawPlayViews() {
         openTimeLabel.text = play.openTime
         nameLabel.text = play.name
-        distanceLabel.text = "\(play.distance ?? 0)m"
+        setDistanceDisplay(play.distance ?? 0)
         categoryLabel.text = play.category.name
         setImageView(urlStr: play.imageList.first?.imageURL)
         commentLabel.text = play.comment
@@ -118,7 +129,7 @@ class AlienceTableViewCell: UITableViewCell {
     func drawShoppingViews() {
         openTimeLabel.text = shopping.openTime
         nameLabel.text = shopping.name
-        distanceLabel.text = "\(shopping.distance ?? 0)m"
+        setDistanceDisplay(shopping.distance ?? 0)
         categoryLabel.text = shopping.category.name
         setImageView(urlStr: shopping.imageList.first?.imageURL)
         commentLabel.text = shopping.comment

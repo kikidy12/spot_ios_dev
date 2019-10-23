@@ -10,7 +10,6 @@ import UIKit
 
 class CustomMarkerInfoWindowView: UIView {
     
-    
     var selectClouser: ((Any?)->())!
     private let xibName = "CustomMarkerInfoWindowView"
     
@@ -36,6 +35,16 @@ class CustomMarkerInfoWindowView: UIView {
         selectClouser(alienceData)
     }
     
+    func setDistanceDisplay(_ distance: Int) {
+        if distance >= 1000 {
+            let distance = Double(distance)/100
+            distanceLabel.text = "\(distance.rounded()/10)"
+        }
+        else {
+            distanceLabel.text = "\(distance)m"
+        }
+    }
+    
     private func commonInit(){
         let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
@@ -47,7 +56,7 @@ class CustomMarkerInfoWindowView: UIView {
         
         if let restaurant = alienceData as? RestaurantDatas {
             nameLabel.text = restaurant.name
-            distanceLabel.text = "\(restaurant.distance ?? 0)m"
+            setDistanceDisplay(restaurant.distance ?? 0)
             categoryLabel.text = restaurant.category.name
             openTimeLabel.text = restaurant.openTime
             commentLabel.text = restaurant.comment ?? "없음"
@@ -55,7 +64,7 @@ class CustomMarkerInfoWindowView: UIView {
         }
         else if let ticket = alienceData as? TicketDatas {
             nameLabel.text = ticket.name
-            distanceLabel.text = "\(ticket.distance ?? 0)m"
+            setDistanceDisplay(ticket.distance ?? 0)
             categoryLabel.text = ticket.category.name
             openTimeLabel.text = ticket.openTime
             commentLabel.text = ticket.comment ?? "없음"
@@ -63,7 +72,7 @@ class CustomMarkerInfoWindowView: UIView {
         }
         else if let shopping = alienceData as? ShoppingDatas {
             nameLabel.text = shopping.name
-            distanceLabel.text = "\(shopping.distance ?? 0)m"
+            setDistanceDisplay(shopping.distance ?? 0)
             categoryLabel.text = shopping.category.name
             openTimeLabel.text = shopping.openTime
             commentLabel.text = shopping.comment ?? "없음"
@@ -71,7 +80,7 @@ class CustomMarkerInfoWindowView: UIView {
         }
         else if let hotel = alienceData as? HotelDatas {
             nameLabel.text = hotel.name
-            distanceLabel.text = "\(hotel.distance ?? 0)m"
+            setDistanceDisplay(hotel.distance ?? 0)
             categoryLabel.text = hotel.category.name
             commentLabel.text = hotel.comment ?? "없음"
             openTimeLabel.text = "Check In \(hotel.sleepInTime!)/ Out \(hotel.sleepOutTime!)"
@@ -80,7 +89,7 @@ class CustomMarkerInfoWindowView: UIView {
         
         else if let play = alienceData as? PlayDatas {
             nameLabel.text = play.name
-            distanceLabel.text = "\(play.distance ?? 0)m"
+            setDistanceDisplay(play.distance ?? 0)
             categoryLabel.text = play.category.name
             commentLabel.text = play.comment ?? "없음"
             openTimeLabel.text = play.openTime
@@ -89,7 +98,7 @@ class CustomMarkerInfoWindowView: UIView {
         
         else if let beauty = alienceData as? BeautyDatas {
             nameLabel.text = beauty.name
-            distanceLabel.text = "\(beauty.distance ?? 0)m"
+            setDistanceDisplay(beauty.distance ?? 0)
             categoryLabel.text = beauty.category.name
             commentLabel.text = beauty.comment ?? "없음"
             openTimeLabel.text = beauty.openTime

@@ -41,7 +41,7 @@ class MyPageMainViewController: UIViewController {
     
     @IBAction func showAttandVCEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            self.showPopupView(vc: AttendanceCheckViewController())
+            self.show(AttendanceCheckViewController(), sender: nil)
         }
     }
     

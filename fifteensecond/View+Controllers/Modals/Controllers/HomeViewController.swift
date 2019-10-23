@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
     @IBAction func showAttandView(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             self.attandAlertview.isHidden = true
-            self.showPopupView(vc: AttendanceCheckViewController())
+            self.show(AttendanceCheckViewController(), sender: nil)
         }
     }
     

@@ -32,7 +32,7 @@ class AlienceMapViewController: UIViewController {
                 marker.position = $0.location
                 marker.map = mapView
                 marker.icon = #imageLiteral(resourceName: "restaurantMarker")
-                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
         }
@@ -45,7 +45,7 @@ class AlienceMapViewController: UIViewController {
                 marker.position = $0.location
                 marker.map = mapView
                 marker.icon = #imageLiteral(resourceName: "shoppingMarker")
-                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
         }
@@ -58,7 +58,7 @@ class AlienceMapViewController: UIViewController {
                 marker.position = $0.location
                 marker.map = mapView
                 marker.icon = #imageLiteral(resourceName: "ticketMarker")
-                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
         }
@@ -71,7 +71,7 @@ class AlienceMapViewController: UIViewController {
                 marker.position = $0.location
                 marker.map = mapView
                 marker.icon = #imageLiteral(resourceName: "hotelMarker")
-                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
         }
@@ -84,7 +84,7 @@ class AlienceMapViewController: UIViewController {
                 marker.position = $0.location
                 marker.map = mapView
                 marker.icon = #imageLiteral(resourceName: "playMapIcon")
-                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
         }
@@ -97,7 +97,7 @@ class AlienceMapViewController: UIViewController {
                 marker.position = $0.location
                 marker.map = mapView
                 marker.icon = #imageLiteral(resourceName: "beautyMapIcon")
-                marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+                marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                     return [marker:$0]
                 }
             }
@@ -187,11 +187,11 @@ extension AlienceMapViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didCloseInfoWindowOf marker: GMSMarker) {
-        marker.setIconSize(scaledToSize: CGSize(width: 60, height: 65))
+        marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        marker.setIconSize(scaledToSize: CGSize(width: 70, height: 78))
+        marker.setIconSize(scaledToSize: CGSize(width: 50, height: 54))
         return false
     }
 }
