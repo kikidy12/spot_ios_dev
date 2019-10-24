@@ -23,6 +23,7 @@ class HotelDatas: NSObject {
     var rentOutTime: String!
     var sleepInTime: String!
     var sleepOutTime: String!
+    var promotionCount: Int!
     
     var category = CategoryDatas()
     
@@ -41,6 +42,7 @@ class HotelDatas: NSObject {
         timeFormatter.dateFormat = "HH:mm:ss"
         id = data["id"] as? Int
         address = data["address"] as? String
+        promotionCount = data["promotion_count"] as? Int
         
         linkURL = data["link_url"] as? String
         if let dist = data["distance"] as? Double {

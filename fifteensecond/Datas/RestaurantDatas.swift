@@ -20,6 +20,7 @@ class RestaurantDatas: NSObject {
     var linkUrl: String!
     var openTime: String!
     var comment: String!
+    var promotionCount: Int!
     
     var category = CategoryDatas()
     
@@ -69,6 +70,7 @@ class RestaurantDatas: NSObject {
         comment = data["comment"] as? String
         name = data["name"] as? String
         phoneNum = data["phone_num"] as? String
+        promotionCount = data["promotion_count"] as? Int
     }
 }
 

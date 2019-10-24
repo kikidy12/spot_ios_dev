@@ -31,7 +31,13 @@ class AlienceMapViewController: UIViewController {
                 let marker = GMSMarker()
                 marker.position = $0.location
                 marker.map = mapView
-                marker.icon = #imageLiteral(resourceName: "restaurantMarker")
+                if $0.promotionCount == 0 {
+                    marker.icon = #imageLiteral(resourceName: "restaurantMarker")
+                }
+                else {
+                    marker.icon = #imageLiteral(resourceName: "npRestaurantMapIcon")
+                }
+                
                 marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
@@ -44,7 +50,12 @@ class AlienceMapViewController: UIViewController {
                 let marker = GMSMarker()
                 marker.position = $0.location
                 marker.map = mapView
-                marker.icon = #imageLiteral(resourceName: "shoppingMarker")
+                if $0.promotionCount == 0 {
+                    marker.icon = #imageLiteral(resourceName: "shoppingMarker")
+                }
+                else {
+                    marker.icon = #imageLiteral(resourceName: "shoppingMarker")
+                }
                 marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
@@ -57,7 +68,12 @@ class AlienceMapViewController: UIViewController {
                 let marker = GMSMarker()
                 marker.position = $0.location
                 marker.map = mapView
-                marker.icon = #imageLiteral(resourceName: "ticketMarker")
+                if $0.promotionCount == 0 {
+                    marker.icon = #imageLiteral(resourceName: "ticketMarker")
+                }
+                else {
+                    marker.icon = #imageLiteral(resourceName: "npTicketMapIcon")
+                }
                 marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
@@ -70,7 +86,12 @@ class AlienceMapViewController: UIViewController {
                 let marker = GMSMarker()
                 marker.position = $0.location
                 marker.map = mapView
-                marker.icon = #imageLiteral(resourceName: "hotelMarker")
+                if $0.promotionCount == 0 {
+                    marker.icon = #imageLiteral(resourceName: "hotelMarker")
+                }
+                else {
+                    marker.icon = #imageLiteral(resourceName: "hotelMarker")
+                }
                 marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
@@ -83,7 +104,12 @@ class AlienceMapViewController: UIViewController {
                 let marker = GMSMarker()
                 marker.position = $0.location
                 marker.map = mapView
-                marker.icon = #imageLiteral(resourceName: "playMapIcon")
+                if $0.promotionCount == 0 {
+                    marker.icon = #imageLiteral(resourceName: "playMapIcon")
+                }
+                else {
+                    marker.icon = #imageLiteral(resourceName: "npPlayMapIcon")
+                }
                 marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                 return [marker:$0]
             }
@@ -94,10 +120,15 @@ class AlienceMapViewController: UIViewController {
             didSet {
                 markerList = beautyList.compactMap {
                     let marker = GMSMarker()
-                marker.position = $0.location
-                marker.map = mapView
-                marker.icon = #imageLiteral(resourceName: "beautyMapIcon")
-                marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
+                    marker.position = $0.location
+                    marker.map = mapView
+                    if $0.promotionCount == 0 {
+                        marker.icon = #imageLiteral(resourceName: "beautyMapIcon")
+                    }
+                    else {
+                        marker.icon = #imageLiteral(resourceName: "npBeautyMapIcon")
+                    }
+                    marker.setIconSize(scaledToSize: CGSize(width: 40, height: 42))
                     return [marker:$0]
                 }
             }

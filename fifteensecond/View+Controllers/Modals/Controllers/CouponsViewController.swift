@@ -74,7 +74,4 @@ extension CouponsViewController {
         }
     }
     
-    func checkSpotCode() {
-        
-    }
 }
