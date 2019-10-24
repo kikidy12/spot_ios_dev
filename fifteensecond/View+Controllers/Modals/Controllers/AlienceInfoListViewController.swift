@@ -370,17 +370,33 @@ extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if tableView == promotionTableView {
             if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
-                promotionTableViewHeightConstraint.constant = tableView.contentSize.height
+                promotionTableViewHeightConstraint.constant = cell.frame.height * CGFloat(promotionList.count)
             }
         }
         else if tableView == hasFacilityMenuTableView {
             if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
-                hasFacilityTableHeightConstraint.constant = tableView.contentSize.height
+                if type == .hotel {
+                    hasFacilityTableHeightConstraint.constant = cell.frame.height * CGFloat(hotel.roomList.count)
+                }
+                else if type == .tickets {
+                    hasFacilityTableHeightConstraint.constant = cell.frame.height * CGFloat(ticket.kindList.count)
+                }
             }
         }
         else {
             if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
-                menuTableHeightConstraint.constant = tableView.contentSize.height
+                if type == .restaurant {
+                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(restaurant.menuList.count)
+                }
+                else if type == .play {
+                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(play.menuList.count)
+                }
+                else if type == .beauty {
+                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(beauty.menuList.count)
+                }
+                else if type == .shopping {
+                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(shopping.menuList.count)
+                }
             }
         }
     }

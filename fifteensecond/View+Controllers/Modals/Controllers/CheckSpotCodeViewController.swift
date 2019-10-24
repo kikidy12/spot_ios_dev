@@ -21,7 +21,7 @@ class CheckSpotCodeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        title = "15Seconds 이용하기"
+        title = "15Seconds 인증하기"
     }
     
     override func viewWillDisappear(_ animated: Bool) {

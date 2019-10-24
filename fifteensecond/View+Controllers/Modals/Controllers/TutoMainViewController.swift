@@ -62,6 +62,7 @@ class TutoMainViewController: UIViewController {
     }
     
     @IBAction func showLoginViewEvent() {
+        UserDefs.setOpenedApp(true)
         let navi = UINavigationController(rootViewController: LoginViewController())
         navi.navigationBar.barStyle = .black
         navi.navigationBar.tintColor = .white

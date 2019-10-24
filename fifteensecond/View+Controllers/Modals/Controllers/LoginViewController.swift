@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
         createPickerViewAndAccessarayView()
         getNationCode()
     }
+    
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

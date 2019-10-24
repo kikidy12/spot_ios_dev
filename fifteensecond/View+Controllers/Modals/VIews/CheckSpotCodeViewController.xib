@@ -98,7 +98,7 @@
                         <constraint firstAttribute="height" constant="50" id="YiH-3e-1TD"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                    <state key="normal" title="기기확인">
+                    <state key="normal" title="기기인증">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>

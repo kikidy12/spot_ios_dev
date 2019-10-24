@@ -158,7 +158,7 @@ class AlienceListViewController: UIViewController {
 extension AlienceListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
-            alienceTableHeightConstraint.constant = tableView.contentSize.height
+            alienceTableHeightConstraint.constant = cell.frame.height * CGFloat(alienceArray.count)
         }
     }
     

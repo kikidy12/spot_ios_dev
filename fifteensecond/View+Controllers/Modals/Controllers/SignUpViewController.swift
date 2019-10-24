@@ -16,6 +16,8 @@ class SignUpViewController: UIViewController {
     let pickerView = UIPickerView()
     let textField = UITextField(frame: .zero)
     
+    var termCheck: Bool = false
+    
     var email: String!
     var isNext = false
     
@@ -71,7 +73,7 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func nextEvent(sender: UIButton) {
-        if isNext {
+        if isNext, termCheck {
             signUpParameters["name"] = nameTextField.text!
             signUpParameters["email"] = emailTextField.text!
             signUpParameters["national_code"] = phoneCodeLabel.text!
@@ -80,6 +82,40 @@ class SignUpViewController: UIViewController {
             signUpParameters["uid"] = snsUID
             
             smsAuth()
+        }
+    }
+    
+    @IBAction func showServiceTermEvent() {
+        let vc = DocumentViewController()
+        vc.fileUrl = Bundle.main.url(forResource: "spotPrivacyTerm", withExtension: "docx")
+        vc.titleStr = "SPOT 서비스 이용약관"
+        show(vc, sender: nil)
+    }
+    
+    @IBAction func showLocationTermEvent() {
+        let vc = DocumentViewController()
+        vc.fileUrl = Bundle.main.url(forResource: "spotServiceTerm", withExtension: "docx")
+        vc.titleStr = "개인정보 처리방침"
+        show(vc, sender: nil)
+    }
+    
+    @IBAction func showPrivacyTermEvent() {
+        let vc = DocumentViewController()
+        vc.fileUrl = Bundle.main.url(forResource: "spotLocationTerm", withExtension: "docx")
+        vc.titleStr = "위치기반 서비스 이용약관"
+        show(vc, sender: nil)
+    }
+    
+    @IBAction func termCheckEvent(_ sender: UIButton) {
+        if sender.tag == 0 {
+            sender.setImage(UIImage(named: "checkIcon"), for: .normal)
+            sender.tag = 1
+            termCheck = true
+        }
+        else {
+            sender.setImage(nil, for: .normal)
+            sender.tag = 0
+            termCheck = false
         }
     }
     
