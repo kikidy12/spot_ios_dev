@@ -55,7 +55,7 @@ class PayViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         title = "결제하기"
-        getCardList()
+//        getCardList()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

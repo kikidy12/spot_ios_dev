@@ -30,6 +30,23 @@ extension DateFormatter {
     }
 }
 
+extension Date {
+    func dateToString(formatter:String = "yyyy-MM-dd HH:mm:ss") -> String {
+        let dateForamtter = DateFormatter()
+        dateForamtter.dateFormat = formatter
+        
+        return dateForamtter.string(from: self)
+    }
+}
+
+extension String {
+    func stringToDate(formatter:String = "yyyy-MM-dd HH:mm:ss") -> Date? {
+        let dateForamtter = DateFormatter()
+        dateForamtter.dateFormat = formatter
+        return dateForamtter.date(from: self)
+    }
+}
+
 extension UIColor {
     
     @nonobjc class var darkblue: UIColor {

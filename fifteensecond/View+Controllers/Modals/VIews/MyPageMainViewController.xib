@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -361,8 +359,20 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 15Seconds, All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7e-NL-l2R">
-                    <rect key="frame" x="106" y="840" width="202.5" height="12"/>
+                    <rect key="frame" x="23" y="840" width="202.5" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" name="brownGrey"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ei4-GA-TM1">
+                    <rect key="frame" x="23" y="604" width="291" height="66.5"/>
+                    <string key="text">주식회사 씨포     대표자 : 정순혁 , DAVID DONG WON KIM 
+사업자 등록번호 : 773-86-01377 
+통신판매업 신고번호 : 제2019-인천남동구-1341 호
+주소 : 서울특별시 송파구 법원로 90 파트너스2 510
+대표전화 02-6925-0607 
+개인정보보호책임자 : 정순혁 ,DAVID DONG WON KIM</string>
+                    <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".AppleKoreanFont" pointSize="10"/>
                     <color key="textColor" name="brownGrey"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -370,11 +380,14 @@
             <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Amd-tw-kOx" firstAttribute="top" secondItem="C44-34-YQs" secondAttribute="bottom" id="64n-Mr-Lt2"/>
+                <constraint firstItem="r7e-NL-l2R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23" id="6Ta-T6-UN6"/>
                 <constraint firstItem="C44-34-YQs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Awq-f6-1wN"/>
                 <constraint firstItem="C44-34-YQs" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="IHV-hD-uXG"/>
+                <constraint firstItem="ei4-GA-TM1" firstAttribute="top" secondItem="Amd-tw-kOx" secondAttribute="bottom" constant="18" id="IMe-8p-i59"/>
                 <constraint firstItem="C44-34-YQs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PDk-GZ-je7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Amd-tw-kOx" secondAttribute="trailing" id="Sdf-KW-0zB"/>
-                <constraint firstItem="r7e-NL-l2R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZVZ-Pq-Kou"/>
+                <constraint firstAttribute="trailing" secondItem="ei4-GA-TM1" secondAttribute="trailing" constant="100" id="VIF-gi-3yo"/>
+                <constraint firstItem="ei4-GA-TM1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23" id="lK5-Op-QLd"/>
                 <constraint firstItem="Amd-tw-kOx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pwM-Fg-IfT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r7e-NL-l2R" secondAttribute="bottom" constant="10" id="sFP-Jk-Jgc"/>
             </constraints>

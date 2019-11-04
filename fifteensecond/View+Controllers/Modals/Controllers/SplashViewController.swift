@@ -31,7 +31,6 @@ class SplashViewController: UIViewController {
         lottie.center = view.center
         lottie.loopMode = .playOnce
         
-        
         view.addSubview(lottie)
     }
     

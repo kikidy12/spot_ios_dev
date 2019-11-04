@@ -59,6 +59,9 @@
 		99114D382301A65800D0494A /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D372301A65800D0494A /* AlertHandler.swift */; };
 		99114D3B2301ADC700D0494A /* AlienceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114D392301ADC700D0494A /* AlienceMapViewController.swift */; };
 		99114D3C2301ADC700D0494A /* AlienceMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */; };
+		99118313236F0C7A0020D6CE /* CouponDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99118311236F0C7A0020D6CE /* CouponDetailViewController.swift */; };
+		99118314236F0C7A0020D6CE /* CouponDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99118312236F0C7A0020D6CE /* CouponDetailViewController.xib */; };
+		9911831E236FBE140020D6CE /* RouletteDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9911831D236FBE140020D6CE /* RouletteDatas.swift */; };
 		994A6B12235D875E0088D46E /* UseSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A6B10235D875E0088D46E /* UseSpotViewController.swift */; };
 		994A6B13235D875E0088D46E /* UseSpotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994A6B11235D875E0088D46E /* UseSpotViewController.xib */; };
 		994A6B16235D8B0E0088D46E /* TermListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A6B14235D8B0E0088D46E /* TermListViewController.swift */; };
@@ -111,6 +114,9 @@
 		99694C272315666600F4FF49 /* AttendanceCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */; };
 		99694C2A23156B5500F4FF49 /* AttendanceCheckPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */; };
 		99694C2B23156B5500F4FF49 /* AttendanceCheckPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */; };
+		99766E11236FCECD002573FD /* CouponDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99766E10236FCECD002573FD /* CouponDatas.swift */; };
+		99766E14236FD00E002573FD /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99766E12236FD00E002573FD /* CouponTableViewCell.swift */; };
+		99766E15236FD00E002573FD /* CouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99766E13236FD00E002573FD /* CouponTableViewCell.xib */; };
 		997D18E6231D0552007B98DF /* SpotMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18E4231D0552007B98DF /* SpotMapViewController.swift */; };
 		997D18E7231D0552007B98DF /* SpotMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 997D18E5231D0552007B98DF /* SpotMapViewController.xib */; };
 		997D18E9231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D18E8231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift */; };
@@ -266,6 +272,9 @@
 		99114D372301A65800D0494A /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		99114D392301ADC700D0494A /* AlienceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienceMapViewController.swift; sourceTree = "<group>"; };
 		99114D3A2301ADC700D0494A /* AlienceMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceMapViewController.xib; sourceTree = "<group>"; };
+		99118311236F0C7A0020D6CE /* CouponDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDetailViewController.swift; sourceTree = "<group>"; };
+		99118312236F0C7A0020D6CE /* CouponDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponDetailViewController.xib; sourceTree = "<group>"; };
+		9911831D236FBE140020D6CE /* RouletteDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteDatas.swift; sourceTree = "<group>"; };
 		994A6B10235D875E0088D46E /* UseSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseSpotViewController.swift; sourceTree = "<group>"; };
 		994A6B11235D875E0088D46E /* UseSpotViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UseSpotViewController.xib; sourceTree = "<group>"; };
 		994A6B14235D8B0E0088D46E /* TermListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermListViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +327,9 @@
 		99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceCheckViewController.xib; sourceTree = "<group>"; };
 		99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckPopupViewController.swift; sourceTree = "<group>"; };
 		99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceCheckPopupViewController.xib; sourceTree = "<group>"; };
+		99766E10236FCECD002573FD /* CouponDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDatas.swift; sourceTree = "<group>"; };
+		99766E12236FD00E002573FD /* CouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
+		99766E13236FD00E002573FD /* CouponTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponTableViewCell.xib; sourceTree = "<group>"; };
 		997D18E4231D0552007B98DF /* SpotMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMapViewController.swift; sourceTree = "<group>"; };
 		997D18E5231D0552007B98DF /* SpotMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotMapViewController.xib; sourceTree = "<group>"; };
 		997D18E8231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMarkerInfoWindowView.swift; sourceTree = "<group>"; };
@@ -536,6 +548,8 @@
 				99D43F75234C5433009B9AB5 /* PromotionDatas.swift */,
 				99D43F77234C55CD009B9AB5 /* PlayDatas.swift */,
 				99D43F79234C55DD009B9AB5 /* BeautyDatas.swift */,
+				9911831D236FBE140020D6CE /* RouletteDatas.swift */,
+				99766E10236FCECD002573FD /* CouponDatas.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -593,6 +607,7 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				99118312236F0C7A0020D6CE /* CouponDetailViewController.xib */,
 				994A6B1D235EC20E0088D46E /* CheckSpotCodeViewController.xib */,
 				994A6B15235D8B0E0088D46E /* TermListViewController.xib */,
 				994A6B11235D875E0088D46E /* UseSpotViewController.xib */,
@@ -664,6 +679,7 @@
 				994A6B10235D875E0088D46E /* UseSpotViewController.swift */,
 				994A6B14235D8B0E0088D46E /* TermListViewController.swift */,
 				994A6B1C235EC20E0088D46E /* CheckSpotCodeViewController.swift */,
+				99118311236F0C7A0020D6CE /* CouponDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -720,6 +736,7 @@
 				997D192C23276C4C007B98DF /* FacilityCollectionViewCell.swift */,
 				997D19302327C369007B98DF /* DetailImageCollectionViewCell.swift */,
 				99D43F7B234C5D6B009B9AB5 /* PromotionTableViewCell.swift */,
+				99766E12236FD00E002573FD /* CouponTableViewCell.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -727,6 +744,7 @@
 		99114CE822F2D90800D0494A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				99766E13236FD00E002573FD /* CouponTableViewCell.xib */,
 				99D43F7C234C5D6B009B9AB5 /* PromotionTableViewCell.xib */,
 				997D19312327C369007B98DF /* DetailImageCollectionViewCell.xib */,
 				997D192D23276C4C007B98DF /* FacilityCollectionViewCell.xib */,
@@ -948,6 +966,7 @@
 				994A6B17235D8B0E0088D46E /* TermListViewController.xib in Resources */,
 				997D1905231DEC19007B98DF /* SpotTicketTableViewCell.xib in Resources */,
 				99694BF1230B7E0700F4FF49 /* RestaurantCallPopupViewController.xib in Resources */,
+				99766E15236FD00E002573FD /* CouponTableViewCell.xib in Resources */,
 				99114CEC22F2D94000D0494A /* PlaceImageCollectionViewCell.xib in Resources */,
 				99694C1B231529AF00F4FF49 /* AdContectViewController.xib in Resources */,
 				99114D2523013E5100D0494A /* RecommandCollectionViewCell.xib in Resources */,
@@ -979,6 +998,7 @@
 				9968CF1E233CF1D400B8D095 /* loading.json in Resources */,
 				99F7DCA82349B648007C4ABE /* CouponsViewController.xib in Resources */,
 				99694BFD2314F53E00F4FF49 /* MyPageMainViewController.xib in Resources */,
+				99118314236F0C7A0020D6CE /* CouponDetailViewController.xib in Resources */,
 				99114CF622F8544100D0494A /* LoginViewController.xib in Resources */,
 				994A6B472360963F0088D46E /* logolottie_0.png in Resources */,
 				997D192F23276C4C007B98DF /* FacilityCollectionViewCell.xib in Resources */,
@@ -1152,6 +1172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99766E11236FCECD002573FD /* CouponDatas.swift in Sources */,
 				99D43F76234C5433009B9AB5 /* PromotionDatas.swift in Sources */,
 				997D18EE231D2EB4007B98DF /* RegistCardViewController.swift in Sources */,
 				99694BFC2314F53E00F4FF49 /* MyPageMainViewController.swift in Sources */,
@@ -1188,6 +1209,7 @@
 				99694C002314FA9800F4FF49 /* UseListViewController.swift in Sources */,
 				99114CF022F2D99100D0494A /* ServerUtil.swift in Sources */,
 				99114D0322FBA34300D0494A /* HomeViewController.swift in Sources */,
+				99118313236F0C7A0020D6CE /* CouponDetailViewController.swift in Sources */,
 				997D190C231DFE07007B98DF /* RecordVideoViewController.swift in Sources */,
 				99F7DCAB2349BD3F007C4ABE /* BuySpotTicketViewController.swift in Sources */,
 				997D18F9231D4E82007B98DF /* CardDatas.swift in Sources */,
@@ -1225,6 +1247,7 @@
 				998869A32309570900612092 /* AlienceInfoListViewController.swift in Sources */,
 				9988699A23081A9300612092 /* RestaurantDatas.swift in Sources */,
 				99D43F78234C55CD009B9AB5 /* PlayDatas.swift in Sources */,
+				99766E14236FD00E002573FD /* CouponTableViewCell.swift in Sources */,
 				99694C0F2315230100F4FF49 /* NoticeDatas.swift in Sources */,
 				99114CFB22FB9B8000D0494A /* SignUpViewController.swift in Sources */,
 				9988699423080D1E00612092 /* EventDatas.swift in Sources */,
@@ -1234,6 +1257,7 @@
 				99694C122315245800F4FF49 /* NoticeTableViewCell.swift in Sources */,
 				998869A7230A271F00612092 /* AlienceInfoImageCollectionViewCell.swift in Sources */,
 				99114CF522F8544100D0494A /* LoginViewController.swift in Sources */,
+				9911831E236FBE140020D6CE /* RouletteDatas.swift in Sources */,
 				997D1910231E82B5007B98DF /* ShoppingMenuTableViewCell.swift in Sources */,
 				99114D182300E24500D0494A /* AllienceCollectionViewCell.swift in Sources */,
 				994A6B16235D8B0E0088D46E /* TermListViewController.swift in Sources */,

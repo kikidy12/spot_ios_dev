@@ -258,6 +258,16 @@ class ServerUtil: NSObject {
         apiRequest("spot", method: .get, parameters: parameters, completion: completion)
     }
     
+    func getMyCoupon(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("my_coupon", method: .get, parameters: parameters, completion: completion)
+    }
+    
+    func postMyCoupon(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("my_coupon", method: .post, parameters: parameters, completion: completion)
+    }
+    
     
     func putCardRegistration(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
@@ -358,6 +368,7 @@ extension ServerUtil {
             print(response.description)
         }
         
+        print("test")
         loadingView.removeFromSuperview()
         progressLabel.removeFromSuperview()
         guard let result = response.result.value as? NSDictionary else {
