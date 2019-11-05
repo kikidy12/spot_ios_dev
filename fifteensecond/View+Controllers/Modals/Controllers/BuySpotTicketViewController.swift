@@ -39,7 +39,7 @@ class BuySpotTicketViewController: UIViewController {
     }
     
     @IBAction func showPayViewController() {
-        let vc = PayViewController()
+        let vc = SelectPayTypeViewController()
         vc.count = count
         show(vc, sender: nil)
     }

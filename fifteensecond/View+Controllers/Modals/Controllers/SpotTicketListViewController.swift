@@ -38,7 +38,7 @@ class SpotTicketListViewController: UIViewController {
     }
     
     @IBAction func buyTicketEvent() {
-        let vc = PayViewController()
+        let vc = SelectPayTypeViewController()
 //        vc.spotTicket = selectItem
         show(vc, sender: nil)
     }

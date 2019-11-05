@@ -185,6 +185,8 @@
 		99DE34C02355F3580043D61A /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DE34BE2355F3580043D61A /* DocumentViewController.swift */; };
 		99DE34C12355F3580043D61A /* DocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DE34BF2355F3580043D61A /* DocumentViewController.xib */; };
 		99DE34C32355F4980043D61A /* spotServiceTerm.docx in Resources */ = {isa = PBXBuildFile; fileRef = 99DE34C22355F4980043D61A /* spotServiceTerm.docx */; };
+		99F45E4823715756008CA219 /* SelectPayTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F45E4623715756008CA219 /* SelectPayTypeViewController.swift */; };
+		99F45E4923715756008CA219 /* SelectPayTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F45E4723715756008CA219 /* SelectPayTypeViewController.xib */; };
 		99F7DCA72349B648007C4ABE /* CouponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F7DCA52349B648007C4ABE /* CouponsViewController.swift */; };
 		99F7DCA82349B648007C4ABE /* CouponsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F7DCA62349B648007C4ABE /* CouponsViewController.xib */; };
 		99F7DCAB2349BD3F007C4ABE /* BuySpotTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F7DCA92349BD3F007C4ABE /* BuySpotTicketViewController.swift */; };
@@ -398,6 +400,8 @@
 		99DE34BE2355F3580043D61A /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		99DE34BF2355F3580043D61A /* DocumentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentViewController.xib; sourceTree = "<group>"; };
 		99DE34C22355F4980043D61A /* spotServiceTerm.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = spotServiceTerm.docx; sourceTree = "<group>"; };
+		99F45E4623715756008CA219 /* SelectPayTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPayTypeViewController.swift; sourceTree = "<group>"; };
+		99F45E4723715756008CA219 /* SelectPayTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectPayTypeViewController.xib; sourceTree = "<group>"; };
 		99F7DCA52349B648007C4ABE /* CouponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsViewController.swift; sourceTree = "<group>"; };
 		99F7DCA62349B648007C4ABE /* CouponsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponsViewController.xib; sourceTree = "<group>"; };
 		99F7DCA92349BD3F007C4ABE /* BuySpotTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySpotTicketViewController.swift; sourceTree = "<group>"; };
@@ -607,6 +611,7 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				99F45E4723715756008CA219 /* SelectPayTypeViewController.xib */,
 				99118312236F0C7A0020D6CE /* CouponDetailViewController.xib */,
 				994A6B1D235EC20E0088D46E /* CheckSpotCodeViewController.xib */,
 				994A6B15235D8B0E0088D46E /* TermListViewController.xib */,
@@ -680,6 +685,7 @@
 				994A6B14235D8B0E0088D46E /* TermListViewController.swift */,
 				994A6B1C235EC20E0088D46E /* CheckSpotCodeViewController.swift */,
 				99118311236F0C7A0020D6CE /* CouponDetailViewController.swift */,
+				99F45E4623715756008CA219 /* SelectPayTypeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1029,6 +1035,7 @@
 				9968CF11232F4DDC00B8D095 /* TutoMainViewController.xib in Resources */,
 				997D1909231DF337007B98DF /* PayCompViewController.xib in Resources */,
 				99114D0422FBA34300D0494A /* HomeViewController.xib in Resources */,
+				99F45E4923715756008CA219 /* SelectPayTypeViewController.xib in Resources */,
 				99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */,
 				997D18EF231D2EB4007B98DF /* RegistCardViewController.xib in Resources */,
 				997D19332327C369007B98DF /* DetailImageCollectionViewCell.xib in Resources */,
@@ -1177,6 +1184,7 @@
 				997D18EE231D2EB4007B98DF /* RegistCardViewController.swift in Sources */,
 				99694BFC2314F53E00F4FF49 /* MyPageMainViewController.swift in Sources */,
 				997D192E23276C4C007B98DF /* FacilityCollectionViewCell.swift in Sources */,
+				99F45E4823715756008CA219 /* SelectPayTypeViewController.swift in Sources */,
 				99114D2F230171E800D0494A /* AlienceMainViewController.swift in Sources */,
 				99114CD222F2D1D100D0494A /* Extensions+Objects.swift in Sources */,
 				997D18F2231D49C2007B98DF /* PayViewController.swift in Sources */,
