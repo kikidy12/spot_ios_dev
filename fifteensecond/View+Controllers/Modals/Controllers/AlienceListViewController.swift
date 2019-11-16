@@ -28,21 +28,21 @@ class AlienceListViewController: UIViewController {
     
     var alienceArray = NSArray() {
         didSet {
-            let tempArray = alienceArray.sortedArray { (dict1, dict2) -> ComparisonResult in
-                let id1 = (dict1 as! NSDictionary)["id"] as! Int
-                let id2 = (dict2 as! NSDictionary)["id"] as! Int
-                
-                return "\(id1)".compare("\(id2)")
-                } as NSArray
-            
-            premiumArray = tempArray.filter {
-                if (($0 as! NSDictionary)["is_premium"] as! Bool) {
-                    return true
-                }
-                else {
-                    return false
-                }
-                } as NSArray
+//            let tempArray = alienceArray.sortedArray { (dict1, dict2) -> ComparisonResult in
+//                let id1 = (dict1 as! NSDictionary)["id"] as! Int
+//                let id2 = (dict2 as! NSDictionary)["id"] as! Int
+//
+//                return "\(id1)".compare("\(id2)")
+//                } as NSArray
+//
+//            premiumArray = tempArray.filter {
+//                if (($0 as! NSDictionary)["is_premium"] as! Bool) {
+//                    return true
+//                }
+//                else {
+//                    return false
+//                }
+//                } as NSArray
             
             alienceTableView.reloadData()
         }
@@ -70,6 +70,7 @@ class AlienceListViewController: UIViewController {
     @IBOutlet weak var alienceTableView: UITableView!
     @IBOutlet weak var sortTypeView: UIView!
     @IBOutlet weak var sortTypeBtn: UIButton!
+    @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var alienceTableHeightConstraint: NSLayoutConstraint!
     
@@ -92,6 +93,11 @@ class AlienceListViewController: UIViewController {
         alienceTableView.separatorStyle = .none
         
         getCategorys()
+        getAliencePremium()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getAddress()
     }
     
     @IBAction func showSortTypeView(_ sender: UIButton) {
@@ -152,7 +158,25 @@ class AlienceListViewController: UIViewController {
         }
     }
     
-    
+    func getAddress() {
+        CLGeocoder().reverseGeocodeLocation(locManager.location!, preferredLocale: Locale(identifier: "Ko-kr"), completionHandler:{ (placemarks, error) in
+            if let address: [CLPlacemark] = placemarks {
+                var addressStr = ""
+                if let locality = address.last?.locality {
+                    addressStr = locality
+                }
+                if let thoroughfare = address.last?.thoroughfare {
+                    if addressStr == "" {
+                        addressStr = thoroughfare
+                    }
+                    else {
+                        addressStr += (" " + thoroughfare)
+                    }
+                }
+                self.addressLabel.text = addressStr
+            }
+        })
+    }
 }
 
 extension AlienceListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -276,10 +300,41 @@ extension AlienceListViewController {
         }
     }
     
+    func getAliencePremium() {
+        guard let type = categoryType else { return }
+        let parameters = [
+            "latitude": locManager.location!.coordinate.latitude,
+            "longitude": locManager.location!.coordinate.longitude
+        ] as Parameters
+        
+        ServerUtil.shared.getAliencePremium(self, type: type, parameters: parameters) { (success, dict, message) in
+            guard success, let data = dict else { return }
+            
+            switch type {
+            case .restaurant:
+                self.premiumArray = data["restaurant"] as? NSArray ?? NSArray()
+                break
+            case .shopping:
+                self.premiumArray = data["shopping_mall"] as? NSArray ?? NSArray()
+                break
+            case .tickets:
+                self.premiumArray = data["ticket"] as? NSArray ?? NSArray()
+                break
+            case .hotel:
+                self.premiumArray = data["hotel"] as? NSArray ?? NSArray()
+                break
+            case .play:
+                self.premiumArray = data["play"] as? NSArray ?? NSArray()
+            case .beauty:
+                self.premiumArray = data["beauty"] as? NSArray ?? NSArray()
+            }
+            
+        }
+    }
+    
     func getAliences() {
         sortTypeView.isHidden = true
         guard let type = categoryType else { return }
-        //수정 필요
         var parameters = [
             "latitude": locManager.location!.coordinate.latitude,
             "longitude": locManager.location!.coordinate.longitude,

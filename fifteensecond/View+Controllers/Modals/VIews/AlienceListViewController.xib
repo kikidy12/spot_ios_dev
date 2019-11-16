@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlienceListViewController" customModule="fifteensecond" customModuleProvider="target">
             <connections>
+                <outlet property="addressLabel" destination="9yQ-zX-Nuc" id="rX8-ec-C89"/>
                 <outlet property="alienceTableHeightConstraint" destination="Rin-Zu-0Se" id="P2n-go-VU4"/>
                 <outlet property="alienceTableView" destination="ziG-vp-E36" id="qYE-Oj-Slt"/>
                 <outlet property="categoryColletionView" destination="0yt-eG-Vtw" id="pXE-mr-Qyj"/>

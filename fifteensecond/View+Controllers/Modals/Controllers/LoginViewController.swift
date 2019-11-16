@@ -52,6 +52,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signupEvent(sender: UIButton) {
+//        self.showPopupView(vc: SharedPopupViewController())
         navigationController?.isNavigationBarHidden = false
         let vc = SignUpViewController()
         self.show(vc, sender: nil)
@@ -74,6 +75,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func kakaoSignIn(_ sender: UIButton) {
+        print("kakaoStart")
         guard let kakaoSession = KOSession.shared() else { return }
         if kakaoSession.isOpen() {
             print("kakaoSessionColose")
@@ -284,9 +286,13 @@ extension LoginViewController {
                 if let token = dict?["token"] as? String {
                     UserDefs.setUserToken(token: token)
                     UserDefs.setAutoLogin(true)
-                    self.navigationController?.isNavigationBarHidden = false
-                    let vc = HomeViewController()
-                    self.show(vc, sender: nil)
+                    let navi = UINavigationController(rootViewController: HomeViewController())
+                    navi.navigationBar.barStyle = .black
+                    navi.navigationBar.tintColor = .white
+                    navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
+                    navi.navigationBar.shadowImage = UIImage()
+                    navi.isNavigationBarHidden = false
+                    UIApplication.shared.keyWindow?.rootViewController = navi
                 }
             }
             else {
@@ -296,6 +302,7 @@ extension LoginViewController {
                     vc.email = email
                 }
                 vc.provider = provider
+                vc.snsUID = uid
                 self.show(vc, sender: nil)
             }
         }
@@ -312,6 +319,7 @@ extension LoginViewController {
         ] as [String:Any]
         ServerUtil.shared.postSendSms(self, parameters: parameters) { (success, dict, message) in
             guard success else { return }
+            
             self.navigationController?.isNavigationBarHidden = false
             let vc = AuthCheckViewController()
             vc.phoneNum = phoneNum

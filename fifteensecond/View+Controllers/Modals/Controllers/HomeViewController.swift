@@ -121,6 +121,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func showBuySpotTicketView() {
+        title = ""
         let vc = CouponsViewController()
         show(vc, sender: nil)
     }

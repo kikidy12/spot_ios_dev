@@ -26,6 +26,22 @@ class AuthCheckViewController: UIViewController {
         phoneLabel.text = phoneNum + "로\n발송된 인증번호를 입력해주세요"
         codeTextField.attributedPlaceholder = NSAttributedString(string: "4자리 숫자입력",
                                                                  attributes: [.foregroundColor: UIColor.steel])
+        
+        
+        settingTimer()
+    }
+    
+    func settingTimer() {
+        self.timerLabel.isHidden = false
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            self.lastTime -= 1
+            
+            self.timerLabel.text = "\(self.lastTime)s"
+            if self.lastTime == 0 {
+                timer.invalidate()
+                self.timerLabel.isHidden = true
+            }
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -63,10 +79,18 @@ class AuthCheckViewController: UIViewController {
             UserDefs.setUserToken(token: token)
             UserDefs.setAutoLogin(true)
             
-            self.navigationController?.isNavigationBarHidden = false
-            let vc = HomeViewController()
-            self.show(vc, sender: nil)
-
+            if UserDefs.isOpenedApp {
+                let navi = UINavigationController(rootViewController: HomeViewController())
+                navi.navigationBar.barStyle = .black
+                navi.navigationBar.tintColor = .white
+                navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
+                navi.navigationBar.shadowImage = UIImage()
+                UIApplication.shared.keyWindow?.rootViewController = navi
+            }
+            else {
+                let vc = TutoMainViewController()
+                self.show(vc, sender: nil)
+            }
         }
     }
 

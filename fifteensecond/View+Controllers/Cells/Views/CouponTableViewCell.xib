@@ -26,7 +26,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wf8-HT-O6E">
                                 <rect key="frame" x="0.0" y="0.0" width="85" height="88"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OCL-Yw-Wee">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="OCL-Yw-Wee">
                                         <rect key="frame" x="7.5" y="9" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="EFN-jh-ax9"/>
@@ -104,5 +104,6 @@
     </objects>
     <resources>
         <image name="peachyPinkGradient" width="333" height="88"/>
+        <image name="placeholderImage" width="163" height="125"/>
     </resources>
 </document>

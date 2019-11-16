@@ -21,6 +21,8 @@ class TicketDatas: NSObject {
     var comment: String!
     var promotionCount: Int!
     
+    var discountRate: Int!
+    
     var category = CategoryDatas()
     
     var imageList = [ImageDatas]()
@@ -51,7 +53,12 @@ class TicketDatas: NSObject {
             let oStr = oTime[..<oIndex]
             let cStr = cTime[..<cIndex]
             
-            openTime = "\(oStr) - \(cStr)"
+            if oStr == "00:00", cStr == "00:00" {
+                openTime = "24시간"
+            }
+            else {
+                openTime = "\(oStr) - \(cStr)"
+            }
         }
         
         if let array = data["ticket_facilities"] as? NSArray {
@@ -70,6 +77,7 @@ class TicketDatas: NSObject {
             self.kindList = array.compactMap { TicketKindDatas($0 as! NSDictionary) }
         }
         
+        discountRate = data["discount_rate"] as? Int
         linkUrl = data["link_url"] as? String
         comment = data["comment"] as? String
         name = data["name"] as? String

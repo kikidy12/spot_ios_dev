@@ -15,8 +15,9 @@ target 'fifteensecond' do
   pod 'Firebase/Messaging'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'FacebookSDK'
   pod 'FBSDKLoginKit'
-  pod 'KakaoOpenSDK', '~> 1.14'
+  pod 'KakaoOpenSDK'
   pod 'Firebase/Analytics'
   pod 'lottie-ios'
 

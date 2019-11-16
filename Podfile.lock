@@ -1,13 +1,25 @@
 PODS:
   - Alamofire (4.8.2)
-  - FBSDKCoreKit (5.1.1):
-    - FBSDKCoreKit/Basics (= 5.1.1)
-    - FBSDKCoreKit/Core (= 5.1.1)
-  - FBSDKCoreKit/Basics (5.1.1)
-  - FBSDKCoreKit/Core (5.1.1):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (5.1.1):
+  - FacebookSDK (5.11.0):
+    - FacebookSDK/CoreKit (= 5.11.0)
+    - FacebookSDK/MarketingKit (= 5.11.0)
+  - FacebookSDK/CoreKit (5.11.0):
     - FBSDKCoreKit (~> 5.0)
+  - FacebookSDK/MarketingKit (5.11.0):
+    - FacebookSDK/CoreKit
+    - FBSDKMarketingKit (~> 5.0)
+  - FBSDKCoreKit (5.11.0):
+    - FBSDKCoreKit/Basics (= 5.11.0)
+    - FBSDKCoreKit/Core (= 5.11.0)
+  - FBSDKCoreKit/Basics (5.11.0)
+  - FBSDKCoreKit/Core (5.11.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.11.0):
+    - FBSDKLoginKit/Login (= 5.11.0)
+  - FBSDKLoginKit/Login (5.11.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKMarketingKit (5.10.1):
+    - FBSDKCoreKit (~> 5.5)
   - Firebase/Analytics (6.3.0):
     - Firebase/Core
   - Firebase/Auth (6.3.0):
@@ -98,22 +110,19 @@ PODS:
   - GoogleUtilities/UserDefaults (6.2.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
-  - KakaoOpenSDK (1.14.1):
-    - KakaoOpenSDK/KakaoCommon (= 1.14.1)
-    - KakaoOpenSDK/KakaoLink (= 1.14.1)
-    - KakaoOpenSDK/KakaoMessageTemplate (= 1.14.1)
-    - KakaoOpenSDK/KakaoNavi (= 1.14.1)
-    - KakaoOpenSDK/KakaoOpenSDK (= 1.14.1)
-    - KakaoOpenSDK/KakaoS2 (= 1.14.1)
-  - KakaoOpenSDK/KakaoCommon (1.14.1)
-  - KakaoOpenSDK/KakaoLink (1.14.1):
+  - KakaoOpenSDK (1.19.0):
+    - KakaoOpenSDK/KakaoCommon (= 1.19.0)
+    - KakaoOpenSDK/KakaoLink (= 1.19.0)
+    - KakaoOpenSDK/KakaoMessageTemplate (= 1.19.0)
+    - KakaoOpenSDK/KakaoNavi (= 1.19.0)
+    - KakaoOpenSDK/KakaoOpenSDK (= 1.19.0)
+  - KakaoOpenSDK/KakaoCommon (1.19.0)
+  - KakaoOpenSDK/KakaoLink (1.19.0):
     - KakaoOpenSDK/KakaoCommon
-  - KakaoOpenSDK/KakaoMessageTemplate (1.14.1)
-  - KakaoOpenSDK/KakaoNavi (1.14.1):
+  - KakaoOpenSDK/KakaoMessageTemplate (1.19.0)
+  - KakaoOpenSDK/KakaoNavi (1.19.0):
     - KakaoOpenSDK/KakaoCommon
-  - KakaoOpenSDK/KakaoOpenSDK (1.14.1)
-  - KakaoOpenSDK/KakaoS2 (1.14.1):
-    - KakaoOpenSDK/KakaoCommon
+  - KakaoOpenSDK/KakaoOpenSDK (1.19.0)
   - Kingfisher (5.6.0)
   - lottie-ios (3.1.2)
   - nanopb (0.3.901):
@@ -125,6 +134,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FacebookSDK
   - FBSDKLoginKit
   - Firebase/Analytics
   - Firebase/Auth
@@ -133,15 +143,13 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - GoogleSignIn
-  - KakaoOpenSDK (~> 1.14)
+  - KakaoOpenSDK
   - Kingfisher
   - lottie-ios
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
-    - FBSDKCoreKit
-    - FBSDKLoginKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -157,16 +165,23 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GoogleUtilities
     - GTMSessionFetcher
-    - KakaoOpenSDK
     - Kingfisher
     - lottie-ios
     - nanopb
     - Protobuf
+  trunk:
+    - FacebookSDK
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKMarketingKit
+    - KakaoOpenSDK
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  FBSDKCoreKit: c29b6b65f6a171ca0a317960a622cff62c9ee269
-  FBSDKLoginKit: fdaf402766755e1175ed5c0382f25e2e7dab3c2a
+  FacebookSDK: b15ad4ed9bcbefaa04bdcb8bdddfc269a9d2d221
+  FBSDKCoreKit: 9fbfb5b0022d34861bfa6b79f56f8e2ddcd8170b
+  FBSDKLoginKit: 0e976e0c91ee69dd5dc69062c095205146f1dd9f
+  FBSDKMarketingKit: 7bf10d0f716713615c3434a57e94dd7d14436cd8
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
   FirebaseAnalyticsInterop: efbe45c8385ec626e29f9525e5ebd38520dfb6c1
@@ -182,12 +197,12 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GoogleUtilities: 996e0db07153674fd1b54b220fda3a3dc3547cba
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
-  KakaoOpenSDK: 8f26484fee731781441561b7bb7e8a5739188b95
+  KakaoOpenSDK: 6e315de26f68484875506f5a4c520522101f3bfa
   Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
   lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
 
-PODFILE CHECKSUM: deb00b2c0aa8457763140136dbfcbc5af0436f1e
+PODFILE CHECKSUM: a88d64e4c0a812099199b954acd332debf3dd5a5
 
 COCOAPODS: 1.8.3

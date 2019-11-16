@@ -61,9 +61,15 @@ class TutoMainViewController: UIViewController {
         }
     }
     
-    @IBAction func showLoginViewEvent() {
-        UserDefs.setOpenedApp(true)
-        let navi = UINavigationController(rootViewController: LoginViewController())
+    @IBAction func showLoginViewEvent(_ sender: UIButton) {
+        if sender.titleLabel?.text == "SPOT 시작하기" {
+            UserDefs.setOpenedApp(false)
+        }
+        else {
+            UserDefs.setOpenedApp(true)
+        }
+
+        let navi = UINavigationController(rootViewController: HomeViewController())
         navi.navigationBar.barStyle = .black
         navi.navigationBar.tintColor = .white
         navi.navigationBar.setBackgroundImage(UIImage(), for: .default)

@@ -78,11 +78,16 @@ extension AttendanceCheckViewController {
     }
     
     func attendent() {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.roundingMode = .floor
+        numberFormatter.maximumSignificantDigits = 10
+        
         guard let lat = CLLocationManager().location?.coordinate.latitude, let lng = CLLocationManager().location?.coordinate.longitude else { return }
         let parameter = [
             "latitude": lat,
             "longitude": lng
         ] as [String:Any]
+        print(parameter)
         ServerUtil.shared.postAttendance(self, parameters: parameter) { (success, dict, message) in
             guard success, let count = dict?["attendance_count"] as? Int else {
                 if let message = message {

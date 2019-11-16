@@ -297,6 +297,7 @@
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="55" id="8Hw-m9-9fZ"/>
                                         <constraint firstAttribute="bottom" secondItem="ZBL-M9-rhr" secondAttribute="bottom" id="9wm-08-pDS"/>
@@ -307,6 +308,9 @@
                                         <constraint firstItem="V6O-Wu-F8T" firstAttribute="leading" secondItem="QJ3-qc-txa" secondAttribute="leading" constant="25" id="wNn-52-ASJ"/>
                                         <constraint firstItem="ZBL-M9-rhr" firstAttribute="leading" secondItem="QJ3-qc-txa" secondAttribute="leading" id="wWN-5A-IJ4"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="tqW-Eq-NrU" appends="YES" id="YSg-sH-ULk"/>
+                                    </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGA-2m-YpX">
                                     <rect key="frame" x="0.0" y="410" width="414" height="55"/>
@@ -490,6 +494,11 @@
         <tapGestureRecognizer id="Deh-mf-801" userLabel="termTapGesture">
             <connections>
                 <action selector="showTermEvent" destination="-1" id="IqH-C2-zGE"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="tqW-Eq-NrU" userLabel="compTap">
+            <connections>
+                <action selector="showCompWeb" destination="-1" id="3Tq-mE-C6X"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

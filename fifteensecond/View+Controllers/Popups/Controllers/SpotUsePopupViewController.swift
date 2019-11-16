@@ -12,6 +12,8 @@ class SpotUsePopupViewController: UIViewController {
     
     var useSpotTicket: SpotTicketUseInfoDatas!
     
+    var count = 0
+    
     var closeHandler: (()->())!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -19,7 +21,7 @@ class SpotUsePopupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = "15Second를\n이용하시겠습니까?"
+        titleLabel.text = "15Second 이용권\(count)장을\n사용하시겠습니까?"
     }
     
     @IBAction func recordVideo() {

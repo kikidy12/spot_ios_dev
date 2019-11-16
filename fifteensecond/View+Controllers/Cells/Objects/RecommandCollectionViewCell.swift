@@ -33,7 +33,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
     func setDistanceDisplay(_ distance: Int) {
         if distance >= 1000 {
             let distance = Double(distance)/100
-            distanceLabel.text = "\(distance.rounded()/10)"
+            distanceLabel.text = "\(distance.rounded()/10)km"
         }
         else {
             distanceLabel.text = "\(distance)m"
@@ -73,7 +73,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         nameLabel.text = hotel.name
         setDistanceDisplay(hotel.distance ?? 0)
         setImageView(urlStr: hotel.imageList.first?.imageURL)
-        commentLabel.text = hotel.comment ?? ""
+        commentLabel.text = hotel.comment ?? "없음"
     }
     
     func drawTicketViews() {
@@ -81,7 +81,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         nameLabel.text = ticket.name
         setDistanceDisplay(ticket.distance ?? 0)
         setImageView(urlStr: ticket.imageList.first?.imageURL)
-        commentLabel.text = ticket.comment
+        commentLabel.text = ticket.comment ?? "없음"
     }
     
     func drawRestaurantViews() {
@@ -89,7 +89,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         nameLabel.text = restaurant.name
         setDistanceDisplay(restaurant.distance ?? 0)
         setImageView(urlStr: restaurant.imageList.first?.imageURL)
-        commentLabel.text = restaurant.comment
+        commentLabel.text = restaurant.comment ?? "없음"
     }
     
     func drawShoppingViews() {
@@ -97,7 +97,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         nameLabel.text = shopping.name
         setDistanceDisplay(shopping.distance ?? 0)
         setImageView(urlStr: shopping.imageList.first?.imageURL)
-        commentLabel.text = shopping.comment
+        commentLabel.text = shopping.comment ?? "없음"
     }
     
     func drawPlayViews() {
@@ -105,7 +105,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         nameLabel.text = play.name
         setDistanceDisplay(play.distance ?? 0)
         setImageView(urlStr: play.imageList.first?.imageURL)
-        commentLabel.text = play.comment
+        commentLabel.text = play.comment ?? "없음"
     }
     
     func drawBeautyViews() {
@@ -113,7 +113,7 @@ class RecommandCollectionViewCell: UICollectionViewCell {
         nameLabel.text = beauty.name
         setDistanceDisplay(beauty.distance ?? 0)
         setImageView(urlStr: beauty.imageList.first?.imageURL)
-        commentLabel.text = beauty.comment
+        commentLabel.text = beauty.comment ?? "없음"
     }
     
     func setImageView(urlStr: String?) {

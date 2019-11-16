@@ -161,7 +161,10 @@ extension SignUpViewController {
     func smsAuth() {
         print(signUpParameters)
         ServerUtil.shared.putSendSms(self, parameters: signUpParameters) { (success, dict, message) in
-            guard success else { return }
+            guard success else {
+                AlertHandler.shared.showAlert(vc: self, message: message ?? "Server Error", okTitle: "확인")
+                return
+            }
             let vc = AuthCheckViewController()
             vc.phoneNum = self.phoneTextField.text ?? ""
             vc.nationalCode = self.phoneCodeLabel.text ?? ""

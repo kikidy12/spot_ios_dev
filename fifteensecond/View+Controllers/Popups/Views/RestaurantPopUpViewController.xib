@@ -229,6 +229,12 @@
                                 <constraint firstAttribute="height" constant="54" id="Vp4-BW-4sf"/>
                             </constraints>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매장에서 결제시 직원에게 확인 필요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tza-1z-boP">
+                            <rect key="frame" x="0.0" y="164" width="326" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" name="darkishPink"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHm-9s-WEU">
                             <rect key="frame" x="17" y="195" width="292" height="50"/>
                             <color key="backgroundColor" name="darkblue"/>
@@ -250,12 +256,15 @@
                         <constraint firstItem="RDF-CW-O3Z" firstAttribute="leading" secondItem="3Nl-nq-KmM" secondAttribute="leading" id="732-gj-jWq"/>
                         <constraint firstAttribute="trailing" secondItem="gHm-9s-WEU" secondAttribute="trailing" constant="17" id="Bvh-Zc-Q6M"/>
                         <constraint firstItem="j43-nx-PXI" firstAttribute="top" secondItem="RDF-CW-O3Z" secondAttribute="bottom" constant="36" id="D2p-1W-uL8"/>
+                        <constraint firstItem="gHm-9s-WEU" firstAttribute="top" secondItem="tza-1z-boP" secondAttribute="bottom" constant="15" id="JPU-hh-wyk"/>
                         <constraint firstItem="j43-nx-PXI" firstAttribute="leading" secondItem="3Nl-nq-KmM" secondAttribute="leading" constant="15" id="LNQ-Pn-Dla"/>
                         <constraint firstAttribute="trailing" secondItem="RDF-CW-O3Z" secondAttribute="trailing" id="MkO-K9-ygU"/>
                         <constraint firstItem="gHm-9s-WEU" firstAttribute="leading" secondItem="3Nl-nq-KmM" secondAttribute="leading" constant="17" id="W7N-uN-jnD"/>
                         <constraint firstItem="RDF-CW-O3Z" firstAttribute="top" secondItem="3Nl-nq-KmM" secondAttribute="top" constant="36" id="jSF-bD-gE3"/>
+                        <constraint firstItem="tza-1z-boP" firstAttribute="top" secondItem="j43-nx-PXI" secondAttribute="bottom" constant="15" id="q1E-gn-Y9d"/>
                         <constraint firstAttribute="trailing" secondItem="j43-nx-PXI" secondAttribute="trailing" constant="15" id="s3t-8i-mhP"/>
-                        <constraint firstAttribute="height" constant="262" id="sZ2-1a-KbV"/>
+                        <constraint firstAttribute="trailing" secondItem="tza-1z-boP" secondAttribute="trailing" id="vYz-q6-IVY"/>
+                        <constraint firstItem="tza-1z-boP" firstAttribute="leading" secondItem="3Nl-nq-KmM" secondAttribute="leading" id="zLL-Ha-SZl"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifS-Es-WPE">
@@ -289,6 +298,9 @@
         </namedColor>
         <namedColor name="darkblue">
             <color red="0.11764705882352941" green="0.13725490196078433" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkishPink">
+            <color red="0.92941176470588238" green="0.21176470588235294" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="veryLightPinkThree">
             <color red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

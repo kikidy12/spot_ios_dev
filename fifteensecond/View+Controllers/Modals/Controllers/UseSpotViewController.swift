@@ -34,7 +34,12 @@ class UseSpotViewController: UIViewController {
     }
 
     @IBAction func useSoptTicketEvent() {
-        useSpotTicket()
+        let vc = SpotUsePopupViewController()
+        vc.count = spot.count ?? 0
+        vc.closeHandler = {
+            self.useSpotTicket()
+        }
+        self.showPopupView(vc: vc)
     }
     
     func recordVideo() {

@@ -22,6 +22,8 @@ class ShoppingDatas: NSObject {
     var linkUrl: String!
     var promotionCount: Int!
     
+    var discountRate: Int!
+    
     var category = CategoryDatas()
     
     var imageList = [ImageDatas]()
@@ -72,6 +74,7 @@ class ShoppingDatas: NSObject {
             self.category = CategoryDatas(category)
         }
         
+        discountRate = data["discount_rate"] as? Int
         comment = data["comment"] as? String
         name = data["name"] as? String
         phoneNum = data["phone_num"] as? String

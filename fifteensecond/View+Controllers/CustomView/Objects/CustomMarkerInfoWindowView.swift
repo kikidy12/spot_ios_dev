@@ -38,7 +38,7 @@ class CustomMarkerInfoWindowView: UIView {
     func setDistanceDisplay(_ distance: Int) {
         if distance >= 1000 {
             let distance = Double(distance)/100
-            distanceLabel.text = "\(distance.rounded()/10)"
+            distanceLabel.text = "\(distance.rounded()/10)km"
         }
         else {
             distanceLabel.text = "\(distance)m"

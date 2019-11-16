@@ -181,6 +181,30 @@ class ServerUtil: NSObject {
         }
     }
     
+    func getAliencePremium(_ vc: UIViewController, type: AlienceTitles, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        
+        switch type {
+        case .restaurant:
+            apiRequest("restaurant_premium", method: .get, parameters: parameters, completion: completion)
+            
+        case .hotel:
+            apiRequest("hotel_premium", method: .get, parameters: parameters, completion: completion)
+            
+        case .shopping:
+            apiRequest("shopping_premium", method: .get, parameters: parameters, completion: completion)
+            
+        case .tickets:
+            apiRequest("ticket_premium", method: .get, parameters: parameters, completion: completion)
+            
+        case .play:
+            apiRequest("play_premium", method: .get, parameters: parameters, completion: completion)
+        
+        case .beauty:
+            apiRequest("beauty_premium", method: .get, parameters: parameters, completion: completion)
+        }
+    }
+    
     func getDetails(_ vc: UIViewController, type: AlienceTitles, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
         

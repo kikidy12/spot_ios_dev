@@ -36,6 +36,7 @@ class SplashViewController: UIViewController {
     
     @objc func locCheck() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse, CLLocationManager.authorizationStatus() == .authorizedAlways {
+            
             if UserDefs.isAutoLogin {
                 self.showHomeVc()
             }
@@ -47,19 +48,8 @@ class SplashViewController: UIViewController {
     
     func showHomeVc() {
         lottie.play { (_) in
-            let navi = UINavigationController(rootViewController: HomeViewController())
-            navi.navigationBar.barStyle = .black
-            navi.navigationBar.tintColor = .white
-            navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            navi.navigationBar.shadowImage = UIImage()
-            UIApplication.shared.keyWindow?.rootViewController = navi
-        }
-    }
-    
-    func showLoginVc() {
-        lottie.play { (_) in
             if UserDefs.isOpenedApp {
-                let navi = UINavigationController(rootViewController: LoginViewController())
+                let navi = UINavigationController(rootViewController: HomeViewController())
                 navi.navigationBar.barStyle = .black
                 navi.navigationBar.tintColor = .white
                 navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -67,8 +57,24 @@ class SplashViewController: UIViewController {
                 UIApplication.shared.keyWindow?.rootViewController = navi
             }
             else {
-                UIApplication.shared.keyWindow?.rootViewController = TutoMainViewController()
+                let navi = UINavigationController(rootViewController: TutoMainViewController())
+                navi.navigationBar.barStyle = .black
+                navi.navigationBar.tintColor = .white
+                navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
+                navi.navigationBar.shadowImage = UIImage()
+                UIApplication.shared.keyWindow?.rootViewController = navi
             }
+        }
+    }
+    
+    func showLoginVc() {
+        lottie.play { (_) in
+            let navi = UINavigationController(rootViewController: LoginViewController())
+            navi.navigationBar.barStyle = .black
+            navi.navigationBar.tintColor = .white
+            navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navi.navigationBar.shadowImage = UIImage()
+            UIApplication.shared.keyWindow?.rootViewController = navi
         }
     }
 
@@ -89,7 +95,7 @@ extension SplashViewController: CLLocationManagerDelegate {
             break
             
         case .restricted, .denied:
-            AlertHandler.shared.showAlert(vc: self, message: "권한설정해주세요", okTitle: "OK", cancelTitle: "NO", okHandler: { (_) in
+            AlertHandler.shared.showAlert(vc: self, message: "위치정보 사용을 허용해 주세요.", okTitle: "설정", cancelTitle: "취소", okHandler: { (_) in
                 guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
                     return
                 }
@@ -112,6 +118,7 @@ extension SplashViewController: CLLocationManagerDelegate {
             else {
                 showLoginVc()
             }
+            
             break
             
         case .authorizedAlways:

@@ -72,8 +72,17 @@ class SettingViewController: UIViewController {
         title = " "
     }
     
+    @IBAction func showCompWeb() {
+        let url = URL(string: "http://www.gospot.co.kr")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
     @IBAction func logoutEvent() {
-        logout()
+        AlertHandler.shared.showAlert(vc: self, message: "로그아웃 하시겠습니까?", okTitle: "로그아웃", cancelTitle: "취소", okHandler: { (_) in
+            self.logout()
+        })
     }
     
     @IBAction func showTermEvent() {
@@ -82,9 +91,9 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func deleteUserEvent() {
-        AlertHandler.shared.showAlert(vc: self, message: "탈퇴하시겠습니까?", okTitle: "확인", cancelTitle: "취소") { (_) in
+        AlertHandler.shared.showAlert(vc: self, message: "탈퇴하시겠습니까?", okTitle: "탈퇴", cancelTitle: "취소", okHandler: { (_) in
             self.deleteUser()
-        }
+        })
     }
     
     @IBAction func googleSignIn(_ sender: Any) {
@@ -219,6 +228,7 @@ extension SettingViewController {
                 return }
             
             UserDefs.setAutoLogin(false)
+            UserDefs.setOpenedApp(false)
             UserDefs.setUserToken(token: "")
             GlobalDatas.currentUser = nil
             let navi = UINavigationController(rootViewController: LoginViewController())
@@ -262,6 +272,7 @@ extension SettingViewController {
             guard success else { return }
             
             UserDefs.setAutoLogin(false)
+            UserDefs.setOpenedApp(false)
             UserDefs.setUserToken(token: "")
             GlobalDatas.currentUser = nil
             let navi = UINavigationController(rootViewController: LoginViewController())

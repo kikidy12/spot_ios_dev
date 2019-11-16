@@ -21,7 +21,15 @@ class AlienceInfoListViewController: UIViewController {
         didSet {
             if let firstImageStr = imageList.first?.imageURL {
                 let url = URL(string: firstImageStr)
-                mainImageView.kf.setImage(with: url)
+                mainImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholderImage"))
+                let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+                let blurEffectView = UIVisualEffectView(effect: blurEffect)
+                blurEffectView.frame = mainImageView.bounds
+                blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                mainImageView.addSubview(blurEffectView)
+            }
+            else {
+                mainImageView.image = UIImage(named: "placeholderImage")
                 let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
                 let blurEffectView = UIVisualEffectView(effect: blurEffect)
                 blurEffectView.frame = mainImageView.bounds
@@ -60,7 +68,7 @@ class AlienceInfoListViewController: UIViewController {
             hasFacilityView.isHidden = true
             menuView.isHidden = false
             nameLabel.text = restaurant.name
-            commentLabel.text = ""
+            commentLabel.text = restaurant.comment ?? "없음"
             openTimeLabel.text = restaurant.openTime
             categoryLabel.text = restaurant.category.name
             addressLabel.text = restaurant.address
@@ -78,7 +86,7 @@ class AlienceInfoListViewController: UIViewController {
             hasFacilityView.isHidden = true
             menuView.isHidden = false
             nameLabel.text = beauty.name
-            commentLabel.text = ""
+            commentLabel.text = beauty.comment ?? "없음"
             openTimeLabel.text = beauty.openTime
             categoryLabel.text = beauty.category.name
             addressLabel.text = beauty.address
@@ -96,7 +104,7 @@ class AlienceInfoListViewController: UIViewController {
             hasFacilityView.isHidden = true
             menuView.isHidden = false
             nameLabel.text = play.name
-            commentLabel.text = ""
+            commentLabel.text = play.comment ?? "없음"
             openTimeLabel.text = play.openTime
             categoryLabel.text = play.category.name
             addressLabel.text = play.address
@@ -133,7 +141,7 @@ class AlienceInfoListViewController: UIViewController {
             hasFacilityView.isHidden = false
             menuView.isHidden = true
             nameLabel.text = ticket.name
-            commentLabel.text = ""
+            commentLabel.text = ticket.comment ?? "없음"
             openTimeLabel.text = ticket.openTime
             categoryLabel.text = ticket.category.name
             addressLabel.text = ticket.address
@@ -213,7 +221,9 @@ class AlienceInfoListViewController: UIViewController {
         hasFacilityMenuTableView.register(UINib(nibName: "HotelRoomInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "roomCell")
         hasFacilityMenuTableView.register(UINib(nibName: "AlienceTicketTableViewCell", bundle: nil), forCellReuseIdentifier: "ticketCell")
         facilityCollectionView.register(UINib(nibName: "FacilityCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "facilityCell")
-        alienceMenuTableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 0.001))
+        let bottomView = UIView(frame: .init(x: 0, y: 0, width: alienceMenuTableView.frame.width, height: 1))
+        bottomView.backgroundColor = .veryLightPink
+        alienceMenuTableView.tableFooterView = bottomView
         promotionTableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: "promotionCell")
         promotionTableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 0.001))
         getAlienceInfo()
@@ -386,7 +396,7 @@ extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSou
         else {
             if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
                 if type == .restaurant {
-                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(restaurant.menuList.count)
+                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(restaurant.menuList.count) + 1
                 }
                 else if type == .play {
                     menuTableHeightConstraint.constant = cell.frame.height * CGFloat(play.menuList.count)

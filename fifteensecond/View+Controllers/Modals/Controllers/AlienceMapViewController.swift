@@ -140,7 +140,6 @@ class AlienceMapViewController: UIViewController {
         super.viewDidLoad()
         let latCenter = 37.562899
         let longCenter = 127.064770
-        mapView.isMyLocationEnabled = true
         
         if let loc = locationManager.location?.coordinate {
             let camera = GMSCameraPosition.camera(withLatitude: loc.latitude, longitude: loc.longitude, zoom: 15.0)
@@ -150,16 +149,23 @@ class AlienceMapViewController: UIViewController {
             let camera = GMSCameraPosition.camera(withLatitude: latCenter, longitude: longCenter, zoom: 15.0)
             mapView.camera = camera
         }
-        mapView.settings.myLocationButton = true
-        mapView.delegate = self
-        locationManager.delegate = self
         
+        mapView.delegate = self
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        locationManager.delegate = self
         getAliences()
     }
 
 }
 
 extension AlienceMapViewController: GMSMapViewDelegate {
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        let camera = GMSCameraPosition.camera(withTarget: mapView.myLocation!.coordinate, zoom: 15)
+        mapView.camera = camera
+        
+        return true
+    }
     
     func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
         let infoView = CustomMarkerInfoWindowView(frame: .init(x: 0, y: 0, width: 263, height: 153))

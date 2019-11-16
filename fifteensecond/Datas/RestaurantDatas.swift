@@ -21,6 +21,7 @@ class RestaurantDatas: NSObject {
     var openTime: String!
     var comment: String!
     var promotionCount: Int!
+    var discountRate: Int!
     
     var category = CategoryDatas()
     
@@ -51,7 +52,12 @@ class RestaurantDatas: NSObject {
             let oStr = oTime[..<oIndex]
             let cStr = cTime[..<cIndex]
             
-            openTime = "\(oStr) - \(cStr)"
+            if oStr == "00:00", cStr == "00:00" {
+                openTime = "24시간"
+            }
+            else {
+                openTime = "\(oStr) - \(cStr)"
+            }
         }
         
         if let array = data["restaurant_menu"] as? NSArray {
@@ -66,6 +72,7 @@ class RestaurantDatas: NSObject {
             self.category = CategoryDatas(category)
         }
         
+        discountRate = data["discount_rate"] as? Int
         linkUrl = data["link_url"] as? String
         comment = data["comment"] as? String
         name = data["name"] as? String

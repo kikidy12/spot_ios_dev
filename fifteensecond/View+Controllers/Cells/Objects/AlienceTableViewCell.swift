@@ -21,6 +21,7 @@ class AlienceTableViewCell: UITableViewCell {
     var beauty: BeautyDatas!
     
     
+    @IBOutlet weak var discountLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var openTimeLabel: UILabel!
@@ -96,7 +97,8 @@ class AlienceTableViewCell: UITableViewCell {
         setDistanceDisplay(ticket.distance ?? 0)
         categoryLabel.text = ticket.category.name
         setImageView(urlStr: ticket.imageList.first?.imageURL)
-        commentLabel.text = ticket.comment
+        commentLabel.text = ticket.comment ?? "없음"
+        discountLabel.text = "~\(ticket.discountRate ?? 0)%"
     }
     
     func drawRestaurantViews() {
@@ -105,7 +107,8 @@ class AlienceTableViewCell: UITableViewCell {
         setDistanceDisplay(restaurant.distance ?? 0)
         categoryLabel.text = restaurant.category.name
         setImageView(urlStr: restaurant.imageList.first?.imageURL)
-        commentLabel.text = restaurant.comment
+        commentLabel.text = restaurant.comment ?? "없음"
+        discountLabel.text = "~\(restaurant.discountRate ?? 0)%"
     }
     
     func drawBeautyViews() {
@@ -114,7 +117,8 @@ class AlienceTableViewCell: UITableViewCell {
         setDistanceDisplay(beauty.distance ?? 0)
         categoryLabel.text = beauty.category.name
         setImageView(urlStr: beauty.imageList.first?.imageURL)
-        commentLabel.text = beauty.comment
+        commentLabel.text = beauty.comment ?? "없음"
+        discountLabel.text = "~\(beauty.discountRate ?? 0)%"
     }
     
     func drawPlayViews() {
@@ -123,7 +127,8 @@ class AlienceTableViewCell: UITableViewCell {
         setDistanceDisplay(play.distance ?? 0)
         categoryLabel.text = play.category.name
         setImageView(urlStr: play.imageList.first?.imageURL)
-        commentLabel.text = play.comment
+        commentLabel.text = play.comment ?? "없음"
+        discountLabel.text = "~\(play.discountRate ?? 0)%"
     }
     
     func drawShoppingViews() {

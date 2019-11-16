@@ -64,12 +64,19 @@ class SpotMapViewController: UIViewController {
     }
     
     @IBAction func showCouPonViewEvent() {
-        let vc = CouponsViewController()
+        let vc = CheckSpotCodeViewController()
         show(vc, sender: nil)
     }
 }
 
 extension SpotMapViewController: GMSMapViewDelegate {
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        let camera = GMSCameraPosition.camera(withTarget: mapView.myLocation!.coordinate, zoom: 15)
+        mapView.camera = camera
+        
+        return true
+    }
     
     func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
         let infoView = SpotMarkerInfoWindowView(frame: .init(x: 0, y: 0, width: 242, height: 153))
@@ -85,7 +92,7 @@ extension SpotMapViewController: GMSMapViewDelegate {
 //            selectSpot = spot
 //            let vc = HasSpotTicketListViewController()
 //            vc.spot = spot
-            let vc = CouponsViewController()
+            let vc = CheckSpotCodeViewController()
             show(vc, sender: nil)
         }
     }
