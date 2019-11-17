@@ -61,7 +61,7 @@
                                     <color key="textColor" name="greyishBrown"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QCI-aG-9qb">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="QCI-aG-9qb">
                                     <rect key="frame" x="16" y="16" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="37M-7I-qgq"/>
@@ -121,6 +121,7 @@
     </objects>
     <resources>
         <image name="cancelBtn" width="38" height="38"/>
+        <image name="placeholderImage" width="163" height="125"/>
         <namedColor name="black60">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -21,7 +21,10 @@ class BuyTicketPopupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = "\(ticket.name ?? "")" + " 구매처"
-        
+        sellerNameLabel.text = ticket.siteName
+        if let urlStr = ticket.siteImage, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
+            sellerImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholderImage"))
+        }
     }
     
     @IBAction func goToSeller() {

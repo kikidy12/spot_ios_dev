@@ -20,6 +20,8 @@ class TicketDatas: NSObject {
     var openTime: String!
     var comment: String!
     var promotionCount: Int!
+    var siteImage: String!
+    var siteName: String!
     
     var discountRate: Int!
     
@@ -77,6 +79,8 @@ class TicketDatas: NSObject {
             self.kindList = array.compactMap { TicketKindDatas($0 as! NSDictionary) }
         }
         
+        siteImage = data["site_image"] as? String
+        siteName = data["site_name"] as? String
         discountRate = data["discount_rate"] as? Int
         linkUrl = data["link_url"] as? String
         comment = data["comment"] as? String
