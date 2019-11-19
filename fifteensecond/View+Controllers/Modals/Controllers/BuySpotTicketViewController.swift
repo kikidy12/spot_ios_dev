@@ -10,12 +10,13 @@ import UIKit
 
 class BuySpotTicketViewController: UIViewController {
     
-    var count = 0
+    var count = 1
     
     @IBOutlet weak var countLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        countLabel.text = "\(count)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,8 +40,13 @@ class BuySpotTicketViewController: UIViewController {
     }
     
     @IBAction func showPayViewController() {
-        let vc = SelectPayTypeViewController()
-        vc.count = count
-        show(vc, sender: nil)
+        guard count != 0 else {
+            return
+        }
+        AlertHandler.shared.showAlert(vc: self, message: "스팟 \(count)장\n구매하시겠습니까?", okTitle: "구매하기", cancelTitle: "취소", okHandler: { (_) in
+            let vc = SelectPayTypeViewController()
+            GlobalDatas.spotTicketBuyDict["count"] = self.count
+            self.show(vc, sender: nil)
+        })
     }
 }

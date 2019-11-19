@@ -54,7 +54,7 @@ class AttendanceCheckViewController: UIViewController {
             attdentBtn.setTitle("룰렛 돌리기", for: .normal)
         }
         else {
-            attdentBtn.setTitle("춣석하기 (\(count)/10)", for: .normal)
+            attdentBtn.setTitle("출석하기 (\(count)/10)", for: .normal)
         }
         
         attdentView.subviews.enumerated().forEach {

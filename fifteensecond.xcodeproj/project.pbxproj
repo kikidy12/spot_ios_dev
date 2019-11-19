@@ -11,6 +11,8 @@
 		8C3FB95DA7E30807F0C49480 /* Pods_fifteensecondUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0687D153C9EF02D72D9B6216 /* Pods_fifteensecondUITests.framework */; };
 		99088BEF237FB450009C9AE6 /* SharedPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99088BED237FB450009C9AE6 /* SharedPopupViewController.swift */; };
 		99088BF0237FB450009C9AE6 /* SharedPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99088BEE237FB450009C9AE6 /* SharedPopupViewController.xib */; };
+		99088BF72383D9C9009C9AE6 /* PayWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99088BF52383D9C9009C9AE6 /* PayWebViewController.swift */; };
+		99088BF82383D9C9009C9AE6 /* PayWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99088BF62383D9C9009C9AE6 /* PayWebViewController.xib */; };
 		99114C9E22F2726100D0494A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114C9D22F2726100D0494A /* AppDelegate.swift */; };
 		99114CA022F2726100D0494A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99114C9F22F2726100D0494A /* ViewController.swift */; };
 		99114CA322F2726100D0494A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99114CA122F2726100D0494A /* Main.storyboard */; };
@@ -221,6 +223,8 @@
 		8A972FF4545F09F4104F6A9A /* Pods-fifteensecondTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fifteensecondTests.release.xcconfig"; path = "Target Support Files/Pods-fifteensecondTests/Pods-fifteensecondTests.release.xcconfig"; sourceTree = "<group>"; };
 		99088BED237FB450009C9AE6 /* SharedPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPopupViewController.swift; sourceTree = "<group>"; };
 		99088BEE237FB450009C9AE6 /* SharedPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SharedPopupViewController.xib; sourceTree = "<group>"; };
+		99088BF52383D9C9009C9AE6 /* PayWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWebViewController.swift; sourceTree = "<group>"; };
+		99088BF62383D9C9009C9AE6 /* PayWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayWebViewController.xib; sourceTree = "<group>"; };
 		99114C9A22F2726100D0494A /* fifteensecond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fifteensecond.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99114C9D22F2726100D0494A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99114C9F22F2726100D0494A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -690,6 +694,8 @@
 				994A6B1C235EC20E0088D46E /* CheckSpotCodeViewController.swift */,
 				99118311236F0C7A0020D6CE /* CouponDetailViewController.swift */,
 				99F45E4623715756008CA219 /* SelectPayTypeViewController.swift */,
+				99088BF52383D9C9009C9AE6 /* PayWebViewController.swift */,
+				99088BF62383D9C9009C9AE6 /* PayWebViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1045,6 +1051,7 @@
 				99114D0E22FC6C9A00D0494A /* AllianceCollectionViewHeaderView.xib in Resources */,
 				99088BF0237FB450009C9AE6 /* SharedPopupViewController.xib in Resources */,
 				997D18EF231D2EB4007B98DF /* RegistCardViewController.xib in Resources */,
+				99088BF82383D9C9009C9AE6 /* PayWebViewController.xib in Resources */,
 				997D19332327C369007B98DF /* DetailImageCollectionViewCell.xib in Resources */,
 				99DE34C12355F3580043D61A /* DocumentViewController.xib in Resources */,
 				99114D212300F2A100D0494A /* AlienceCategoryCollectionViewCell.xib in Resources */,
@@ -1232,6 +1239,7 @@
 				99694BF7230C0D2D00F4FF49 /* CustomMarkerInfoWindowView.swift in Sources */,
 				997D1904231DEC19007B98DF /* SpotTicketTableViewCell.swift in Sources */,
 				997D191C2325FA33007B98DF /* HasSpotTicketTableViewCell.swift in Sources */,
+				99088BF72383D9C9009C9AE6 /* PayWebViewController.swift in Sources */,
 				9968CF18233B361C00B8D095 /* RestaurantPopUpViewController.swift in Sources */,
 				998869922303B4CC00612092 /* NationCodeData.swift in Sources */,
 				99114D0C22FC6C8B00D0494A /* AllianceCollectionViewHeaderView.swift in Sources */,
@@ -1461,7 +1469,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5GTM2WZXJH;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1482,7 +1490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5GTM2WZXJH;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

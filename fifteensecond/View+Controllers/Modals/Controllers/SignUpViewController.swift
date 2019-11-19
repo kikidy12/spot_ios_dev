@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var phoneCodeLabel: UILabel!
     @IBOutlet weak var nextButton: CustomButton!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,12 @@ class SignUpViewController: UIViewController {
             emailTextField.text = email
         }
         
+        //tests
+        
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
+        tapGesture.cancelsTouchesInView = false
+        scrollView.addGestureRecognizer(tapGesture)
+        
         let nation = GlobalDatas.nationCodeList.first(where: { $0.code == "82"})
         self.phoneCodeLabel.text = nation!.code
         if let nationImageURL = URL(string: nation!.imgUrl ?? "") {
@@ -51,6 +58,12 @@ class SignUpViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    @objc func hideKeyBoard() {
+        nameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        phoneTextField.resignFirstResponder()
     }
     
     @IBAction func showNationCodeList(_ sender: UITapGestureRecognizer) {

@@ -10,8 +10,6 @@ import UIKit
 
 class SelectPayTypeViewController: UIViewController {
     
-    var count = 0
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,10 +17,14 @@ class SelectPayTypeViewController: UIViewController {
     @IBAction func payEvent(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             if sender.view?.tag == 0 {
-                
+                GlobalDatas.spotTicketBuyDict["type"] = PayType.phone
+                let vc = PayWebViewController()
+                self.show(vc, sender: nil)
             }
             else if sender.view?.tag == 1 {
-                
+                GlobalDatas.spotTicketBuyDict["type"] = PayType.card
+                let vc = PayWebViewController()
+                self.show(vc, sender: nil)
             }
             else if sender.view?.tag == 2 {
                 
@@ -30,6 +32,7 @@ class SelectPayTypeViewController: UIViewController {
             else if sender.view?.tag == 3 {
                 
             }
+            
         }
     }
 }

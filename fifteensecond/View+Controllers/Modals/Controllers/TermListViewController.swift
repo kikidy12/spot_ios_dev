@@ -24,22 +24,22 @@ class TermListViewController: UIViewController {
     
     @IBAction func showServiceTermEvent() {
         let vc = DocumentViewController()
-        vc.fileUrl = Bundle.main.url(forResource: "spotPrivacyTerm", withExtension: "docx")
+        vc.fileUrl = Bundle.main.url(forResource: "spotServiceTerm", withExtension: "docx")
         vc.titleStr = "SPOT 서비스 이용약관"
         show(vc, sender: nil)
     }
     
     @IBAction func showLocationTermEvent() {
         let vc = DocumentViewController()
-        vc.fileUrl = Bundle.main.url(forResource: "spotServiceTerm", withExtension: "docx")
-        vc.titleStr = "개인정보 처리방침"
+        vc.fileUrl = Bundle.main.url(forResource: "spotLocationTerm", withExtension: "docx")
+        vc.titleStr = "위치기반 서비스 이용약관"
         show(vc, sender: nil)
     }
     
     @IBAction func showPrivacyTermEvent() {
         let vc = DocumentViewController()
-        vc.fileUrl = Bundle.main.url(forResource: "spotLocationTerm", withExtension: "docx")
-        vc.titleStr = "위치기반 서비스 이용약관"
+        vc.fileUrl = Bundle.main.url(forResource: "spotPrivacyTerm", withExtension: "docx")
+        vc.titleStr = "개인정보 처리방침"
         show(vc, sender: nil)
     }
 }

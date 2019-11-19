@@ -20,6 +20,11 @@ enum AlienceTitles: String {
     static var allCase = [restaurant, tickets, play, beauty]
 }
 
+enum PayType: String {
+    case card = "card"
+    case phone = "phone"
+}
+
 enum CardInfoEnum: String {
     case wooriCard = "우리은행"
     case shinhanCard = "신한은행"

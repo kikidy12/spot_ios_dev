@@ -133,6 +133,11 @@ class ServerUtil: NSObject {
         apiRequest("promotion_logs", method: .post, parameters: parameters, completion: completion)
     }
     
+    func getCardPayment(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("payment", method: .get, parameters: parameters, completion: completion)
+    }
+    
     func getCategorys(_ vc: UIViewController, type: AlienceTitles, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
         
