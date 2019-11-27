@@ -19,21 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adback" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-IQ-wZr">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adback" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-IQ-wZr">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rO2-Lw-y8T">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="W6M-TC-AOv">
-                            <rect key="frame" x="40" y="70" width="108" height="55"/>
+                            <rect key="frame" x="40" y="130" width="108" height="55"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="OJ6-kB-QRL"/>
                                 <constraint firstAttribute="width" constant="108" id="yPZ-B1-UM1"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지정된 양식으로 메일 전송" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpH-6w-7Da">
-                            <rect key="frame" x="40" y="160" width="204" height="24"/>
+                            <rect key="frame" x="40" y="220" width="204" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -44,16 +44,19 @@
                                 <constraint firstAttribute="height" constant="50" id="bAw-N6-icx"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <state key="normal" title="C4@official.com">
+                            <state key="normal" title="cfourworldad@gmail.com">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="sendMailEvent" destination="-1" eventType="touchUpInside" id="Qc7-5h-447"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" name="darkblue91"/>
                     <constraints>
                         <constraint firstItem="dds-Cb-yjV" firstAttribute="leading" secondItem="rO2-Lw-y8T" secondAttribute="leading" constant="40" id="2YD-0M-c72"/>
                         <constraint firstAttribute="trailing" secondItem="dds-Cb-yjV" secondAttribute="trailing" constant="40" id="GNY-1d-bGd"/>
-                        <constraint firstItem="W6M-TC-AOv" firstAttribute="top" secondItem="rO2-Lw-y8T" secondAttribute="top" constant="70" id="etF-CK-BT1"/>
+                        <constraint firstItem="W6M-TC-AOv" firstAttribute="top" secondItem="rO2-Lw-y8T" secondAttribute="top" constant="130" id="etF-CK-BT1"/>
                         <constraint firstItem="CpH-6w-7Da" firstAttribute="leading" secondItem="rO2-Lw-y8T" secondAttribute="leading" constant="40" id="gYk-kz-Iwe"/>
                         <constraint firstItem="W6M-TC-AOv" firstAttribute="leading" secondItem="rO2-Lw-y8T" secondAttribute="leading" constant="40" id="m3s-nl-lgP"/>
                         <constraint firstItem="CpH-6w-7Da" firstAttribute="top" secondItem="W6M-TC-AOv" secondAttribute="bottom" constant="35" id="o4J-vs-Rcz"/>

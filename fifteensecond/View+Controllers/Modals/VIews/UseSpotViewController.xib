@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paycompBack" translatesAutoresizingMaskIntoConstraints="NO" id="yNE-ws-anY">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paycompBack" translatesAutoresizingMaskIntoConstraints="NO" id="yNE-ws-anY">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tw-iW-1Ra">
@@ -47,8 +47,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YC-vJ-XqE" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
                             <rect key="frame" x="45" y="342.5" width="324" height="133"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용지점 : 중구지점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-3R-FF3">
-                                    <rect key="frame" x="92.5" y="30" width="139" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용지점 : 중구지점" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-3R-FF3">
+                                    <rect key="frame" x="20" y="30" width="284" height="21"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -62,10 +62,11 @@
                             </subviews>
                             <color key="backgroundColor" name="white10"/>
                             <constraints>
+                                <constraint firstItem="cOS-3R-FF3" firstAttribute="leading" secondItem="2YC-vJ-XqE" secondAttribute="leading" constant="20" id="CWv-YF-QAJ"/>
                                 <constraint firstAttribute="bottom" secondItem="sdr-MI-wJ8" secondAttribute="bottom" constant="30" id="Ppq-Gz-Nbc"/>
+                                <constraint firstAttribute="trailing" secondItem="cOS-3R-FF3" secondAttribute="trailing" constant="20" id="TbY-xZ-uRi"/>
                                 <constraint firstItem="sdr-MI-wJ8" firstAttribute="centerX" secondItem="2YC-vJ-XqE" secondAttribute="centerX" id="YkG-X6-2la"/>
                                 <constraint firstAttribute="height" constant="133" id="dC4-eh-IYU"/>
-                                <constraint firstItem="cOS-3R-FF3" firstAttribute="centerX" secondItem="2YC-vJ-XqE" secondAttribute="centerX" id="sjx-dI-Fpm"/>
                                 <constraint firstItem="cOS-3R-FF3" firstAttribute="top" secondItem="2YC-vJ-XqE" secondAttribute="top" constant="30" id="vqe-bf-MMr"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>

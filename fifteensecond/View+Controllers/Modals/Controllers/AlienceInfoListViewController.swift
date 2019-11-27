@@ -288,10 +288,10 @@ class AlienceInfoListViewController: UIViewController {
                 openNaverNavi(lat: hotel.location.latitude, lng: hotel.location.longitude)
                 break
             case .play:
-                openNaverNavi(lat: play.location.latitude, lng: hotel.location.longitude)
+                openNaverNavi(lat: play.location.latitude, lng: play.location.longitude)
                 break
             case .beauty:
-                openNaverNavi(lat: beauty.location.latitude, lng: hotel.location.longitude)
+                openNaverNavi(lat: beauty.location.latitude, lng: beauty.location.longitude)
                 break
             }
         }

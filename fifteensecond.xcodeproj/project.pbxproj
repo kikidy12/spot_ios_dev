@@ -176,6 +176,7 @@
 		998869A8230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998869A6230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib */; };
 		998869AB230A27A500612092 /* RestaurantMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */; };
 		998869AC230A27A500612092 /* RestaurantMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */; };
+		99CF869423840D8E00812A36 /* SpotUseLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF869323840D8E00812A36 /* SpotUseLogData.swift */; };
 		99D43F76234C5433009B9AB5 /* PromotionDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D43F75234C5433009B9AB5 /* PromotionDatas.swift */; };
 		99D43F78234C55CD009B9AB5 /* PlayDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D43F77234C55CD009B9AB5 /* PlayDatas.swift */; };
 		99D43F7A234C55DD009B9AB5 /* BeautyDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D43F79234C55DD009B9AB5 /* BeautyDatas.swift */; };
@@ -395,6 +396,7 @@
 		998869A6230A271F00612092 /* AlienceInfoImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlienceInfoImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		998869A9230A27A500612092 /* RestaurantMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuTableViewCell.swift; sourceTree = "<group>"; };
 		998869AA230A27A500612092 /* RestaurantMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantMenuTableViewCell.xib; sourceTree = "<group>"; };
+		99CF869323840D8E00812A36 /* SpotUseLogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotUseLogData.swift; sourceTree = "<group>"; };
 		99D43F75234C5433009B9AB5 /* PromotionDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionDatas.swift; sourceTree = "<group>"; };
 		99D43F77234C55CD009B9AB5 /* PlayDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayDatas.swift; sourceTree = "<group>"; };
 		99D43F79234C55DD009B9AB5 /* BeautyDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyDatas.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 				99D43F79234C55DD009B9AB5 /* BeautyDatas.swift */,
 				9911831D236FBE140020D6CE /* RouletteDatas.swift */,
 				99766E10236FCECD002573FD /* CouponDatas.swift */,
+				99CF869323840D8E00812A36 /* SpotUseLogData.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 		99114CDB22F2D5CE00D0494A /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				99088BF62383D9C9009C9AE6 /* PayWebViewController.xib */,
 				99F45E4723715756008CA219 /* SelectPayTypeViewController.xib */,
 				99118312236F0C7A0020D6CE /* CouponDetailViewController.xib */,
 				994A6B1D235EC20E0088D46E /* CheckSpotCodeViewController.xib */,
@@ -695,7 +699,6 @@
 				99118311236F0C7A0020D6CE /* CouponDetailViewController.swift */,
 				99F45E4623715756008CA219 /* SelectPayTypeViewController.swift */,
 				99088BF52383D9C9009C9AE6 /* PayWebViewController.swift */,
-				99088BF62383D9C9009C9AE6 /* PayWebViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1287,6 +1290,7 @@
 				994A6B16235D8B0E0088D46E /* TermListViewController.swift in Sources */,
 				99114D0A22FBAD3400D0494A /* CustomPageControl.swift in Sources */,
 				997D18E9231D0C2F007B98DF /* SpotMarkerInfoWindowView.swift in Sources */,
+				99CF869423840D8E00812A36 /* SpotUseLogData.swift in Sources */,
 				99114D382301A65800D0494A /* AlertHandler.swift in Sources */,
 				9968CF10232F4DDC00B8D095 /* TutoMainViewController.swift in Sources */,
 				998869A023081CC500612092 /* AlienceDatas.swift in Sources */,
@@ -1469,7 +1473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 5GTM2WZXJH;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1490,7 +1494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 5GTM2WZXJH;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

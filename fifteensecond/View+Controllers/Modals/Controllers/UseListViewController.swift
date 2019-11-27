@@ -10,7 +10,7 @@ import UIKit
 
 class UseListViewController: UIViewController {
     
-    var useSpotList = [SpotTicketUseInfoDatas]() {
+    var useSpotList = [SpotUseLogData]() {
         didSet {
             if useSpotList.isEmpty {
                 emptyLabel.isHidden = false
@@ -33,8 +33,7 @@ class UseListViewController: UIViewController {
         useListTableView.delegate = self
         useListTableView.dataSource = self
         
-//        getUseList()
-        getTicketUseList()
+        getUseList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,21 +63,18 @@ extension UseListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension UseListViewController {
     func getUseList() {
-        ServerUtil.shared.getSpotHistory(self) { (success, dict, message) in
-            guard success, let array = dict?["history"] as? NSArray else {
-                AlertHandler.shared.showAlert(vc: self, message: message ?? "", okTitle: "확인")
-                return }
-            
-            self.useSpotList = array.compactMap { SpotTicketUseInfoDatas($0 as! NSDictionary) }
-        }
-    }
-    
-    func getTicketUseList() {
         let parameters = [
             "type": "USE"
         ] as [String:Any]
-        ServerUtil.shared.getSpotTicket(self, parameters: parameters) { (success, dict, messate) in
-            guard success else { return }
+        
+        ServerUtil.shared.getSpotTicket(self, parameters: parameters) { (success, dict, message) in
+            guard success, let array = dict?["spot_ticket_logs"] as? NSArray else {
+                AlertHandler.shared.showAlert(vc: self, message: message ?? "", okTitle: "확인")
+                return }
+            
+            self.useSpotList = array.compactMap {
+                SpotUseLogData( $0 as! NSDictionary)
+            }
         }
     }
 }

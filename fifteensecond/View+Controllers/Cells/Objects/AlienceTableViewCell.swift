@@ -89,6 +89,7 @@ class AlienceTableViewCell: UITableViewCell {
         setDistanceDisplay(hotel.distance ?? 0)
         categoryLabel.text = hotel.category.name
         setImageView(urlStr: hotel.imageList.first?.imageURL)
+        discountLabel.superview?.isHidden = false
     }
     
     func drawTicketViews() {
@@ -98,7 +99,7 @@ class AlienceTableViewCell: UITableViewCell {
         categoryLabel.text = ticket.category.name
         setImageView(urlStr: ticket.imageList.first?.imageURL)
         commentLabel.text = ticket.comment ?? "없음"
-        discountLabel.text = "~\(ticket.discountRate ?? 0)%"
+        discountLabel.superview?.isHidden = true
     }
     
     func drawRestaurantViews() {
@@ -109,6 +110,7 @@ class AlienceTableViewCell: UITableViewCell {
         setImageView(urlStr: restaurant.imageList.first?.imageURL)
         commentLabel.text = restaurant.comment ?? "없음"
         discountLabel.text = "~\(restaurant.discountRate ?? 0)%"
+        discountLabel.superview?.isHidden = true
     }
     
     func drawBeautyViews() {
@@ -119,6 +121,7 @@ class AlienceTableViewCell: UITableViewCell {
         setImageView(urlStr: beauty.imageList.first?.imageURL)
         commentLabel.text = beauty.comment ?? "없음"
         discountLabel.text = "~\(beauty.discountRate ?? 0)%"
+        discountLabel.superview?.isHidden = true
     }
     
     func drawPlayViews() {
@@ -129,6 +132,7 @@ class AlienceTableViewCell: UITableViewCell {
         setImageView(urlStr: play.imageList.first?.imageURL)
         commentLabel.text = play.comment ?? "없음"
         discountLabel.text = "~\(play.discountRate ?? 0)%"
+        discountLabel.superview?.isHidden = true
     }
     
     func drawShoppingViews() {
@@ -138,6 +142,7 @@ class AlienceTableViewCell: UITableViewCell {
         categoryLabel.text = shopping.category.name
         setImageView(urlStr: shopping.imageList.first?.imageURL)
         commentLabel.text = shopping.comment
+        discountLabel.superview?.isHidden = true
     }
     
     func setImageView(urlStr: String?) {

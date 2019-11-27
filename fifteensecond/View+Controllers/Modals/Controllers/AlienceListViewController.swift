@@ -159,7 +159,10 @@ class AlienceListViewController: UIViewController {
     }
     
     func getAddress() {
-        CLGeocoder().reverseGeocodeLocation(locManager.location!, preferredLocale: Locale(identifier: "Ko-kr"), completionHandler:{ (placemarks, error) in
+        guard let loc = locManager.location else {
+            return
+        }
+        CLGeocoder().reverseGeocodeLocation(loc, preferredLocale: Locale(identifier: "Ko-kr"), completionHandler:{ (placemarks, error) in
             if let address: [CLPlacemark] = placemarks {
                 var addressStr = ""
                 if let locality = address.last?.locality {
@@ -209,6 +212,27 @@ extension AlienceListViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 extension AlienceListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if collectionView == categoryColletionView {
+            if let cell = cell as? AlienceCategoryCollectionViewCell {
+                let data = categoryList[indexPath.item]
+                if !data.isSelect {
+                    cell.gradient.isHidden = true
+                    cell.categoryView.borderWidth = 1
+                    cell.categoryView.backgroundColor = .clear
+                    cell.categoryLabel.textColor = .darkishPink
+                }
+                else {
+                    cell.gradient.isHidden = false
+                    cell.categoryView.borderWidth = 0
+                    cell.categoryView.backgroundColor = .darkishPink
+                    cell.categoryLabel.textColor = .white
+                }
+                cell.categoryLabel.text = data.name
+            }
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == categoryColletionView {
             return categoryList.count
@@ -224,20 +248,7 @@ extension AlienceListViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == categoryColletionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! AlienceCategoryCollectionViewCell
-            let data = categoryList[indexPath.item]
-            if !data.isSelect {
-                cell.gradient.isHidden = true
-                cell.categoryView.borderWidth = 1
-                cell.categoryView.backgroundColor = .clear
-                cell.categoryLabel.textColor = .darkishPink
-            }
-            else {
-                cell.gradient.isHidden = false
-                cell.categoryView.borderWidth = 0
-                cell.categoryView.backgroundColor = .darkishPink
-                cell.categoryLabel.textColor = .white
-            }
-            cell.categoryLabel.text = data.name
+            
             return cell
         }
         else if collectionView == recommandColletionView {
@@ -302,9 +313,12 @@ extension AlienceListViewController {
     
     func getAliencePremium() {
         guard let type = categoryType else { return }
+        guard let latitude = locManager.location?.coordinate.latitude, let longitude = locManager.location?.coordinate.longitude else {
+            return
+        }
         let parameters = [
-            "latitude": locManager.location!.coordinate.latitude,
-            "longitude": locManager.location!.coordinate.longitude
+            "latitude": latitude,
+            "longitude": longitude
         ] as Parameters
         
         ServerUtil.shared.getAliencePremium(self, type: type, parameters: parameters) { (success, dict, message) in
@@ -335,9 +349,12 @@ extension AlienceListViewController {
     func getAliences() {
         sortTypeView.isHidden = true
         guard let type = categoryType else { return }
+        guard let latitude = locManager.location?.coordinate.latitude, let longitude = locManager.location?.coordinate.longitude else {
+            return
+        }
         var parameters = [
-            "latitude": locManager.location!.coordinate.latitude,
-            "longitude": locManager.location!.coordinate.longitude,
+            "latitude": latitude,
+            "longitude": longitude,
             "category_id": selectedCategory.id!
         ] as Parameters
         

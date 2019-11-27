@@ -29,9 +29,9 @@ class SplashViewController: UIViewController {
         lottie.frame.size = CGSize(width: 250, height: 250)
         lottie.contentMode = .scaleToFill
         lottie.center = view.center
+        view.addSubview(lottie)
         lottie.loopMode = .playOnce
         
-        view.addSubview(lottie)
     }
     
     @objc func locCheck() {

@@ -10,7 +10,7 @@ import UIKit
 
 class UseListTableViewCell: UITableViewCell {
     
-    var spotTicketUseInfo: SpotTicketUseInfoDatas!
+    var spotTicketUseInfo: SpotUseLogData!
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var useTimeLabel: UILabel!
@@ -20,11 +20,11 @@ class UseListTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func initView(_ data: SpotTicketUseInfoDatas) {
+    func initView(_ data: SpotUseLogData) {
         spotTicketUseInfo = data
         
         addressLabel.text = spotTicketUseInfo.spot.address
-        useTimeLabel.text = "이용일자 \(DateFormatter().showDateStr(spotTicketUseInfo.usedTime, style: .dot))"
+        useTimeLabel.text = "이용일자 \(DateFormatter().showDateStr(spotTicketUseInfo.createAt, style: .dot))"
         
     }
 

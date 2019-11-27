@@ -112,7 +112,10 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func kakaoSignIn(_ sender: UIButton) {
-        guard let kakaoSession = KOSession.shared() else { return }
+        guard let kakaoSession = KOSession.shared() else {
+            print("fail to kakao")
+            return
+        }
         if kakaoSession.isOpen() {
             print("kakaoSessionColose")
             kakaoSession.close()}

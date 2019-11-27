@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ory-s1-A8d">
-                        <rect key="frame" x="30" y="18" width="29.5" height="21"/>
+                        <rect key="frame" x="30" y="18" width="283" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용일자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uB-Mp-dEg">
-                        <rect key="frame" x="30" y="44" width="48.5" height="17"/>
+                        <rect key="frame" x="30" y="44" width="283" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" name="brownGrey"/>
                         <nil key="highlightedColor"/>
@@ -42,11 +42,13 @@
                 <constraints>
                     <constraint firstItem="aw9-sq-Oj1" firstAttribute="top" secondItem="2uB-Mp-dEg" secondAttribute="bottom" constant="22" id="KeG-7C-wPJ"/>
                     <constraint firstItem="ory-s1-A8d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="LiK-lO-ydW"/>
+                    <constraint firstAttribute="trailing" secondItem="2uB-Mp-dEg" secondAttribute="trailing" constant="30" id="QlP-Yj-q7e"/>
                     <constraint firstAttribute="trailing" secondItem="aw9-sq-Oj1" secondAttribute="trailing" id="enQ-Es-k1D"/>
                     <constraint firstItem="2uB-Mp-dEg" firstAttribute="top" secondItem="ory-s1-A8d" secondAttribute="bottom" constant="5" id="rCh-lL-bOA"/>
                     <constraint firstItem="ory-s1-A8d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="sOw-sT-jpN"/>
                     <constraint firstItem="2uB-Mp-dEg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="sr6-WF-5QD"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aw9-sq-Oj1" secondAttribute="bottom" id="wKw-XC-Nl6"/>
+                    <constraint firstAttribute="trailing" secondItem="ory-s1-A8d" secondAttribute="trailing" constant="30" id="xHl-1z-6S8"/>
                     <constraint firstItem="aw9-sq-Oj1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xZ9-hm-j6G"/>
                 </constraints>
             </tableViewCellContentView>

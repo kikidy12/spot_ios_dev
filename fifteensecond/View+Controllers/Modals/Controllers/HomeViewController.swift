@@ -152,7 +152,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if collectionView == allianceCollectionView {
-            return CGSize(width: 95, height: collectionView.frame.width)
+            return CGSize(width: 95, height: collectionView.frame.height)
         }
         else {
             return .zero

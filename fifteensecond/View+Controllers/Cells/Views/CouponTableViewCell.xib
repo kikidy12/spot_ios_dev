@@ -42,19 +42,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypt-bc-HsF">
-                                <rect key="frame" x="103" y="10" width="35.5" height="17"/>
+                                <rect key="frame" x="103" y="10" width="197" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7T-Do-5IP">
-                                <rect key="frame" x="103" y="32" width="42.5" height="19.5"/>
+                                <rect key="frame" x="103" y="32" width="197" height="19.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KME-D6-xZf">
-                                <rect key="frame" x="103" y="63.5" width="31" height="14.5"/>
+                                <rect key="frame" x="103" y="63.5" width="197" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -68,10 +68,13 @@
                             <constraint firstItem="Wf8-HT-O6E" firstAttribute="leading" secondItem="Xpf-yt-dWo" secondAttribute="leading" id="BZb-YD-Ypb"/>
                             <constraint firstItem="4KJ-Th-uNk" firstAttribute="top" secondItem="Xpf-yt-dWo" secondAttribute="top" id="HBC-iK-Hwl"/>
                             <constraint firstItem="Wf8-HT-O6E" firstAttribute="top" secondItem="Xpf-yt-dWo" secondAttribute="top" id="M6a-mn-zPZ"/>
+                            <constraint firstAttribute="trailing" secondItem="T7T-Do-5IP" secondAttribute="trailing" constant="20" id="Opg-0p-rFL"/>
                             <constraint firstAttribute="bottom" secondItem="Wf8-HT-O6E" secondAttribute="bottom" id="U7f-fw-enw"/>
+                            <constraint firstAttribute="trailing" secondItem="KME-D6-xZf" secondAttribute="trailing" constant="20" id="Ueo-2Q-Db4"/>
                             <constraint firstItem="Ypt-bc-HsF" firstAttribute="leading" secondItem="Wf8-HT-O6E" secondAttribute="trailing" constant="18" id="Ul5-BJ-gCB"/>
                             <constraint firstAttribute="trailing" secondItem="4KJ-Th-uNk" secondAttribute="trailing" id="XLh-9n-jC4"/>
                             <constraint firstAttribute="bottom" secondItem="4KJ-Th-uNk" secondAttribute="bottom" id="em4-Ku-DFC"/>
+                            <constraint firstAttribute="trailing" secondItem="Ypt-bc-HsF" secondAttribute="trailing" constant="20" id="fDu-yg-ria"/>
                             <constraint firstItem="KME-D6-xZf" firstAttribute="leading" secondItem="Wf8-HT-O6E" secondAttribute="trailing" constant="18" id="hRc-wx-Jrz"/>
                             <constraint firstItem="Ypt-bc-HsF" firstAttribute="top" secondItem="Xpf-yt-dWo" secondAttribute="top" constant="10" id="l64-cL-GXc"/>
                             <constraint firstAttribute="height" constant="88" id="nly-eA-Wjd"/>

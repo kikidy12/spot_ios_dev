@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-OV-Kto">
-                                <rect key="frame" x="9" y="136" width="40" height="19.5"/>
+                                <rect key="frame" x="9" y="136" width="334" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -45,8 +45,8 @@
                                 <color key="textColor" name="brownGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="3.5/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mR-Gf-c2C">
-                                <rect key="frame" x="24" y="408" width="286" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="3.5/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mR-Gf-c2C">
+                                <rect key="frame" x="24" y="408" width="276" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="maize"/>
                                 <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                             <constraint firstItem="5mR-Gf-c2C" firstAttribute="leading" secondItem="u7O-eo-ADh" secondAttribute="trailing" constant="3" id="7h4-P4-nbQ"/>
                             <constraint firstAttribute="trailing" secondItem="xDZ-0Y-c2T" secondAttribute="trailing" constant="8" id="8Gn-FY-R2Y"/>
                             <constraint firstItem="d0h-OV-Kto" firstAttribute="leading" secondItem="ff7-Pl-SKB" secondAttribute="leading" constant="9" id="JOl-LO-KeO"/>
-                            <constraint firstItem="xDZ-0Y-c2T" firstAttribute="leading" secondItem="5mR-Gf-c2C" secondAttribute="trailing" id="LIH-id-lB5"/>
+                            <constraint firstItem="xDZ-0Y-c2T" firstAttribute="leading" secondItem="5mR-Gf-c2C" secondAttribute="trailing" constant="10" id="LIH-id-lB5"/>
                             <constraint firstItem="fUy-z3-uvX" firstAttribute="top" secondItem="ff7-Pl-SKB" secondAttribute="top" constant="5" id="O57-ua-YlG"/>
                             <constraint firstAttribute="trailing" secondItem="61B-RG-Ao6" secondAttribute="trailing" id="WUh-QB-DEh"/>
                             <constraint firstItem="u7O-eo-ADh" firstAttribute="leading" secondItem="ff7-Pl-SKB" secondAttribute="leading" constant="9" id="Ybi-SK-FpD"/>
@@ -83,6 +83,7 @@
                             <constraint firstItem="61B-RG-Ao6" firstAttribute="leading" secondItem="ff7-Pl-SKB" secondAttribute="leading" id="lBF-yE-DiU"/>
                             <constraint firstItem="d0h-OV-Kto" firstAttribute="top" secondItem="61B-RG-Ao6" secondAttribute="bottom" constant="11" id="nNo-cP-LXz"/>
                             <constraint firstItem="5mR-Gf-c2C" firstAttribute="centerY" secondItem="u7O-eo-ADh" secondAttribute="centerY" id="o6x-ac-6al"/>
+                            <constraint firstAttribute="trailing" secondItem="d0h-OV-Kto" secondAttribute="trailing" constant="11" id="xe0-G0-axT"/>
                             <constraint firstAttribute="bottom" secondItem="xDZ-0Y-c2T" secondAttribute="bottom" constant="11" id="zhC-gh-xxT"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

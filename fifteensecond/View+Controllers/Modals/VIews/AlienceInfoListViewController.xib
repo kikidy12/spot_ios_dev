@@ -119,8 +119,8 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kg1-R4-7FY">
                                     <rect key="frame" x="0.0" y="243" width="414" height="85.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEh-1M-Y29">
-                                            <rect key="frame" x="17" y="18" width="35.5" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEh-1M-Y29">
+                                            <rect key="frame" x="17" y="18" width="168" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -132,7 +132,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="aPI-KW-x5Q">
-                                            <rect key="frame" x="268" y="18" width="123" height="51.5"/>
+                                            <rect key="frame" x="195" y="18" width="196" height="51.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUk-RQ-dkS" userLabel="locationView">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="51.5"/>
@@ -154,14 +154,12 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
-                                                        <constraint firstItem="PTd-Er-XKk" firstAttribute="leading" secondItem="yUk-RQ-dkS" secondAttribute="leading" id="3jY-Nx-qdp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PTd-Er-XKk" secondAttribute="trailing" id="18Q-3M-0JC"/>
+                                                        <constraint firstItem="PTd-Er-XKk" firstAttribute="leading" secondItem="yUk-RQ-dkS" secondAttribute="leading" id="1dL-jG-Dlc"/>
                                                         <constraint firstItem="Hrd-Fu-jTa" firstAttribute="centerX" secondItem="yUk-RQ-dkS" secondAttribute="centerX" id="AYs-Xh-EUw"/>
                                                         <constraint firstItem="PTd-Er-XKk" firstAttribute="top" secondItem="Hrd-Fu-jTa" secondAttribute="bottom" constant="5" id="Alo-SK-uMO"/>
                                                         <constraint firstItem="Hrd-Fu-jTa" firstAttribute="top" secondItem="yUk-RQ-dkS" secondAttribute="top" id="FA5-0V-LcF"/>
-                                                        <constraint firstItem="Hrd-Fu-jTa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yUk-RQ-dkS" secondAttribute="leading" id="PhJ-v7-lMz"/>
-                                                        <constraint firstAttribute="trailing" secondItem="PTd-Er-XKk" secondAttribute="trailing" id="dpB-ib-iHv"/>
                                                         <constraint firstAttribute="bottom" secondItem="PTd-Er-XKk" secondAttribute="bottom" id="f9T-U9-6Ta"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hrd-Fu-jTa" secondAttribute="trailing" id="jZi-hq-WGK"/>
                                                     </constraints>
                                                     <connections>
                                                         <outletCollection property="gestureRecognizers" destination="m5m-vI-BfC" appends="YES" id="Y4x-Je-p0f"/>
@@ -189,8 +187,6 @@
                                                     <constraints>
                                                         <constraint firstItem="Y29-JV-etu" firstAttribute="top" secondItem="hu0-Sv-4A5" secondAttribute="top" id="09R-DQ-pXM"/>
                                                         <constraint firstItem="shP-n8-oQ4" firstAttribute="top" secondItem="Y29-JV-etu" secondAttribute="bottom" constant="5" id="3t0-R6-FO1"/>
-                                                        <constraint firstItem="Y29-JV-etu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hu0-Sv-4A5" secondAttribute="leading" id="Dq9-aT-GyM"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y29-JV-etu" secondAttribute="trailing" id="M4J-Jn-Uwy"/>
                                                         <constraint firstItem="Y29-JV-etu" firstAttribute="centerX" secondItem="hu0-Sv-4A5" secondAttribute="centerX" id="Ofv-Vi-aEb"/>
                                                         <constraint firstAttribute="bottom" secondItem="shP-n8-oQ4" secondAttribute="bottom" id="Rqf-ND-C5f"/>
                                                         <constraint firstAttribute="trailing" secondItem="shP-n8-oQ4" secondAttribute="trailing" id="XKP-5d-8b3"/>
@@ -200,18 +196,18 @@
                                                         <outletCollection property="gestureRecognizers" destination="Zth-JF-GNv" appends="YES" id="aoP-jo-VQI"/>
                                                     </connections>
                                                 </view>
-                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vZ-5X-PIQ" userLabel="siteView">
-                                                    <rect key="frame" x="123" y="0.0" width="32" height="51.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vZ-5X-PIQ" userLabel="siteView">
+                                                    <rect key="frame" x="146" y="0.0" width="50" height="51.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="siteImage" translatesAutoresizingMaskIntoConstraints="NO" id="NLR-IW-rnR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                            <rect key="frame" x="9" y="0.0" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="32" id="50p-dw-iUX"/>
                                                                 <constraint firstAttribute="height" constant="32" id="e2L-GS-RKQ"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홈페이지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOO-k1-62i">
-                                                            <rect key="frame" x="0.0" y="37" width="32" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="37" width="50" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -225,9 +221,7 @@
                                                         <constraint firstItem="BOO-k1-62i" firstAttribute="leading" secondItem="5vZ-5X-PIQ" secondAttribute="leading" id="VwE-wS-E78"/>
                                                         <constraint firstItem="BOO-k1-62i" firstAttribute="top" secondItem="NLR-IW-rnR" secondAttribute="bottom" constant="5" id="fEw-91-ejw"/>
                                                         <constraint firstItem="NLR-IW-rnR" firstAttribute="top" secondItem="5vZ-5X-PIQ" secondAttribute="top" id="qua-T4-SGC"/>
-                                                        <constraint firstItem="NLR-IW-rnR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5vZ-5X-PIQ" secondAttribute="leading" id="s7d-x4-OyD"/>
                                                         <constraint firstItem="NLR-IW-rnR" firstAttribute="centerX" secondItem="5vZ-5X-PIQ" secondAttribute="centerX" id="wxx-6a-X3q"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NLR-IW-rnR" secondAttribute="trailing" id="yZL-Ur-eV0"/>
                                                     </constraints>
                                                     <connections>
                                                         <outletCollection property="gestureRecognizers" destination="kVd-jb-3R8" appends="YES" id="Hxh-tQ-g4Z"/>
@@ -241,6 +235,7 @@
                                         <constraint firstItem="UDm-w8-pCi" firstAttribute="top" secondItem="bEh-1M-Y29" secondAttribute="bottom" constant="6" id="4TR-Pj-mno"/>
                                         <constraint firstItem="bEh-1M-Y29" firstAttribute="leading" secondItem="kg1-R4-7FY" secondAttribute="leading" constant="17" id="ZDa-T2-Nkz"/>
                                         <constraint firstItem="bEh-1M-Y29" firstAttribute="top" secondItem="kg1-R4-7FY" secondAttribute="top" constant="18" id="Zwo-QE-q9m"/>
+                                        <constraint firstItem="aPI-KW-x5Q" firstAttribute="leading" secondItem="bEh-1M-Y29" secondAttribute="trailing" constant="10" id="bxA-sm-ER9"/>
                                         <constraint firstAttribute="trailing" secondItem="aPI-KW-x5Q" secondAttribute="trailing" constant="23" id="eB5-c9-aQA"/>
                                         <constraint firstItem="UDm-w8-pCi" firstAttribute="leading" secondItem="kg1-R4-7FY" secondAttribute="leading" constant="17" id="fml-oC-xkR"/>
                                         <constraint firstAttribute="bottom" secondItem="UDm-w8-pCi" secondAttribute="bottom" constant="24" id="y4C-Ua-qHA"/>

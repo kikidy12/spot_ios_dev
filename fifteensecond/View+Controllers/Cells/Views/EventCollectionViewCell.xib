@@ -20,7 +20,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5g-iE-E7K" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="266"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="I3T-YB-v0x">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="I3T-YB-v0x">
                                 <rect key="frame" x="0.0" y="0.0" width="440" height="266"/>
                             </imageView>
                         </subviews>

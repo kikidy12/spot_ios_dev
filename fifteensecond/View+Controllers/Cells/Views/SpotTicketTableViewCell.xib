@@ -22,13 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="338" height="126"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbA-bV-V67">
-                                <rect key="frame" x="24" y="17" width="43.5" height="21"/>
+                                <rect key="frame" x="24" y="17" width="289" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMD-Ek-8Qi">
-                                <rect key="frame" x="24" y="48" width="35.5" height="57"/>
+                                <rect key="frame" x="24" y="48" width="243" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -43,11 +43,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sbA-bV-V67" secondAttribute="trailing" constant="25" id="88K-L9-Egd"/>
                             <constraint firstItem="hMD-Ek-8Qi" firstAttribute="top" secondItem="sbA-bV-V67" secondAttribute="bottom" constant="10" id="8kv-Gk-rg7"/>
                             <constraint firstItem="tv7-lA-33s" firstAttribute="centerY" secondItem="8cg-ej-vr0" secondAttribute="centerY" id="CnN-mG-61a"/>
                             <constraint firstItem="sbA-bV-V67" firstAttribute="top" secondItem="8cg-ej-vr0" secondAttribute="top" constant="17" id="Qf4-uZ-Sy4"/>
                             <constraint firstAttribute="bottom" secondItem="hMD-Ek-8Qi" secondAttribute="bottom" constant="21" id="RIJ-PE-1WM"/>
                             <constraint firstItem="sbA-bV-V67" firstAttribute="leading" secondItem="8cg-ej-vr0" secondAttribute="leading" constant="24" id="hOs-UH-1df"/>
+                            <constraint firstItem="tv7-lA-33s" firstAttribute="leading" secondItem="hMD-Ek-8Qi" secondAttribute="trailing" constant="25" id="o0e-Lk-L3i"/>
                             <constraint firstItem="hMD-Ek-8Qi" firstAttribute="leading" secondItem="8cg-ej-vr0" secondAttribute="leading" constant="24" id="tD0-hU-vjM"/>
                             <constraint firstAttribute="trailing" secondItem="tv7-lA-33s" secondAttribute="trailing" constant="20" id="x0U-Jt-9RS"/>
                         </constraints>

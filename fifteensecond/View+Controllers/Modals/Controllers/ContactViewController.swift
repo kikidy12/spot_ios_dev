@@ -12,16 +12,16 @@ class ContactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "고객센터"
     }
 
     
     @IBAction func callServiceCenterEvent(_ sender: UIButton) {
-        self.phoneCall("16001515")
+        self.phoneCall("0269250607")
     }
     
     @IBAction func katalkServiceCenterEvent(_ sender: UIButton) {
         //카톡연결
+        UIApplication.shared.open(URL(string: "https://pf.kakao.com/_SClxkT")!, options: [:], completionHandler: nil)
     }
 }

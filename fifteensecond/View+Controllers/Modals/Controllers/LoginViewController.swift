@@ -75,6 +75,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func kakaoSignIn(_ sender: UIButton) {
+        
         print("kakaoStart")
         guard let kakaoSession = KOSession.shared() else { return }
         if kakaoSession.isOpen() {
@@ -318,7 +319,10 @@ extension LoginViewController {
             "phone_num": phoneNum
         ] as [String:Any]
         ServerUtil.shared.postSendSms(self, parameters: parameters) { (success, dict, message) in
-            guard success else { return }
+            guard success else {
+                AlertHandler.shared.showAlert(vc: self, message: message ?? "ServerError", okTitle: "확인")
+                return
+            }
             
             self.navigationController?.isNavigationBarHidden = false
             let vc = AuthCheckViewController()

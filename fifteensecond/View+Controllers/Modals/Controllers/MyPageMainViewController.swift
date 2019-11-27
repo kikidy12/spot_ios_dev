@@ -14,7 +14,7 @@ class MyPageMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         nameLabel.text = GlobalDatas.currentUser.name
     }
     

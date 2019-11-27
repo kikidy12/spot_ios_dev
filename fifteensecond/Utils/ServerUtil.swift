@@ -138,6 +138,7 @@ class ServerUtil: NSObject {
         apiRequest("payment", method: .get, parameters: parameters, completion: completion)
     }
     
+    
     func getCategorys(_ vc: UIViewController, type: AlienceTitles, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc
         

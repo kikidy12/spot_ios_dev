@@ -15,12 +15,12 @@ class TutoMainViewController: UIViewController {
     @IBOutlet weak var tutoLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
-    let tutoSet: [String:UIImage] = [
-        "클릭 한 번으로 내주변 먹거리,\n축제 , 호텔 정보를 결제부터 이용까지!":UIImage(named: "tuto1")!,
-        "내주변 먹거리 , 쇼핑 ,티켓, 숙소,\n15Seconds 한번에 알아보기!":UIImage(named: "tuto2")!,
-        "15Seconds로 영화같은\n나만의 영상 촬영하기":UIImage(named: "tuto3")!,
-        "내주변 15Seconds\n위치 확인하기":UIImage(named: "tuto4")!,
-        "촬영한 영상을 편집한 뒤\nSNS에 자랑하기":UIImage(named: "tuto5")!
+    let tutoSet: [[String:UIImage]] = [
+        ["클릭 한 번으로 내주변 먹거리,\n축제 , 호텔 정보를 결제부터 이용까지!":UIImage(named: "tuto1")!],
+        ["내주변 먹거리 , 쇼핑 ,티켓, 숙소,\n15Seconds 한번에 알아보기!":UIImage(named: "tuto2")!],
+        ["15Seconds로 영화같은\n나만의 영상 촬영하기":UIImage(named: "tuto3")!],
+        ["내주변 15Seconds\n위치 확인하기":UIImage(named: "tuto4")!],
+        ["촬영한 영상을 편집한 뒤\nSNS에 자랑하기":UIImage(named: "tuto5")!]
     ]
     
 
@@ -28,8 +28,8 @@ class TutoMainViewController: UIViewController {
         super.viewDidLoad()
         
         pageControl.currentPage = 0
-        setText(Array(tutoSet)[0].key)
-        tutoImageView.image = Array(tutoSet)[0].value
+        setText(tutoSet[0].keys.first!)
+        tutoImageView.image = tutoSet[0].values.first!
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -46,8 +46,8 @@ class TutoMainViewController: UIViewController {
 
     @IBAction func showNextTutoEvent() {
         pageControl.currentPage = pageControl.currentPage + 1
-        setText(Array(tutoSet)[pageControl.currentPage].key)
-        tutoImageView.image = Array(tutoSet)[pageControl.currentPage].value
+        setText(tutoSet[pageControl.currentPage].keys.first!)
+        tutoImageView.image = tutoSet[pageControl.currentPage].values.first!
         
         if pageControl.currentPage == 4 {
             stackView.arrangedSubviews.forEach {

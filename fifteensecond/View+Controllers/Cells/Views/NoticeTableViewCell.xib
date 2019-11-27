@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88x-G9-LgP">
-                        <rect key="frame" x="25" y="18" width="39.5" height="19.5"/>
+                        <rect key="frame" x="25" y="18" width="295" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK4-bl-JQV">
-                        <rect key="frame" x="25" y="42.5" width="35.5" height="17"/>
+                        <rect key="frame" x="25" y="42.5" width="295" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" name="brownGrey"/>
                         <nil key="highlightedColor"/>
@@ -43,7 +43,9 @@
                     <constraint firstItem="DC7-fu-bOB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4V1-jv-4gv"/>
                     <constraint firstItem="gK4-bl-JQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Hcu-b8-PLR"/>
                     <constraint firstItem="88x-G9-LgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="NhL-Qr-pNL"/>
+                    <constraint firstAttribute="trailing" secondItem="88x-G9-LgP" secondAttribute="trailing" constant="25" id="Smc-dU-eZv"/>
                     <constraint firstItem="88x-G9-LgP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="h1O-hY-Wdz"/>
+                    <constraint firstAttribute="trailing" secondItem="gK4-bl-JQV" secondAttribute="trailing" constant="25" id="iIe-85-olP"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DC7-fu-bOB" secondAttribute="bottom" id="kSK-dD-QRV"/>
                     <constraint firstAttribute="trailing" secondItem="DC7-fu-bOB" secondAttribute="trailing" id="nIR-y9-P4c"/>
                     <constraint firstItem="gK4-bl-JQV" firstAttribute="top" secondItem="88x-G9-LgP" secondAttribute="bottom" constant="5" id="pSv-PK-PDk"/>
