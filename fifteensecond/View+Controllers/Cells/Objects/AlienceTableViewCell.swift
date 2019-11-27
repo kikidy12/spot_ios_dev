@@ -110,7 +110,7 @@ class AlienceTableViewCell: UITableViewCell {
         setImageView(urlStr: restaurant.imageList.first?.imageURL)
         commentLabel.text = restaurant.comment ?? "없음"
         discountLabel.text = "~\(restaurant.discountRate ?? 0)%"
-        discountLabel.superview?.isHidden = true
+        discountLabel.superview?.isHidden = false
     }
     
     func drawBeautyViews() {
@@ -121,7 +121,7 @@ class AlienceTableViewCell: UITableViewCell {
         setImageView(urlStr: beauty.imageList.first?.imageURL)
         commentLabel.text = beauty.comment ?? "없음"
         discountLabel.text = "~\(beauty.discountRate ?? 0)%"
-        discountLabel.superview?.isHidden = true
+        discountLabel.superview?.isHidden = false
     }
     
     func drawPlayViews() {
@@ -132,7 +132,7 @@ class AlienceTableViewCell: UITableViewCell {
         setImageView(urlStr: play.imageList.first?.imageURL)
         commentLabel.text = play.comment ?? "없음"
         discountLabel.text = "~\(play.discountRate ?? 0)%"
-        discountLabel.superview?.isHidden = true
+        discountLabel.superview?.isHidden = false
     }
     
     func drawShoppingViews() {
@@ -142,7 +142,7 @@ class AlienceTableViewCell: UITableViewCell {
         categoryLabel.text = shopping.category.name
         setImageView(urlStr: shopping.imageList.first?.imageURL)
         commentLabel.text = shopping.comment
-        discountLabel.superview?.isHidden = true
+        discountLabel.superview?.isHidden = false
     }
     
     func setImageView(urlStr: String?) {

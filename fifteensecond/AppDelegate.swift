@@ -106,7 +106,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
     }
-    
 //    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 //        return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation)
 //    }

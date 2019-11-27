@@ -9,6 +9,11 @@
 import Foundation
 
 
+enum VersionError: Error {
+    case invalidResponse, invalidBundleInfo
+}
+
+
 enum AlienceTitles: String {
     case restaurant = "Restaurant"
     case shopping = "Shopping"
