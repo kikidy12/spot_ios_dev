@@ -13,7 +13,7 @@ class GlobalDatas: NSObject {
     static var currentUser: UserData!
     
     static var deviceToken = ""
-    
+    static var isPush = false
     static var spotTicketBuyDict = [
         "count": 0,
         "type": PayType.card

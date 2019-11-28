@@ -71,8 +71,7 @@ class AuthCheckViewController: UIViewController {
             "phone_auth_code": authCode
         ] as [String:Any]
         ServerUtil.shared.postAuth(self, parameters: parameters) { (success, dict, message) in
-            
-            guard success, let data = dict?["user"] as? NSDictionary, let token = dict?["token"] as? String else {
+            guard success, let token = dict?["token"] as? String else {
                 AlertHandler.shared.showAlert(vc: self, message: message ?? "", okTitle: "확인")
                 return
             }

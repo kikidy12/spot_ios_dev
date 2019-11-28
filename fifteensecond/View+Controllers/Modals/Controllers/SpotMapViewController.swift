@@ -88,7 +88,7 @@ extension SpotMapViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        if let spot = markerList.first(where: {$0.keys.first == marker})?.values.first {
+        if (markerList.first(where: {$0.keys.first == marker})?.values.first) != nil {
 //            selectSpot = spot
 //            let vc = HasSpotTicketListViewController()
 //            vc.spot = spot

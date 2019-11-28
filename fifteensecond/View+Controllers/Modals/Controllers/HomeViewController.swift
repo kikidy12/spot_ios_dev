@@ -253,7 +253,7 @@ extension HomeViewController {
         
         ServerUtil.shared.getInfo(self, parameters: parameters) { (success, dict, message) in
             guard success, let isAttend = dict?["today_attendance"] as? Bool,
-                let user = dict?["user"] as? NSDictionary else { return }
+                let user = dict?["user"] as? NSDictionary, let isPush = dict?["is_push"] as? Bool else { return }
             
             GlobalDatas.currentUser = UserData(user, isAttend: isAttend)
             
@@ -263,6 +263,8 @@ extension HomeViewController {
             else {
                 self.attandAlertview.isHidden = false
             }
+            
+            GlobalDatas.isPush = isPush
             
             self.getMainEvents()
         }

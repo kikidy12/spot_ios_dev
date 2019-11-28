@@ -85,7 +85,7 @@ class LoginViewController: UIViewController {
         kakaoSession.presentingViewController = self
         kakaoSession.open(completionHandler: { (error) in
             if error != nil || !kakaoSession.isOpen() {
-                print("openError: ", error)
+                print("openError: ", error as Any)
                 return
             }
             KOSessionTask.userMeTask(completion: { (error, user) in
@@ -96,7 +96,7 @@ class LoginViewController: UIViewController {
                     }
                     KOSession.shared()?.updateScopes(updateScopes, completionHandler: { (error) in
                         guard error == nil else {
-                            print("updateError: ", error)
+                            print("updateError: ", error as Any)
                             return
                         }
                         KOSessionTask.userMeTask(completion: { (error, user) in
@@ -144,9 +144,6 @@ class LoginViewController: UIViewController {
                 let email = dict["email"] as? String
                 let uid = dict["id"] as! String
                 
-                print(uid)
-                print(email)
-                
                 self.snsCheck(provider: "FACEBOOK", uid: uid, email: email)
             }
         })
@@ -157,17 +154,12 @@ class LoginViewController: UIViewController {
     func profile(_ error: Error?, user: KOUserMe?) {
         guard let user = user,
             error == nil else {
-                print("userError: ", error)
+                print("userError: ", error as Any)
                 return
         }
         
         guard let token = user.id else { return }
-        let name = user.nickname ?? ""
         let email = user.account?.email
-        
-        print(token)
-        print(name)
-        print(email)
         
         self.snsCheck(provider: "KAKAO", uid: token, email: email)
     }
@@ -229,12 +221,10 @@ extension LoginViewController: GIDSignInUIDelegate, GIDSignInDelegate {
             return
         }
         
-        guard let authentication = user.authentication else { return }
+        guard user.authentication != nil else { return }
 //        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
 //                                                       accessToken: authentication.accessToken)
 
-        print(user.profile.email)
-        print(user.userID)
         self.snsCheck(provider: "GOOGLE", uid: user.userID, email: user.profile.email)
     }
     

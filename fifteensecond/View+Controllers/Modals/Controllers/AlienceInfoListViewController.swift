@@ -365,6 +365,7 @@ extension AlienceInfoListViewController: UICollectionViewDelegate, UICollectionV
         case imageCollectionView:
             let vc = ImageListPopupViewController()
             vc.imageList = self.imageList
+            vc.index = indexPath.item
             showPopupView(vc: vc)
             break
         default:
@@ -472,6 +473,7 @@ extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSou
         if type == .hotel {
             let vc = ImageListPopupViewController()
             vc.imageList = hotel.roomList[indexPath.item].imageList
+            vc.index = indexPath.item
             showPopupView(vc: vc)
         }
         

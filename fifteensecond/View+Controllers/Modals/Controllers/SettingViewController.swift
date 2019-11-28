@@ -52,6 +52,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var kakaoBtn: UIButton!
     @IBOutlet weak var googleBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
+    @IBOutlet weak var switchBtn: UISwitch!
     
 
     override func viewDidLoad() {
@@ -61,6 +62,7 @@ class SettingViewController: UIViewController {
         emailLabel.text = GlobalDatas.currentUser.email
         
         versionLabel.text = version
+        switchBtn.isOn = GlobalDatas.isPush
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +79,10 @@ class SettingViewController: UIViewController {
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+    }
+    
+    @IBAction func pushCheck(sender: UISwitch) {
+        pushOnOff(sender.isOn)
     }
     
     @IBAction func logoutEvent() {
@@ -108,6 +114,17 @@ class SettingViewController: UIViewController {
         }
         else {
             getFacebookUserInfo()
+        }
+    }
+    
+    @IBAction func updataAppEvent() {
+        _ = try? isUpdateAvailable { (update, error) in
+            if let error = error {
+                print("error: ",error)
+                AlertHandler.shared.showAlert(vc: self, message: "준비중입니다.", okTitle: "확인")
+            } else if let update = update {
+                print(update)
+            }
         }
     }
     
@@ -197,10 +214,6 @@ class SettingViewController: UIViewController {
         }
         
         guard let token = user.id else { return }
-        let name = user.nickname ?? ""
-        
-        print(token)
-        print(name)
         
         self.snsConnect(provider: "KAKAO", uid: token)
     }
@@ -285,6 +298,20 @@ extension SettingViewController {
             navi.navigationBar.shadowImage = UIImage()
             navi.modalPresentationStyle = .fullScreen
             self.present(navi, animated: true, completion: nil)
+        }
+    }
+    
+    func pushOnOff(_ isOn: Bool) {
+        let parameters = [
+            "value": isOn
+        ] as [String:Any]
+        ServerUtil.shared.postPushOnOff(self, parameters: parameters) { (success, dict, message) in
+            guard success else {
+                return
+            }
+            
+            GlobalDatas.isPush = isOn
+            self.switchBtn.isOn = GlobalDatas.isPush
         }
     }
 }

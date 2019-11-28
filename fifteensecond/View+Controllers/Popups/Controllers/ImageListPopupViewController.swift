@@ -12,15 +12,37 @@ class ImageListPopupViewController: UIViewController {
     
     var imageList = [ImageDatas]()
     
+    var index = 0
+    
+    var isScrolled = false
+    
     @IBOutlet weak var imageCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageList.forEach {
+            print("imageId: ", $0.id)
+        }
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         imageCollectionView.register(UINib(nibName: "DetailImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imageCell")
     }
+
     
+    override func viewWillAppear(_ animated: Bool) {
+        imageCollectionView.reloadData()
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if !isScrolled && imageCollectionView.visibleCells.count > 0 {
+            isScrolled = true
+            imageCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: false)
+        }
+    }
+
+    @IBAction func testEvetn() {
+        imageCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

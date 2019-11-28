@@ -52,6 +52,7 @@ extension UIViewController {
                 throw VersionError.invalidBundleInfo
         }
         print(currentVersion)
+        print(url.absoluteString)
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             do {
                 if let error = error { throw error }

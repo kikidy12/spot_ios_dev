@@ -22,5 +22,9 @@ class AdContectViewController: UIViewController {
     @IBAction func sendMailEvent() {
         UIApplication.shared.open(URL(string: "mailto:cfourworldad@gmail.com")!, options: [:], completionHandler: nil)
     }
+    
+    @IBAction func callServiceCenterEvent(_ sender: UIButton) {
+        self.phoneCall("0269250607")
+    }
 
 }

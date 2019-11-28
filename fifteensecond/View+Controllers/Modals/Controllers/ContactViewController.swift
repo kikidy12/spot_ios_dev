@@ -18,13 +18,6 @@ class ContactViewController: UIViewController {
     
     @IBAction func callServiceCenterEvent(_ sender: UIButton) {
         self.phoneCall("0269250607")
-//        _ = try? isUpdateAvailable { (update, error) in
-//            if let error = error {
-//                print(error)
-//            } else if let update = update {
-//                print(update)
-//            }
-//        }
     }
     
     

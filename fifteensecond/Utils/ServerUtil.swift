@@ -298,6 +298,10 @@ class ServerUtil: NSObject {
         apiRequest("my_coupon", method: .post, parameters: parameters, completion: completion)
     }
     
+    func postPushOnOff(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
+        currentVc = vc
+        apiRequest("push_on_off", method: .post, parameters: parameters, completion: completion)
+    }
     
     func putCardRegistration(_ vc: UIViewController, parameters: Parameters? = nil, completion: @escaping (Bool, NSDictionary?, String?) -> Void) {
         currentVc = vc

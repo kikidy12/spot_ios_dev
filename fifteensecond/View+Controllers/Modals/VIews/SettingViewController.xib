@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +16,7 @@
                 <outlet property="googleBtn" destination="5Jn-lL-dTb" id="lzC-cV-DuG"/>
                 <outlet property="kakaoBtn" destination="PL3-Yd-1lR" id="dCL-eK-dCI"/>
                 <outlet property="phoneNumLabel" destination="uTs-Ky-Nte" id="T57-WE-Rlv"/>
+                <outlet property="switchBtn" destination="mSJ-6i-hhn" id="Usy-lM-BAi"/>
                 <outlet property="versionLabel" destination="eyI-Cf-q0F" id="oXE-gz-map"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,7 +34,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S0L-mh-1Lu">
-                            <rect key="frame" x="0.0" y="40" width="414" height="575"/>
+                            <rect key="frame" x="0.0" y="40" width="414" height="630"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FN9-E5-IgC">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -71,6 +72,9 @@
                                                     <color key="value" name="darkishPink"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="updataAppEvent" destination="-1" eventType="touchUpInside" id="QwL-nE-1KH"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rW8-Gz-8J8">
                                             <rect key="frame" x="0.0" y="54" width="414" height="1"/>
@@ -94,8 +98,44 @@
                                         <constraint firstAttribute="trailing" secondItem="rW8-Gz-8J8" secondAttribute="trailing" id="y3Z-cC-y7x"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-jN-oNC">
+                                    <rect key="frame" x="0.0" y="55" width="414" height="55"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="푸쉬 알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-1E-P2R">
+                                            <rect key="frame" x="25" y="18" width="60" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVs-A7-bNG">
+                                            <rect key="frame" x="0.0" y="54" width="414" height="1"/>
+                                            <color key="backgroundColor" name="gunmetal"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="lSy-8a-Pbc"/>
+                                            </constraints>
+                                        </view>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mSJ-6i-hhn">
+                                            <rect key="frame" x="339" y="12" width="51" height="31"/>
+                                            <color key="onTintColor" name="darkishPink"/>
+                                            <connections>
+                                                <action selector="pushCheckWithSender:" destination="-1" eventType="valueChanged" id="xOU-S3-RWl"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="mSJ-6i-hhn" firstAttribute="centerY" secondItem="Xtc-jN-oNC" secondAttribute="centerY" id="HR5-E0-Nkd"/>
+                                        <constraint firstAttribute="bottom" secondItem="RVs-A7-bNG" secondAttribute="bottom" id="SDh-zP-6q6"/>
+                                        <constraint firstAttribute="trailing" secondItem="RVs-A7-bNG" secondAttribute="trailing" id="ShO-bc-7VC"/>
+                                        <constraint firstAttribute="trailing" secondItem="mSJ-6i-hhn" secondAttribute="trailing" constant="26" id="TPu-do-u1y"/>
+                                        <constraint firstItem="RVs-A7-bNG" firstAttribute="leading" secondItem="Xtc-jN-oNC" secondAttribute="leading" id="aPU-xW-Y9i"/>
+                                        <constraint firstItem="kg9-1E-P2R" firstAttribute="centerY" secondItem="Xtc-jN-oNC" secondAttribute="centerY" id="gZZ-uZ-EwI"/>
+                                        <constraint firstItem="kg9-1E-P2R" firstAttribute="leading" secondItem="Xtc-jN-oNC" secondAttribute="leading" constant="25" id="q1o-mz-Mpa"/>
+                                        <constraint firstAttribute="height" constant="55" id="wMh-Y3-r6i"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cz-dR-X4n">
-                                    <rect key="frame" x="0.0" y="55" width="414" height="300"/>
+                                    <rect key="frame" x="0.0" y="110" width="414" height="300"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N54-hU-UuM">
                                             <rect key="frame" x="25" y="13" width="28" height="19.5"/>
@@ -274,7 +314,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJ3-qc-txa">
-                                    <rect key="frame" x="0.0" y="355" width="414" height="55"/>
+                                    <rect key="frame" x="0.0" y="410" width="414" height="55"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회사소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6O-Wu-F8T">
                                             <rect key="frame" x="25" y="18" width="55.5" height="19.5"/>
@@ -314,7 +354,7 @@
                                     </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGA-2m-YpX">
-                                    <rect key="frame" x="0.0" y="410" width="414" height="55"/>
+                                    <rect key="frame" x="0.0" y="465" width="414" height="55"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약관 및 정책" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCr-yE-gsc">
                                             <rect key="frame" x="25" y="18" width="78" height="19.5"/>
@@ -354,7 +394,7 @@
                                     </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhQ-6A-Awa">
-                                    <rect key="frame" x="0.0" y="465" width="414" height="55"/>
+                                    <rect key="frame" x="0.0" y="520" width="414" height="55"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그아웃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zr-FW-61c">
                                             <rect key="frame" x="25" y="18" width="55.5" height="19.5"/>
@@ -408,7 +448,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3w-XF-682">
-                                    <rect key="frame" x="0.0" y="520" width="414" height="55"/>
+                                    <rect key="frame" x="0.0" y="575" width="414" height="55"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원 탈퇴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyx-yG-HH2">
                                             <rect key="frame" x="25" y="18" width="60" height="19.5"/>
