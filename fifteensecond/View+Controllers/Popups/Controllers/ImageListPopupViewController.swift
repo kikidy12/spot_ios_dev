@@ -20,9 +20,6 @@ class ImageListPopupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageList.forEach {
-            print("imageId: ", $0.id)
-        }
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         imageCollectionView.register(UINib(nibName: "DetailImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imageCell")
