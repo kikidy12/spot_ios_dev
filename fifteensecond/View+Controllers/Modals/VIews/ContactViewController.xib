@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -16,17 +16,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contactBack" translatesAutoresizingMaskIntoConstraints="NO" id="v3T-Xb-mGL">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ib-ZW-mNg">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcT-xZ-qbp" customClass="GradientButton" customModule="fifteensecond" customModuleProvider="target">
-                            <rect key="frame" x="60" y="235" width="294" height="50"/>
+                            <rect key="frame" x="32" y="235" width="256" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="OZL-IE-Rgx"/>
                             </constraints>
@@ -39,26 +39,25 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02-6925-0607 | 10:00 - 19:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQP-bd-PuP">
-                            <rect key="frame" x="0.0" y="292" width="414" height="17"/>
+                            <rect key="frame" x="0.0" y="292" width="320" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" name="brownGrey"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7u5-9b-PkY" customClass="GradientButton" customModule="fifteensecond" customModuleProvider="target">
-                            <rect key="frame" x="60" y="349" width="294" height="51"/>
+                            <rect key="frame" x="32" y="349" width="256" height="51"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="51" id="8Dn-xa-it9"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="카카오톡으로 문의하기" image="kakaotalk"/>
                             <connections>
                                 <action selector="katalkServiceCenterEvent:" destination="-1" eventType="touchUpInside" id="zzW-Zo-R4H"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카카오톡 ID : C4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb4-nN-9vu">
-                            <rect key="frame" x="0.0" y="407" width="414" height="17"/>
+                            <rect key="frame" x="0.0" y="407" width="320" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" name="brownGrey"/>
                             <nil key="highlightedColor"/>
@@ -67,16 +66,15 @@
                     <color key="backgroundColor" name="darkblue91"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="oQP-bd-PuP" secondAttribute="trailing" id="7TS-1M-Oma"/>
-                        <constraint firstItem="vcT-xZ-qbp" firstAttribute="leading" secondItem="9ib-ZW-mNg" secondAttribute="leading" constant="60" id="9hc-mP-nq2"/>
+                        <constraint firstItem="7u5-9b-PkY" firstAttribute="leading" secondItem="vcT-xZ-qbp" secondAttribute="leading" id="8v8-NS-lsZ"/>
                         <constraint firstItem="7u5-9b-PkY" firstAttribute="top" secondItem="oQP-bd-PuP" secondAttribute="bottom" constant="40" id="G0c-Ba-EEj"/>
                         <constraint firstItem="gb4-nN-9vu" firstAttribute="leading" secondItem="9ib-ZW-mNg" secondAttribute="leading" id="O2M-UD-C18"/>
-                        <constraint firstAttribute="trailing" secondItem="7u5-9b-PkY" secondAttribute="trailing" constant="60" id="XrY-8n-A1I"/>
-                        <constraint firstAttribute="trailing" secondItem="vcT-xZ-qbp" secondAttribute="trailing" constant="60" id="YL2-Q4-9Ao"/>
                         <constraint firstItem="gb4-nN-9vu" firstAttribute="top" secondItem="7u5-9b-PkY" secondAttribute="bottom" constant="7" id="aew-WB-jBW"/>
                         <constraint firstItem="oQP-bd-PuP" firstAttribute="leading" secondItem="9ib-ZW-mNg" secondAttribute="leading" id="fWI-QD-7L9"/>
                         <constraint firstAttribute="trailing" secondItem="gb4-nN-9vu" secondAttribute="trailing" id="mJd-hk-HSK"/>
-                        <constraint firstItem="7u5-9b-PkY" firstAttribute="leading" secondItem="9ib-ZW-mNg" secondAttribute="leading" constant="60" id="oAh-68-uuB"/>
                         <constraint firstItem="oQP-bd-PuP" firstAttribute="top" secondItem="vcT-xZ-qbp" secondAttribute="bottom" constant="7" id="pYi-3x-2A3"/>
+                        <constraint firstItem="vcT-xZ-qbp" firstAttribute="centerX" secondItem="9ib-ZW-mNg" secondAttribute="centerX" id="uqg-AG-4Tx"/>
+                        <constraint firstItem="7u5-9b-PkY" firstAttribute="trailing" secondItem="vcT-xZ-qbp" secondAttribute="trailing" id="wGc-vI-wF3"/>
                         <constraint firstItem="vcT-xZ-qbp" firstAttribute="top" secondItem="9ib-ZW-mNg" secondAttribute="top" constant="235" id="wkH-bH-RsW"/>
                     </constraints>
                 </view>
@@ -84,6 +82,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="9ib-ZW-mNg" secondAttribute="trailing" id="3Gs-6x-2Sh"/>
+                <constraint firstItem="vcT-xZ-qbp" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="80%" id="4Xw-K0-9lK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="v3T-Xb-mGL" secondAttribute="bottom" id="CJt-rT-weL"/>
                 <constraint firstItem="v3T-Xb-mGL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JYi-S2-Tez"/>
                 <constraint firstItem="9ib-ZW-mNg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ky3-Ir-664"/>

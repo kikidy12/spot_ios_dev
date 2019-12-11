@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import CoreLocation
+
 
 class CustomMarkerInfoWindowView: UIView {
     
     var selectClouser: ((Any?)->())!
     private let xibName = "CustomMarkerInfoWindowView"
     
+    var locationManager = CLLocationManager()
+    
     var alienceData: Any!
+    
+    var location: CLLocation!
 
     @IBOutlet weak var openTimeLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -45,6 +51,16 @@ class CustomMarkerInfoWindowView: UIView {
         }
     }
     
+    func setDistanceDisplay(_ distance: Double) {
+        if distance >= 1000 {
+            let distance = distance/100
+            distanceLabel.text = "\(distance.rounded()/10)km"
+        }
+        else {
+            distanceLabel.text = "\(Int(distance))m"
+        }
+    }
+    
     private func commonInit(){
         let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
@@ -55,6 +71,7 @@ class CustomMarkerInfoWindowView: UIView {
         alienceData = data
         
         if let restaurant = alienceData as? RestaurantDatas {
+            location = CLLocation(latitude: restaurant.location.latitude, longitude: restaurant.location.longitude)
             nameLabel.text = restaurant.name
             setDistanceDisplay(restaurant.distance ?? 0)
             categoryLabel.text = restaurant.category.name
@@ -88,8 +105,8 @@ class CustomMarkerInfoWindowView: UIView {
         }
         
         else if let play = alienceData as? PlayDatas {
+            location = CLLocation(latitude: play.location.latitude, longitude: play.location.longitude)
             nameLabel.text = play.name
-            setDistanceDisplay(play.distance ?? 0)
             categoryLabel.text = play.category.name
             commentLabel.text = play.comment ?? "없음"
             openTimeLabel.text = play.openTime
@@ -97,12 +114,26 @@ class CustomMarkerInfoWindowView: UIView {
         }
         
         else if let beauty = alienceData as? BeautyDatas {
+            location = CLLocation(latitude: beauty.location.latitude, longitude: beauty.location.longitude)
             nameLabel.text = beauty.name
-            setDistanceDisplay(beauty.distance ?? 0)
             categoryLabel.text = beauty.category.name
             commentLabel.text = beauty.comment ?? "없음"
             openTimeLabel.text = beauty.openTime
             setImageView(urlStr: beauty.imageList.first?.imageURL)
+        }
+        
+//        locationManager.delegate = self
+//        locationManager.activityType = .automotiveNavigation
+//        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//
+//        locationManager.distanceFilter = 10
+//
+//        if CLLocationManager.locationServicesEnabled() {
+//            locationManager.startUpdatingLocation()
+//        }
+        
+        if let loc = locationManager.location {
+            setDistanceDisplay(loc.distance(from: location))
         }
     }
     
@@ -114,3 +145,11 @@ class CustomMarkerInfoWindowView: UIView {
     
 
 }
+
+//extension CustomMarkerInfoWindowView: CLLocationManagerDelegate {
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        if let loc = locationManager.location, let location = self.location {
+//            setDistanceDisplay(loc.distance(from: location))
+//        }
+//    }
+//}

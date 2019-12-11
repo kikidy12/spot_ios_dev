@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -16,15 +16,15 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-hb-Oyl" customClass="GradientDarkBlueView" customModule="fifteensecond" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6f-ow-NMd">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제 수단을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReY-RR-aGz">
                             <rect key="frame" x="40" y="50" width="171" height="20.5"/>
@@ -33,10 +33,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YNw-jL-6so">
-                            <rect key="frame" x="40" y="87.5" width="334" height="254"/>
+                            <rect key="frame" x="40" y="87.5" width="240" height="254"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-8U-cOk" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="334" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="56"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="핸드폰결제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1v-ZP-XDw">
                                             <rect key="frame" x="28" y="18.5" width="69.5" height="19.5"/>
@@ -45,7 +45,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phonePayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fOo-0L-SdH">
-                                            <rect key="frame" x="282" y="11" width="22" height="34"/>
+                                            <rect key="frame" x="188" y="11" width="22" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="22" id="bct-eD-dEb"/>
                                                 <constraint firstAttribute="height" constant="34" id="r14-Kz-8IX"/>
@@ -71,7 +71,7 @@
                                     </connections>
                                 </view>
                                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NE2-Sm-xeu" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="66" width="334" height="56"/>
+                                    <rect key="frame" x="0.0" y="66" width="240" height="56"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신용카드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSG-5x-1fH">
                                             <rect key="frame" x="28" y="18.5" width="55.5" height="19.5"/>
@@ -80,7 +80,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DQo-n3-BNV">
-                                            <rect key="frame" x="276" y="17" width="34" height="22"/>
+                                            <rect key="frame" x="182" y="17" width="34" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="b4V-0e-09C"/>
                                                 <constraint firstAttribute="width" constant="34" id="cN8-ch-Q1r"/>
@@ -106,7 +106,7 @@
                                     </connections>
                                 </view>
                                 <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5af-SP-VBp" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="132" width="334" height="56"/>
+                                    <rect key="frame" x="0.0" y="132" width="240" height="56"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버페이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cM-Le-vy6">
                                             <rect key="frame" x="28" y="18.5" width="69.5" height="19.5"/>
@@ -115,7 +115,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="naverPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eTi-3t-nPu">
-                                            <rect key="frame" x="281" y="17.5" width="23" height="21"/>
+                                            <rect key="frame" x="187" y="17.5" width="23" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="23" id="06z-oO-tJE"/>
                                                 <constraint firstAttribute="height" constant="21" id="nBF-bg-LXY"/>
@@ -141,7 +141,7 @@
                                     </connections>
                                 </view>
                                 <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-55-fBr" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="198" width="334" height="56"/>
+                                    <rect key="frame" x="0.0" y="198" width="240" height="56"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카카오페이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ek-Dy-4jZ">
                                             <rect key="frame" x="28" y="18.5" width="69.5" height="19.5"/>
@@ -150,7 +150,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaoPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="RHo-rI-9Rn">
-                                            <rect key="frame" x="280" y="17" width="24" height="22"/>
+                                            <rect key="frame" x="186" y="17" width="24" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="24" id="0WM-gr-xc7"/>
                                                 <constraint firstAttribute="height" constant="22" id="x84-qK-4Wq"/>

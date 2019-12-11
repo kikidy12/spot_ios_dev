@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -29,14 +29,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backImage1" translatesAutoresizingMaskIntoConstraints="NO" id="4rf-ac-nSt">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="1970"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="2004"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMe-Sa-Q5Z">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="1970"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="2004"/>
                     <color key="backgroundColor" name="darkblue91"/>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHI-PI-jj5">
-                    <rect key="frame" x="0.0" y="44" width="414" height="1926"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="2004"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upp-Dn-s9L">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="928"/>
