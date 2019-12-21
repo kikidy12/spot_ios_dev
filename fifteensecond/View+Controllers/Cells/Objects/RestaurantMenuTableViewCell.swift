@@ -66,8 +66,8 @@ class RestaurantMenuTableViewCell: UITableViewCell {
             salePriceLabel.isHidden = true
         }
         
-        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            titleImageView.kf.setImage(with: url)
+        if let str = menu.imageURL {
+            titleImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
     }
     
@@ -91,9 +91,8 @@ class RestaurantMenuTableViewCell: UITableViewCell {
             arrowLabel.isHidden = true
             salePriceLabel.isHidden = true
         }
-        
-        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            titleImageView.kf.setImage(with: url)
+        if let str = menu.imageURL {
+            titleImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
     }
     
@@ -117,9 +116,8 @@ class RestaurantMenuTableViewCell: UITableViewCell {
             arrowLabel.isHidden = true
             salePriceLabel.isHidden = true
         }
-        
-        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            titleImageView.kf.setImage(with: url)
+        if let str = menu.imageURL {
+            titleImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
     }
 }

@@ -37,9 +37,8 @@ class ShoppingMenuTableViewCell: UITableViewCell {
         else {
             isFavorBtn.isHidden = false
         }
-        
-        if let urlStr = mall.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            titleImageView.kf.setImage(with: url)
+        if let str = mall.imageURL {
+            titleImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
         
         nameLabel.text = mall.name

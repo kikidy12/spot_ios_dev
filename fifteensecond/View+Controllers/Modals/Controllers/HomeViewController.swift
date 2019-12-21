@@ -87,7 +87,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func show15SecondView(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            show(SpotMapViewController(), sender: nil)
+            AlertHandler().showAlert(vc: self, message: "서비스 준비중입니다.", okTitle: "확인")
+//            show(SpotMapViewController(), sender: nil)
         }
     }
     
@@ -112,7 +113,7 @@ class HomeViewController: UIViewController {
         self.navigationItem.titleView = titleImageView
         self.navigationItem.hidesBackButton = true
         
-        let rightBtn = UIBarButtonItem(image: UIImage(named: "mainSpotTicket"), style: .plain, target: self, action: #selector(showBuySpotTicketView))
+        let rightBtn = UIBarButtonItem(image: UIImage(named: "couponIcon"), style: .plain, target: self, action: #selector(showBuySpotTicketView))
         
         let leftBtn = UIBarButtonItem(title: "MAP", style: .plain, target: self, action: #selector(showMapView))
         

@@ -52,7 +52,7 @@ class PromotionTableViewCell: UITableViewCell {
     }
     
     func drawRestaurant(_ menu: RestaurantMenuDatas) {
-        nameLabel.text = menu.name
+        nameLabel.text = promotion.title
         disCountPriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
         priceLabel.text = "\(menu.price ?? 0)원"
         
@@ -70,14 +70,13 @@ class PromotionTableViewCell: UITableViewCell {
             arrowLabel.isHidden = true
             disCountPriceLabel.isHidden = true
         }
-        
-        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            menuImageView.kf.setImage(with: url)
+        if let str = menu.imageURL {
+            menuImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
     }
     
     func drawPlay(_ menu: PlayMenuDatas) {
-        nameLabel.text = menu.name
+        nameLabel.text = promotion.title
         disCountPriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
         priceLabel.text = "\(menu.price ?? 0)원"
         
@@ -96,13 +95,13 @@ class PromotionTableViewCell: UITableViewCell {
             disCountPriceLabel.isHidden = true
         }
         
-        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            menuImageView.kf.setImage(with: url)
+        if let str = menu.imageURL {
+            menuImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
     }
     
     func drawBeauty(_ menu: BeautyMenuDatas) {
-        nameLabel.text = menu.name
+        nameLabel.text = promotion.title
         disCountPriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
         priceLabel.text = "\(menu.price ?? 0)원"
         
@@ -121,8 +120,8 @@ class PromotionTableViewCell: UITableViewCell {
             disCountPriceLabel.isHidden = true
         }
         
-        if let urlStr = menu.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            menuImageView.kf.setImage(with: url)
+        if let str = menu.imageURL {
+            menuImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
     }
 }

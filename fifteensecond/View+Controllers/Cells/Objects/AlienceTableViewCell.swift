@@ -20,6 +20,21 @@ class AlienceTableViewCell: UITableViewCell {
     var play: PlayDatas!
     var beauty: BeautyDatas!
     
+    var isOpneStore:Bool = false {
+        didSet {
+            promotionStateView.subviews.forEach {
+                if let view = $0 as? CustomView  {
+                    view.backgroundColor = isOpneStore ? UIColor.green : UIColor.red
+                }
+                
+                if let label = $0 as? UILabel  {
+                    label.text = isOpneStore ? "이용가능" : "준비중"
+                }
+            }
+            hideView.isHidden = isOpneStore
+        }
+    }
+    
     
     @IBOutlet weak var discountLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -28,6 +43,8 @@ class AlienceTableViewCell: UITableViewCell {
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var promotionStateView: UIView!
+    @IBOutlet weak var hideView: UIView!
     
 
     override func awakeFromNib() {
@@ -44,6 +61,7 @@ class AlienceTableViewCell: UITableViewCell {
     
     func initView(type: AlienceTitles, data: NSDictionary) {
         self.type = type
+        
         switch type {
         case .restaurant:
             restaurant = RestaurantDatas(data)
@@ -111,6 +129,8 @@ class AlienceTableViewCell: UITableViewCell {
         commentLabel.text = restaurant.comment ?? "없음"
         discountLabel.text = "~\(restaurant.discountRate ?? 0)%"
         discountLabel.superview?.isHidden = false
+        
+//        isOpneStore = (restaurant.promotionCount > 0 || restaurant.isOpend)
     }
     
     func drawBeautyViews() {
@@ -122,6 +142,8 @@ class AlienceTableViewCell: UITableViewCell {
         commentLabel.text = beauty.comment ?? "없음"
         discountLabel.text = "~\(beauty.discountRate ?? 0)%"
         discountLabel.superview?.isHidden = false
+        
+//        isOpneStore = (beauty.promotionCount > 0 || beauty.isOpend)
     }
     
     func drawPlayViews() {
@@ -133,7 +155,10 @@ class AlienceTableViewCell: UITableViewCell {
         commentLabel.text = play.comment ?? "없음"
         discountLabel.text = "~\(play.discountRate ?? 0)%"
         discountLabel.superview?.isHidden = false
+        
+//        isOpneStore = (play.promotionCount > 0 || play.isOpend)
     }
+    
     
     func drawShoppingViews() {
         openTimeLabel.text = shopping.openTime
@@ -146,8 +171,8 @@ class AlienceTableViewCell: UITableViewCell {
     }
     
     func setImageView(urlStr: String?) {
-        if let urlStr = urlStr, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            titleImageView.kf.setImage(with: url)
+        if let str = urlStr {
+            titleImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
     }
 }

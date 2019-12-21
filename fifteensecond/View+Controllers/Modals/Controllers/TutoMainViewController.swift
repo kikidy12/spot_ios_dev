@@ -12,43 +12,44 @@ class TutoMainViewController: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var tutoImageView: UIImageView!
-    @IBOutlet weak var tutoLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
-    let tutoSet: [[String:UIImage]] = [
-        ["세상의 모든 할인 SPOT으로 한눈에":UIImage(named: "tuto2")!],
-        ["클릭 한번으로 내 주변\n\n먹거리, 놀이, 뷰티, 티켓, 15Seconds 정보를\n\n할인에서 결제까지!":UIImage(named: "tuto1")!],
-        ["내 주변 15Seconds\n\n위치  확인하기":UIImage(named: "tuto4")!],
-        ["15Seconds로 영화같은\n\n나만의 영상 촬영하기":UIImage(named: "tuto3")!],
-        ["촬영한 영상을 편집한 뒤\n\nSNS에 자랑하기":UIImage(named: "tuto5")!]
+    
+    let tuto8ImageList:[UIImage?] = [
+        UIImage(named: "Iphone8_1"), UIImage(named: "Iphone8_2"), UIImage(named: "Iphone8_3"), UIImage(named: "Iphone8_4"), UIImage(named: "Iphone8_5")
     ]
     
+    let tutoXImageList:[UIImage?] = [
+        UIImage(named: "IphoneX_1"), UIImage(named: "IphoneX_2"), UIImage(named: "IphoneX_3"), UIImage(named: "IphoneX_4"), UIImage(named: "IphoneX_5")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         pageControl.currentPage = 0
-        setText(tutoSet[0].keys.first!)
-        tutoImageView.image = tutoSet[0].values.first!
+        
+        if UIDevice.modelName.contains("10") || UIDevice.modelName.contains("11") {
+            tutoImageView.image = tutoXImageList[pageControl.currentPage]
+        }
+        else {
+            tutoImageView.image = tuto8ImageList[pageControl.currentPage]
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    func setText(_ str: String) {
-//        let attributedString = NSMutableAttributedString(string: str)
-//        let paragraphStyle = NSMutableParagraphStyle()
-//        paragraphStyle.lineSpacing = 10
-//        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-//        tutoLabel.attributedText = attributedString
-        tutoLabel.text = str
-    }
 
     @IBAction func showNextTutoEvent() {
         pageControl.currentPage = pageControl.currentPage + 1
-        setText(tutoSet[pageControl.currentPage].keys.first!)
-        tutoImageView.image = tutoSet[pageControl.currentPage].values.first!
+        
+        if UIDevice.modelName.contains("10") || UIDevice.modelName.contains("11") {
+            tutoImageView.image = tutoXImageList[pageControl.currentPage]
+        }
+        else {
+            tutoImageView.image = tuto8ImageList[pageControl.currentPage]
+        }
         
         if pageControl.currentPage == 4 {
             stackView.arrangedSubviews.forEach {

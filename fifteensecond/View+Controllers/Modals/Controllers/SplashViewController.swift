@@ -21,6 +21,7 @@ class SplashViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+
         locManager.delegate = self
         
         NotificationCenter.default.addObserver(self, selector:#selector(self.locCheck), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)

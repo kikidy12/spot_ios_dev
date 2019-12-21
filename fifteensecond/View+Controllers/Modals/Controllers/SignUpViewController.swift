@@ -86,15 +86,38 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func nextEvent(sender: UIButton) {
+        guard let name = nameTextField.text, !name.isEmpty else {
+            AlertHandler().showAlert(vc: self, message: "이름을 입력해주세요.", okTitle: "확인")
+            return
+        }
+        
+        guard let email = emailTextField.text, !email.isEmpty else {
+            AlertHandler().showAlert(vc: self, message: "이메일을 입력해주세요.", okTitle: "확인")
+            return
+        }
+        
+        guard let phoneCode = phoneCodeLabel.text, !phoneCode.isEmpty else {
+            AlertHandler().showAlert(vc: self, message: "국가코드를 선택해주세요.", okTitle: "확인")
+            return
+        }
+        
+        guard let phoneNum = phoneTextField.text, !name.isEmpty else {
+            AlertHandler().showAlert(vc: self, message: "전화번호를 입력해주세요.", okTitle: "확인")
+            return
+        }
+        
         if isNext, termCheck {
-            signUpParameters["name"] = nameTextField.text!
-            signUpParameters["email"] = emailTextField.text!
-            signUpParameters["national_code"] = phoneCodeLabel.text!
-            signUpParameters["phone_num"] = phoneTextField.text!
+            signUpParameters["name"] = name
+            signUpParameters["email"] = email
+            signUpParameters["national_code"] = phoneCode
+            signUpParameters["phone_num"] = phoneNum
             signUpParameters["provieder"] = provider
             signUpParameters["uid"] = snsUID
             
             smsAuth()
+        }
+        else {
+            AlertHandler().showAlert(vc: self, message: "약관에 동의해주세요.", okTitle: "확인")
         }
     }
     

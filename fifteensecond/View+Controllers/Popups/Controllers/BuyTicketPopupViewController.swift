@@ -22,8 +22,8 @@ class BuyTicketPopupViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = "\(ticket.name ?? "")" + " 구매처"
         sellerNameLabel.text = ticket.siteName
-        if let urlStr = ticket.siteImage, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            sellerImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholderImage"))
+        if let str = ticket.siteImage {
+            sellerImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
     }
     

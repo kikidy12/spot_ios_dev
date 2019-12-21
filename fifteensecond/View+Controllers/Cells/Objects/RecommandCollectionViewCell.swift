@@ -117,8 +117,12 @@ class RecommandCollectionViewCell: UICollectionViewCell {
     }
     
     func setImageView(urlStr: String?) {
-        if let urlStr = urlStr, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            titleImageView.kf.setImage(with: url)
+        if let str = urlStr {
+            titleImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
+        
+//        if let urlStr = urlStr, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
+//            titleImageView.kf.setImage(with: url)
+//        }
     }
 }

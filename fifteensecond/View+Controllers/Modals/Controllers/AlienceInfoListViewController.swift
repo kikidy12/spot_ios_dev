@@ -57,6 +57,10 @@ class AlienceInfoListViewController: UIViewController {
                 promotionView.isHidden = false
             }
             promotionTableView.reloadData()
+            
+            promotionTableViewHeightConstraint.constant = 300
+            self.view.layoutIfNeeded()
+            promotionTableViewHeightConstraint.constant = promotionTableView.contentSize.height
         }
     }
     
@@ -69,12 +73,17 @@ class AlienceInfoListViewController: UIViewController {
             menuView.isHidden = false
             nameLabel.text = restaurant.name
             commentLabel.text = restaurant.comment ?? "없음"
-            openTimeLabel.text = restaurant.openTime
+            openTimeLabel.text = restaurant.openTime ?? "개장시간"
+            
             categoryLabel.text = restaurant.category.name
-            addressLabel.text = restaurant.address
+            addressLabel.text = restaurant.address ?? "주소"
             linkURL = restaurant.linkUrl ?? ""
             imageList = restaurant.imageList
             alienceMenuTableView.reloadData()
+            
+            menuTableHeightConstraint.constant = 300
+            self.view.layoutIfNeeded()
+            menuTableHeightConstraint.constant = alienceMenuTableView.contentSize.height
         }
     }
     
@@ -87,12 +96,16 @@ class AlienceInfoListViewController: UIViewController {
             menuView.isHidden = false
             nameLabel.text = beauty.name
             commentLabel.text = beauty.comment ?? "없음"
-            openTimeLabel.text = beauty.openTime
+            openTimeLabel.text = beauty.openTime ?? "개장시간"
             categoryLabel.text = beauty.category.name
-            addressLabel.text = beauty.address
+            addressLabel.text = beauty.address ?? "주소"
             linkURL = beauty.linkUrl ?? ""
             imageList = beauty.imageList
             alienceMenuTableView.reloadData()
+            
+            menuTableHeightConstraint.constant = 300
+            self.view.layoutIfNeeded()
+            menuTableHeightConstraint.constant = alienceMenuTableView.contentSize.height
         }
     }
     
@@ -105,12 +118,16 @@ class AlienceInfoListViewController: UIViewController {
             menuView.isHidden = false
             nameLabel.text = play.name
             commentLabel.text = play.comment ?? "없음"
-            openTimeLabel.text = play.openTime
+            openTimeLabel.text = play.openTime ?? "개장시간"
             categoryLabel.text = play.category.name
-            addressLabel.text = play.address
+            addressLabel.text = play.address ?? "주소"
             linkURL = play.linkUrl ?? ""
             imageList = play.imageList
             alienceMenuTableView.reloadData()
+            
+            menuTableHeightConstraint.constant = 300
+            self.view.layoutIfNeeded()
+            menuTableHeightConstraint.constant = alienceMenuTableView.contentSize.height
         }
     }
     
@@ -380,9 +397,13 @@ extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if tableView == promotionTableView {
-            if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
-                promotionTableViewHeightConstraint.constant = cell.frame.height * CGFloat(promotionList.count)
-            }
+//            promotionTableViewHeightConstraint.constant = 300
+//            self.view.layoutIfNeeded()
+//            promotionTableViewHeightConstraint.constant = tableView.contentSize.height
+//            if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
+//                promotionTableViewHeightConstraint.constant = cell.frame.height * CGFloat(promotionList.count)
+//                promotionTableViewHeightConstraint.constant = tableView.contentSize.height
+//            }
         }
         else if tableView == hasFacilityMenuTableView {
             if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
@@ -394,22 +415,22 @@ extension AlienceInfoListViewController: UITableViewDelegate, UITableViewDataSou
                 }
             }
         }
-        else {
-            if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
-                if type == .restaurant {
-                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(restaurant.menuList.count) + 1
-                }
-                else if type == .play {
-                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(play.menuList.count)
-                }
-                else if type == .beauty {
-                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(beauty.menuList.count)
-                }
-                else if type == .shopping {
-                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(shopping.menuList.count)
-                }
-            }
-        }
+//        else {
+//            if indexPath.item == (tableView.indexPathsForVisibleRows!.last!).item {
+//                if type == .restaurant {
+//                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(restaurant.menuList.count) + 1
+//                }
+//                else if type == .play {
+//                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(play.menuList.count)
+//                }
+//                else if type == .beauty {
+//                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(beauty.menuList.count)
+//                }
+//                else if type == .shopping {
+//                    menuTableHeightConstraint.constant = cell.frame.height * CGFloat(shopping.menuList.count)
+//                }
+//            }
+//        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == promotionTableView {
@@ -491,8 +512,8 @@ extension AlienceInfoListViewController {
     func getAlienceInfo() {
         guard let id = alienceId else { return }
         var parameters = [
-            "latitude": locationManager.location!.coordinate.latitude,
-            "longitude": locationManager.location!.coordinate.longitude
+            "latitude": locationManager.location?.coordinate.latitude ?? 37.569508,
+            "longitude": locationManager.location?.coordinate.longitude ?? 126.993541
         ] as [String:Any]
         useView.isHidden = true
         switch type {

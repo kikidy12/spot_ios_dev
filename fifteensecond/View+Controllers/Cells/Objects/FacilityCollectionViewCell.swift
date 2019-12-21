@@ -22,8 +22,8 @@ class FacilityCollectionViewCell: UICollectionViewCell {
     func initView(_ data: FacilityDatas) {
         facility = data
         
-        if let urlStr = facility.imgUrl, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            imageView.kf.setImage(with: url)
+        if let str = facility.imgUrl {
+            imageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
         
         nameLabel.text = facility.name

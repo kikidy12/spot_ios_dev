@@ -25,9 +25,12 @@ class CouponDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        productImageView.kf.setImage(with: setImageView(urlStr: coupon.goodsImgUrl))
-        barcodeImageView.kf.setImage(with: setImageView(urlStr: coupon.barcodeUrl))
+        if let str = coupon.goodsImgUrl {
+            productImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
+        }
+        if let str = coupon.barcodeUrl {
+            barcodeImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
+        }
         
         storeNameLabel.text = "\(coupon.brandName ?? "미확인")"
         storeName2Label.text = "\(coupon.brandName ?? "미확인")"

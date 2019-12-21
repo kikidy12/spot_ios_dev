@@ -18,8 +18,6 @@ class AlienceInfoImageCollectionViewCell: UICollectionViewCell {
     }
 
     func initView(imageStr: String) {
-        if let encoded = imageStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            coverImageView.kf.setImage(with: url)
-        }
+        coverImageView.kf.setImage(with: URL(string: imageStr), placeholder: UIImage(named: "placeholderImage"))
     }
 }

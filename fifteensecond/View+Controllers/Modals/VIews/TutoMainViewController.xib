@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,6 @@
                 <outlet property="pageControl" destination="5Wt-pr-Cap" id="1tF-Y0-slH"/>
                 <outlet property="stackView" destination="8cm-co-Sw3" id="xnj-pc-3O3"/>
                 <outlet property="tutoImageView" destination="1Pg-nq-bDU" id="T90-az-K3T"/>
-                <outlet property="tutoLabel" destination="YNL-aK-E8S" id="9oy-OE-eDA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,16 +26,8 @@
                     <rect key="frame" x="152" y="81.5" width="71" height="37"/>
                     <color key="currentPageIndicatorTintColor" name="darkishPink"/>
                 </pageControl>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNL-aK-E8S">
-                    <rect key="frame" x="61.5" y="148" width="252" height="38"/>
-                    <string key="text">클릭 한 번으로 내주변 먹거리, 
-축제 , 호텔 정보를 결제부터 이용까지!</string>
-                    <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".AppleKoreanFont" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuto1" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-nq-bDU">
-                    <rect key="frame" x="0.0" y="267" width="375" height="400"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-nq-bDU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUF-Du-Ayx" customClass="GradientHorizentalView" customModule="fifteensecond" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="620" width="375" height="47"/>
@@ -90,26 +81,22 @@
                 <constraint firstItem="8cm-co-Sw3" firstAttribute="trailing" secondItem="xUF-Du-Ayx" secondAttribute="trailing" id="1NK-HM-OBS"/>
                 <constraint firstItem="5Wt-pr-Cap" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9s5-Yw-LtR"/>
                 <constraint firstItem="8cm-co-Sw3" firstAttribute="bottom" secondItem="xUF-Du-Ayx" secondAttribute="bottom" id="BpK-9I-OCZ"/>
-                <constraint firstItem="YNL-aK-E8S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="F6Y-kd-0sD"/>
                 <constraint firstItem="8cm-co-Sw3" firstAttribute="leading" secondItem="xUF-Du-Ayx" secondAttribute="leading" id="MxQ-sI-mQe"/>
-                <constraint firstItem="1Pg-nq-bDU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RMD-ea-MTt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xUF-Du-Ayx" secondAttribute="trailing" id="SF4-zY-feE"/>
+                <constraint firstItem="1Pg-nq-bDU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Uaa-39-B1O"/>
                 <constraint firstItem="5Wt-pr-Cap" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="30%" id="UkX-vl-xIe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xUF-Du-Ayx" secondAttribute="bottom" id="VcJ-Zl-CjY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Pg-nq-bDU" secondAttribute="trailing" id="YjV-3B-jCG"/>
                 <constraint firstItem="xUF-Du-Ayx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a9r-3P-KFO"/>
-                <constraint firstItem="1Pg-nq-bDU" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="60%" id="cqy-u4-o7c"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1Pg-nq-bDU" secondAttribute="bottom" id="dtY-m5-QJ8"/>
-                <constraint firstItem="YNL-aK-E8S" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="50%" id="nTt-0j-tNv"/>
                 <constraint firstItem="1Pg-nq-bDU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="v6E-BC-y7g"/>
                 <constraint firstItem="8cm-co-Sw3" firstAttribute="top" secondItem="xUF-Du-Ayx" secondAttribute="top" id="yQX-tj-hIu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+            <point key="canvasLocation" x="136.80000000000001" y="85.007496251874073"/>
         </view>
     </objects>
     <resources>
-        <image name="tuto1" width="278" height="451"/>
         <namedColor name="darkblue">
             <color red="0.11764705882352941" green="0.13725490196078433" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

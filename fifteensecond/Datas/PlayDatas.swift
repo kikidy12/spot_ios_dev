@@ -23,6 +23,8 @@ class PlayDatas: NSObject {
     var promotionCount: Int!
     var discountRate: Int!
     
+    var isOpend: Bool = false
+    
     var category = CategoryDatas()
     
     var imageList = [ImageDatas]()
@@ -54,10 +56,39 @@ class PlayDatas: NSObject {
             
             if oStr == "00:00", cStr == "00:00" {
                 openTime = "24시간"
+                isOpend = true
             }
             else {
                 openTime = "\(oStr) - \(cStr)"
+                
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "HH:mm"
+                
+                let oDate = dateformatter.date(from: String(oStr))!
+                let cDate = dateformatter.date(from: String(cStr))!
+                
+                let oHour = Calendar.current.component(.hour, from: oDate)
+                let cHour = Calendar.current.component(.hour, from: cDate)
+                let currentHour = Calendar.current.component(.hour, from: Date())
+                
+                let oMin = Calendar.current.component(.minute, from: oDate)
+                let cMin = Calendar.current.component(.minute, from: cDate)
+                let currentMin = Calendar.current.component(.minute, from: Date())
+                
+                if oHour < currentHour, cHour > currentHour {
+                    isOpend = true
+                }
+                else if oHour == currentHour, oMin < currentMin {
+                    isOpend = true
+                }
+                else if cHour == currentHour, cMin > currentMin {
+                    isOpend = true
+                }
+                else {
+                    isOpend = false
+                }
             }
+            
         }
         
         if let array = data["play_menu"] as? NSArray {

@@ -45,13 +45,15 @@ class CouponsViewController: UIViewController {
     
     
     @IBAction func showBuyTicketView() {
-        let vc = BuySpotTicketViewController()
-        show(vc, sender: nil)
+        AlertHandler().showAlert(vc: self, message: "서비스 준비중입니다.", okTitle: "확인")
+//        let vc = BuySpotTicketViewController()
+//        show(vc, sender: nil)
     }
     
     @IBAction func showCheckSpotCodeViewEvent() {
-        let vc = CheckSpotCodeViewController()
-        show(vc, sender: nil)
+        AlertHandler().showAlert(vc: self, message: "서비스 준비중입니다.", okTitle: "확인")
+//        let vc = CheckSpotCodeViewController()
+//        show(vc, sender: nil)
     }
 }
 

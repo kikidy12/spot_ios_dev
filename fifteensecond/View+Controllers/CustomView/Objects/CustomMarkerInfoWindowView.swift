@@ -138,9 +138,12 @@ class CustomMarkerInfoWindowView: UIView {
     }
     
     func setImageView(urlStr: String?) {
-        if let urlStr = urlStr, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            alienceImageView.kf.setImage(with: url)
+        if let str = urlStr {
+            alienceImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
+//        if let urlStr = urlStr, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: encoded) {
+//            alienceImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholderImage"))
+//        }
     }
     
 

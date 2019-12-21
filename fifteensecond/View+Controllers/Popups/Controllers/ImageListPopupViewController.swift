@@ -24,11 +24,11 @@ class ImageListPopupViewController: UIViewController {
         imageCollectionView.dataSource = self
         imageCollectionView.register(UINib(nibName: "DetailImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imageCell")
     }
-
     
     override func viewWillAppear(_ animated: Bool) {
         imageCollectionView.reloadData()
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if !isScrolled && imageCollectionView.visibleCells.count > 0 {

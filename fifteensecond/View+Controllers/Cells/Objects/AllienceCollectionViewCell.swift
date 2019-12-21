@@ -22,8 +22,12 @@ class AllienceCollectionViewCell: UICollectionViewCell {
     
     func initView(_ data: EventDatas) {
         event = data
-        if let urlStr = event.imgaeURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            imageView.kf.setImage(with: url)
+        if let str = event.imgaeURL {
+            imageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
+        
+//        if let urlStr = event.imgaeURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
+//            imageView.kf.setImage(with: url)
+//        }
     }
 }

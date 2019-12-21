@@ -32,8 +32,9 @@ class CouponTableViewCell: UITableViewCell {
     
     func initView(_ data: CouponDatas) {
         coupon = data
-        
-        brandImageView.kf.setImage(with: setImageView(urlStr: coupon.brandImgUrl))
+        if let str = coupon.brandImgUrl {
+            brandImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
+        }
         brandNameLabel.text = "\(coupon.brandName ?? "미확인") 기프티콘"
         goodsNameLabel.text = "\(coupon.goodsName ?? "미확인")"
         endDateLabel.text = "유효기간 \(coupon.limitDay.dateToString(formatter: "yyyy년 mm월 dd일"))"

@@ -107,12 +107,14 @@ extension UIViewController {
     }
     
     func phoneCall(_ phoneNum: String) {
-        guard let url = URL(string: "tel://\(phoneNum)") else { return }
+        let str = phoneNum.components(separatedBy: [" ", "\n"]).joined()
+        guard let url = URL(string: "tel://\(str)") else { return }
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-        
-        
+        else {
+            print("전화불가")
+        }
     }
     
     func openNaverNavi(lat: Double, lng: Double) {

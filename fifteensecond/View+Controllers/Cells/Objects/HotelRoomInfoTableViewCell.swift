@@ -49,9 +49,8 @@ class HotelRoomInfoTableViewCell: UITableViewCell {
         room = data
         
         nameLabel.text = room.name
-        
-        if let urlStr = room.imageList.first?.imageURL, let encoded = urlStr.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) {
-            titleImageView.kf.setImage(with: url)
+        if let str = room.imageList.first?.imageURL {
+            titleImageView.kf.setImage(with: URL(string: str), placeholder: UIImage(named: "placeholderImage"))
         }
         
         if let sleep = room.sleepRoomInfo {
