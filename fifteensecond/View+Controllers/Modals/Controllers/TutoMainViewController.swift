@@ -27,8 +27,8 @@ class TutoMainViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         pageControl.currentPage = 0
-        
-        if UIDevice.modelName.contains("10") || UIDevice.modelName.contains("11") {
+        print(UIDevice.modelName)
+        if UIDevice.modelName.contains("X") || UIDevice.modelName.contains("11") {
             tutoImageView.image = tutoXImageList[pageControl.currentPage]
         }
         else {
