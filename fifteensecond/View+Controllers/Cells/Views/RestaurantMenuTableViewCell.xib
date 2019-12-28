@@ -14,7 +14,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="162" id="KGk-i7-Jjw" customClass="RestaurantMenuTableViewCell" customModule="fifteensecond" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="395" height="162"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="395" height="162"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -86,16 +86,16 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="qml-na-QaJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="3fG-72-Hzn"/>
                     <constraint firstAttribute="trailing" secondItem="u3n-g1-5vG" secondAttribute="trailing" constant="21" id="9Bw-hM-zd4"/>
                     <constraint firstItem="u3n-g1-5vG" firstAttribute="leading" secondItem="qkV-de-GzT" secondAttribute="trailing" constant="15" id="Eeh-hN-SdQ"/>
                     <constraint firstItem="YRs-80-vOH" firstAttribute="leading" secondItem="gLg-z8-Ba4" secondAttribute="trailing" constant="10" id="FtL-C0-Tmn"/>
                     <constraint firstItem="gLg-z8-Ba4" firstAttribute="bottom" secondItem="0VM-zy-KAS" secondAttribute="bottom" id="KtX-Th-xg6"/>
-                    <constraint firstAttribute="bottom" secondItem="qml-na-QaJ" secondAttribute="bottom" constant="11" id="NF0-9F-mSd"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qml-na-QaJ" secondAttribute="bottom" constant="15" id="Oio-p9-Ig5"/>
                     <constraint firstItem="fJC-YE-wP1" firstAttribute="leading" secondItem="0VM-zy-KAS" secondAttribute="leading" id="T3w-El-ew9"/>
                     <constraint firstItem="u3n-g1-5vG" firstAttribute="centerY" secondItem="qkV-de-GzT" secondAttribute="centerY" id="T5z-S8-q0f"/>
                     <constraint firstItem="gLg-z8-Ba4" firstAttribute="leading" secondItem="Srj-W6-FOD" secondAttribute="trailing" constant="5" id="TKG-R5-eft"/>
                     <constraint firstItem="fJC-YE-wP1" firstAttribute="centerY" secondItem="0VM-zy-KAS" secondAttribute="centerY" id="Y3A-AG-wvU"/>
+                    <constraint firstItem="qml-na-QaJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ygy-tC-2yw"/>
                     <constraint firstItem="fJC-YE-wP1" firstAttribute="trailing" secondItem="0VM-zy-KAS" secondAttribute="trailing" id="aWZ-AQ-LR1"/>
                     <constraint firstItem="YRs-80-vOH" firstAttribute="trailing" secondItem="u3n-g1-5vG" secondAttribute="trailing" id="cKV-Wp-4bq"/>
                     <constraint firstItem="0VM-zy-KAS" firstAttribute="leading" secondItem="qml-na-QaJ" secondAttribute="trailing" constant="10" id="e4Q-bF-kDe"/>
@@ -103,11 +103,11 @@
                     <constraint firstItem="0VM-zy-KAS" firstAttribute="top" secondItem="qkV-de-GzT" secondAttribute="bottom" constant="12" id="keV-P4-peT"/>
                     <constraint firstItem="YRs-80-vOH" firstAttribute="centerY" secondItem="0VM-zy-KAS" secondAttribute="centerY" id="lae-xq-enT"/>
                     <constraint firstItem="Srj-W6-FOD" firstAttribute="leading" secondItem="0VM-zy-KAS" secondAttribute="trailing" constant="5" id="mDN-9N-Lgy"/>
-                    <constraint firstItem="qml-na-QaJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="qo1-8j-bLJ"/>
                     <constraint firstItem="qkV-de-GzT" firstAttribute="leading" secondItem="qml-na-QaJ" secondAttribute="trailing" constant="10" id="qoO-cv-keO"/>
                     <constraint firstItem="qkV-de-GzT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="sJ7-8D-O7V"/>
                     <constraint firstItem="Srj-W6-FOD" firstAttribute="bottom" secondItem="0VM-zy-KAS" secondAttribute="bottom" id="sbq-ZR-DOb"/>
                     <constraint firstItem="Srj-W6-FOD" firstAttribute="top" secondItem="0VM-zy-KAS" secondAttribute="top" id="tFR-PI-Cue"/>
+                    <constraint firstItem="qml-na-QaJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="uCA-ZX-2hu"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

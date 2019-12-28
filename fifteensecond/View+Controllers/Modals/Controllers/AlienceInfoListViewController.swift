@@ -80,7 +80,7 @@ class AlienceInfoListViewController: UIViewController {
             linkURL = restaurant.linkUrl ?? ""
             imageList = restaurant.imageList
             alienceMenuTableView.reloadData()
-            
+
             menuTableHeightConstraint.constant = 300
             self.view.layoutIfNeeded()
             menuTableHeightConstraint.constant = alienceMenuTableView.contentSize.height
@@ -242,6 +242,11 @@ class AlienceInfoListViewController: UIViewController {
         bottomView.backgroundColor = .veryLightPink
         alienceMenuTableView.tableFooterView = bottomView
         promotionTableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: "promotionCell")
+        alienceMenuTableView.estimatedRowHeight = 100
+        alienceMenuTableView.rowHeight = UITableView.automaticDimension
+        
+        promotionTableView.estimatedRowHeight = 100
+        promotionTableView.rowHeight = UITableView.automaticDimension
         promotionTableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 0.001))
         getAlienceInfo()
     }

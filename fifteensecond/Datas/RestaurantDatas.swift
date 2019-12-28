@@ -77,18 +77,32 @@ class RestaurantDatas: NSObject {
                 let cMin = Calendar.current.component(.minute, from: cDate)
                 let currentMin = Calendar.current.component(.minute, from: Date())
                 
-                if oHour < currentHour, cHour > currentHour {
-                    isOpend = true
-                }
-                else if oHour == currentHour, oMin < currentMin {
-                    isOpend = true
-                }
-                else if cHour == currentHour, cMin > currentMin {
-                    isOpend = true
+                if oHour > cHour {
+                    if currentHour > cHour, oHour < currentHour {
+                        isOpend = true
+                    }
+                    else if currentHour < cHour {
+                        isOpend = true
+                    }
+                    else {
+                         isOpend = false
+                    }
                 }
                 else {
-                    isOpend = false
+                    if oHour < currentHour, cHour > currentHour {
+                        isOpend = true
+                    }
+                    else if oHour == currentHour, oMin < currentMin {
+                        isOpend = true
+                    }
+                    else if cHour == currentHour, cMin > currentMin {
+                        isOpend = true
+                    }
+                    else {
+                        isOpend = false
+                    }
                 }
+                
             }
         }
         

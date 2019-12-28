@@ -31,7 +31,7 @@ class AlienceMapViewController: UIViewController {
                 let marker = GMSMarker()
                 marker.position = $0.location
                 marker.map = mapView
-                if $0.promotionCount != 0 || !$0.isOpend {
+                if $0.promotionCount != 0, $0.isOpend {
                     marker.icon = #imageLiteral(resourceName: "restaurantMarker")
                 }
                 else {
@@ -104,7 +104,7 @@ class AlienceMapViewController: UIViewController {
                 let marker = GMSMarker()
                 marker.position = $0.location
                 marker.map = mapView
-                if $0.promotionCount != 0 || !$0.isOpend {
+                if $0.promotionCount != 0, $0.isOpend {
                     marker.icon = #imageLiteral(resourceName: "playMapIcon")
                 }
                 else {
@@ -122,7 +122,7 @@ class AlienceMapViewController: UIViewController {
                     let marker = GMSMarker()
                     marker.position = $0.location
                     marker.map = mapView
-                    if $0.promotionCount != 0 || !$0.isOpend {
+                    if $0.promotionCount != 0, $0.isOpend {
                         marker.icon = #imageLiteral(resourceName: "beautyMapIcon")
                     }
                     else {
