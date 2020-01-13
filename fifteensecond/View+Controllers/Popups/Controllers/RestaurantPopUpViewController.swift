@@ -67,6 +67,7 @@ class RestaurantPopUpViewController: UIViewController {
     
     @IBAction func checkCode() {
         guard !numberfirstView.text!.isEmpty, !numbersecondView.text!.isEmpty, !numberthirdView.text!.isEmpty, !numberfourthView.text!.isEmpty, !numberfifthView.text!.isEmpty, !numbersixthView.text!.isEmpty else {
+            AlertHandler().showAlert(vc: self, message: "코드를 입력해 주세요.", okTitle: "확인")
             return
         }
         usePromotion()
@@ -83,7 +84,16 @@ extension RestaurantPopUpViewController {
             "promotion_id": promotion.id!
         ] as [String: Any]
         
+        self.numberfirstView.text = ""
+        self.numbersecondView.text = ""
+        self.numberthirdView.text = ""
+        self.numberfourthView.text = ""
+        self.numberfifthView.text = ""
+        self.numbersixthView.text = ""
+        
         ServerUtil.shared.postPromotionLogs(self, parameters: parameters) { (success, dict, message) in
+            
+            
             guard success else {
                 AlertHandler.shared.showAlert(vc: self, message: message ?? "error", okTitle: "확인")
                 return

@@ -30,7 +30,17 @@ class NoticeTableViewCell: UITableViewCell {
         notice = data
         
         titleLabel.text = notice.title
-        dateLabel.text = DateFormatter().showDateStr(notice.createdAt, style: .dot)
+        
+        if let createdAt = notice.createdAt {
+            print(createdAt)
+            let year = Calendar.current.component(.year, from: createdAt)
+            let month = Calendar.current.component(.month, from: createdAt)
+            let day = Calendar.current.component(.day, from: createdAt)
+            print(year)
+            print(month)
+            print(day)
+            dateLabel.text = "\(year).\(month).\(day)"
+        }
         
     }
 }

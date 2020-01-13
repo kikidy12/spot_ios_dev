@@ -42,5 +42,8 @@ class CouponDatas: NSObject {
         if let str = data["recive_date"] as? String {
             reciveDate = str.stringToDate(formatter: "yyyy-MM-dd")
         }
+        
+        print(limitDay)
+        print(reciveDate)
     }
 }

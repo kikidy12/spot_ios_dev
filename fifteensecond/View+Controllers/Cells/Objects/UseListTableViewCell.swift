@@ -24,8 +24,16 @@ class UseListTableViewCell: UITableViewCell {
         spotTicketUseInfo = data
         
         addressLabel.text = spotTicketUseInfo.spot.address
-        useTimeLabel.text = "이용일자 \(DateFormatter().showDateStr(spotTicketUseInfo.createAt, style: .dot))"
-        
+        if let createdAt = spotTicketUseInfo.createAt {
+            print(createdAt)
+            let year = Calendar.current.component(.year, from: createdAt)
+            let month = Calendar.current.component(.month, from: createdAt)
+            let day = Calendar.current.component(.day, from: createdAt)
+            print(year)
+            print(month)
+            print(day)
+            useTimeLabel.text = "이용일자 \(year).\(month).\(day)"
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

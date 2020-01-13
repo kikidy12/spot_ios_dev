@@ -94,6 +94,7 @@ class TicketKindDatas: NSObject {
     var id: Int!
     var name: String!
     var price: Int!
+    var salePrice: Int!
     
     override init() {
         
@@ -103,6 +104,7 @@ class TicketKindDatas: NSObject {
         id = data["id"] as? Int
         name = data["name"] as? String
         price = data["price"] as? Int
+        salePrice = data["sale_price"] as? Int
     }
 }
 

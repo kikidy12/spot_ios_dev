@@ -53,18 +53,17 @@ class PromotionTableViewCell: UITableViewCell {
     
     func drawRestaurant(_ menu: RestaurantMenuDatas) {
         nameLabel.text = promotion.title
-        disCountPriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
-        priceLabel.text = "\(menu.price ?? 0)원"
-        
+        priceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
+        disCountPriceLabel.text = "\(numberFormatter.string(for: menu.salePrice) ?? "0")원"
         if let rate = menu.discountRate {
             cancelLineView.isHidden = false
             arrowLabel.isHidden = false
-            var discountPrice = 0
-            if let price = menu.price, price > 0 {
-                discountPrice = price - Int(Double(price * rate) / 100)
-            }
+//            var discountPrice = 0
+//            if let price = menu.price, price > 0 {
+//                discountPrice = price - Int(Double(price * rate) / 100)
+//            }
+//            disCountPriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
             discountRateLabel.text = "\(rate)%"
-            disCountPriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
         }
         else {
             arrowLabel.isHidden = true
@@ -77,18 +76,18 @@ class PromotionTableViewCell: UITableViewCell {
     
     func drawPlay(_ menu: PlayMenuDatas) {
         nameLabel.text = promotion.title
-        disCountPriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
-        priceLabel.text = "\(menu.price ?? 0)원"
+        priceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
+        disCountPriceLabel.text = "\(numberFormatter.string(for: menu.salePrice) ?? "0")원"
         
         if let rate = menu.discountRate {
             cancelLineView.isHidden = false
             arrowLabel.isHidden = false
-            var discountPrice = 0
-            if let price = menu.price, price > 0 {
-                discountPrice = price - Int(Double(price * rate) / 100)
-            }
+//            var discountPrice = 0
+//            if let price = menu.price, price > 0 {
+//                discountPrice = price - Int(Double(price * rate) / 100)
+//            }
+//            disCountPriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
             discountRateLabel.text = "\(rate)%"
-            disCountPriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
         }
         else {
             arrowLabel.isHidden = true
@@ -102,18 +101,18 @@ class PromotionTableViewCell: UITableViewCell {
     
     func drawBeauty(_ menu: BeautyMenuDatas) {
         nameLabel.text = promotion.title
-        disCountPriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
-        priceLabel.text = "\(menu.price ?? 0)원"
-        
+        priceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
+        disCountPriceLabel.text = "\(numberFormatter.string(for: menu.salePrice) ?? "0")원"
         if let rate = menu.discountRate {
             cancelLineView.isHidden = false
             arrowLabel.isHidden = false
-            var discountPrice = 0
-            if let price = menu.price, price > 0 {
-                discountPrice = price - Int(Double(price * rate) / 100)
-            }
+//            var discountPrice = 0
+//            if let price = menu.price, price > 0 {
+//                discountPrice = price - Int(Double(price * rate) / 100)
+//            }
+//            disCountPriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
+            
             discountRateLabel.text = "\(rate)%"
-            disCountPriceLabel.text = "\(numberFormatter.string(for: discountPrice) ?? "0")원"
         }
         else {
             arrowLabel.isHidden = true

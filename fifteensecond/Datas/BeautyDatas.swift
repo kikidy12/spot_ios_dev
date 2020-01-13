@@ -61,18 +61,12 @@ class BeautyDatas: NSObject {
             else {
                 openTime = "\(oStr) - \(cStr)"
                 
-                let dateformatter = DateFormatter()
-                dateformatter.dateFormat = "HH:mm"
-                
-                let oDate = dateformatter.date(from: String(oStr))!
-                let cDate = dateformatter.date(from: String(cStr))!
-                
-                let oHour = Calendar.current.component(.hour, from: oDate)
-                let cHour = Calendar.current.component(.hour, from: cDate)
+                let oHour = Int(oStr.split(separator: ":").first!)!
+                let cHour = Int(cStr.split(separator: ":").first!)!
                 let currentHour = Calendar.current.component(.hour, from: Date())
                 
-                let oMin = Calendar.current.component(.minute, from: oDate)
-                let cMin = Calendar.current.component(.minute, from: cDate)
+                let oMin = Int(oStr.split(separator: ":").last!)!
+                let cMin = Int(cStr.split(separator: ":").last!)!
                 let currentMin = Calendar.current.component(.minute, from: Date())
                 
                 if oHour < currentHour, cHour > currentHour {
@@ -118,6 +112,7 @@ class BeautyMenuDatas: NSObject {
     var isMain = false
     var imageURL: String!
     var discountRate: Int!
+    var salePrice: Int!
     
     override init() {
         
@@ -129,6 +124,7 @@ class BeautyMenuDatas: NSObject {
         name = data["name"] as? String
         isMain = data["is_main"] as? Bool ?? false
         discountRate = data["discount_rate"] as? Int
+        salePrice = data["sale_price"] as? Int
         
         if let dict = data["beauty_menu_images"] as? NSDictionary {
             imageURL = dict["img_url"] as? String
