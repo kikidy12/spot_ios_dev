@@ -48,7 +48,7 @@ class RestaurantMenuTableViewCell: UITableViewCell {
     func drawRestaurant(_ menu: RestaurantMenuDatas) {
         nameLabel.text = menu.name
         menu.isMain ? (mainBtn.isHidden = false) : (mainBtn.isHidden = true)
-        salePriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
+        salePriceLabel.text = "\(numberFormatter.string(for: menu.salePrice) ?? "0")원"
         priceLabel.text = "\(menu.price ?? 0)원"
         
         if let rate = menu.discountRate {
@@ -74,7 +74,6 @@ class RestaurantMenuTableViewCell: UITableViewCell {
     func drawBeauty(_ menu: BeautyMenuDatas) {
         nameLabel.text = menu.name
         menu.isMain ? (mainBtn.isHidden = false) : (mainBtn.isHidden = true)
-        salePriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
         priceLabel.text = "\(menu.price ?? 0)원"
         salePriceLabel.text = "\(numberFormatter.string(for: menu.salePrice) ?? "0")원"
         if let rate = menu.discountRate {
@@ -99,7 +98,6 @@ class RestaurantMenuTableViewCell: UITableViewCell {
     func drawPlay(_ menu: PlayMenuDatas) {
         nameLabel.text = menu.name
         menu.isMain ? (mainBtn.isHidden = false) : (mainBtn.isHidden = true)
-        salePriceLabel.text = "\(numberFormatter.string(for: menu.price) ?? "0")원"
         priceLabel.text = "\(menu.price ?? 0)원"
         salePriceLabel.text = "\(numberFormatter.string(for: menu.salePrice) ?? "0")원"
         if let rate = menu.discountRate {
