@@ -121,9 +121,15 @@ class SettingViewController: UIViewController {
         _ = try? isUpdateAvailable { (update, error) in
             if let error = error {
                 print("error: ",error)
-                AlertHandler.shared.showAlert(vc: self, message: "준비중입니다.", okTitle: "확인")
             } else if let update = update {
-                print(update)
+                DispatchQueue.main.async {
+                    if update, let url = URL(string: "itms-apps://itunes.apple.com/app/apple-store/id1481224516?mt=8"),UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                    else {
+                        AlertHandler().showAlert(vc: self, message: "최신버전입니다.", okTitle: "확인")
+                    }
+                }
             }
         }
     }

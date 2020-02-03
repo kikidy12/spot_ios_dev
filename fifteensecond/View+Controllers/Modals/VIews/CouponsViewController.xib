@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CouponsViewController" customModule="fifteensecond" customModuleProvider="target">
             <connections>
                 <outlet property="couponTableView" destination="hQs-jo-zuy" id="elb-ud-tuE"/>
+                <outlet property="emptyCouponView" destination="svo-SL-9ft" id="e0A-S3-i8p"/>
                 <outlet property="hasTicketCountLabel" destination="aFo-nk-v3I" id="tXq-mF-40c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -108,11 +109,45 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※유효기간 주의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bro-Qr-m4H">
+                            <rect key="frame" x="203" y="208.5" width="97" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <color key="textColor" name="darkishPink"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hQs-jo-zuy">
                             <rect key="frame" x="21" y="243.5" width="278" height="324.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svo-SL-9ft" customClass="CustomView" customModule="fifteensecond" customModuleProvider="target">
+                            <rect key="frame" x="20" y="243.5" width="280" height="88"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용 가능한 쿠폰이 없습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgW-VA-rz2">
+                                    <rect key="frame" x="56" y="35" width="168" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" name="veryLightPinkThree"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="dgW-VA-rz2" firstAttribute="centerX" secondItem="svo-SL-9ft" secondAttribute="centerX" id="AWG-IS-bUO"/>
+                                <constraint firstAttribute="height" constant="88" id="FoZ-2v-RUe"/>
+                                <constraint firstItem="dgW-VA-rz2" firstAttribute="centerY" secondItem="svo-SL-9ft" secondAttribute="centerY" id="cta-Hd-Zsl"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="lightGreyBlue"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -123,12 +158,17 @@
                         <constraint firstItem="GXv-RG-XbY" firstAttribute="top" secondItem="g5p-mS-y2j" secondAttribute="bottom" constant="50" id="PRa-rH-7i6"/>
                         <constraint firstItem="g5p-mS-y2j" firstAttribute="leading" secondItem="qrR-Pc-HHg" secondAttribute="leading" constant="22" id="SOg-7a-Nug"/>
                         <constraint firstItem="b72-Po-gbh" firstAttribute="centerY" secondItem="WrX-kt-9S3" secondAttribute="centerY" id="WIC-44-XT8"/>
+                        <constraint firstItem="Bro-Qr-m4H" firstAttribute="centerY" secondItem="GXv-RG-XbY" secondAttribute="centerY" id="bBy-jj-JJf"/>
                         <constraint firstItem="g5p-mS-y2j" firstAttribute="top" secondItem="b72-Po-gbh" secondAttribute="bottom" constant="15" id="eXA-rq-yao"/>
                         <constraint firstItem="hQs-jo-zuy" firstAttribute="top" secondItem="GXv-RG-XbY" secondAttribute="bottom" constant="15" id="gsP-HN-d0c"/>
+                        <constraint firstAttribute="trailing" secondItem="svo-SL-9ft" secondAttribute="trailing" constant="20" id="icP-i1-0xO"/>
                         <constraint firstAttribute="trailing" secondItem="b72-Po-gbh" secondAttribute="trailing" constant="22" id="kyr-nE-mO5"/>
+                        <constraint firstItem="svo-SL-9ft" firstAttribute="leading" secondItem="qrR-Pc-HHg" secondAttribute="leading" constant="20" id="p6h-dn-fUh"/>
+                        <constraint firstAttribute="trailing" secondItem="Bro-Qr-m4H" secondAttribute="trailing" constant="20" id="qRo-bo-ZTs"/>
                         <constraint firstAttribute="trailing" secondItem="hQs-jo-zuy" secondAttribute="trailing" constant="21" id="qu5-2C-s1e"/>
                         <constraint firstItem="hQs-jo-zuy" firstAttribute="leading" secondItem="qrR-Pc-HHg" secondAttribute="leading" constant="21" id="uLh-4C-bmB"/>
                         <constraint firstItem="WrX-kt-9S3" firstAttribute="top" secondItem="qrR-Pc-HHg" secondAttribute="top" constant="50" id="w9X-5w-rD1"/>
+                        <constraint firstItem="svo-SL-9ft" firstAttribute="top" secondItem="GXv-RG-XbY" secondAttribute="bottom" constant="15" id="ytw-L8-sj1"/>
                     </constraints>
                 </view>
             </subviews>
@@ -164,8 +204,14 @@
         <namedColor name="darkishPink">
             <color red="0.92941176470588238" green="0.21176470588235294" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="lightGreyBlue">
+            <color red="0.6470588235294118" green="0.66666666666666663" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="steel">
             <color red="0.46666666666666667" green="0.49019607843137253" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="veryLightPinkThree">
+            <color red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white10">
             <color red="1" green="1" blue="1" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>

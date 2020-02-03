@@ -339,6 +339,8 @@
 		99694C252315666600F4FF49 /* AttendanceCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceCheckViewController.xib; sourceTree = "<group>"; };
 		99694C2823156B5500F4FF49 /* AttendanceCheckPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCheckPopupViewController.swift; sourceTree = "<group>"; };
 		99694C2923156B5500F4FF49 /* AttendanceCheckPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceCheckPopupViewController.xib; sourceTree = "<group>"; };
+		99696C1523E80B1A0097C4ED /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		99696C1623E80B1A0097C4ED /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		99766E10236FCECD002573FD /* CouponDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDatas.swift; sourceTree = "<group>"; };
 		99766E12236FD00E002573FD /* CouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
 		99766E13236FD00E002573FD /* CouponTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponTableViewCell.xib; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 99114C9122F2726100D0494A;
 			productRefGroup = 99114C9B22F2726100D0494A /* Products */;
@@ -1337,6 +1340,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				99114CA222F2726100D0494A /* Base */,
+				99696C1523E80B1A0097C4ED /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1345,6 +1349,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				99114CA722F2726100D0494A /* Base */,
+				99696C1623E80B1A0097C4ED /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1356,6 +1361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1417,6 +1423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1475,14 +1482,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 5GTM2WZXJH;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.cfour.fifteensecond;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1498,14 +1505,14 @@
 				CODE_SIGN_ENTITLEMENTS = fifteensecond/fifteensecondRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 5GTM2WZXJH;
 				INFOPLIST_FILE = fifteensecond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.cfour.fifteensecond;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -48,7 +48,7 @@ extension UIViewController {
         guard let info = Bundle.main.infoDictionary,
             let currentVersion = info["CFBundleShortVersionString"] as? String,
             let identifier = info["CFBundleIdentifier"] as? String,
-            let url = URL(string: "http://itunes.apple.com/lookup?bundleId=\(identifier)") else {
+            let url = URL(string: "http://itunes.apple.com/kr/lookup?bundleId=\(identifier)") else {
                 throw VersionError.invalidBundleInfo
         }
         print(currentVersion)

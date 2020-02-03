@@ -13,10 +13,10 @@ class CouponsViewController: UIViewController {
     var couponList = [CouponDatas]() {
         didSet {
             if couponList.isEmpty {
-                
+                emptyCouponView.isHidden = false
             }
             else {
-                
+                emptyCouponView.isHidden = true
             }
             
             couponTableView.reloadData()
@@ -25,6 +25,7 @@ class CouponsViewController: UIViewController {
     
     @IBOutlet weak var hasTicketCountLabel: UILabel!
     @IBOutlet weak var couponTableView: UITableView!
+    @IBOutlet weak var emptyCouponView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
